@@ -1,0 +1,6 @@
+---
+
+alias:
+  - Java Interface
+
+---
