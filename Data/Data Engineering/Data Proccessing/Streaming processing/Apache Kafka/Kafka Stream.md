@@ -6,7 +6,7 @@
 # Topology
 - Kafka Stream topology is [[DAG]]
   
-  ![[../../../../_images/Kafka/kafka_stream_topology.png]]
+  ![[../../../../../_images/Kafka/kafka_stream_topology.png]]
 - Mỗi luồng xử lý (DAG) trong Kafka stream bao gồm các thành phần
 	- Source node: -> Nơi nhận data từ Kafka, sau đó forward cho các Stream node
 	- Stream node: define custom logic -> nhiệm vụ xử lý dữ liệu
@@ -28,7 +28,7 @@ builder.stream(inputTopic, Consumed.with(Serdes.String(), Serdes.String()));
   
 	- mapValues: dùng để biến đổi values trong 1 cặp key-value:
 	  
-	  ![[../../../../_images/Kafka/kafka_stream_mapping_operation.png]]
+	  ![[../../../../../_images/Kafka/kafka_stream_mapping_operation.png]]
 
   ```
   mapValues(value -> value.substring(5))
@@ -42,7 +42,7 @@ builder.stream(inputTopic, Consumed.with(Serdes.String(), Serdes.String()));
 
 #### Filter
 
-![[../../../../_images/Kafka/kafka_stream_filter-operation.png]]
+![[../../../../../_images/Kafka/kafka_stream_filter-operation.png]]
 Lọc ra nhưng giá trị phù hợp và gửi xuống các node tiếp theo trong [[DAG]]
 
 ## KTable
@@ -58,7 +58,7 @@ KTable<String, String> firstKTable =
 ```
 
 ### Operations
-- KTable cũng có các [[../../../../Software Engineering/Web Development/API]] giống như KStream bao gồm:
+- KTable cũng có các [[../../../../../Software Engineering/Web Development/API]] giống như KStream bao gồm:
 	- Map
 	- Filter
 
@@ -81,7 +81,7 @@ GlobalKTable<String, String> globalKTable =
 
 - Stream-stream joins kết hợp 2 stream thành 1 stream mới. join operator được thực hiện dựa trên key -> giá trị của key key là bắt buộc
 - Sử dụng time window để lấy những message cần join (windowed join).
-- Kết quả của join là 1 stream mới -> cặp (key, value) mới. Với key là key của 2 records, value được xác định thông qua `ValueJoiner`, 1 [[../../../../Programming language/Java/Interface|Java Interface]] nhận 2 values từ 2 records trong join operator -> value mới.
+- Kết quả của join là 1 stream mới -> cặp (key, value) mới. Với key là key của 2 records, value được xác định thông qua `ValueJoiner`, 1 [[../../../../../Programming language/Java/Interface|Java Interface]] nhận 2 values từ 2 records trong join operator -> value mới.
 - Hỗ trợ các loại join:
 	- Inner joins
 	- Outer joins
@@ -105,7 +105,7 @@ GlobalKTable<String, String> globalKTable =
 ## Stateful Operations
 
 - Đối với các [[stateful]] operations, các thao tác processing thường sẽ yêu cầu group by key đầu tiên để tìm ra state -> key is required. Nếu message không có key, có thể tạo key cho message, nhưng cần cân nhắc nếu _Repartition_.
-- [[Stateful]] oprations trong Kafka Stream dựa trên việc lưu trữ state. Cách thức lưu trữ state mặc định là dùng [[RocksDB]], ngoài ra có thể lưu trữ trực tiếp trên RAM. State stores lại được dựa trên changelog topic -> Kafka Stream có khả năng fault-tolerant. Khi call [[stateful]] operation, 1 KTable(overwrite old values) sẽ được return. [[Stateful]] operations bao gồm các hàm: 
+- [[Stateful]] oprations trong Kafka Stream dựa trên việc lưu trữ state. Cách thức lưu trữ state mặc định là dùng [[../../../../Database/Others databases/RocksDB]], ngoài ra có thể lưu trữ trực tiếp trên RAM. State stores lại được dựa trên changelog topic -> Kafka Stream có khả năng fault-tolerant. Khi call [[stateful]] operation, 1 KTable(overwrite old values) sẽ được return. [[Stateful]] operations bao gồm các hàm: 
 
 	- _reduce_: takes one value type as a parameter, _reduce_ expects you to return the same type
 
@@ -177,11 +177,11 @@ myStream.groupByKey().reduce(reducer, Materialized.with(Serdes.String(),
 ### Stream Time
 - Kafka Streams uses the concept of _stream time_:
 
-![[../../../../_images/Kafka/stream-time-1.png]]
+![[../../../../../_images/Kafka/stream-time-1.png]]
 - Stream time, by definition, is the largest timestamp seen so far, and it only moves forward, not backward. If an _out-of-order_ record arrives (meaning a record that is earlier than the current stream time, but still within the window plus the grace period), stream time stays where it is.
 - _Late_ records have timestamps outside of the combined window time and grace period. The delay of a record is determined by taking the stream time minus the event timestamp.
 
-![[../../../../_images/Kafka/late-record-1.png]]
+![[../../../../../_images/Kafka/late-record-1.png]]
 
 ## Processor API
 
@@ -198,7 +198,7 @@ myStream.groupByKey().reduce(reducer, Materialized.with(Serdes.String(),
 #### Wall-Clock-Time Processing
 - You can also schedule punctuation according to wall-clock time. Under the hood, Kafka Streams uses a consumer, and consumers call `poll()` to get records. Wall-clock time advances with the `poll()` calls. So wall-clock time advancement depends in part on how long it takes you to return from a `poll()` loop.
 
-## Processor [[../../../../Software Engineering/Web Development/API]]
+## Processor [[../../../../../Software Engineering/Web Development/API]]
 
 - So far you've learned about the Kafka Streams DSL, which gives you maximum developer velocity when building an application, but is very opinionated. Sometimes you need to accomplish things that aren't provided to you by the DSL, and that's where the Processor API comes in. It gives you maximum flexibility, but you are responsible for all of the details.
 - The Processor API gives you access to state stores for custom stateful operations. In the [[Stateful]] Operations module, you learned about state and the DSL, which uses under-the-hood state stores that you can't directly access. With the Processor API, you create a store that you pass in, so you have full access to the store: You can pull out all of the records, you can do a range query, you can do all sorts of things. You can also programmatically call _commit_, and you can control how often it's called.
@@ -241,7 +241,7 @@ toplogy.addSink(“sink-node”, “output-topic”, “custom-processor”);
 ## Thread
 - Tasks are assigned to `StreamThread`(s) for execution. The default Kafka Streams application has one `StreamThread`. So if you have five tasks and one `StreamThread`, that `StreamThread` will work records for each task in turn. However, in Kafka Streams, you can have as many threads as there are tasks. So for five tasks, you could configure your application to have five threads. Each task gets its own thread, and any remaining threads are idle.
 
-![[../../../../_images/Kafka/kafka_stream_tasks_topic.svg]]
+![[../../../../../_images/Kafka/kafka_stream_tasks_topic.svg]]
 
 ## Instances
 - With respect to task assignment, application instances are similar to tasks. If you have an input topic with five partitions, you could spin up five Kafka Streams instances that all have the same application ID, and each application would be assigned and process one task. Spinning up new applications provides the same increase in throughput as increasing threads. Just like with threads, if you spin up more application instances than tasks, the extra instances will be idle, although available for failover. The advantage is that this behavior is dynamic; it doesn't involve shutting anything down. You can spin up instances on the fly, and you can take down instances.
@@ -250,7 +250,7 @@ toplogy.addSink(“sink-node”, “output-topic”, “custom-processor”);
 - Because Kafka Streams uses a Kafka consumer internally, it inherits the dynamic scaling properties of the _consumer group protocol_. So when a member leaves the group, it reassigns resources to the other active members. When a new member joins the group, it pulls resources from the existing members and gives them to the new member. And as mentioned, this can be done at runtime, without shutting down any currently running applications.
 - So you should set up as many instances as you need until all of your tasks are accounted for. Then in times when traffic is reduced, you can take down instances and the resources will be automatically reassigned.
 
-![[../../../../_images/Kafka/kafka_stream_consumer_group_protocol.jpg]]
+![[../../../../../_images/Kafka/kafka_stream_consumer_group_protocol.jpg]]
 
 # Kafka Stream vs [[Apache Spark]] & [[Apache Flink]]
 # Kafka Stream vs ksqlDB

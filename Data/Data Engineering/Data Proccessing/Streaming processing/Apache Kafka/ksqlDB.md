@@ -13,23 +13,23 @@ alias:
 	- Event-driven [[microservices]]
 - ksqlDB is designed from the principle of simplicity. While many streaming architectures require a grab-bag of components pieced together from many projects, ksqlDB provides a single platform on which you can build streaming ETL and streaming applications, and all with just a single dependency - [[Apache Kafka]].
 
-![[../../../../_images/Kafka/KSQLDB.png]]
+![[../../../../../_images/Kafka/KSQLDB.png]]
 
 # Topology
 - ksqlDB separates its distributed compute layer from its distributed storage layer, for which it uses Apache Kafka.
 
-![[../../../../_images/Kafka/ksqldb-kafka.png]]
+![[../../../../../_images/Kafka/ksqldb-kafka.png]]
 
 - ksqlDB allows us to read, filter, transform, or otherwise process streams and tables of events, which are backed by Kafka topics. We can also join streams and/or tables to meet the needs of our application. And we can do all of this using familiar SQL syntax.
 
-![[../../../../_images/Kafka/ksqldb-computer.png]]
+![[../../../../../_images/Kafka/ksqldb-computer.png]]
 
 - ksqlDB can also build stateful aggregations on event streams. How many orders have been placed in the last hour? Errors in the last five minutes? Current balance on an account? These aggregates are held in a state store within ksqlDB, and external applications can query the store directly.
 
 # Interact with ksqlSB
 - ksqlDB có thể tương tác thông qua 
 	- [[CLI]]
-	- [[../../../../Software Engineering/Web Development/Backend/REST]] [[../../../../Software Engineering/Web Development/API]]
+	- [[../../../../../Software Engineering/Web Development/Backend/REST]] [[../../../../../Software Engineering/Web Development/API]]
 	- Web UI
 	- Client Library
 
@@ -89,16 +89,16 @@ INSERT INTO orders(product, quantity, price) VALUES ('widget', 3, 19.99);
 		```
 
 ## Filtering with ksqlDB
-- Lọc ra các records theo yêu cầu (phép chọn trong [[Relational Algebra]])
+- Lọc ra các records theo yêu cầu (phép chọn trong [[../../../../../Math/Relational Algebra]])
 - syntax giống với [[SQL]]
 
-![[../../../../_images/Kafka/filter_ksqldb.png]]
+![[../../../../../_images/Kafka/filter_ksqldb.png]]
 
 ## Lookups and Joins
 
 - When processing data, a common requirement is to enrich it with other data. These lookups can be done in ksqlDB using the [[SQL]] `JOIN` syntax. Joins can be between streams of events, between streams and tables, or between tables and tables.
 
-![[../../../../_images/Kafka/ksqldb-join.png]]
+![[../../../../../_images/Kafka/ksqldb-join.png]]
 
 - Ví dụ:
 
@@ -124,7 +124,7 @@ SELECT O.*,
 - When creating a new stream from an existing one, you can pick and choose the fields you’d like to preserve in the new stream. You can also use functions to modify data or to create derived fields.
 - Ví dụ: Chuyển từ linux timestamp sang timestamp 
 
-![[../../../../_images/Kafka/ksql-transform-timestamp.png]]
+![[../../../../../_images/Kafka/ksql-transform-timestamp.png]]
 
 ## Flatten Nested Records with ksqlDB
 
@@ -188,19 +188,19 @@ CREATE STREAM source_csv_stream
 
 - ksqlDB can write data from multiple streams into a single target. This can be useful when you have events for the same logical entity (for example, orders) written to separate topics (perhaps originating in different Apache Kafka clusters or instances of the producing application). At the same time, you can add in or modify the data to ensure that attributes such as identifiers remain unique.
 
-![[../../../../_images/Kafka/merge_stream.png]]
+![[../../../../../_images/Kafka/merge_stream.png]]
 
 ## Splitting Streams
 - Ngược lại với merge stream
 - Tạo Stream bằng cách select data to stream mới.
 
-![[../../../../_images/Kafka/split_stream.png]]
+![[../../../../../_images/Kafka/split_stream.png]]
 
 ## Streams and Tables
 - While relational databases center around the concept of a table, ksqlDB has two first-class object types: streams and tables.
 - Streams are unbounded series of events, while tables are the current state of a given key.
 
-![[../../../../_images/Kafka/stream-vs-table.png]]
+![[../../../../../_images/Kafka/stream-vs-table.png]]
 
 - Both streams and tables are built from Apache Kafka topics; the difference is only the semantic interpretation of the data. Which you choose is determined by how you want to use the data.
 - Taking the chess board example in the graphic above, a single Kafka topic would hold the history of all the moves.
@@ -273,19 +273,19 @@ FROM stream3 EMIT CHANGES;
 
 # Under the Covers
 
-- ksqlDB built on top of [[Kafka Stream]]. và cũng giống như [[Kafka Stream]], ksqlDB sử dụng [[RocksDB]] để lưu các state
+- ksqlDB built on top of [[Kafka Stream]]. và cũng giống như [[Kafka Stream]], ksqlDB sử dụng [[../../../../Database/Others databases/RocksDB]] để lưu các state
 - Là distributed system giống [[Apache Kafka|Kafka]]. Sử dụng cơ chế partition để scale out.
 
 # ksql Architecture
 
 - A typical streaming pipeline consists of source databases and apps creating events that feed into Apache Kafka via connectors, a stream processor that filters and aggregates the events, and finally storage facilities that store the events for access by analytics engines.
 
-![[../../../../_images/Kafka/ksqldb-architecture.png]]
+![[../../../../../_images/Kafka/ksqldb-architecture.png]]
 
 - This is a standard system design, and it works well, but it does consist of a whole host of moving parts that are prone to breakage or failure and that make scaling, securing, monitoring, debugging, and operating all as one difficult.
 - An architecture with ksqlDB is much simpler, as many of those external parts have been consolidated into the tool itself: ksqlDB has primitives for connectors, and it performs stream processing. It also features materialized views, so that your data can be queried just like a database table directly in ksqlDB, without needing to be sent to an external source:
 
-![[../../../../_images/Kafka/ksqldb-database.png]]
+![[../../../../../_images/Kafka/ksqldb-database.png]]
 
 - In fact, ksqlDB tucks away complexity in a manner similar to classic [[Relational Database/Relational Database|RDBMS]] such as [[PostgreSQL]], which hides query execution, indexing, concurrency control, and crash recovery behind an intuitive interface.
 - Because ksqlDB relies on [[Apache Kafka|Kafka]] to maintain state, you ultimately end up with a simple two-tier architecture: compute and storage—ksqlDB and Kafka. And each can be elastically scaled independently of the other.
