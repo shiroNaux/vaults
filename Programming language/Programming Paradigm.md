@@ -23,7 +23,6 @@
 
 ![[../_images/Programming_paradigms.svg]]
 
-
 ## [[Machine code]]
 
 - Lowest level of programming paradigms
@@ -63,7 +62,7 @@
 - Các ngôn ngữ thuộc loại [[../Object Oriented Programming|OOP]]
 	- [[C++]]
 	- [[Java]]
-	- [[C#]]
+	- [[C Sharp#]]
 - [[JavaScripts]] không thuộc loại OOP mặc dù có 1 số tính chất của [[Object Oriented Programming|OOP]]
 
 - Advantages
@@ -80,9 +79,27 @@
 	select x % 2 == 0
 ```
 
+``` js
+const result = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+               .filter(n => n % 2 === 0)
+               .map(a => a * 10)
+               .reduce((a, b) => a + b);
+```
+
 - Các ngôn ngữ thuộc dạng này thường có đặc trưng là các hàm `map`, `flatMap`, `filter`. Ví dụ điển hình là [[JavaScripts]]
 
 ### 1. Functional
+
+- Với Functional programming, chương trình được xây dựng bởi chuỗi các hàm
+- Các ngôn ngữ:
+	- [[JavaScripts]]
+	- [[Scala]]
+	- [[Haskell]]
+	- Lisp
+- Functional programming có đôi chút khác biệt với [[Purely Functional Programming]]
+- Được phát triển dựa trên [[Lambda Calculus]]
+- Functional programming languages are typically less efficient in their use of [[CPU]] and memory than imperative languages
+- For programs that handle large [[matrices]] and multidimensional [[../Databases |database]], array functional languages were designed with speed optimizations
 
 ### 2. Logic
 
@@ -97,11 +114,17 @@
 	H :- B1, …, Bn
 ```
 
-
-
+- H kí hiệu của Head, B1 -> Bn gọi là body
 
 ### 3. Mathematical
+
+- Mô phỏng các bài toán thực tế dưới dạng các hệ phương trình, bất phương trình trong toán học và giải chúng
+- Đây không hẳn là 1 loại [[Programming Language |ngôn ngữ lập trình]] mà là một phương pháp giải quyết các bài toán bởi việc sử [[Programming Language]]
+
 ### 4. Reactive
+
+- Cũng giống như Mathematical programming, đây là 1 mô hình lập trình chứ không hẳn là loại [[Programming Language|ngôn ngữ lập trình]]
+- Thường được sử dụng trong các bài toán event-driven
 
 # Parallel proccessing
 
@@ -109,6 +132,10 @@
 
 # Mixing paradigm
 
+- Các ngôn ngữ có thể được chia vào nhiều 1 loại
+- Ví dụ: [[Scala]] vừa là functional programming, vừa là ngôn ngữ [[OOP]]
+- Hay [[JS]] là 1 ngôn ngữ lập trình hàm, nhưng hỗ trợ rất nhiều tính năng của [[OOP]]
+- Rất nhiều các ngôn ngữ [[OOP]] đã áp dụng các hàm đặc trưng của functional programming như các hàm `map`, `flatMap`, `lambda expression`, *higher-order functions* vào trong syntax: [[Java]] từ Java 8, [[C Sharp|C#]] từ .NetCore, [[C Programming language|C]]/[[C++]] từ C++ 11
 
 # References
 1. [Programming Paradigms – Paradigm Examples for Beginners (freecodecamp.org)](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/)
