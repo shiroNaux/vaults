@@ -23,14 +23,14 @@
 
 ![[../_images/Programming_paradigms.svg]]
 
-## [[Machine code]]
+## [[../Computer Architecture/Machine code]]
 
 - Lowest level of programming paradigms
 
 ## Imperative language
 
 - Imperative programming consists of sets of detailed instructions that are given to the computer to execute in a given order
-- Được dựa trên [[Von Neumann architecture]]
+- Được dựa trên [[../Applied Math/Von Neumann architecture]]
 - It works by changing the program state through assignment statements
 - It performs step by step task by changing state.
 - It's called "imperative" because as programmers we dictate exactly what the computer has to do, in a very specific way.
@@ -59,7 +59,7 @@
 - The core concept of OOP is to separate concerns into entities which are coded as objects. Each entity will group a given set of information (properties) and actions (methods) that can be performed by the entity.
 -  The smallest and basic entity is object and all kind of computation is performed on the objects only.
 - Với cách lập trình kiểu này, có thể giải quyết hầu hết các bài toán trong thực tế với việc mô phỏng các đối tượng thành các object
-- Các ngôn ngữ thuộc loại [[../Object Oriented Programming|OOP]]
+- Các ngôn ngữ thuộc loại [[Object Oriented Programming|OOP]]
 	- [[C++]]
 	- [[Java]]
 	- [[C Sharp#]]
@@ -98,8 +98,8 @@ const result = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 	- Lisp
 - Functional programming có đôi chút khác biệt với [[Purely Functional Programming]]
 - Được phát triển dựa trên [[Lambda Calculus]]
-- Functional programming languages are typically less efficient in their use of [[CPU]] and memory than imperative languages
-- For programs that handle large [[matrices]] and multidimensional [[../Databases |database]], array functional languages were designed with speed optimizations
+- Functional programming languages are typically less efficient in their use of [[../Computer Architecture/Hardware/CPU]] and memory than imperative languages
+- For programs that handle large [[matrices]] and multidimensional [[../Data/Database/Database |database]], array functional languages were designed with speed optimizations
 
 ### 2. Logic
 

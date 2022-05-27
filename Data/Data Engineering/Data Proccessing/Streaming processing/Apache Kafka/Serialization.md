@@ -10,19 +10,19 @@ tags:
 
 ## Serialization
 - Serialization bao gồm cả deserializing và serializing
-- Cần có Serialization bởi vì: Kafka broker chỉ làm việc với chuỗi [[../../../../../Hardware/bytes]]
+- Cần có Serialization bởi vì: Kafka broker chỉ làm việc với chuỗi [[../../../../../Computer Architecture/Hardware/bytes]]
 - Kafka lưu trữ các giá trị theo bytes. Khi 1 consumer lấy dữ liệu, [[Apache Kafka|Kafka]] sẽ gửi về chuỗi bytes đó. Để consumer hiểu được nội dung của message -> cần có Deserializer để decode thành object
 - Tương tự, khi gửi dữ liệu lên [[Apache Kafka|Kafka]] thì cần có Serializer để encode bject.
 
 ### Deserializer
 
 ![[../../../../../_images/Kafka/deserializer.png]]
-Deserializer nhận vào 1 chuỗi các [[../../../../../Hardware/bit]] và -> là 1 object 
+Deserializer nhận vào 1 chuỗi các [[../../../../../Computer Architecture/Hardware/bit]] và -> là 1 object 
 
 ### Serializer
 
 ![[../../../../../_images/Kafka/serializer.png]]
-Serializer ngược với Dersializer: nhận 1 object vào -> 1 chuỗi [[../../../../../Hardware/bit]]
+Serializer ngược với Dersializer: nhận 1 object vào -> 1 chuỗi [[../../../../../Computer Architecture/Hardware/bit]]
 
 # Kafka Stream SerDes
 - To bring data into Kafka Streams, you provide SerDes for your topic’s key and value in the `Consumed` configuration object.
