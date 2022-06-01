@@ -10,8 +10,13 @@ alias:
 - OLTP thường được dùng để chỉ các hệ thống cần có sự phản hồi ngay lập tức với user requests. 1 ví dụ nổi bật là máy ATM.
 
 # Trait
-- OLTP yêu cầu: high throughput and và insert- or update-intensive in database management. Các ứng dụng dạng này 
-- These applications are used concurrently by hundreds of users. The key goals of OLTP applications are availability, speed, concurrency and recoverability. Reduced paper trails and the faster, more accurate forecast for revenues and expenses are both examples of how OLTP makes things simpler for businesses. However, like many modern online information technology solutions, some systems require offline maintenance, which further affects the cost-benefit analysis of an online transaction processing system.
+- OLTP yêu cầu: high throughput and và insert- or update-intensive đối với database. Ngoài ra các ứng dụng dạng này thường sẽ phải đáp ứng số lượng người dùng cùng một thời điểm rất lớn -> Yêu cầu 1 hệ thống OLTP phải đảm bảo thêm các yếu tố sau:
+
+	- *Availability*
+	- *Speed*
+	- *Concurrency*
+	- *Recoverability*
+
 - OLTP is typically contrasted to [OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing "Online analytical processing") (online analytical processing), which is generally characterized by much more complex queries, in a smaller volume, for the purpose of business intelligence or reporting rather than to process transactions. Whereas OLTP systems process all kinds of queries (read, insert, update and delete), OLAP is generally optimized for read only and might not even support other kinds of queries. OLTP also operates differently from [[../Data Engineering/Data Proccessing/Batch Proccessing|batch proccessing]] and [[../../Grid Computing|grid computing]].
 - In addition, OLTP is often contrasted to [[OLEP]], which is based on distributed event logs to offer strong consistency in large-scale heterogeneous systems. Whereas OLTP is associated with short atomic transactions, OLEP allows for more flexible distribution patterns and higher scalability, but with increased latency and without guaranteed upper bound to the processing time
 - In large applications, efficient OLTP may depend on sophisticated transaction management software (such as [CICS](https://en.wikipedia.org/wiki/CICS "CICS")) and/or [database](https://en.wikipedia.org/wiki/Database "Database") optimization tactics to facilitate the processing of large numbers of concurrent updates to an OLTP-oriented database.
@@ -25,12 +30,18 @@ alias:
 
 ## Rollback segments
 ## Clusters
+## Discrete transactions
+## Block size
+## Buffer cache size
+## Dynamic allocation
+## Transaction proccessing
+## Partition
+## Database tunning
 
-# Contrast
+# Distinction
 
 ## 1. [[OLAP]]
 ## 2. [[OLEP]]
 
 # References
 1. [Online transaction processing - Wikipedia](https://en.wikipedia.org/wiki/Online_transaction_processing)
-2. 
