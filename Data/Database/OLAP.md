@@ -1,5 +1,5 @@
 ---
-alias
+aliases
 	- OLAP
 	- Online analytical proccessing
 ---
@@ -11,7 +11,7 @@ alias
 # Distinction
 
 ## 1. [[OLTP]]
-
+## 2. [[OLEP]]
 
 # References
 1. [OLTP Và OLAP Có Gì Khác Nhau? (viblo.asia)](https://viblo.asia/p/oltp-va-olap-co-gi-khac-nhau-maGK786BZj2)
