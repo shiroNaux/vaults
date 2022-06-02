@@ -1,13 +1,14 @@
 ---
 alias:
-	- OLTP
-	- Online transactional proccessing
+  - OLTP
+  - Online transactional proccessing
 ---
 
 # Online transactional proccessing
 
--  OLTP systems typically facilitate and manage transaction-oriented applications
+-  OLTP systems typically facilitate and manage **transaction**-oriented applications
 - OLTP thường được dùng để chỉ các hệ thống cần có sự phản hồi ngay lập tức với user requests. 1 ví dụ nổi bật là máy ATM.
+- Hầu hết các hệ thống hiện nay đều là OLTP và đều xoay quanh **transaction**
 
 # Trait
 - OLTP yêu cầu: high throughput and và insert- or update-intensive đối với database. Ngoài ra các ứng dụng dạng này thường sẽ phải đáp ứng số lượng người dùng cùng một thời điểm rất lớn -> Yêu cầu 1 hệ thống OLTP phải đảm bảo thêm các yếu tố sau:
@@ -29,19 +30,29 @@ alias:
 # Design consideration
 
 ## Rollback segments
+- Rollback segments are the portions of database that record the actions of transactions in the event that a transaction is rolled back. Rollback segments provide read consistency, rollback transactions, and recovery of the [[database]] 
 ## Clusters
+- A cluster is a schema that contains one or more tables that have one or more columns in common. Clustering tables in a database improves the performance of [[SQL|join]] operations.
 ## Discrete transactions
+- A discrete transaction defers all change to the data until the transaction is committed. It can improve the performance of short, non-[[../../Distributed system|distributed]] transactions
 ## Block size
+- The data block size should be a multiple of the operating system's block size within the maximum limit to avoid unnecessary I/O
 ## Buffer cache size
+ - [[SQL]] statements should be tuned to use the database buffer cache to avoid unnecessary resource consumption
 ## Dynamic allocation
-## Transaction proccessing
+- Dynamic allocation of space to tables and rollback segments
+## Transaction proccessing monitors and the multi-threaded server
+- A transaction processing monitor is used for coordination of services. It is like an operating system and does the coordination at a high level of granularity and can span multiple computing devices
 ## Partition
+- Partition use increases performance for sites that have regular transactions while still maintaining availability and security
 ## Database tunning
+- With database tuning, an OLTP system can maximize its performance as efficiently and rapidly as possible
 
 # Distinction
 
 ## 1. [[OLAP]]
+- see in [[OLAP]]
 ## 2. [[OLEP]]
-
+- 
 # References
 1. [Online transaction processing - Wikipedia](https://en.wikipedia.org/wiki/Online_transaction_processing)
