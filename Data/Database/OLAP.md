@@ -9,6 +9,15 @@ aliases
 ![[../../_images/ICLH_Diagram_Batch_01_09-OLAP-DataCube-WHITEBG.webp]]
 
 # Trait
+- At the core of any OLAP system is an OLAP cube (also called a 'multidimensional cube' or a [[hypercube]]. It consists of numeric facts called _measures_ that are categorized by dimensions. The measures are placed at the intersections of the hypercube, which is spanned by the dimensions as a [[vector space]]. The usual interface to manipulate an OLAP cube is a matrix interface, like Pivot tables in a spreadsheet program, which performs projection operations along the dimensions, such as aggregation or averaging.
+- Each _measure_ can be thought of as having a set of _labels_, or meta-data associated with it. A _dimension_ is what describes these _labels_; it provides information about the _measure_.
+- 
+
+# Classify
+
+## 1. MOLAP
+## 2. ROLAP
+## 3. HOLAP
 
 # Distinction
 
@@ -24,6 +33,9 @@ aliases
 - Tóm lại OLAP và [[OLTP]] có mục đích riêng của chúng, ***không thể thay thế lẫn nhau***, và thường được kết hợp với nhau: nguồn dữ liệu của OLAP thường sẽ là từ nhiều nguồn [[OLTP]] kết hợp lại và được biến đổi thông  qua quá trình [[../Data Engineering/ETL]]
 
 ## 2. [[OLEP]]
+
+## 3. [[Data warehouse]]
+
 
 # References
 1. [OLTP Và OLAP Có Gì Khác Nhau? (viblo.asia)](https://viblo.asia/p/oltp-va-olap-co-gi-khac-nhau-maGK786BZj2)
