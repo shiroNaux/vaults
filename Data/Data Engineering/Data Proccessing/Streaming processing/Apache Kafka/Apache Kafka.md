@@ -8,6 +8,20 @@ alias:
 ---
 # Why ?
 
+## Ưu điểm của Kafka
+- Distributed, resilient architecture, fault tolerant
+- Horizontal scalability
+	- ~ 100 brokers $10^6$
+	- -> $n*10^6$  messages / seconds
+	- low latency  (~ mili second)
+	- high performance
+
+## Use cases
+- Messaging system
+- Activity tracking
+- Gathers matrics for many locations
+- Collect log
+- Streaming processing
 
 # Kafka Architecture
 - Kafka core concept là event
@@ -38,17 +52,18 @@ alias:
 ## Kafka topics
 
 ![[../../../../../_images/Kafka/kafka-topics.png]]
-- Tương đương với table trong [[Relational Database|RDBMS]]
+- Tương đương với table trong [[Relational Database|RDBMS]] -> Stream of data
 - It's a concept for organizing events of the same type, together
-- Topics are immutable, append-only
+- Topics là immutable, append-only
 
 ## Topic Partitions
 
 ![[../../../../../_images/Kafka/partition-offsets.png]]
 
-- Là cách thức distribute the storage and processing events in a topic.
-- 1 topic có thể gồm 1 hoặc nhiều topics partitions. Các partition này có thể ở trong cùng 1 node hoặc khác node
-- Partition là main unit trong việc lưu trữ. Partition cũng là main unit việc xử lý song song
+- Partiotion là thành phần con của topic, là phân chia lưu trữ về mặt logic của topic. 1 topic được chia tành nhiều partition => là cách thức distribute the storage and processing events in a topic.
+- 1 topic có thể gồm >= 1 partitions. Các partition này có thể ở trong cùng 1 node hoặc khác node
+- Các messages được lưu trong 1 topic sẽ có id tăng dần, được gọi là offset. Bắt đầu từ 0
+- Partition là main unit trong việc lưu trữ. Partition cũng là main unit trong việc xử lý song song
 - Events can be produced to a topic in parallel by writing to multiple partitions at the same time. Likewise, consumers can spread their workload by individual consumer instances reading from different partitions. If we only used one partition, we could only effectively use one consumer instance.
 - Nếu chỉ sử dụng 1 partition -> việc sử dụng > 1 consumer không đem lại nhiều hiệu quả
 - Trong mỗi partition, mỗi 1 event sẽ được gán với 1 unique identifier gọi là offset. The offset for a given partition will continue to grow as events are added, and offsets are never reused. Việc sử dụng offset đem lại nhiều tác dụng, đặc biệt là consumers keeping track of which events have been processed.
@@ -309,7 +324,7 @@ alias:
 
 ### Kafka streams
 - Với sự gia tăng của các ứng dụng sử dụng Kafka -> Consumer ngày càng trở nên phức tạp và cần giải quyết các bài toán về transform data
-- Functional [[../../../../../Programming language/Java/Java]] [[../../../../../Software Engineering/Web Development/API]]
+- Functional [[Java]] [[API]]
 - Hỗ trợ: Filtering, grouping, aggregating, join, ...
 - Là consumer group
 - Là 1 library, not infrastructure
@@ -320,20 +335,20 @@ alias:
 - A database optimized for streaming processing
 - Run outside of Kafka cluster
 - Sử dụng syntax giống với [[SQL]]
-- Hỗ trợ command line và [[../../../../../Software Engineering/Web Development/Backend/REST]] [[../../../../../Software Engineering/Web Development/API]]
-- Có thể sử dụng như 1 [[../../../../../Programming language/Java/Java]] Library
+- Hỗ trợ command line và [[REST]] [[API]]
+- Có thể sử dụng như 1 [[Java]] Library
 - Kết hợp với các connectors để automate luồng sử lý data
 
 # Alternative
 
-## 1. Kafka vs [[../PubSub]]
+## 1. Kafka vs [[PubSub]]
 ## 2. Kafka vs Redpanda
 
 # Combination
 
 ## 1. [[Apache Spark]]
 ## 2. [[Apache Flink]]
-## 3. [[../../../../Database/OLAP]] engine
+## 3. [[OLAP]] engine
 
 ## Reference
 1. a
