@@ -268,8 +268,8 @@ alias:
 	- Sử dụng tham số groupID cho consumer để scale out.
 	- Nếu số consumer > số partitions thì sẽ có 1 số partition không nhận được message
 
-	***Làm thế nào để ứng dụng sau khi restart kafka vẫn nhận ra đó là service nào và apply offset cũ ???***
-	***How Kafka distinct consumer & producer ???***
+	***Làm thế nào để ứng dụng sau khi restart kafka vẫn nhận ra đó là service nào và apply offset cũ ???*** => Consumer group, nếu không set consumer group => dùng giá trị mặc định, lấy message từ offset cũ, được lưu bời Kafka
+	***How Kafka distinct consumer & producer ???*** => Consumer group
 	
 
 ### [[Kafka Connect]]
