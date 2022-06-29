@@ -47,7 +47,7 @@ alias:
 
 ## Record Schema
 - key và value đều lưu dưới dạng byte arrays -> dễ dàng encode bằng nhiều cách khác nhau sử dụng [[Serializer]] (tương ứng [[Deserializer]])
-- Dạng format hay dùng nhất trong Kafka là [[../../../../../Storage/Avro]]
+- Dạng format hay dùng nhất trong Kafka là [[Avro]]
 
 ## Kafka topics
 
@@ -61,20 +61,20 @@ alias:
 ![[../../../../../_images/Kafka/partition-offsets.png]]
 
 - Partiotion là thành phần con của topic, là phân chia lưu trữ về mặt logic của topic. 1 topic được chia tành nhiều partition => là cách thức distribute the storage and processing events in a topic.
-- 1 topic có thể gồm >= 1 partitions. Các partition này có thể ở trong cùng 1 node hoặc khác node
-- Các messages được lưu trong 1 topic sẽ có id tăng dần, được gọi là offset. Bắt đầu từ 0
-- Partition là main unit trong việc lưu trữ. Partition cũng là main unit trong việc xử lý song song
-- Events can be produced to a topic in parallel by writing to multiple partitions at the same time. Likewise, consumers can spread their workload by individual consumer instances reading from different partitions. If we only used one partition, we could only effectively use one consumer instance.
-- Nếu chỉ sử dụng 1 partition -> việc sử dụng > 1 consumer không đem lại nhiều hiệu quả
-- Trong mỗi partition, mỗi 1 event sẽ được gán với 1 unique identifier gọi là offset. The offset for a given partition will continue to grow as events are added, and offsets are never reused. Việc sử dụng offset đem lại nhiều tác dụng, đặc biệt là consumers keeping track of which events have been processed.
+- 1 topic có thể gồm >= 1 partitions (không giới hạn số lượng). Các partition này có thể ở trong cùng 1 node hoặc khác node
+- Các messages được lưu trong 1 topic sẽ có id tăng dần, được gọi là offset -> unique identifier của message. Bắt đầu từ 0, *and offsets are never reused*. Giá trị offset này sẽ tăng dần với việc các message được thêm vào partition. Việc sử dụng offset đem lại nhiều tác dụng, đặc biệt là consumers keeping track of which events have been processed
+- Thứ tự của các message trong partition sẽ được đảm bảo ordered về mặt thời gian nếu không tính đến lagging
+- Partition là main unit trong việc lưu trữ. Partition cũng là main unit trong việc xử lý song song. Bởi vì: **Events can be produced to a topic in parallel by writing to multiple partitions at the same time. Likewise, consumers can spread their workload by individual consumer instances reading from different partitions. If we only used one partition, we could only effectively use one consumer instance**. => *dẫn đến việc*: nếu chỉ sử dụng 1 partition thì số lượng consumer > 1 không đem lại hiệu quả về mặt tính toán
 
 ## Broker
-
-- The functions within a Kafka cluster are broken up into a data plane and a control plane. The control plane handles management of all the metadata in the cluster. The data plane deals with the actual data that we are writing to and reading from Kafka.
+- 1 Kafka cluster được chia là 2 thành phần:
+	- *control plane*: handles management of all the metadata in the cluster
+	- *data plane*: deals with the actual data that we are writing to and reading from Kafka
 
 ![[../../../../../_images/Kafka/inside-the-apache-kafka-broker.png]]
 
 - Client requests fall into two categories: produce requests and fetch requests. A produce request is requesting that a batch of data be written to a specified topic. A fetch request is requesting data from Kafka topics. Both types of requests go through many of the same steps.
+
 ### Produce requets
 
 #### Partition Assignment
