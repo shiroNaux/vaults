@@ -67,40 +67,48 @@ alias:
 - Partition là main unit trong việc lưu trữ. Partition cũng là main unit trong việc xử lý song song. Bởi vì: **Events can be produced to a topic in parallel by writing to multiple partitions at the same time. Likewise, consumers can spread their workload by individual consumer instances reading from different partitions. If we only used one partition, we could only effectively use one consumer instance**. => *dẫn đến việc*: nếu chỉ sử dụng 1 partition thì số lượng consumer > 1 không đem lại hiệu quả về mặt tính toán
 
 ## Broker
+
+- Kafka cluster được tạo thành từ nhiều servers khác nhau. Mỗi server được gọi là 1 broker(*From a physical infrastructure standpoint, [[Apache Kafka]] is composed of a network of machines called brokers*). Broker là nơi lưu trữ và xử lý partition
+- Mỗi broker được định danh bởi 1 số int, gọi là ID. Brokers là ngang hàng -> connect đến 1 broker bất kỳ là connect đến toàn bộ cluster.
 - 1 Kafka cluster được chia là 2 thành phần:
 	- *control plane*: handles management of all the metadata in the cluster
 	- *data plane*: deals with the actual data that we are writing to and reading from Kafka
 
 ![[../../../../../_images/Kafka/inside-the-apache-kafka-broker.png]]
 
-- Client requests fall into two categories: produce requests and fetch requests. A produce request is requesting that a batch of data be written to a specified topic. A fetch request is requesting data from Kafka topics. Both types of requests go through many of the same steps.
+- Client requests đước chia làm 2 loại: produce requests and fetch requests. Procedure request tức là procude message -> ghi data vào topic. Fetch request thì ngược lại, là request lấy data từ topic. 2 loại request này đều phải trải qua 1 số bước khá giống nhau.
 
-### Produce requets
+### *Produce requets*
 
-#### Partition Assignment
+#### _Partition Assignment_
+
+- Mỗi khi producer gửi message bất kì đến Kafka, nó sẽ được phân chia vào 1 partition nhất định theo các ràng buộc sau:
+	- If the record has a key -> key này sẽ được hash và rồi tính toán (thường là phép module) ra ra partition mà message sẽ được lưu vào. Với việc sử dụng [[Hash function|hash]] và các phép toán => message với cùng key sẽ luôn đi vào cùng 1 partition.
+	- If the record has no key then a partition strategy is used to balance the data in the partitions (thường dùng [[Round robin]])
 
 ![[../../../../../_images/Kafka/assign-record-to-topic-partition.png]]
 
-+ When a producer is ready to send an event record, it will use a configurable partitioner to determine the topic partition to assign to the record. If the record has a key, then the default partitioner will use a hash of the key to determine the correct partition. After that, any records with the same key will always be assigned to the same partition. If the record has no key then a partition strategy is used to balance the data in the partitions.
-
-#### Record batching
+#### _Record batching_
 
 ![[../../../../../_images/Kafka/records-accumulated-into-record-batches.png]]
 
-+ Sending records one at a time would be inefficient due to the overhead of repeated network requests. So, the producer will accumulate the records assigned to a given partition into batches. Batching also provides for much more effective compression, when compression is used.
-+ The producer has two main configurations that it uses to determine when to send batches to the broker. The first, `batch.size`, determines the minimum size of the batch, and the second, `linger.ms`, specifies the maximum amount of time to wait for the batch to reach that size. When either the batch size requirement is met, or the wait time has been reached, the batch is sent to the broker.
+- Thông thường sending 1 records trong 1 request có thể dẫn đến overhead of repeated network requests -> Producer thường sẽ gom nhiều message chung 1 partition vào 1 lần gửi. Các message trong 1 batch được buffer lại trên [[RAM]] và được gọi là records batch (như hình trên). *Batching also provides for much more effective compression, when compression is used.*
+- The producer has two main configurations that it uses to determine when to send batches to the broker:
+	- Đầu tiên: `batch.size` -> xác định số lượng minimum message -> số message tối thiểu cần đạt để gửi request.
+	- Thứ hai: `linger.ms` -> maximum amount of time to wait.
+- Chỉ cần đạt được 1 trong 2 điều kiện trên là request sẽ được gửi tới broker.
 
-#### Network Thread Adds Request to Queue
+#### *Network Thread Adds Request to Queue*
 
 ![[../../../../../_images/Kafka/network-thread-adds-request-to-queue.png]]
 
-+ The request first lands in the broker’s socket receive buffer where it will be picked up by a network thread from the pool. That network thread will handle that particular client request through the rest of its lifecycle. The network thread will read the data from the socket buffer, form it into a produce request object, and add it to the request queue.
+- Request sẽ được gửi đến broker’s socket. Sau đó 1 network thread từ pull sẽ tiếp nhận data và đưa vào xử lý. *Network thread này sẽ handle **mọi** request từ client đó*. *The network thread will read the data from the socket buffer, form it into a produce request object, and add it to the request queue*
 
-#### I/O Thread Verifies and Stores the Batch
+#### *I/O Thread Verifies and Stores the Batch*
 
 ![[../../../../../_images/Kafka/io-thread-verifies-record-batch-and-stores.png]]
 
-+ Next, a thread from the I/O thread pool will pick up the request from the queue. The I/O thread will perform some validations, including a CRC check of the data in the request. It will then append the data to the physical data structure of the partition, which is called a commit log.
+- Next, a thread from the I/O thread pool will pick up the request from the queue. I/O thread sẽ thực hiện các validation (bao gồm cả tính [[CRC|CRC checksum]]. Rồi sau đó sẽ append data to the physical data structure of the partition, được gọi là **commit log**.
 
 #### Kafka Physical Storage
 
@@ -255,7 +263,7 @@ alias:
 
 
 
-# Kafka component
+# Kafka ecosystem
 1. Topic là core component của Kafka. Là đơn vị lưu trữu cơ bản trong Kafka. Nó tương đương với table hay collection trong một số DBMS khác -> Dùng name để định danh, chứa các message có chung mục đích. Confluent gọi là: Named container for similar events, hay là: Durable of ***logs*** events
 2. Các records được gọi là message. Chúng phải nằm trong 1 topic nhất định. Message là immutable -> Không thể thay đổi. Các messages có retention time -> config dựa vào size hoặc thời gian.
 3. Topic được break thành các partiotions -> mỗi partion là đơn vị lưu trữ mức vật lý của topic. Nó cũng giống như việc partitions trong các DBMS khác -> act as distributed system.
