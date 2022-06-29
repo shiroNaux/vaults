@@ -122,9 +122,8 @@ alias:
 
 ![[../../../../../_images/Kafka/purgatory-holds-requests-being-replicated.png]]
 
-+ Since the log data is not flushed from the page cache to disk synchronously, Kafka relies on replication to multiple broker nodes, in order to provide durability. By default, the broker will not acknowledge the produce request until it has been replicated to other brokers.
-+ To avoid tying up the I/O threads while waiting for the replication step to complete, the request object will be stored in a map-like data structure called purgatory (it’s where things go to wait).
-+ Once the request has been fully replicated, the broker will take the request object out of purgatory, generate a response object, and place it on the response queue.
+- Để đảm bảo durability, dựa vào replication (synchronously), nên log data sẽ không được *flush from the page cache* -> Kafka sẽ không thừa nhận producer request nếu quá trình replication chưa hoàn thành -> Để giảm I/O trong lúc chờ replication hoàn thành, request object sẽ được lưu dưới dạng map-like data structure gọi là: **purgatory** (đưa vào trạng thái chờ)
+- Một khi quá trình replicated được hoàn thành broker sẽ lấy request object ra khỏi **purgatory** và tạo ra response và đẩy vào response queue
 
 #### Response Added to Socket
 
