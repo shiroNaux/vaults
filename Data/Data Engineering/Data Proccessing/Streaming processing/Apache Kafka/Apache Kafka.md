@@ -108,13 +108,13 @@ alias:
 
 ![[../../../../../_images/Kafka/io-thread-verifies-record-batch-and-stores.png]]
 
-- Next, a thread from the I/O thread pool will pick up the request from the queue. I/O thread sẽ thực hiện các validation (bao gồm cả tính [[CRC|CRC checksum]]. Rồi sau đó sẽ append data to the physical data structure of the partition, được gọi là **commit log**.
+- Next, 1 thread từ I/O thread pool sẽ lấy request từ queue để thực hiện các validation (bao gồm cả tính [[CRC|CRC checksum]]. Rồi sau đó sẽ append data to the physical data structure of the partition, được gọi là **commit log**.
 
 #### Kafka Physical Storage
 
 ![[../../../../../_images/Kafka/kafka-physical-storage.png]]
 
-+ On disk, the commit log is organized as a collection of segments. Each segment is made up of several files. Commit bao gồm các loại file sau:
++ On disk, **commit log** được tổ chức dưới dạng collection of segments. Each segment is made up of several files. **commit log** bao gồm các loại file sau:
 	+ `.log` file, chứa data. 
 	+ `.index` file, chứa index structure. File này sẽ maps offset của record vào `.log` file tương ứng.
 
@@ -129,7 +129,7 @@ alias:
 
 ![[../../../../../_images/Kafka/response-added-to-socket-send-buffer.png]]
 
-+ From the response queue, the network thread will pick up the generated response, and send its data to the socket send buffer. The network thread also enforces ordering of requests from an individual client by waiting for all of the bytes for a response from that client to be sent before taking another object from the response queue.
+- Từ response queue, network thread will sẽ lấy response đã được tạo ra trong **purgatory**, và gửi nó tới socket send buffer. Network thread cũng có nhiệm vụ đảm bảo ordering of requests from an individual client bằng cách: đợi cho tới khi response được gửi hoàn toàn tới client rồi mới lấy response tiếp theo từ response queue.
 
 ### Fetch request
 
