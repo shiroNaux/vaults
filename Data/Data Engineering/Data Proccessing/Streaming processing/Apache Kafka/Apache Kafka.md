@@ -259,6 +259,58 @@ alias:
 
 ## Apache Kafka Control Plane
 
+![[../../../../../_images/Kafka/kafka-manages-data-and-metadata-separately.png]]
+
+### Zookeeper Mode
+
+![[../../../../../_images/Kafka/zookeeper-mode-legacy.png]]
+
+- Historically, the Kafka control plane was managed through an external consensus service called ZooKeeper. One broker is designated as the controller. The controller is responsible for communicating with ZooKeeper and the other brokers in the cluster. The metadata for the cluster is persisted in ZooKeeper.
+
+### KRaft Mode
+
+![[../../../../../_images/Kafka/kraft-mode-nascent.png]]
+
+- Going forward, the Kafka control plane will be based on a new internal feature called KRaft. The dependency on ZooKeeper will be eliminated. In KRaft, a subset of brokers are designated as controllers, and these controllers provide the consensus services that used to be provided by ZooKeeper. All cluster metadata will be stored in Kafka topics and managed internally.
+
+### KRaft Mode Advantages
+
+![[../../../../../_images/Kafka/kraft-mode-advantages.png]]
+
+- **Simpler deployment and administration** – By having only a single application to install and manage, Kafka now has a much smaller operational footprint. This also makes it easier to take advantage of Kafka in smaller devices at the edge
+- **Improved scalability** – As shown in the diagram, recovery time is an order of magnitude faster with KRaft than with ZooKeeper. This allows us to efficiently scale to millions of partitions in a single cluster. With ZooKeeper the effective limit was in the tens of thousands.
+- **More efficient metadata propagation** – Log-based, event-driven metadata propagation results in improved performance for many of Kafka’s core functions
+
+### KRaft Cluster Node Roles
+
+![[../../../../../_images/Kafka/kraft-cluster-mode-roles.png]]
+
+- In KRaft mode, a Kafka cluster can run in dedicated or shared mode. In dedicated mode, some nodes will have their `process.roles` configuration set to `controller`, and the rest of the nodes will have it set to `broker`. For shared mode, some nodes will have `process.roles` set to `controller, broker` and those nodes will do double duty. Which way to go will depend on the size of your cluster
+
+### KRaft Mode Controller
+
+![[../../../../../_images/Kafka/kraft-mode-controller.png]]
+
+- The brokers that serve as controllers, in a KRaft mode cluster, are listed in the `controller.quorum.voters` configuration property that is set on each broker. This allows all of the brokers to communicate with the controllers. One of these controller brokers will be the active controller and it will handle communicating changes to metadata with the other brokers
+- All of the controller brokers maintain an in-memory metadata cache that is kept up to date, so that any controller can take over as the active controller if needed. This is one of the features of KRaft that make it so much more efficient than the ZooKeeper-based control plane
+
+### KRaft Cluster Metadata
+
+![[../../../../../_images/Kafka/kraft-cluster-metadata.png]]
+
+- KRaft is based upon the Raft consensus protocol which was introduced to Kafka as part of KIP-500 with additional details defined in other related KIPs. In KRaft mode, cluster metadata, reflecting the current state of all controller managed resources, is stored in a single partition Kafka topic called `__cluster_metadata`. KRaft uses this topic to synchronize cluster state changes across controller and broker nodes.
+- The active controller is the leader of this internal metadata topic’s single partition. Other controllers are replica followers. Brokers are replica observers. So, rather than the controller broadcasting metadata changes to the other controllers or to brokers, they each fetch the changes. This makes it very efficient to keep all the controllers and brokers in sync, and also shortens restart times of brokers and controllers.
+
+### KRaft Metadata Replication
+
+![[../../../../../_images/Kafka/kraft-metadata-replication.png]]
+
+- Since cluster metadata is stored in a Kafka topic, replication of that data is very similar to what we saw in the data plane replication module. The active controller is the leader of the metadata topic’s single partition and it will receive all writes. The other controllers are followers and will fetch those changes. We still use offsets and leader epochs the same as with the data plane. However, when a leader needs to be elected, this is done via quorum, rather than an in-sync replica set. So, there is no ISR involved in metadata replication. Another difference is that metadata records are flushed to disk immediately as they are written to each node’s local log.
+
+### Leader Election
+
+- 
+
 ## Consumer Group Protocol
 
 ## Data Durability and Availability Guarantees
