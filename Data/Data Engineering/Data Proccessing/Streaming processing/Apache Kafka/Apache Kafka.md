@@ -309,13 +309,60 @@ alias:
 
 ### Leader Election
 
-- 
+- Controller leader election is required when the cluster is started, as well as when the current leader stops, either as part of a rolling upgrade or due to a failure. Let’s now take a look at the steps involved in KRaft leader election.
+
+#### Vote Request
+
+![[../../../../../_images/Kafka/leader-election-step-1-vote-request.png]]
+
+- When the leader controller needs to be elected, the other controllers will participate in the election of a new leader. A controller, usually the one that first recognized the need for a new leader, will send a `VoteRequest` to the other controllers. This request will include the candidate’s last offset and the epoch associated with that offset. It will also increment that epoch and pass it as the candidate epoch. The candidate controller will also vote for itself for that epoch.
+
+#### Vote Response
+
+![[../../../../../_images/Kafka/leader-election-step-2-vote-response.png]]
+
+- When a follower controller receives a `VoteRequest` it will check to see if it has seen a higher epoch than the one being passed in by the candidate. If it has, or if it has already voted for a different candidate with that same epoch, it will reject the request. Otherwise it will look at the latest offset passed in by the candidate and if it is the same or higher than its own, it will grant the vote. That candidate controller now has two votes: its own and the one it was just granted. The first controller to achieve a majority of the votes becomes the new leader.
+
+#### Completion
+
+![[../../../../../_images/Kafka/leader-election-step-3-completion.png]]
+
+- Once a candidate has collected a majority of votes, it will consider itself the leader but it still needs to inform the other controllers of this. To do this the new leader will send a `BeginQuorumEpoch` request, including the new epoch, to the other controllers. Now the election is complete. When the old leader controller comes back online, it will follow the new leader at the new epoch and bring its own metadata log up to date with the leader
+
+### Metadata Replica Reconciliation
+
+![[../../../../../_images/Kafka/metadata-replica-reconciliation.png]]
+
+- After a leader election is complete a log reconciliation may be required. In this case the reconciliation process is the same that we saw for topic data in the data plane replication module. Using the epoch and offsets of both the followers and the leader, the follower will truncate uncommitted records and bring itself in sync with the leader.
+
+### KRaft Cluster Metadata Snapshot
+
+![[../../../../../_images/Kafka/kraft-cluster-metadata.png]]
+
+- There is no clear point at which we know that cluster metadata is no longer needed, but we don’t want the metadata log to grow endlessly. The solution for this requirement is the metadata snapshot. Periodically, each of the controllers and brokers will take a snapshot of their in-memory metadata cache. This snapshot is saved to a file identified with the end offset and controller epoch. Now we know that all data in the metadata log that is older than that offset and epoch is safely stored, and the log can be truncated up to that point. The snapshot, together with the remaining data in the metadata log, will still give us the complete metadata for the whole cluster
+
+### When a Snapshot Is Read
+
+- Two primary uses of the metadata snapshot are broker restarts and new brokers coming online
+
+![[../../../../../_images/Kafka/when-snapshot-is-read.png]]
+
+- When an existing broker restarts, it (1) loads its most recent snapshot into memory. Then starting from the `EndOffset` of its snapshot, it (2) adds available records from its local `__cluster_metadata` log. It then (3) begins fetching records from the active controller. If the fetched record offset is less than the active controller `LogStartOffset`, the controller response includes the snapshot ID of its latest snapshot. The broker then (4) fetches this snapshot and loads it into memory and then once again continues fetching records from the `__cluster_metadata` partition leader (the active controller).
+- When a new broker starts up, it (3) begins fetching records for the first time from the active controller. Typically, this offset will be less than the active controller `LogStartOffset` and the controller response will include the snapshot ID of its latest snapshot. The broker (4) fetches this snapshot and loads it into memory and then once again continues fetching records from the `__cluster_metadata` partition leader (the active controller).
 
 ## Consumer Group Protocol
 
 ## Data Durability and Availability Guarantees
 
+## Transactions
 
+## Topic Compaction
+
+## Tiered Storage
+
+## Cluster Elasticity
+
+## Geo-Replication
 
 # Kafka ecosystem
 1. Topic là core component của Kafka. Là đơn vị lưu trữu cơ bản trong Kafka. Nó tương đương với table hay collection trong một số DBMS khác -> Dùng name để định danh, chứa các message có chung mục đích. Confluent gọi là: Named container for similar events, hay là: Durable of ***logs*** events
