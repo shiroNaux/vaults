@@ -135,8 +135,9 @@ alias:
 
 ![[../../../../../_images/Kafka/fetch-requests.png]]
 
-- Đối với phía consume, mỗi consumer client sẽ gửi 1 fetch request to the broker, trong đó nêu rõ topic, partition, and offset it wants to consume. The fetch request goes to the broker’s socket receive buffer where it is picked up by a network thread. The network thread puts the request in the request queue, as was done with the produce request.
-- The I/O thread will take the offset that is included in the fetch request and compare it with the `.index` file that is part of the partition segment. That will tell it exactly the range of bytes that need to be read from the corresponding `.log` file to add to the response object.
+- Đối với phía consume, mỗi consumer client sẽ gửi 1 fetch request to the broker, trong đó nêu rõ topic, partition, và offset mà client muốn consume. Fetch request đi tới broker’s socket receive buffer. Tại đây 1 network thread sẽ tiếp nhận request. Network thread sẽ để request vào trong queue, quá trình này tương tự với produce request.
+- I/O thread sẽ lấy offset được gắn trong fetch request và so sánh nó với `.index` file (1 thành phần của *partition segment*). Từ đó sẽ biết được chính xác vị trí của `.log` file chứa data cần được trả về
+- Tuy nhiên, việc trả về 1 response mỗi khi tìm được 1 record hay ngay kể cả khi không tìm được record thích hợp -> *inefficient*. 
 - However, it would be inefficient to send a response with every record fetched, or even worse, when there are no records available. To be more efficient, consumers can be configured to wait for a minimum number of bytes of data, or to wait for a maximum amount of time before returning a response to a fetch request. While waiting for these criteria to be met, the fetch request is sent to purgatory.
 - Once the size or time requirements have been met, the broker will take the fetch request out of purgatory and generate a response to be sent back to the client. The rest of the process is the same as the produce request.
 
