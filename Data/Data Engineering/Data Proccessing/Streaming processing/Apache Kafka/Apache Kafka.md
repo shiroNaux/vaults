@@ -137,7 +137,11 @@ alias:
 
 - Đối với phía consume, mỗi consumer client sẽ gửi 1 fetch request to the broker, trong đó nêu rõ topic, partition, và offset mà client muốn consume. Fetch request đi tới broker’s socket receive buffer. Tại đây 1 network thread sẽ tiếp nhận request. Network thread sẽ để request vào trong queue, quá trình này tương tự với produce request.
 - I/O thread sẽ lấy offset được gắn trong fetch request và so sánh nó với `.index` file (1 thành phần của *partition segment*). Từ đó sẽ biết được chính xác vị trí của `.log` file chứa data cần được trả về
-- Tuy nhiên, việc trả về 1 response mỗi khi tìm được 1 record hay ngay kể cả khi không tìm được record thích hợp -> *inefficient*. 
+- Tuy nhiên, việc trả về 1 response mỗi khi tìm được 1 record hay ngay kể cả khi không tìm được record thích hợp -> *inefficient*.  Để hiệu quả hơn, consumers có thể set các config
+	- wait for a minimum number of bytes of data
+	- wait for a maximum amount of time
+	=> Trong lúc chờ đợi fetch request sẽ được gửi tới *purgatory*
+	=> Chỉ cần 1 trong 2 điều kiện này đạt được, gửi fetch request -> *purgatory*
 - However, it would be inefficient to send a response with every record fetched, or even worse, when there are no records available. To be more efficient, consumers can be configured to wait for a minimum number of bytes of data, or to wait for a maximum amount of time before returning a response to a fetch request. While waiting for these criteria to be met, the fetch request is sent to purgatory.
 - Once the size or time requirements have been met, the broker will take the fetch request out of purgatory and generate a response to be sent back to the client. The rest of the process is the same as the produce request.
 
@@ -150,16 +154,17 @@ alias:
 
 ### Leader, Follower, and In-Sync Replica (ISR) List
 
-- Trong số N replicas, sẽ có 1 replica được gọi là leader -> broker chứa replica đó được coi là leader của partition. Các replicas còn lại được gọi là followers.
--  Producers will write to the leader replica and the followers will fetch the data in order to keep in sync with the leader. Consumers also, generally, fetch from the leader replica, but they can be configured to fetch from followers.
+- Trong số N replicas của partition, sẽ có 1 replica được gọi là leader -> broker chứa replica đó được coi là leader của partition. Các replicas còn lại được gọi là followers.
+- Producers sẽ ghi data vào leader replica và các followers sẽ fetch data để giữ trạng thái dồng bộ với leader. Consumers mặc định sẽ fetch từ leader replica, tuy nhiên có thể config để fetch từ followers
 
 ![[../../../../../_images/Kafka/leader-follower-isr-list.png]]
 
-- The partition leader, along with all of the followers that have caught up with the leader, will be part of the in-sync replica set (ISR). In the ideal situation, all of the replicas will be part of the ISR.
+- Partition leader cùng với những replica khác có cùng data như leader được gọi là *in-sync replica set* (ISR).
 
 ### Leader Epoch
 
-- Each leader is associated with a unique, monotonically increasing number called the leader epoch. The epoch is used to keep track of what work was done while this replica was the leader and it will be increased whenever a new leader is elected.
+- Mỗi leader có 1 unique, monotonically increasing number gọi là leader **epoch**.
+- The epoch is used to keep track of what work was done while this replica was the leader and it will be increased whenever a new leader is elected.
 
 ![[../../../../../_images/Kafka/leader-epoch.png]]
 
