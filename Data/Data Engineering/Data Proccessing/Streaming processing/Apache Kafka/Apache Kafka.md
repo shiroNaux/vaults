@@ -141,13 +141,11 @@ alias:
 	- wait for a minimum number of bytes of data
 	- wait for a maximum amount of time
 	=> Trong lúc chờ đợi fetch request sẽ được gửi tới *purgatory*
-	=> Chỉ cần 1 trong 2 điều kiện này đạt được, gửi fetch request -> *purgatory*
-- However, it would be inefficient to send a response with every record fetched, or even worse, when there are no records available. To be more efficient, consumers can be configured to wait for a minimum number of bytes of data, or to wait for a maximum amount of time before returning a response to a fetch request. While waiting for these criteria to be met, the fetch request is sent to purgatory.
-- Once the size or time requirements have been met, the broker will take the fetch request out of purgatory and generate a response to be sent back to the client. The rest of the process is the same as the produce request.
+	=> Chỉ cần 1 trong 2 điều kiện này đạt được, broker sẽ lấy fetch request ra khỏi *purgatory* và trả response về phía client. Các quá trình khác cũng giống như *produce request*
 
 ## Data plane: Replication Protocol
 
-- replication is enabled at the topic level
+- Replication hoạt động ở topic level
 - Replication được khai báo trong lúc tạo partition. Ngoài ra có thể set giá trị mặc định cho replication factor -> không cần define lại mỗi lần tạo topic
 
 ![[../../../../../_images/Kafka/kafka-data-replication.png]]
@@ -163,7 +161,8 @@ alias:
 
 ### Leader Epoch
 
-- Mỗi leader có 1 unique, monotonically increasing number gọi là leader **epoch**.
+- Mỗi leader có 1 giá trị unique, là monotonically increasing number gọi là leader **epoch**.
+- Giá trị này
 - The epoch is used to keep track of what work was done while this replica was the leader and it will be increased whenever a new leader is elected.
 
 ![[../../../../../_images/Kafka/leader-epoch.png]]
