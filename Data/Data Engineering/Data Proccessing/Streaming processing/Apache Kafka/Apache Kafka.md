@@ -11,10 +11,10 @@ alias:
 ## Ưu điểm của Kafka
 - Distributed, resilient architecture, fault tolerant
 - Horizontal scalability
-	- ~ 100 brokers $10^6$
-	- -> $n*10^6$  messages / seconds
-	- low latency  (~ mili second)
-	- high performance
+	- ~ 100 brokers
+	- lên tới -> $n*10^6$  messages / seconds
+	- Low latency  (~ mili second)
+	- High performance
 
 ## Use cases
 - Messaging system
@@ -162,7 +162,7 @@ alias:
 ### Leader Epoch
 
 - Mỗi leader có 1 giá trị unique, là monotonically increasing number gọi là leader **epoch**.
-- Giá trị này
+- Giá trị này dùng để keep track 
 - The epoch is used to keep track of what work was done while this replica was the leader and it will be increased whenever a new leader is elected.
 
 ![[../../../../../_images/Kafka/leader-epoch.png]]
@@ -171,13 +171,14 @@ alias:
 
 ![[../../../../../_images/Kafka/follower-fetch-request.png]]
 
-- Whenever the leader appends new data into its local log, the followers will issue a fetch request to the leader, passing in the offset at which they need to begin fetching.
+- Mỗi khi leader nhận thêm data vào local log, followers sẽ thực hiện 1 fetch request tới leader, gửi kèm là giá trị offset mà nó cần lấy dữ liệu.
 
 ### Follower Fetch Response
 
 ![[../../../../../_images/Kafka/follower-fetch-response.png]]
 
 - The leader will respond to the fetch request with the records starting at the specified offset. The fetch response will also include the offset for each record and the current leader epoch. The followers will then append those records to their own local logs.
+- Leader sẽ response những records được chỉ định bởi offset mà fetch request gửi
 
 ### Committing Partition Offsets
 
