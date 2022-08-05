@@ -41,3 +41,4 @@ Ngoài ra, môi trường dev còn có thêm 1 số servcies khác
 # Build a custom Image
 - Superset cung cấp sẵn `Dockerfile` để dev có thể tự tạo image cho các mục đích riêng.
 - `Dockerfile` của superset sử dụng **multi-stage build** -> dễ dàng chỉnh sửa các thành phần của image cuối cùng theo từng stage
+- Docker image chỉ tạo folder `pythonpath` chứ không đưa bất cứ file nào vào -> Nếu muốn overwrite lại các config -> mount volume hoặc dùng secret, env
