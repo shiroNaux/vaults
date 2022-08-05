@@ -24,7 +24,7 @@ Ngoài ra, môi trường dev còn có thêm 1 số servcies khác
 	2. Chạy lệnh upgrade database, nếu schema đã có sẵn -> upgrade, nếu trống -> tạo mới chema và insert các data cơ bản (`role`, `permission`,...)
 	-> Hiện tại đang thấy file compose của superset không có option set password của `admin`, trong file `docker-init.sh` đang fix cứng giá trị này là: `admin` -> Nếu muốn thay đổi giá trị này -> sửa file `docker-init.sh`
 	3. Setup `admin` user sử dụng lệnh `superset fab`
-	> :warning: Hiện tại đang thấy file compose của superset không có option set password của `admin`, trong file `docker-init.sh` đang fix cứng giá trị này là: `admin` -> Nếu muốn thay đổi giá trị này -> sửa file `docker-init.sh`
+	> ⚠️⚠️ Hiện tại đang thấy file compose của superset không có option set password của `admin`, trong file `docker-init.sh` đang fix cứng giá trị này là: `admin` -> Nếu muốn thay đổi giá trị này -> sửa file `docker-init.sh`
 
 3. Tất cả các [[container]] đều có entrypoint là file `docker-bootstrap.sh`, mỗi container sẽ truyền argument thích hợp với nhiệm vụ của nó khi chạy.
 	1. App container: chạy superset app
