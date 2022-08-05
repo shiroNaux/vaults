@@ -29,7 +29,7 @@ Ngoài ra, môi trường dev còn có thêm 1 số servcies khác
 3. Tất cả các [[container]] đều có entrypoint là file `docker-bootstrap.sh`, mỗi container sẽ truyền argument thích hợp với nhiệm vụ của nó khi chạy.
 	1. App container: chạy superset app
 		> The “webserver” that ships with flask (e.g. “app.run()”) is really great for local development. And that’s about it. It isn’t designed to take the abuse that a normal webserver receives
-		
+
 		Do đó khi chạy superset trong production nên dùng `app-unicorn`, và `app` chỉ nên chạy trên local development
 	2. Superset worker
 	3. Superset worker beat
