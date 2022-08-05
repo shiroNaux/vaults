@@ -36,6 +36,7 @@ Ngoài ra, môi trường dev còn có thêm 1 số servcies khác
 4. Ngoài ra có một số [[container]] dùng cho developemnt
 	1. Superset node: Chạy trên node image, ***mount volume chung*** với các image chạy app -> mỗi khi code có thay đổi thì run build lại (dùng `webpack --watch`)
 	2. Superset websocket
+3. Các container đều sử dụng file `.env` hoặc `.env-non-dev` 
 ---
 # Build a custom Image
 - Superset cung cấp sẵn `Dockerfile` để dev có thể tự tạo image cho các mục đích riêng.
