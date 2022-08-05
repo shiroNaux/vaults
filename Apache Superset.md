@@ -36,7 +36,7 @@ Ngoài ra, môi trường dev còn có thêm 1 số servcies khác
 4. Ngoài ra có một số [[container]] dùng cho developemnt
 	1. Superset node: Chạy trên node image, ***mount volume chung*** với các image chạy app -> mỗi khi code có thay đổi thì run build lại (dùng `webpack --watch`)
 	2. Superset websocket
-3. Các container đều sử dụng file `.env` hoặc `.env-non-dev`. Trong các file này, các giá trị được sử dụng là `DATABASE_DB` chứ ko phải là `POSTGRES_DB`. Ngoài ra các container đều mount volume `pythonpath_dev`. Nó chứa các scripts python. Trong đó có `superset_config.py` dùng để overwrite các config mặc định.
+3. Các container đều sử dụng file `.env` hoặc `.env-non-dev`. Trong các file này, các giá trị được sử dụng là `DATABASE_DB` chứ ko phải là `POSTGRES_DB`. Ngoài ra các container đều mount volume `pythonpath_dev`. Nó chứa các scripts python. Trong đó có `superset_config.py` dùng để overwrite các config mặc định. Tuy nhiên, các files trong `pythonpath_dev` sẽ được mount vào container trong `docker-compose.yaml` file. Còn nếu deploy bằng [[Kubernetes]] sẽ phải sử dụng các `secrets` hay `configMap`
 ---
 # Build a custom Image
 - Superset cung cấp sẵn `Dockerfile` để dev có thể tự tạo image cho các mục đích riêng.
