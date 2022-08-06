@@ -13,7 +13,7 @@ Các services trong docker compose của superset
 - Superset worker beat -> check health của worker
 
 Ngoài ra, môi trường dev còn có thêm 1 số servcies khác
-- Superset node
+- Superset node (là nodeJs, khác với services trong [[Kubernetes]] là node compute)
 - Superset web-socket
 
 ## Cách hoạt động
