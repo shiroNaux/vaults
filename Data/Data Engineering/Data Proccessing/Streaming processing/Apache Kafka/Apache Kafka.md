@@ -177,15 +177,14 @@ alias:
 
 ![[../../../../../_images/Kafka/follower-fetch-response.png]]
 
-- The leader will respond to the fetch request with the records starting at the specified offset. The fetch response will also include the offset for each record and the current leader epoch. The followers will then append those records to their own local logs.
-- Leader sẽ response những records được chỉ định bởi offset mà fetch request gửi
+- Leader sẽ response những records được chỉ định bởi offset mà fetch request gửi đến. Fetch response sẽ trả về offset tương ứng với từng records; kèm theo đó là giá trị *leader epoch* hiện tại. Các followers sẽ append những records này vào *local logs*
 
 ### Committing Partition Offsets
 
 ![[../../../../../_images/Kafka/committing-partition-offsets.png]]
 
-- Once all of the followers in the ISR have fetched up to a particular offset, the records up to that offset are considered committed and are available for consumers. This is designated by the high watermark.
-- The leader is made aware of the highest offset fetched by the followers through the offset value sent in the fetch requests. For example, if a follower sends a fetch request to the leader that specifies offset 3, the leader knows that this follower has committed all records up to offset 3. Once all of the followers have reached offset 3, the leader will advance the high watermark accordingly.
+- Khi mà tất cả các followers trong ISR đã fetch đầy đủ offset, những records phía trước offset đó được coi là `commited` và available for consumers. ***This is designated by the high watermark***.
+- Leader sẽ coi giá trị offset mà followers gửi đến là giá trị mà follower đó xác nhận là `commited`, và nếu mọi followers đều đạt tới giá trị offset đó -> the leader will advance the high watermark accordingly
 
 ### Advancing the Follower High Watermark
 
