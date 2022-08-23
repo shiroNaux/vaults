@@ -5,6 +5,7 @@ System Testing
 > Server testing is a process to ensure that all services are stable, a server is secure, and it can withstand high load. As a rule, a testing suite includes a series of test cases to demonstrate the high-level performance and speed.
 
 - System testing thường được thực hiện sau khi hệ thống đã được tích hợp đầy đủ các thành phần và chuẩn bị đưa vào hoạt động
+- Sau quá trình kiểm thử, cần có 1 quá trình cải thiện hiệu năng dựa vào những kết quả thu được từ quá trình testing
 
 1. Phân loại
 	- ***Performance testing***: Kiểm thử hiệu năng của hệ thống. Bao gồm các testing khác:
@@ -25,6 +26,22 @@ System Testing
 	2. Tìm ra khoảng làm việc phù hợp với tài nguyên của hệ thống
 	3. Phát hiện các lỗi tiềm ẩn, chưa xuất hiện trong các quá trình kiểm thử khác
 	4. Cải thiện hiệu suất hệ thống
+
+3. Các thông số giám sát
+	- Response time: Tổng thời gian từ lúc gửi request và hoàn thành mọi response, xử lý và hiển thị ra cho người dùng
+	- Waite time: Khoảng thời gian chờ giữa lúc gửi thành công request và lúc nhận được response đầu tiên
+	- Average load time: Thời gian trung bình để từ lúc hoàn thành action đến lúc gửi request thành công
+	- Peak response time
+	- Error rate
+	- Concurrent users
+	- Requests per second
+	- Transactions passed/failed
+	- Throughput
+	- [[CPU]] utilization
+	- [[RAM|Memory]] utilization
+	- [[Disk]] usage
+	- Network utilization
+
 
 # References
 1. [What is Server Testing? An Introduction To Server Testing | Orangesoft](https://orangesoft.co/blog/introduction-to-server-testing
