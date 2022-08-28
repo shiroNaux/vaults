@@ -1,7 +1,7 @@
 ---
 ---
 # Postgres Statistics
-- PostgreSQL has an undeniably clever query planning system that auto-tunes based on the data in the system. It samples tables to gain statistics about the distribution of data, and uses those statistics to choose the order of joins and filters applied to the data for the most efficient query execution
+- [[PostgreSQL]] has an undeniably clever query planning system that auto-tunes based on the data in the system. It samples tables to gain statistics about the distribution of data, and uses those statistics to choose the order of joins and filters applied to the data for the most efficient query execution
 - Even more amazing, the query planning system is modular enough to integrate user-defined data types, like the `geometry` and `geography` types in [[PostGIS]]. So complex queries involving spatial filters are also correctly planned on-the-fly.
 
 ## Statistics Targets
@@ -47,7 +47,7 @@ An ordinary filter on numbers or strings or dates might define an equality or a 
 
 Here's two spatial filters, which one do you suppose is more selective?
 
-The red one, right? Just like our SQL example above on ages, the smaller rectangle must return fewer records. Except not necessarily. Suppose our data table looked like this.
+The red one, right? Just like our [[SQL]] example above on ages, the smaller rectangle must return fewer records. Except not necessarily. Suppose our data table looked like this.
 
 So the blue box is selective and should use an index scan and the red one should use a sequence scan.
 
@@ -63,9 +63,9 @@ For spatial data types, the system builds a spatial histogram of frequencies of 
 
 Instead of being a potentially unconstrained collection of maybe millions of spatial objects, the database now just has to make a quick summary of a few cells in a histogram to get an estimate of how many features a given query filter will return.
 
-The spatial statistics analyzer in PostGIS is actually a little more sophisticated than that: before filling out the histogram it adjusts the cell widths for each dimension, to try and catch more resolution in places where the data is more dense.
+The spatial statistics analyzer in [[PostGIS]] is actually a little more sophisticated than that: before filling out the histogram it adjusts the cell widths for each dimension, to try and catch more resolution in places where the data is more dense.
 
-All these statistics do have a cost. Increasing statistics targets will make the `ANALYZE` command run a little slower, as it samples more data. It will also make the planning stage of queries slower, as the larger collection of statistics need to be read through and compared to the filters and joins in the SQL. However, for complex BI queries, more statistics are almost always worth while to get a better plan for a complex query.
+All these statistics do have a cost. Increasing statistics targets will make the `ANALYZE` command run a little slower, as it samples more data. It will also make the planning stage of queries slower, as the larger collection of statistics need to be read through and compared to the filters and joins in the [[SQL]]. However, for complex BI queries, more statistics are almost always worth while to get a better plan for a complex query.
 
 # Conclusion
 -   PostgreSQL has an undeniably clever query planning system which auto-tunes based on the data in the system.
