@@ -37,8 +37,14 @@ The other machines in the cluster are designated as **nodes** -> accepting and 
 - Mỗi loại lại có 1 chức năng riêng biệt là quản lý các chức năng của Kubernetes
 - Ty có nhiều loại controller khác nhau, và mỗi loại lại được chạy bởi 1 [[process]] rieeng, nhưng chúng đều được compiled chung trong 1 binary
 ### 4. kube-scheduler
-- The process that actually assigns workloads to specific nodes in the cluster is the scheduler. This service reads in a workload’s operating requirements, analyzes the current infrastructure environment, and places the work on an acceptable node or nodes.
-- The scheduler is responsible for tracking available capacity on each host to make sure that workloads are not scheduled in excess of the available resources. The scheduler must know the total capacity as well as the resources already allocated to existing workloads on each server.
+- Scheduler có nhiệm vụ giám sát available capacity trên các node trong cluster. Và mỗi khi nhận được workload’s operating requirements, nó sẽ phân tích, tính toán và đưa ra quyết định assign workload vào 1 hoặc nhiều node 1 một cách hợp lý sao cho không có node nào phải chạy vượt quá lượng tài nguyên mà node đó có.
+- Các yếu tố ảnh hưởng tới quyết định của scheduler bao gồm
+	- individual and collective resource requirements
+	- hardware/software/policy constraints
+	- affinity and anti-affinity specifications
+	- data locality
+	- inter-workload interference
+	- deadlines
 
 ### 5. cloud-controller-manager
 
