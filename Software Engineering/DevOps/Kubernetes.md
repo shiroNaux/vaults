@@ -6,7 +6,7 @@
 
 
 # Architecture
-
+## Basic info
 - Written in [[go lang]]
 
 ## Master-Slave architecture
@@ -47,9 +47,27 @@ The other machines in the cluster are designated as **nodes** -> accepting and 
 	- deadlines
 
 ### 5. cloud-controller-manager
+- cloud-controller-manager liên kết với các Cloud provider's [[API]]. Loại controller này chỉ xuất hiện khi sử dụng Kubernetes trên cloud (**SaaS hay IaaS**)
+- cloud-controller-manager có nhiệm tách riêng các tài nguyên nằm trong cụm Kubernetes của nó ra khỏi các tài nguyên trên cloud khác không liên quan đến cluster -> cô lập cluster khỏi các thành phần khác
+- Bao gồm các thành phần
+	- Node controller: For checking the cloud provider to determine if a node has been deleted in the cloud after it stops responding
+	- Route controller: For setting up routes in the underlying cloud infrastructure
+	- Service controller: For creating, updating and deleting cloud provider load balancers
 
 ## Node components
 - Các thành phần mà 1 node cần có, bao gồm cả control plane
+
+### 1. kubelet
+### 2. kube-proxy
+### 3. Container runtime
+
+## Addons
+- Addons là các tài nguyên thứ cấp. Chúng sử dụng các services (DaemonSet, Deployment, ... được tạo nên bởi các tài nguyên cơ bản) để hình thành nên cá tính năng, tài nguyên mới của cụm Kubernetes
+
+### 1. DNS
+### 2. Web UI (Dashboard)
+### 3. Container Resource Monitoring
+### 4. Cluster-level Logging
 
 # References
 1. https://kubernetes.io/docs/concepts/architecture/
