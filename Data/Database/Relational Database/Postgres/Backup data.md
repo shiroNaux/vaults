@@ -6,3 +6,7 @@
 
 # Using
 
+```
+pg_dump database_name > file-name.sql
+```
+
