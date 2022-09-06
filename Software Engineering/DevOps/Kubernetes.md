@@ -103,18 +103,29 @@ Có 2 cách để add 1 node vào cluster
 - When the kubelet flag `--register-node` is true (the default), the kubelet will attempt to register itself with the API server. This is the preferred pattern, used by most distros.
 #### Manual node administration
 - Sử dụng `kubectl` để add node 1 cách thủ công
-### 4. Heartbeats
+### 3. Heartbeats
 - Là tín hiệu được node gửi đến control plane để xác định tình trạng hiện tại của node
 - Nếu node đang ở trạng thái failed thì cluster sẽ thực hiện các actions cần thiết
-- Heartbeats của node chia ra làm 2 dạng:
-	- updates to the `.status` of a Node
-	- 
-### 5. Node controller
-### 6. Resource capacity tracking
-### 7. Node topology
+- Để update heartbeats của node có 2 phương thức:
+	- updates `.status` của node
+	- Thực hiện *lease* objects trong namespace `kube-node-lease`. Mỗi Node sẽ có 1 _lease_ object tương ứng
+- *kubelet* có trách nhiệm update heartbeat của Node
+	- Update `.status` của node được thực hiện theo _interval_ với giá trị mặc định 5 phút 1 lần(việc update luôn được thực hiện kể cả giá trị `.status` có tahy đổi hay không). 
+	- Đối với _lease_ object, kubelet sẽ thực hiện mỗi 10s. Nếu update thất bại, kubelet sẽ retries với cơ chế [[exponential backoff]] bắt đầu với 200ms và giới hạn ở 7s
+### 4. Node controller
+- Là thành phần nằm trong _control plane_, có nhiệm vụ quản lý các Nodes
+- Gán [[CIDR]] cho Node khi cần
+- Đảm bảo trạng thái của các Nodes trên control plane giống như trạng thái của các machine trên cloud.Nếu sử dụng trên các nền tảng cloud, khi có 1 Node nào đó unavailable, node controller sẽ hỏi provider xem machine tương ứng với Node còn hoạt động được ko. nếu không -> xóa Node khỏi cluster
+- Nhiệm vụ tiếp theo của node controller là giám sát trạng thái của node. Node cotroller sẽ check trạng thái của node mỗi 5s.
+	- Nếu node rơi vào trạng thái unreachable -> update giá trị `.status` của node thành `unknown`
+	- Nếu node vẫn ỏ trạng thái unreachable sau 1 khoảng thời gian (mặc định là 5 phút), thì node controller sẽ thực hiện *API-initiated eviction* đối với mọi pod trong node đó để loại bỏ chúng khỏi cluster
+#### Rate limit on eviction
+- Số lượng pod bị evict khỏi node sẽ bị giới hạn (giá trị mặc định là 0.1 -> không loại bỏ quá 1 pod khỏi node trong 10s)
+- Nếu Kubernetes được triển khai trên nhiều availability zone thì giá trị này sẽ thay đổi theo từng zone kèm theo nhiều điều kiện khác (số node, tỉ lệ node chết, ...)
 ### 8. Graceful node shutdown
 ### 9. None graceful shutdown
 ### 10. Swap memory management
+- Từ phiện bản 1.22, Kubernetes hỗ trợ node sử dụng swap. Config theo từng node
 
 
 
