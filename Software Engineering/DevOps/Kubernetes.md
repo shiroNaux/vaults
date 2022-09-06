@@ -104,7 +104,11 @@ Có 2 cách để add 1 node vào cluster
 #### Manual node administration
 - Sử dụng `kubectl` để add node 1 cách thủ công
 ### 4. Heartbeats
-- Là tín hiệu được node gửi đến control plane để xác định tình trạng hiện tại của node -> thực hiện các actions khi ở trạng thái failed
+- Là tín hiệu được node gửi đến control plane để xác định tình trạng hiện tại của node
+- Nếu node đang ở trạng thái failed thì cluster sẽ thực hiện các actions cần thiết
+- Heartbeats của node chia ra làm 2 dạng:
+	- updates to the `.status` of a Node
+	- 
 ### 5. Node controller
 ### 6. Resource capacity tracking
 ### 7. Node topology
