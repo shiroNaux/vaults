@@ -82,7 +82,7 @@ The other machines in the cluster are designated as **nodes** -> accepting and 
 - general purpose, web-based UI for Kubernetes clusters
 - Cho phép người dùng quản lý cluster thông qua Web UI
 ### 3. Container Resource Monitoring
-- Ghi lại các time-series metrics về các container, lưu lại trong central database
+- Ghi lại các time-series metrics về các container, lưu lại trong central [[database]]
 - Cung cấp UI để access data
 ### 4. Cluster-level Logging
 - Mục đích: Lưu lại log của container ra central log store with search/browsing interface
@@ -94,11 +94,23 @@ The other machines in the cluster are designated as **nodes** -> accepting and 
 - Trong trường hợp có 2 node cùng tên: Kubernetes sẽ coi đó là 2 node mà có cùng state (network settings, root disk contents, ...) và các attributes như node labels -> có thể dẫn inconsistencies nếu 1 trong 2 node thay đổi các trạng thái mà không đổi tên
 - Nếu cần phải thay thế node hoặc thực hiện các thay đổi có sự ảnh hưởng lớn, thì đầu tiên, node hiện tại phải được loại bỏ khỏi [[API]] server và sau đó re-added sau khi đã thay đổi
 
-### 2. Manual Node administration
-### 3. Node status
-#### Address
-#### conditions
-#### Capacity & Allocatable
+### 2. Management
+Có 2 cách để add 1 node vào cluster
+- kubelet trên node sẽ tự register node đó với control plane
+- Người sử dụng sẽ add thủ công
+
+#### Self-registration
+- When the kubelet flag `--register-node` is true (the default), the kubelet will attempt to register itself with the API server. This is the preferred pattern, used by most distros.
+#### Manual node administration
+- Sử dụng `kubectl` để add node 1 cách thủ công
+### 4. Heartbeats
+- Là tín hiệu được node gửi đến control plane để xác định tình trạng hiện tại của node -> thực hiện các actions khi ở trạng thái failed
+### 5. Node controller
+### 6. Resource capacity tracking
+### 7. Node topology
+### 8. Graceful node shutdown
+### 9. None graceful shutdown
+### 10. Swap memory management
 
 
 
