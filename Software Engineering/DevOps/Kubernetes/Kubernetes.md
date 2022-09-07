@@ -13,7 +13,7 @@
 
 A Kubernets cluster is composed of many machines, each one called **node** and has it's roles and duties. Node có thể là VM hay physical machine. Kubernetes follow Master-Slave architecture. It has a centralized controller called master node or control plane (***minimal cluster***).
 
-![[../../_images/0 4NDfryrEmVpo2UOp.png]]
+![[../../../_images/0 4NDfryrEmVpo2UOp.png]]
 
 This server acts as a gateway by exposing an [[API]] for users and clients, health checking other servers, deciding how best to split up and assign work (known as “scheduling”). 
 The other machines in the cluster are designated as **nodes** -> accepting and running workloads using local and external resources. To help with isolation, management, and flexibility, Kubernetes runs applications and services in [[container|containers]], so each node needs to be equipped with a container runtime (like [[Docker]] or rkt). The node receives work instructions from the master server and creates or destroys containers accordingly, adjusting networking rules to route and forward traffic appropriately
@@ -35,7 +35,7 @@ The other machines in the cluster are designated as **nodes** -> accepting and 
 	- Endpoints controller: Populates the Endpoints object (that is, joins Services & Pods).
 	- Service Account & Token controllers: Create default accounts and API access tokens for new namespaces.
 - Mỗi loại lại có 1 chức năng riêng biệt là quản lý các chức năng của Kubernetes
-- Ty có nhiều loại controller khác nhau, và mỗi loại lại được chạy bởi 1 [[process]] rieeng, nhưng chúng đều được compiled chung trong 1 binary
+- Ty có nhiều loại controller khác nhau, và mỗi loại lại được chạy bởi 1 [[process]] riêng, nhưng chúng đều được compiled chung trong 1 binary
 ### 4. kube-scheduler
 - Scheduler có nhiệm vụ giám sát available capacity trên các node trong cluster. Và mỗi khi nhận được workload’s operating requirements, nó sẽ phân tích, tính toán và đưa ra quyết định assign workload vào 1 hoặc nhiều node 1 một cách hợp lý sao cho không có node nào phải chạy vượt quá lượng tài nguyên mà node đó có.
 - Các yếu tố ảnh hưởng tới quyết định của scheduler bao gồm
@@ -122,14 +122,46 @@ Có 2 cách để add 1 node vào cluster
 #### Rate limit on eviction
 - Số lượng pod bị evict khỏi node sẽ bị giới hạn (giá trị mặc định là 0.1 -> không loại bỏ quá 1 pod khỏi node trong 10s)
 - Nếu Kubernetes được triển khai trên nhiều availability zone thì giá trị này sẽ thay đổi theo từng zone kèm theo nhiều điều kiện khác (số node, tỉ lệ node chết, ...)
-### 8. Graceful node shutdown
-### 9. None graceful shutdown
+### 8. Graceful node shutdown & None graceful shutdown
+- Graceful node shutdown là 1 tính năng của Kubernetes, nó đảm bảo các pod trên node được shutdown đúng cách 
+- Tính nưng này phụ thuộc vào [[systemd]](sử dụng [[systemd]] inhibit block) để delay node shutdown
+- Trong 1 số trường hợp pod shutdown nhưng không được ghi nhận bởi _kubelet's Node Shutdown Manager_, do đó pod có thể bị stuck ở trạng thái terminating -> sử dụng tính năng Non-gracefule shutdown để giải quyết vấn đề này
 ### 10. Swap memory management
 - Từ phiện bản 1.22, Kubernetes hỗ trợ node sử dụng swap. Config theo từng node
 
+## Communication between node and control plane
+### 1. Node to control plane
+- Kubernetes sử dụng cơ chế __hub-and-spoke__ để giao tiếp.
+- Các Node giao tiếp với Control plane thông qua [[API]] Server sử dụng [[HTTPS]](port 443), kết nối đên [[API]] Server. Tất cả các node phải có root certificate để giao tiếp với control plane. Ngoài ra các components của control plane cũng giao tiếp với API server qua port [[HTTPS]]
+### 2. Control plane to node
+- Kết nối từ control plane đến node được chia làm 2 loại
+	- Kết nối từ [[API]] Server đến kubelet. 
+		- Mục đích của kết nối này là:
+			- Fetching logs for pods
+			- Attaching (usually through `kubectl`) to running pods
+			- Providing the kubelet's port-forwarding functionality
+		- Các connections này sẽ trỏ tới kubelet's [[HTTPS]] endpoint. Mặc định là [[API]] server sẽ không verify kubelet's certificate, do đó các kết nối này có thể bị tấn công theo kiểu [[man-in-the-middle]] và đương nhiên là nó không an toàn để connect giữa các thành phần với nhau qua public Internet. Tuy nhiên, có thể config cho kubelet sử dụng root certificate để secure connections. Hoặc cũng có thể dùng cách khác _SSH Tunnel_
+		- Ngoài ra, nên sử dụng kubelet [[authentication]] and/or [[authorization]] để gia tăng khả năng bảo mật
+	- Kết nối từ API Server đến nodes, pods, services
+		- Các kết nối kiểu này theo mặc định là sử dụng [[HTTP]], nên nó dễ bị tấn công -> không nên sử dụng ở môi trường `untrusted` hay Internet
+		- Để các connections này sử dụng HTTPS, chỉ cần thay prefix `https` vào trước đường dẫn tới node, pod, hay service, tuy nhiên chúng sẽ không xác nhận endpoint certificate nên vẫn được coi là không an toàn để chạy trong `untrusted` hay Internet
 
+### 3. SSH Tunnel
+- Đã bị deprecated
+- Kubernetes hỗ trợ [[SSH]] Tunnel để bảo vệ các kết nối từ control plane tới nodes.
+- [[API]] Server sẽ tạo SSH Tunnel tới mọi node và sau đó giao tiếp với các node hay kể cả kubelet thông qua Tunnel đã được thiết lập
 
+### 4. Konnectivity service
+- Là giải pháp thay thế cho [[SSH]] Tunnel khi mà nó đã bị deprecated
+- Konnectivity là 1 service. Nó sẽ cung cấp [[proxy]] ở level [[TCP]] để control plane kết nối tới các thành phần khác trong cluster
+- Bao gồm 2 phần:
+	- Konnectivity server ở control plane
+	- Konnectivity agents nằm trong nodes
+- The Konnectivity agents khởi tạo các connections tới Konnectivity server và maintain các connections này
+- Sau đó mọi network traffics từ control plane tới node đều đi qua các connections đó
 # References
 1. https://kubernetes.io/docs/concepts/architecture/
 2. https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9
 3. https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
+4. [inhibit (www.freedesktop.org)](https://www.freedesktop.org/wiki/Software/systemd/inhibit/)
+5. 
