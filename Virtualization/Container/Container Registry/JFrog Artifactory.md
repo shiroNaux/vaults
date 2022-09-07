@@ -1,15 +1,14 @@
 # JFrog Atifactory
 
 # JFrog Container Registry
-###### JFrog có cung cấp bản miễn phí của artifactory, nhưng chỉ sử dụng được cho cho [[Docker Registry]] và helm
+- JFrog có cung cấp bản miễn phí của artifactory, nhưng chỉ sử dụng được cho cho [[Docker Registry]] và helm
+- Ngoài ra còn có một số registry khác cho JAVA
 
 ## Mục đích
 Sử
 
 ## Why
 
-## Cài đặt
-	- Tham khảo tại trang chủ của [JFrog](https://jfrog.com/)
 
 ## Concept
 	- Trong JFrog có 3 loại repository:

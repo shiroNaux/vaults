@@ -160,8 +160,8 @@ Có 2 cách để add 1 node vào cluster
 - The Konnectivity agents khởi tạo các connections tới Konnectivity server và maintain các connections này
 - Sau đó mọi network traffics từ control plane tới node đều đi qua các connections đó
 # References
-1. https://kubernetes.io/docs/concepts/architecture/
-2. https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9
-3. https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes
-4. [inhibit (www.freedesktop.org)](https://www.freedesktop.org/wiki/Software/systemd/inhibit/)
-5. 
+1. [Concepts | Kubernetes](https://kubernetes.io/docs/concepts/)
+4. [How To Level Up Your Kubernetes Game | by Piotr | ITNEXT](https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9)
+5. [An Introduction to Kubernetes | DigitalOcean](https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes)
+6. [inhibit (www.freedesktop.org)](https://www.freedesktop.org/wiki/Software/systemd/inhibit/)
+7. 
