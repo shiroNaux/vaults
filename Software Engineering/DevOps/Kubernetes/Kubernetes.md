@@ -87,6 +87,10 @@ The other machines in the cluster are designated as **nodes** -> accepting and 
 ### 4. Cluster-level Logging
 - Mục đích: Lưu lại log của container ra central log store with search/browsing interface
 
+## Object
+### 1. Pod
+### 2. 
+
 ## Node
 ### 1. Node name 
 - Node được phân biệt bới __name__ -> 2 Node không được trùng tên
@@ -159,6 +163,30 @@ Có 2 cách để add 1 node vào cluster
 	- Konnectivity agents nằm trong nodes
 - The Konnectivity agents khởi tạo các connections tới Konnectivity server và maintain các connections này
 - Sau đó mọi network traffics từ control plane tới node đều đi qua các connections đó
+
+## Controller
+- Implement [[control loop]] idea. Nó sẽ quan sát state của cluster, nếu phát hiện bất thường thì sẽ thực hiện các thay đổi để đưa cluster về desired state
+- Mỗi object trong Kubernetes đều có spec mô tả desired state. Mỗi loại controller sẽ quan sát từng loại object mà nó phụ trách và có trách nhiệm đưa curent state của object về gần desired state nhất.Có 2 cách để thay đổi state của object:
+	- Controller có thể tự thực hiện các thay đổi đối với object
+	- Hoặc gửi message đến API Server để có thể có nhiều tác động hơn
+
+- Kubernetes mặc định sẽ có 1 số built-in controller, được run trong `kube-controller-manager`
+- Ngoài ra, có thể sử dụng các external-controller, hoặc tự viết controller
+
+## Cloud controller manager
+- Cloud controller manager hoạt động theo cơ chế _pligin_, điều đó cho phép Kubernetes hoạt động được với nhiều cloud provider khác nhau
+
+### 1. Node controller
+Node controller có nhiệm vụ update các Node khi mà các machine hay server được tạo ra trên cloud infrastructure. Node controller sẽ có những trách nhiệm sau:
+	- Update Node tương ứng với server id
+	- Annotating và labelling cho node tương ứng với các đặc điểm như region, resource (CPU, RAM, ...), ...
+	- Gán Hostname và network address
+	- Kiểm tra health của node. Nó sẽ suer dụng cloud provider [[API]] để kiểm tra các server và update vào trạng thái của node
+### 2. Route controller
+- Route controller sẽ config network trên hệ thống cloud để các thành phần trong cluster có thể giao tiếp với nhau dễ dàng và an toàn
+### 3. Service controller
+- Service controller sẽ tương tác với các dịch vụ của cloud provider như load balancer, IP, Packet filtering, ...và sử dụng chúng để hỗ trợ cho hoạt động của cluster.
+
 # References
 1. [Concepts | Kubernetes](https://kubernetes.io/docs/concepts/)
 4. [How To Level Up Your Kubernetes Game | by Piotr | ITNEXT](https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9)
