@@ -131,7 +131,8 @@ Có 2 cách để add 1 node vào cluster
 - Tính nưng này phụ thuộc vào [[systemd]](sử dụng [[systemd]] inhibit block) để delay node shutdown
 - Trong 1 số trường hợp pod shutdown nhưng không được ghi nhận bởi _kubelet's Node Shutdown Manager_, do đó pod có thể bị stuck ở trạng thái terminating -> sử dụng tính năng Non-gracefule shutdown để giải quyết vấn đề này
 ### 10. Swap memory management
-- Từ phiện bản 1.22, Kubernetes hỗ trợ node sử dụng swap. Config theo từng node
+- Từ phiện bản 1.22, Kubernetes hỗ trợ node sử dụng swap. Config theo từng node. Khả năng sử dụng swap sẽ bị phụ thuộc vào config `swapBehavior` và [[cgroup]] của node.
+- Tuy nhiên để đảm bảo hiệu năng cho cluster -> không nên sử dụng swap
 
 ## Communication between node and control plane
 ### 1. Node to control plane
