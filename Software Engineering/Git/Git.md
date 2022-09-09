@@ -41,4 +41,4 @@ $ls .git/objects/pack/ multi-pack-index pack-7017e6ce443801478cf19006fc5499ba1c4
 ![[../../_images/Git/gitdatabase2.png]]
 
 - Nhưng trên thực tế, các yêu cầu đối với git là truy vấn `content` bằng cách cung cấp `Id` -> Do đó Git có một số cách lưu trữ dữ liệu để là việc đó
-- Đầu tiên git cho phép tạo các `references` để trỏ tới `Object Id`. Các references này do người dùng đ
+- Đầu tiên git cho phép tạo name pointer để `references` tới `Object Id` trong bảng trên. Các `references` này được lưu trữu trong thư mục `.git/refs/`, và thư mục này cũng có cấu trúc riêng để phù hợp với mục đích
