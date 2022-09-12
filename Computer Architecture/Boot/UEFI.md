@@ -12,6 +12,7 @@ Ngoài ra nó còn có khả năng quyết định các thông số phần cứn
 # How UEFI Boot work
 
 
+# UEFI vs Legacy BIOS
 
 # References
 
