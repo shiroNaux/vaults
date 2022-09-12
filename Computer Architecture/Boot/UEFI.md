@@ -12,7 +12,7 @@ Ngoài ra nó còn có khả năng quyết định các thông số phần cứn
 # How UEFI Boot work
 
 - Khi UEFI bắt đầu thực thi chức năng của mình(được đánh thức), điều đầu tiên chúng làm là kiểm tra power-on self test(POST). Có nghĩa là chúng sẽ kiểm tra các phần cứng được gắn liền theo máy, để đảm bảo được các phần cứng này có thể hoạt động bình thường. 
-- Tiếp theo UEFI sẽ scan toàn bộ _bootable storage devices_ được gắn vào máy mà chúng phải sử dụng định dạng [[GPT]] 
+- Tiếp theo UEFI sẽ scan toàn bộ _bootable storage devices_ được gắn vào máy mà chúng phải sử dụng định dạng [[GPT]]. Tiếp đó nó sẽ scan [[GPT]] để tìm được _EFI Service Partition_
 ![[../../_images/UEFI_boot_process.jpg]]
 - 
 # UEFI vs Legacy BIOS
