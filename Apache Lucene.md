@@ -12,7 +12,7 @@ Apache Lucene là 1 công cụ để thực hiện full-text searcg. Tức là k
 ## Mechanism
 ### Indexing
 - Thành phần quan trọng nhất của Lucene chính là index. Nó là 1 schemaless document [[database]]. Index này được tạo bằng cách sử dụng nội dung của các document
-- Index trong lucene là `inverted` index, tức là thay vì mapping pages này chứa keywords nào thì sẽ đánh dấu keywords này có trong những pages nào giống như phần chú giải trong các cuốn sách -> điều này làm khả năng tìm kiếm theo keywords sẽ nhanh hơn rất nhiều -> ***??? keywords đưa vào từ điển để search được lựa chọn như thế nào? 1 từ riêng lẻ hay cụm từ? thuật toán cụ thể ??*** -> được điều khiển bởi __Tokenizers__
+- Index trong lucene là `inverted` index, tức là thay vì mapping pages này chứa keywords nào thì sẽ đánh dấu keywords này có trong những pages nào giống như phần chú giải trong các cuốn sách -> điều này làm khả năng tìm kiếm theo keywords sẽ nhanh hơn rất nhiều -> ***??? có thể search theo field -> cách lưu index theo field để tìm kiếm. Nếu chỉ append các field để tạo ra các term -> thì làm cách nào để biết term đó thuộc field nào?***
 - Index này được lưu trữ theo cấu trúc _Skip list data structure_ và được lưu trữ trên disk.
 
 Quá trình tạo ra index được mô tả theo ảnh dưới
