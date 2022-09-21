@@ -39,3 +39,4 @@ Tuy nhiên, người sử dụng hoàn toàn có thể tác động đến các 
 # References
 1. https://advancedweb.hu/intro-to-lucene/
 2. https://stackoverflow.com/questions/2602253/how-does-lucene-index-documents
+3. https://www.alibabacloud.com/blog/analysis-of-lucene---basic-concepts_594672
