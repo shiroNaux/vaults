@@ -10,5 +10,5 @@
 
 1. TimeProtocol và StatsLogger classes là [[Protocol Class]], dành cho type cheking
 3. Timer class -> Class dùng để đo thời gian
-4. SummyStatsLogger class
+4. DummyStatsLogger class
 5. 
