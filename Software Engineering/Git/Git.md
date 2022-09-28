@@ -74,7 +74,31 @@ git cat-file <Object Id>
 git hash-object -w --stdin
 Hello world
 ```
--> Lệnh `git add` thực chất chính là lấy content của tất cả các file trong repo rồi hash lại
+-> Lệnh `git add` thực chất chính là lấy content của từng file đã thay đổi rồi hash lại thành `object` và từ tất cả các thay đổi đó -> tạo thành `tree object`. Object này bao gồm những sự thay đổi của commit.
+- The `git commit` takes those staged changes and creates trees pointing to all of the new blobs, then creates a new commit object pointing to the new root tree. Finally, `git commit` also updates the current branch to point to the new commit
+- Hình bên dưới mô tả quá trình tạo ra các object khi ta thực hiện 1 thay đổi trong file `README.md` và thực hiện commit
+![[../../_images/Git/gitdatabase5.png]]
+- We can do slightly more complicated queries based on object data. Using `git log --pretty=format:<format-string>`, we can make custom queries into the commits by pulling out “columns” such as the object ID and message, and even the committer and author names, emails, and dates
+- There are also some prebuilt formats ready for immediate use. For example, we can get a simple summary of a commit using `[git log --pretty=reference -1 <ref>](https://git-scm.com/docs/git-log#_pretty_formats)`. This query parses the commit at `<ref>` and provides the following information:
+
+	- An abbreviated object ID.
+	- The first sentence of the commit message.
+	- The commit date in short form.
+- Ví dụ
+```bash
+$ git log --pretty=reference -1 378b51993aa022c432b23b7f1bafd921b7c43835 378b51993aa0 (gc: simplify --cruft description, 2022-06-19)
+```
+
+# Compressed object storage: packfiles
+- Khi vào trong thư mục `.git/objects`, điều đầu tiên mà ta nhận ra đó là: có rất nhiều thư mục có tên là 2 kí tự hexa. Bên trong những thư mục này là các file có tên là chuỗi các kí tự hexa. Các file này gọi là `loose object`. Có thể thấy là 2 kí tự đầu tiên của các files này chính là tên của thư mục chứa chúng. Những files này đã được nén lại nên không dùng các công cụ thông thường để xem được nội dung của chúng.
+- Cách lưu trữ trên không được hiệu quả cho lắm khi mà số lượng object tăng cao, hay lưu trữ nhiều phiên bản khác nhau của cùng 1 file -> sinh ra nhiều objects => ___loose objects là gì___
+- Git sử dụng `.git/objects/pack` để lưu trữ các object. Các file trong này được tạo ra bằng cách nhóm các object lại với nhau và rồi nén lại
+- Cách nén các `objects`
+![[../../_images/Git/gitdatabase6.png]]
+Hình bên dưới mô tả việc `packed` các objects lại với nhau theo dạng đơn giản nhất
+	- Các file này không chứa `object id` mà chỉ chứa content -> nếu muốn tìm kiếm thì phải decompress và hash từng object để có được object id, rồi so sánh chúng với object id input để tìm ra được kết quả
+	- The pack-index file stores the list of object IDs in lexicographical order so a quick binary search is sufficient to discover if an object ID is in the packfile, then an _offset_ value points to where the object’s data begins within the packfile -> cách hoạt động giống với index trong các [[../../Data/Database/Relational Database/Relational Database|database]] 
+	- Ngoài ra còn có 1 _fanout table_ chứa 256 entries (tương ứng với 2 ký tự hexa đầu tiên) -> tách nhỏ các objects để tìm kiếm nhanh hơn -> cách hoạt động của các partitions
 # References
 1. https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/
 2. https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/
