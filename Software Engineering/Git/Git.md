@@ -109,3 +109,4 @@ Do cách hoạt động giống như database, cho nên Git cũng có một số
 3. [Git's database internals III: file history queries | The GitHub Blog](https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/)
 4. [Git's database internals IV: distributed synchronization | The GitHub Blog](https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/)
 5. [Git's database internals V: scalability | The GitHub Blog](https://github.blog/2022-09-02-gits-database-internals-v-scalability/)
+6. [internals - What does the git index contain EXACTLY? - Stack Overflow](https://stackoverflow.com/questions/4084921/what-does-the-git-index-contain-exactly)
