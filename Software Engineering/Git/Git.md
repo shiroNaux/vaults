@@ -100,10 +100,9 @@ Hình bên dưới mô tả việc `packed` các objects lại với nhau theo d
 	- The pack-index file stores the list of object IDs in lexicographical order so a quick binary search is sufficient to discover if an object ID is in the packfile, then an _offset_ value points to where the object’s data begins within the packfile -> cách hoạt động giống với index trong các [[../../Data/Database/Relational Database/Relational Database|database]] 
 	- Ngoài ra còn có 1 _fanout table_ chứa 256 entries (tương ứng với 2 ký tự hexa đầu tiên) -> tách nhỏ các objects để tìm kiếm nhanh hơn -> cách hoạt động của các partitions
 
-### 2. Commit history queries
-- Git có cơ chế hoạt động khá giống với 1 database -> đương nhiên sẽ có cơ chế để lấy được các thông tin về commit và history
-- Lệnh thông thương mà mọi người dùng để lấy thông tin về lịch sử commit là: `git log`, đôi khi kết hợp với `--graph` để trông cho nó đẹp 😍😍
-- Ngoài ra còn có 1 số lệnh h
+### 2. Git Scaling
+Do cách hoạt động giống như database, cho nên Git cũng có một số tricks phục vụ cho caling
+#### Horizontal sharding: submodules
 # References
 1. [Git's database internals I: packed object store | The GitHub Blog](https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/)
 2. [Git's database internals II: commit history queries | The GitHub Blog](https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/)
