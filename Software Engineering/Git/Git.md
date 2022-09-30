@@ -102,7 +102,8 @@ Hình bên dưới mô tả việc `packed` các objects lại với nhau theo d
 
 ### 2. Commit history queries
 - Git có cơ chế hoạt động khá giống với 1 database -> đương nhiên sẽ có cơ chế để lấy được các thông tin về commit và history
-- Lệnh thông thương mà mọi người dùng để lấy thông tin về 
+- Lệnh thông thương mà mọi người dùng để lấy thông tin về lịch sử commit là: `git log`, đôi khi kết hợp với `--graph` để trông cho nó đẹp 😍😍
+- Ngoài ra còn có 1 số lệnh h
 # References
 1. [Git's database internals I: packed object store | The GitHub Blog](https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/)
 2. [Git's database internals II: commit history queries | The GitHub Blog](https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/)
