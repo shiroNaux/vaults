@@ -54,7 +54,7 @@ $ls .git/objects/pack/ multi-pack-index pack-7017e6ce443801478cf19006fc5499ba1c4
 	-   From that tree, we can follow the entry for `README.md` to find a blob object. Blobs store file contents. They get their name from the tree that points to them.
 ![[../../_images/Git/gitdatabase4.png]]
 
-## Object store query
+#### Object store query
 
 Nếu trong các [[database]] thông thường, để lấy được dữ liệu thì chúng ta thường sử dụng [[SQL]], còn đối với git thì đó là [[../../Operating system/CLI|command line interface]].
 Một số thao tác cơ bản để truy xuất dữ liệu của git
@@ -89,7 +89,7 @@ Hello world
 $ git log --pretty=reference -1 378b51993aa022c432b23b7f1bafd921b7c43835 378b51993aa0 (gc: simplify --cruft description, 2022-06-19)
 ```
 
-# Compressed object storage: packfiles
+#### Compressed object storage: packfiles
 - Khi vào trong thư mục `.git/objects`, điều đầu tiên mà ta nhận ra đó là: có rất nhiều thư mục có tên là 2 kí tự hexa. Bên trong những thư mục này là các file có tên là chuỗi các kí tự hexa. Các file này gọi là `loose object`. Có thể thấy là 2 kí tự đầu tiên của các files này chính là tên của thư mục chứa chúng. Những files này đã được nén lại nên không dùng các công cụ thông thường để xem được nội dung của chúng.
 - Cách lưu trữ trên không được hiệu quả cho lắm khi mà số lượng object tăng cao, hay lưu trữ nhiều phiên bản khác nhau của cùng 1 file -> sinh ra nhiều objects => ___loose objects là gì___
 - Git sử dụng `.git/objects/pack` để lưu trữ các object. Các file trong này được tạo ra bằng cách nhóm các object lại với nhau và rồi nén lại
@@ -99,9 +99,13 @@ Hình bên dưới mô tả việc `packed` các objects lại với nhau theo d
 	- Các file này không chứa `object id` mà chỉ chứa content -> nếu muốn tìm kiếm thì phải decompress và hash từng object để có được object id, rồi so sánh chúng với object id input để tìm ra được kết quả
 	- The pack-index file stores the list of object IDs in lexicographical order so a quick binary search is sufficient to discover if an object ID is in the packfile, then an _offset_ value points to where the object’s data begins within the packfile -> cách hoạt động giống với index trong các [[../../Data/Database/Relational Database/Relational Database|database]] 
 	- Ngoài ra còn có 1 _fanout table_ chứa 256 entries (tương ứng với 2 ký tự hexa đầu tiên) -> tách nhỏ các objects để tìm kiếm nhanh hơn -> cách hoạt động của các partitions
+
+### 2. Commit history queries
+- Git có cơ chế hoạt động khá giống với 1 database -> đương nhiên sẽ có cơ chế để lấy được các thông tin về commit và history
+- Lệnh thông thương mà mọi người dùng để lấy thông tin về 
 # References
-1. https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/
-2. https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/
-3. https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/
-4. https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/
-5. https://github.blog/2022-09-02-gits-database-internals-v-scalability/
+1. [Git's database internals I: packed object store | The GitHub Blog](https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/)
+2. [Git's database internals II: commit history queries | The GitHub Blog](https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/)
+3. [Git's database internals III: file history queries | The GitHub Blog](https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/)
+4. [Git's database internals IV: distributed synchronization | The GitHub Blog](https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/)
+5. [Git's database internals V: scalability | The GitHub Blog](https://github.blog/2022-09-02-gits-database-internals-v-scalability/)
