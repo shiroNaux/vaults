@@ -23,7 +23,8 @@
 
 - Git lưu trữ dữ liệu trong thư mục `.git` đặt cùng cấp với _root_ level của repository
 
-### 1. Git object
+### 1. Git object store
+#### Object
 - Git object là khái niệm cơ bản của git. Chúng là _atom_ của git repo, và các object khi kết hợp cùng nhau sẽ tạo ra các đối tượng khác trong git
 - các thông tin về object được lưu tại `.git/objects`. Ví dụ:
 ``` bash
@@ -40,6 +41,8 @@ $ls .git/objects/pack/ multi-pack-index pack-7017e6ce443801478cf19006fc5499ba1c4
 
 ![[../../_images/Git/gitdatabase2.png]]
 
+
+#### git refs
 - Nhưng trên thực tế, các thao tác sử dụng git thường là: lấy ra các file tại commit id nào? só sánh khác nhau giữa 2 commit,... -> tức là truy vấn `content` bằng cách cung cấp `Id` -> Git cần có một cách lưu trữ dữ liệu phù hợp cho việc đó. Và đó là ... (đéo phải fo len ti lô)
 - Đầu tiên git có 1 khái niệm gọi là `references`, nó là 1 `named pointer` dùng để tham chiếu tới `Object id` trong __object database__. Các thông tin về `references` được lưu trong thư mục `.git/refs`. Có thể dùng hình ảnh dưới để mô tả quan hệ của `refs` và `objects`
 ![[../../_images/Git/gitdatabase3.png]]
@@ -100,7 +103,9 @@ Hình bên dưới mô tả việc `packed` các objects lại với nhau theo d
 	- The pack-index file stores the list of object IDs in lexicographical order so a quick binary search is sufficient to discover if an object ID is in the packfile, then an _offset_ value points to where the object’s data begins within the packfile -> cách hoạt động giống với index trong các [[../../Data/Database/Relational Database/Relational Database|database]] 
 	- Ngoài ra còn có 1 _fanout table_ chứa 256 entries (tương ứng với 2 ký tự hexa đầu tiên) -> tách nhỏ các objects để tìm kiếm nhanh hơn -> cách hoạt động của các partitions
 
-### 2. Git Scaling
+### 2. Git's commit graph file
+### 3. Index file
+### 4. Git Scaling
 Do cách hoạt động giống như database, cho nên Git cũng có một số tricks phục vụ cho caling
 #### Horizontal sharding: submodules
 # References
