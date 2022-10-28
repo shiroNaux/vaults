@@ -29,3 +29,7 @@ SSO là 1 thành phần của FIM. Hình ảnh dưới minh họa mối quan h�
 
 ![[../../../_images/sso-types.png]]
 - Có thể thấy OAuth2 thực hiện cả 2 chức năng Authentication và Authorization. Ở khía cạnh Authen, OAuth2 sử dụng OpenID Connect để thực hiện đăng nhập
+
+# References
+1. [What Is and How Does Single Sign-On Authentication Work? (auth0.com)](https://auth0.com/blog/what-is-and-how-does-single-sign-on-work/)
+2. [How Does Single Sign-On (SSO) Work? | OneLogin](https://www.onelogin.com/learn/how-single-sign-on-works)
