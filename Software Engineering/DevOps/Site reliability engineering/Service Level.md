@@ -12,10 +12,17 @@ Là tập hợp các nguyên tắc để đánh giá sự hoạt dộng ổn đ�
 
 Viết tăt của service-level object. Nếu SLA là 1 contract giữa đơn vị cung cấp và người dùng cuối, thì SLO chính là các tiêu chí cụ thể trong SLA đó.
 
-### Ví dụ
+### Ví dụ:
+Trong ví dụ của SLA ở trên, uptime 99.99% chính là 1 SLO, ngoài ra còn có rất nhiều SLO khác nữa như:
+- Response rate under 2 second < 1%
+- resolve reported issues with Product X within 24 hours.%
+
 ## 3. SLI
+
 Viết tắt của service-level indicator. Đây là các chỉ số đo được để đánh giá SLO, xem chúng có được đảm bào như trong SLA hay ko?
-Ví dụ:
+
+### Ví dụ:
+- Nếu SLA có cam kết uptime 99%, thì SLI sẽ là thời gian uptime của hệ thống được ghi lại.
 
 # Conclusion
 
@@ -23,8 +30,6 @@ Ví dụ:
 - SLo: -> Là mục tiêu cụ thể được chỉ rõ ra trong contract(SLA)
 - SLI: -> là các chỉ số đo đạc được của từng SLO
 
-### Ví dụ:
-- Nếu SLA có cam kết uptime 99%, thì SLI sẽ là thời gian uptime của hệ thống được ghi lại.
 
 # Refenrences
 1. [SRE at Google: SLOs, SLIs, SLAs, oh my | Google Cloud Blog](https://cloud.google.com/blog/products/devops-sre/availability-part-deux-cre-life-lessons)
