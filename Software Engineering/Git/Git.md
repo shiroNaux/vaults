@@ -69,7 +69,6 @@ git cat-file <Object Id>
 # options
 # -p: pretty -> dễ đọc
 # -t: type của object
-
 ```
 
 - Có thể tự insert data vào `object store` của git 🤔🤔:
