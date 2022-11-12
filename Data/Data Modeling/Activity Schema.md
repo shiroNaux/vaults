@@ -21,9 +21,19 @@ Cách thức implement activity schema rất đơn giản: đưa mọi bảng v�
 
 Activity schema modeling xoay quanh 2 khía niệm chính là ___entity___ và ___activity___
 
-### 1. Entity
-### 2. Activity
-### 3. Metadata
+##### Entity
+
+Entities là đối tượng hay thực thể nào đó mà thực hiện hành động (activity).
+##### Activity
+Activities là các hành dộng được thực hiện bởi entity
+##### Metadata
+Metadata là các thông tin đi kèm với activity để làm rõ các activity này. Các ví dụ của metadata như:
+- timestamp xảy ra activity
+- amount của hóa đơn nếu activity là thanh toán.
+
+Có 2 loại bảng trong activity shema
+1. activity stream (one per activity schema): là bảng duy nhất, chứa mọi activity
+2. entity table (optional - one per activity schema): là bảng chứa các thông tin của entity. Có thể có nhiều bảng entity khác nhau.
 
 
 # References
