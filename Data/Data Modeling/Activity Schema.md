@@ -36,6 +36,21 @@ Có 2 loại bảng trong activity shema
 2. entity table (optional - one per activity schema): là bảng chứa các thông tin của entity. Có thể có nhiều bảng entity khác nhau.
 
 
+# Pros
+- A table -> single source of truth -> query cho mọi báo cáo trở nên đơn giản hơn. 
+- Thời gian develop nhanh. Bao gồm các bước:
+	- Các thao tác transform dễ dàng hơn
+	- Query cho dashboard đơn giản hơn
+- Activivty schema có thể được áp dụng cho mọi lĩnh vực bào toán khác nhau với chung 1 schema, model. Nếu dùng các model khác thì phải thay đổi theo đặc điểm của từng công ty, lĩnh vực. -> automation dễ dàng
+- Tốc độ truy nhanh hơn, query đơn giản hơn.
+
+# Cons
+- single source of truth -> single point of failure. 
+- Do đặt mọi data trong cùng 1 bảng -> 1 bảng quá lớn, không phù hợp với các công cụ hiện tại như:
+	- Hầu hết các database không xử lý tốt với 1 bảng có quá nhiều dữ liệu do vấn đề về [[Allocation]].
+	- 1 số tools NI như PowerBI, Tableau cần đưa data lên [[RAM]] để thực hiện xử lý -> memeory không đủ. Có thể giải quyết = tách ra các bảng nhỏ hơn để tạo báo cáo, nhưng như vậy sẽ làm mất đi ý nghĩa của activity schema.
+- Rò rỉ dữ liệu -> all done!
+
 # References
 1. [ActivitySchema/spec.md at main · ActivitySchema/ActivitySchema (github.com)](https://github.com/ActivitySchema/ActivitySchema/blob/main/spec.md)
 2. [DWH Modeling: Opinions on Activity Schema? : SQL (reddit.com)](https://www.reddit.com/r/SQL/comments/qj1czv/dwh_modeling_opinions_on_activity_schema/)
