@@ -38,7 +38,15 @@ Có 2 loại bảng trong activity shema
 ## Implement
 
 
-
+Ví dụ cụ thể:
+![[../../_images/113031253-791e9c00-915c-11eb-8e84-bc743c8cafb8.png]]
+Trên đây là 1 ví dụ được đưa ra bởi người/tổ chức đề xuất modeling này (https://github.com/ActivitySchema/ActivitySchema/blob/main/spec.md)
+Có 1 số điểm cần lưu ý:
+- Các cột: feature_1, feature_2, feature_3 là các cột store metadata của activity. Do activity stream chứa mọi activity khác nhau -> tên cột giống nhau nhưng ý nghĩa là khác nhau cho từng dòng dữ liệu, phụ thuộc vào loại activity.
+	- Ví dụ: For example, for the 'received_email' activity, **feature_1** could be the sender email, **feature_2** could be the subject, and **feature_3** could be the marketing campaign used. For the 'viewed_page' activity **feature_1** could be the url, and **feature_2** could be the referrer
+- Thông thường, các activity chỉ chứa metadata liên quan đến nó, nếu cần thêm các thông tin khác thì có 2 cách:
+	- Borrow features: sef [[join]] activity stream để lấy được những thông tin cần thiết. Đây là cách thường được sử dụng do mọi data đã được lưu trong activity stream.
+	- Enrichment table: là 1 loại bảng khác trong activity schema. Có khóa tham chiếu đến activity_id trong activity stream. Ngoài ra còn chứa thêm các cột khác để bổ sung thông tin cho activity.
 # Pros
 - A table -> single source of truth -> query cho mọi báo cáo trở nên đơn giản hơn. 
 - Thời gian develop nhanh. Bao gồm các bước:
