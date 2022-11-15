@@ -63,6 +63,8 @@ Có 1 số điểm cần lưu ý:
 - Rò rỉ dữ liệu -> all done!
 
 > ⚠️Hiện chưa có 1 ví dụ cụ thể, chính xác về activity schema -> không có kết luận chính xác về việc áp dụng activity schema trong thực tế
+
+
 # References
 1. [ActivitySchema/spec.md at main · ActivitySchema/ActivitySchema (github.com)](https://github.com/ActivitySchema/ActivitySchema/blob/main/spec.md)
 2. [DWH Modeling: Opinions on Activity Schema? : SQL (reddit.com)](https://www.reddit.com/r/SQL/comments/qj1czv/dwh_modeling_opinions_on_activity_schema/)
