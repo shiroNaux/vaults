@@ -15,7 +15,7 @@ Activy Schema là 1 spec để xây dựng [[data modeling]] phục vụ cho m�
 
 Cách thức implement activity schema rất đơn giản: đưa mọi bảng về 1 bảng time series duy nhất gọi là activity stream. Các dashboard, report sẽ sử dụng trực tiếp activity stream mà không cần các view hay bảng aggregate.
 
-![[../../_images/113028328-21cafc80-9159-11eb-972c-34d3617eb379.png]]
+![[113028328-21cafc80-9159-11eb-972c-34d3617eb379.png]]
 # Concept
 ## Notion
 
@@ -39,7 +39,7 @@ Có 2 loại bảng trong activity shema
 
 
 Ví dụ cụ thể:
-![[../../_images/113031253-791e9c00-915c-11eb-8e84-bc743c8cafb8.png]]
+![[113031253-791e9c00-915c-11eb-8e84-bc743c8cafb8.png]]
 Trên đây là 1 ví dụ được đưa ra bởi người/tổ chức đề xuất modeling này (https://github.com/ActivitySchema/ActivitySchema/blob/main/spec.md)
 Có 1 số điểm cần lưu ý:
 - Các cột: feature_1, feature_2, feature_3 là các cột store metadata của activity. Do activity stream chứa mọi activity khác nhau -> tên cột giống nhau nhưng ý nghĩa là khác nhau cho từng dòng dữ liệu, phụ thuộc vào loại activity.
