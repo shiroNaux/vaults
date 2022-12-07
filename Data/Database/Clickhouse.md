@@ -1,13 +1,14 @@
 ---
 ---
-# Introduction
-1. Thông tin cơ bản
-	- Viết bằng [[C++]]
-	- Kiến trúc vẫn thiên về nguyên khối (Bao gồm cả [[storage]], và [[query engine]])
-	- Thuộc vào loại [[database]] có tốc độ [[SQL|query]] nhanh nhất
-	- Là loại [[column oriented]] [[database]]
+
+# Abstract
+
+- ClickHouse là 1 [[database]] được viết bằng [[C++]], bởi Yandex
+- ClickHouse được phát triển để đáp ứng các nhu cầu về [[OLAP]] cũng như các nhu cầu về xử lý realtime
+- Là 1 database hướng cột
 
 # Architecture
+
 
 
 # References
