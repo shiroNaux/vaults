@@ -15,7 +15,9 @@
 
 ### Sparse Index
 
-ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ 
+ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ index the từng dòng giống như các [[Relational Database|RDBMS]] khác, mà sẽ lưu trữ index theo các __granule__.
+
+Để dễ hình dung chúng ta sẽ sử dụng ví dụ sau
 
 
 
