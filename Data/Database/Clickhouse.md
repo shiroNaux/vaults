@@ -18,8 +18,24 @@
 ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ index the từng dòng giống như các [[Relational Database|RDBMS]] khác, mà sẽ lưu trữ index theo các __granule__.
 
 Để dễ hình dung chúng ta sẽ sử dụng ví dụ sau
+ - Sử dụng bảng với nội dung như sau:
+``` SQL
+CREATE TABLE hits_UserID_URL  
+	(  
+	`UserID` UInt32,  
+	`URL` String,  
+	`EventTime` DateTime  
+	)  
+		ENGINE = MergeTree  
+		PRIMARY KEY (UserID, URL)  
+		ORDER BY (UserID, URL, EventTime)  
+	SETTINGS index_granularity = 8192, index_granularity_bytes = 0;
+```
+- Dữ liệu trong bảng là khoảng 8.87 triệu dòng
 
-
+Khi ta tạo bảng thuộc lớp ___MergeTree___, primary có thể được khai báo hoặc không
+- Nếu không defined primary key -> primary key = `Order by`
+- Nếu ta xác định primary key thì nó phải là prefix của `Order by`
 
 
 # References
