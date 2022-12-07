@@ -13,6 +13,9 @@
 
 ## 2. Index
 
+### Sparse Index
+
+ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ 
 
 
 
