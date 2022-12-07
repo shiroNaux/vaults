@@ -252,7 +252,7 @@ toplogy.addSink(“sink-node”, “output-topic”, “custom-processor”);
 
 ![[../../../../../_images/Kafka/kafka_stream_consumer_group_protocol.jpg]]
 
-# Kafka Stream vs [[Apache Spark]] & [[Apache Flink]]
+# Kafka Stream vs [[Apache Spark]] & [[Data/Data Engineering/Data Proccessing/Apache Flink]]
 # Kafka Stream vs ksqlDB
 
 
