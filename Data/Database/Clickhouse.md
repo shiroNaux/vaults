@@ -36,6 +36,11 @@ CREATE TABLE hits_UserID_URL
 Khi ta tạo bảng thuộc lớp ___MergeTree___, primary có thể được khai báo hoặc không
 - Nếu không defined primary key -> primary key = `Order by`
 - Nếu ta xác định primary key thì nó phải là prefix của `Order by`
+- Khi ClickHouse thực hiện xử lý thì __primary index__ sẽ được load lên [[RAM]] dựa theo cá cột được defined trong _primary key_
+
+Index được lưu trên disk theo ascending order.
+
+![[sparse-primary-indexes-01-2941706e5275aed3ef7e0ea242196c41.png]]
 
 
 # References
