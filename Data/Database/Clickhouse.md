@@ -54,9 +54,14 @@ Việc lưu trữ này sẽ đem lại 1 số lợi ích so với index thông t
 Primary index được lưu trữ trong file có tên là `primary.idx`. File này là 1 uncompressed flat array file, tức là 1 file ko nén chứa các entry liên tiếp nhau giống như 1 array. Minh họa của file `primary.idx`
 
 ![[sparse-primary-indexes-03a-d89d998e12380419456e8b198110752b.png]]
-- File `primary.idx` có số entry bằng với số granules của bảng, trong ví dụ này là 1083 entries (array bắt đàu = 0)
+- File `primary.idx` có số entry bằng với số granules của bảng, trong ví dụ này là 1083 entries hay mark (array bắt đàu = 0)
 - Mỗi 1 entry sẽ bao gồm n giá trị (với n là số cột trong primary key, trong ví dụ này sẽ là 2), tương ứng với granule mà entry này đại diện:
-	- Giá trị thứ nhất là
+	- Giá trị thứ nhất là: ___giá trị nhỏ nhất___ trong granule tương ứng của cột ___đầu tiên___ trong __primary key__
+	- Giá trị thứ hai là:   ___giá trị nhỏ nhất___ trong granule tương ứng của cột ___thứ 2___ trong __primary key__
+- Chú ý: Các giá trị trong cùng 1 entry không có quan hệ gì với nhau hết, nó chỉ là các giá trị nhỏ nhất trong granule tương ứng
+
+![[sparse-primary-indexes-03b-a5f733bcca895013c09f3cb54a1b3681.png]]
+- 
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
