@@ -47,9 +47,17 @@ Như đã đề cập ở trên, ClickHouse sẽ sử dụng sparse index, tức
 
 ![[sparse-primary-indexes-02-2b2fa8c54c018fd39db9c8a2939dc12c.png]]
 Việc lưu trữ này sẽ đem lại 1 số lợi ích so với index thông thường
-- Thay vì scan toàn bộ 8.87 triệu dòng, thì nếu sùng sparse index chỉ cần scan 1082 granules để tìm ra được granule thích hợ rồi tiếp tục xử lý -> chạy nhanh hơn trong các trường hợp sử dụng __where__ với primary key
-- 
+- Thay vì scan toàn bộ 8.87 triệu dòng, thì nếu sùng sparse index chỉ cần scan 1082 granules để tìm ra được granule thích hợp rồi tiếp tục xử lý -> chạy nhanh hơn trong các trường hợp sử dụng __where__ với primary key
+
+### Index file
+
+Primary index được lưu trữ trong file có tên là `primary.idx`. File này là 1 uncompressed flat array file, tức là 1 file ko nén chứa các entry liên tiếp nhau giống như 1 array. Minh họa của file `primary.idx`
+
+![[sparse-primary-indexes-03a-d89d998e12380419456e8b198110752b.png]]
+- File `primary.idx` có số entry bằng với số granules của bảng, trong ví dụ này là 1083 entries (array bắt đàu = 0)
+- Mỗi 1 entry sẽ bao gồm n giá trị (với n là số cột trong primary key, trong ví dụ này sẽ là 2), tương ứng với granule mà entry này đại diện:
+	- Giá trị thứ nhất là
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
-2. 
+2. [ClickHouse Index Design | ClickHouse Docs](https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-design/)
