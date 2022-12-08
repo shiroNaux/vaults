@@ -15,7 +15,7 @@
 
 ### Sparse Index
 
-ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ index the từng dòng giống như các [[Relational Database|RDBMS]] khác, mà sẽ lưu trữ index theo các __granule__.
+ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ index the từng dòng giống như các [[Relational Database|RDBMS]] khác, mà sẽ lưu trữ index theo các __granule__. Sparse index khá giống với partitiontrong 1 số [[Relational Database|RDBMS]]
 
 Để dễ hình dung chúng ta sẽ sử dụng ví dụ sau
  - Sử dụng bảng với nội dung như sau:
@@ -59,10 +59,10 @@ Primary index được lưu trữ trong file có tên là `primary.idx`. File n�
 	- Giá trị thứ nhất là: ___giá trị nhỏ nhất___ trong granule tương ứng của cột ___đầu tiên___ trong __primary key__
 	- Giá trị thứ hai là:   ___giá trị nhỏ nhất___ trong granule tương ứng của cột ___thứ 2___ trong __primary key__
 - Chú ý: Các giá trị trong cùng 1 entry không có quan hệ gì với nhau hết, nó chỉ là các giá trị nhỏ nhất trong granule tương ứng
-- Toàn bộ file `primary.idx` sẽ được load lên RAM trong quá trình xử lý -> Nêis
+- Toàn bộ file `primary.idx` sẽ được load lên RAM trong quá trình xử lý -> Nếu primary key quá nhiều cột có thể dẫn tới __OOM__
 
 ![[sparse-primary-indexes-03b-a5f733bcca895013c09f3cb54a1b3681.png]]
-## Index in query execution
+## 3. Index in query execution
 
 Khi ClickHouse thực hiện 1 query, có thể chia ra làm 2 bước:
 - First stage - granule selection: Lựa chọn ra những granule chứa data cần thiết
