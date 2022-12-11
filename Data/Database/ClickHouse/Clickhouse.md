@@ -75,7 +75,8 @@ Sau khi đã tìm được granule có chứa data cần thiết. Việc tiếp 
 Cấu trúc của 1 `mark file` như sau
 
 ![[sparse-primary-indexes-05-02e2356da8eb292a54513b2f587cfaf6.png]]
-- Mỗi cột đều có 1 marfile riêng biệt, do ClickHouse lưu dữ liêu
+- Mỗi cột đều có 1 marfile riêng biệt, do ClickHouse lưu dữ liệu dưới dạng cột
+- Cũng giống như `index file`, `mark file` cũng là __flat uncompressed array file__, mỗi một entry trong file cũng tương ứng với 1 granule của bảng
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
