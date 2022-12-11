@@ -78,7 +78,11 @@ Cấu trúc của 1 `mark file` như sau
 - Mỗi cột đều có 1 marfile riêng biệt, do ClickHouse lưu dữ liệu dưới dạng cột
 - Cũng giống như `index file`, `mark file` cũng là __flat uncompressed array file__, mỗi một entry trong file cũng tương ứng với 1 granule của bảng
 - Mỗi entry trong `mark file` có 2 giá trị:
-	- block offset: là vị trí của granule lưu trong `data file`. Data file là file đã compressed. Giá trị offset này có thể không chỉ chứa 
+	- block offset: là vị trí của granule lưu trong `data file`. Data file là file đã compressed. Giá trị offset này có thể không chỉ chứa 1 mà có nhiều granule khác. 
+	- Sau khi xác định được vị trí của data, chúng được đưa lên memory và uncompressed. Giá trị thứ 2 trong `mark file`: granule offset chính là  vị trí của granule cần lấy trong data sau khi đã uncompressed
+## 4. Skipping index
+
+Skipping index hay còn được gọi là secondary index
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
