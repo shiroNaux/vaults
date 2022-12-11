@@ -68,6 +68,7 @@ Khi ClickHouse thực hiện 1 query, có thể chia ra làm 2 bước:
 - First stage - granule selection: Lựa chọn ra những granule chứa data cần thiết
 - Second stage - data reading: Từ những granule đã được lựa chọn, thực hiện load data từ disk lên [[RAM]]
 
+### Locating granule
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
