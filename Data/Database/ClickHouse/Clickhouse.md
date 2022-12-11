@@ -70,6 +70,13 @@ Khi ClickHouse thực hiện 1 query, có thể chia ra làm 2 bước:
 
 ### Locating granule
 
+Sau khi đã tìm được granule có chứa data cần thiết. Việc tiếp theo là load data lên [[RAM]] để xử lý. Việc này được thực hiện nhờ vào các `mark file`.
+
+Cấu trúc của 1 `mark file` như sau
+
+![[sparse-primary-indexes-05-02e2356da8eb292a54513b2f587cfaf6.png]]
+- Mỗi cột đều có 1 marfile riêng biệt, do ClickHouse lưu dữ liêu
+
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
 2. [ClickHouse Index Design | ClickHouse Docs](https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-design/)
