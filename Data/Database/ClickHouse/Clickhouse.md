@@ -94,6 +94,7 @@ Cấu trúc của 1 `mark file` như sau
 
 Skipping index hay còn được gọi là secondary index, là các index khác primary index, được thêm vào để 
 
+### Primary key vs Order by
 ## 3. Partition
 
 Parttion trong ClickHouse tương đối giống với partition trong các [[Relational Database|RDBMS]] khác. Đều là chia bảng ra thành các bảng con theo chiều dọc để xử lý các câu truy vấn theo điều kiện nhanh hơn. Tuy nhiên vẫn có sự khác biệt giữa ClickHouse với các [[Relational Database|RDBMS]] khác, cụ thể ở đây là [[PostgreSQL]]
