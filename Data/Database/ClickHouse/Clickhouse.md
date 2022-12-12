@@ -19,7 +19,7 @@ Do ClickHouse là columnar database, nên khi lưu dữ liệu vào disk, có 2 
 Đơn vị lưu trũ nhỏ nhất trong ClickHouse là ___granule___, mỗi ___granule___ sẽ gồm n rows data được xác định từ lúc tạo bảng, giá trị mặc định là 8192.
 ## 2. Index
 
-### Sparse Index
+### Primary Index
 
 ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ index the từng dòng giống như các [[Relational Database|RDBMS]] khác, mà sẽ lưu trữ index theo các __granule__. Sparse index khá giống với partitiontrong 1 số [[Relational Database|RDBMS]]
 
