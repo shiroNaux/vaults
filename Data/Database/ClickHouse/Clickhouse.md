@@ -18,12 +18,15 @@ Do ClickHouse là columnar database, nên khi lưu dữ liệu vào disk, có 2 
 
 Đơn vị lưu trũ nhỏ nhất trong ClickHouse là ___granule___, mỗi ___granule___ sẽ gồm n rows data được xác định từ lúc tạo bảng, giá trị mặc định là 8192.
 ## 2. Index
-
+	
 ### Primary Index
 
-ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ index the từng dòng giống như các [[Relational Database|RDBMS]] khác, mà sẽ lưu trữ index theo các __granule__. Sparse index khá giống với partitiontrong 1 số [[Relational Database|RDBMS]]
+ClickHouse sử dụng sparse index cho primary index. Đon giản là: ClickHouse sẽ không lưu trữ index theo từng dòng giống như các [[Relational Database|RDBMS]] khác, mà xẽ đánh index dựa vào các giá trị lớn nhất, nhỏ nhất trong ___granule___. Sparse index khá giống với partitiontrong 1 số [[Relational Database|RDBMS]], cũng như là partition của chính ClickHouse
 
-Để dễ hình dung chúng ta sẽ sử dụng ví dụ sau
+Thông thường, với primary key thì các giá trị phải là not null, tuy nhiên do ClickHouse không có những yêu cầu chặt chẽ như các DBMS khác, nên các cột dùng làm `primary key` hay `order by` có thể chứa null. Cái này cần phải enable setting và lựa chọn các giá trị null sẽ được lưu ở các dòng đầu hay cuối bảng.
+
+#### Cách hoạt động của primary key
+Để hình dung cách hoạt động của primary key chúng ta sẽ sử dụng ví dụ sau
  - Sử dụng bảng với nội dung như sau:
 ``` SQL
 CREATE TABLE hits_UserID_URL  
@@ -55,7 +58,7 @@ Như đã đề cập ở trên, ClickHouse sẽ sử dụng sparse index, tức
 Việc lưu trữ này sẽ đem lại 1 số lợi ích so với index thông thường
 - Thay vì scan toàn bộ 8.87 triệu dòng, thì nếu sùng sparse index chỉ cần scan 1082 granules để tìm ra được granule thích hợp rồi tiếp tục xử lý -> chạy nhanh hơn trong các trường hợp sử dụng __where__ với primary key
 
-### Index file
+#### Primary Index file
 
 Primary index được lưu trữ trong file có tên là `primary.idx`. File này là 1 uncompressed flat array file, tức là 1 file ko nén chứa các entry liên tiếp nhau giống như 1 array. Minh họa của file `primary.idx`
 
