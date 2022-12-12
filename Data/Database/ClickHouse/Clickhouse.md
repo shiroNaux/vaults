@@ -71,7 +71,7 @@ Primary index được lưu trữ trong file có tên là `primary.idx`. File n�
 - Toàn bộ file `primary.idx` sẽ được load lên RAM trong quá trình xử lý -> Nếu primary key quá nhiều cột có thể dẫn tới __OOM__
 
 ![[sparse-primary-indexes-03b-a5f733bcca895013c09f3cb54a1b3681.png]]
-## 3. Index in query execution
+### Index in query execution
 
 Khi ClickHouse thực hiện 1 query, có thể chia ra làm 2 bước:
 - First stage - granule selection: Lựa chọn ra những granule chứa data cần thiết
@@ -89,9 +89,16 @@ Cấu trúc của 1 `mark file` như sau
 - Mỗi entry trong `mark file` có 2 giá trị:
 	- block offset: là vị trí của granule lưu trong `data file`. Data file là file đã compressed. Giá trị offset này có thể không chỉ chứa 1 mà có nhiều granule khác. 
 	- Sau khi xác định được vị trí của data, chúng được đưa lên memory và uncompressed. Giá trị thứ 2 trong `mark file`: granule offset chính là  vị trí của granule cần lấy trong data sau khi đã uncompressed
-## 4. Skipping index
 
-Skipping index hay còn được gọi là secondary index
+### Skipping index
+
+Skipping index hay còn được gọi là secondary index, là các index khác primary index, được thêm vào để 
+
+## 3. Partition
+
+Parttion trong ClickHouse tương đối giống với partition trong các [[Relational Database|RDBMS]] khác. Đều là chia bảng ra thành các bảng con theo chiều dọc để xử lý các câu truy vấn theo điều kiện nhanh hơn. Tuy nhiên vẫn có sự khác biệt giữa ClickHouse với các [[Relational Database|RDBMS]] khác, cụ thể ở đây là [[PostgreSQL]]
+
+- ClickHouse chỉ có partition theo 1 level, trong khi [[PostgreSQL]] hỗ trợ multi level partitions
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
