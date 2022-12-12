@@ -14,7 +14,9 @@
 Do ClickHouse là columnar database, nên khi lưu dữ liệu vào disk, có 2 cách tổ chức dữ liệu:
 
 - `wide format` -> Mỗi column trong bảng được lưu ra 1 file riêng biệt
+- `compact format` -> tất cả các cột đều lưu trong 1 `data file` -> `compact format` sẽ phù hợp hơn với các dữ liệu thay đổi (__UPDATE__) thường xuyên
 
+Đơn vị lưu trũ nhỏ nhất trong ClickHouse là ___granule___, mỗi ___granule___ sẽ gồm n rows data được xác định từ lúc tạo bảng, giá trị mặc định là 8192.
 ## 2. Index
 
 ### Sparse Index
