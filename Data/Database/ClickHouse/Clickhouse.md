@@ -11,6 +11,10 @@
 
 ## 1. Data store
 
+Do ClickHouse là columnar database, nên khi lưu dữ liệu vào disk, có 2 cách tổ chức dữ liệu:
+
+- `wide format` -> Mỗi column trong bảng được lưu ra 1 file riêng biệt
+
 ## 2. Index
 
 ### Sparse Index
