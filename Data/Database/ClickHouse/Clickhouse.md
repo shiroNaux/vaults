@@ -92,7 +92,13 @@ Cấu trúc của 1 `mark file` như sau
 
 ### Skipping index
 
-Skipping index hay còn được gọi là secondary index, là các index khác primary index, được thêm vào để 
+Skipping index hay còn được gọi là secondary index, là các index khác primary index, được thêm vào để hỗ trợ cho các [[SQL|query]] trên các cột không nằm trong `Order by`.
+
+Mô tả trực quan cho skipping index
+
+![[simple_skip-52c0988d126255fdb7aa8ad94036b1f7.svg]]
+
+Nó cũng khác giống với secondary index trong các [[Relational Database|RDBMS]]. Tuy nhiên do ClickHouse lưu dữ liệu dưới dạng cột, cũng như đơn vị lưu trữ là granule cho nên skipping index sẽ không sử dụng B-Tree hay các cấu trúc index tương tự. Các index kiểu B-Tree sẽ tạo 1 bảng 
 
 ### Primary key vs Order by
 
