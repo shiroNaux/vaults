@@ -98,7 +98,8 @@ Skipping index hay còn được gọi là secondary index, là các index khác
 
 Đối với các MergeTree [[Table Engine|table engine]], có 2 options là `Order by` và `Primary key` dều dùng để chỉ định các cột dùng để sắp xếp dữ liệu trên [[disk]]. Tuy nhiên Primary key phải là prefix của `Order by` bởi vì:
 - Dữ liệu sẽ được sắp xếp theo `Order by`
-- Tuy nhiên `Primary key` dùng để tạo `primary index`. `Primary index` sẽ được tạo ra dựa trên các cột dùng để sắp xếp dữ liệu -> Primary key phải là 
+- Tuy nhiên `Primary key` dùng để tạo `primary index`. `Primary index` sẽ được tạo ra dựa trên các cột dùng để sắp xếp dữ liệu -> `Primary key` phải là prefix của `Order by`
+
 ## 3. Partition
 
 Parttion trong ClickHouse tương đối giống với partition trong các [[Relational Database|RDBMS]] khác. Đều là chia bảng ra thành các bảng con theo chiều dọc để xử lý các câu truy vấn theo điều kiện nhanh hơn. Tuy nhiên vẫn có sự khác biệt giữa ClickHouse với các [[Relational Database|RDBMS]] khác, cụ thể ở đây là [[PostgreSQL]]
