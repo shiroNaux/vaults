@@ -98,10 +98,13 @@ Mô tả trực quan cho skipping index
 
 ![[simple_skip-52c0988d126255fdb7aa8ad94036b1f7.svg]]
 
-Nó cũng khác giống với secondary index trong các [[Relational Database|RDBMS]]. Tuy nhiên do ClickHouse lưu dữ liệu dưới dạng cột, cũng như đơn vị lưu trữ là granule cho nên skipping index sẽ không sử dụng B-Tree hay các cấu trúc index tương tự. Skipping index của ClickHouse sẽ lưu theo granule -> mỗi entry tương ứng với 1 granule. Các giá trị sẽ không phải là con trỏ tới các dòng dữ liệu như B-Tree mà là các giá trị đặc biệt của granule. Các giá trị này có thể là
-- Các Min - Max của column
+Nó cũng khác giống với secondary index trong các [[Relational Database|RDBMS]]. Tuy nhiên do ClickHouse lưu dữ liệu dưới dạng cột, cũng như đơn vị lưu trữ là granule cho nên skipping index sẽ không sử dụng B-Tree hay các cấu trúc index tương tự. Skipping index của ClickHouse cũng có cấu trúc giống như `idx file` hay `mark file`, lưu trữ theo granule -> mỗi entry tương ứng với 1 granule. Các giá trị tương ứng với các granule này tùy thuộc vào type của index. Có 3 type chính:
+- Min - Max của column
 - Set -> tập hợp tất cả các giá trị unique
 - Bloom filter
+
+Các giá trị này được sử dụng để loại bỏ (skipping) bớt các granule khi nó được nhắc đến trong [[SQL|query]]. Do đó có thể thấy là:
+- Skipping performance bị ảnh hưởng bởi `Order by` -> Nếu `Order by` quá chi tiết (high cardinity) thì skipping index sẽ không được hưởng lợi quá nhiều
 
 ### Primary key vs Order by
 
