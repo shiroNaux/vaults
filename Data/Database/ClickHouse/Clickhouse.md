@@ -98,7 +98,10 @@ Mô tả trực quan cho skipping index
 
 ![[simple_skip-52c0988d126255fdb7aa8ad94036b1f7.svg]]
 
-Nó cũng khác giống với secondary index trong các [[Relational Database|RDBMS]]. Tuy nhiên do ClickHouse lưu dữ liệu dưới dạng cột, cũng như đơn vị lưu trữ là granule cho nên skipping index sẽ không sử dụng B-Tree hay các cấu trúc index tương tự. Các index kiểu B-Tree sẽ tạo 1 bảng 
+Nó cũng khác giống với secondary index trong các [[Relational Database|RDBMS]]. Tuy nhiên do ClickHouse lưu dữ liệu dưới dạng cột, cũng như đơn vị lưu trữ là granule cho nên skipping index sẽ không sử dụng B-Tree hay các cấu trúc index tương tự. Skipping index của ClickHouse sẽ lưu theo granule -> mỗi entry tương ứng với 1 granule. Các giá trị sẽ không phải là con trỏ tới các dòng dữ liệu như B-Tree mà là các giá trị đặc biệt của granule. Các giá trị này có thể là
+- Các Min - Max của column
+- Set -> tập hợp tất cả các giá trị unique
+- Bloom filter
 
 ### Primary key vs Order by
 
