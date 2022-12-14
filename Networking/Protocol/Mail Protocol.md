@@ -11,10 +11,14 @@ smtp được xây dựng phía trên của [[TCP]], và sử dụng cổng 25 l
 ### POP3
 ### IMAP
 
+## Compare between protocols
+
+| |IMAP|POP3|SMTP|
+|----|---|---|---|
+|Function|Retrieving emails|Retrieving emails|Sending emails|
+|Port|143|110|25|
+|Limitation|Mailbox on the server has a definite quota|Messages will be deleted when |It has no ways of verifying sender -> Spam issues|
+
 ## Libraries
-
-
-|---|---|
-|a|a|
 ### Python
 [[Python]] core cung cấp 1 số package để thực hiện các thao tác với email
