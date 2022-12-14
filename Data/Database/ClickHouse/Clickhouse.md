@@ -104,7 +104,8 @@ Nó cũng khác giống với secondary index trong các [[Relational Database|R
 - Bloom filter
 
 Các giá trị này được sử dụng để loại bỏ (skipping) bớt các granule khi nó được nhắc đến trong [[SQL|query]]. Do đó có thể thấy là:
-- Skipping performance bị ảnh hưởng bởi `Order by` -> Nếu `Order by` quá chi tiết (high cardinity) thì skipping index sẽ không được hưởng lợi quá nhiều
+- Skipping index performance bị ảnh hưởng bởi `Order by` -> Nếu `Order by` quá chi tiết (high cardinity) thì skipping index sẽ không được hưởng lợi quá nhiều, do có distribution của column được đánh index bị áp chế bởi các cột trong `Order by`
+- Skipping index hoạt động giống như các cột phụ của `Order by`, thích hợp để sử dụng trong 1 số trường hợp dùng các preaggregate table engine, khi mà các cột Order by có nhiệm vụ đặc biệt.
 
 ### Primary key vs Order by
 
