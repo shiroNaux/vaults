@@ -13,5 +13,8 @@ smtp được xây dựng phía trên của [[TCP]], và sử dụng cổng 25 l
 
 ## Libraries
 
+
+|---|---|
+|a|a|
 ### Python
 [[Python]] core cung cấp 1 số package để thực hiện các thao tác với email
