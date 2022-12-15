@@ -20,17 +20,18 @@ smtp được xây dựng phía trên của [[TCP]], và sử dụng cổng 25 l
 
 ## Compare between protocols
 
-|            | IMAP                                       | POP3                          | SMTP                                              |     |
-| ---------- | ------------------------------------------ | ----------------------------- | ------------------------------------------------- | --- |
-| Function   | Retrieving emails                          | Retrieving emails             | Sending emails                                    |     |
-| Port       | 143                                        | 110                           | 25                                                |     |
-| Limitation | Mailbox on the server has a definite quota | Messages will be deleted when | It has no ways of verifying sender -> Spam issues |     |
-|            |                                            |                               |                                                   |     | 
+|               | IMAP                                       | POP3                          | SMTP                                              |
+| ------------- | ------------------------------------------ | ----------------------------- | ------------------------------------------------- |
+| Function      | Retrieving emails                          | Retrieving emails             | Sending emails                                    |
+| Port          | 143                                        | 110                           | 25                                                |
+| Limitation    | Mailbox on the server has a definite quota | Messages will be deleted when | It has no ways of verifying sender -> Spam issues |
+| Port with SSL | 993                                        | 995                           | 465                                               | 
 
 Ngoài ra, giữa POP và IMAP cũng có 1 số điều cần lưu ý như sau:
-| IMAP | POP |
-| ---- | --- |
-|      |POP3 sẽ download tất cả các email đồng thời|
+| IMAP                                                                                               | POP                                         |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| IMAP sẽ chỉ show header, rồi sau đó dựa vào action của người dùng rồi mới download email về client | POP3 sẽ download tất cả các email đồng thời |
+|                                                                                                    |                                             |
 
 ## Libraries
 ### Python
