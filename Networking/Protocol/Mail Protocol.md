@@ -27,6 +27,11 @@ smtp được xây dựng phía trên của [[TCP]], và sử dụng cổng 25 l
 | Limitation | Mailbox on the server has a definite quota | Messages will be deleted when | It has no ways of verifying sender -> Spam issues |     |
 |            |                                            |                               |                                                   |     | 
 
+Ngoài ra, giữa POP và IMAP cũng có 1 số điều cần lưu ý như sau:
+| IMAP | POP |
+| ---- | --- |
+|      |POP3 sẽ download tất cả các email đồng thời|
+
 ## Libraries
 ### Python
 [[Python]] core cung cấp 1 số package để thực hiện các thao tác với email
