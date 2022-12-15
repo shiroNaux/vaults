@@ -5,6 +5,9 @@
 
 Hầu hết các giao thức gửi/nhận mail được dựa trên [[TCP]], và nằm ở tầng ___???___ của mô hình [[OSI]].
 
+![[diagram-how-smtp-and-imap-pop3-work-together-pnap.png]]
+Mô tả cách quá trình truyền email qua internet
+
 ### SMTP
 
 smtp là viết tắt của _simple mail transfer protocol_, là 1 giao thức truyền thư điện tử qua mạng Internet. Tuy nhiên smtp chỉ là chuẩn outgoing hay sending email, tức là gửi thư đi mail server (phía server là ingoing). Còn đối với các ingoing mail (hay còn gọi là Retrieving emails, phía server sẽ trả lại email) các chuẩn POP3 và IMAP sẽ được sử dụng
@@ -28,11 +31,17 @@ smtp được xây dựng phía trên của [[TCP]], và sử dụng cổng 25 l
 | Port with SSL | 993                                        | 995                           | 465                                               | 
 
 Ngoài ra, giữa POP và IMAP cũng có 1 số điều cần lưu ý như sau:
-| IMAP                                                                                               | POP                                         |
-| -------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| IMAP sẽ chỉ show header, rồi sau đó dựa vào action của người dùng rồi mới download email về client | POP3 sẽ download tất cả các email đồng thời |
-|                                                                                                    |                                             |
+| IMAP                                                                                               | POP                                                                                           |
+| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| IMAP sẽ chỉ show header, rồi sau đó dựa vào action của người dùng rồi mới download email về client | POP3 sẽ download tất cả các email đồng thời                                                   |
+| IMAP vẫn lưu email trên server cho đến khi bị xóa -> server cần nhiều [[hard disk]] hơn            | Email trên server sẽ bị xóa khi người dùng download về client -> server cần ít tài nguyên hơn |
+|                                                                                                    |                                                                                               |
 
 ## Libraries
 ### Python
 [[Python]] core cung cấp 1 số package để thực hiện các thao tác với email
+
+# References
+
+1. [IMAP vs. POP3 vs. SMTP: What Are the Differences? (phoenixnap.com)](https://phoenixnap.com/kb/imap-vs-pop3-vs-smtp)
+2. 
