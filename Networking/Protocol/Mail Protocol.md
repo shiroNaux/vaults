@@ -40,6 +40,9 @@ Ngoài ra, giữa POP và IMAP cũng có 1 số điều cần lưu ý như sau:
 ## Libraries
 ### Python
 [[Python]] core cung cấp 1 số package để thực hiện các thao tác với email
+- imaplib -> sử dụng giao thức IMAP
+- [email]([email: Examples — Python 3.11.1 documentation](https://docs.python.org/3/library/email.examples.html))  -> thư viện để xử lý email, thường được dùng kết hợp với các thư viện khác
+- smtplib -> dùng cho SMTP Protocol
 
 # References
 
