@@ -7,4 +7,7 @@ Thông thường, khi chúng ta sử dụng [[SSH]], thì ta cần phải chỉ 
 - SSH Agent
 
 SSH Agent có tác dụng quản lý các private key, mỗi khi 
-Mặc định trên các [[Linux]] [[Operating System|OS]], thì SSH Agent đã được khởi động mỗi kh
+Mặc định trên các [[Linux]] [[Operating System|OS]], thì SSH Agent đã được khởi động mỗi khi người dùng login -> không cần thêm thao tác nào nữa. Tuy nhiên, có thể khởi động 1 cách thủ công như sau:
+``` bash
+eval "ssh-agent"
+```
