@@ -121,6 +121,7 @@ Parttion trong ClickHouse tương đối giống với partition trong các [[Re
 
 ## 4. Projection
 
+
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
 2. [ClickHouse Index Design | ClickHouse Docs](https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-design/)
