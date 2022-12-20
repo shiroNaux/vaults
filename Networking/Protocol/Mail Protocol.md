@@ -47,4 +47,5 @@ Ngoài ra, giữa POP và IMAP cũng có 1 số điều cần lưu ý như sau:
 # References
 
 1. [IMAP vs. POP3 vs. SMTP: What Are the Differences? (phoenixnap.com)](https://phoenixnap.com/kb/imap-vs-pop3-vs-smtp)
-2. 
+2. [Difference Between SMTP, IMAP, And POP3 (Includes Comparisons) (salesblink.io)](https://salesblink.io/blog/difference-between-smtp-imap-pop3)
+3. [SMTP vs IMAP vs POP3 - Knowing The Difference | JSCAPE](https://www.jscape.com/blog/smtp-vs-imap-vs-pop3-difference)
