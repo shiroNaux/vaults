@@ -11,3 +11,15 @@ Mặc định trên các [[Linux]] [[Operating System|OS]], thì SSH Agent đã 
 ``` bash
 eval "ssh-agent"
 ```
+
+Khi muốn thêm mới 1 private key, nếu chỉ đưa vào thư mục `~/.ssh`  là không đủ. Ta chỉ cần add private key đó và SSH Agent bằng lệnh
+``` Bash
+ssh-add ~/.ssh/id_rsa
+```
+
+
+# References
+
+1. [Ssh-agent single sign-on configuration, agent forwarding, the agent protocol.](https://www.ssh.com/academy/ssh/agent)
+2. [Manage SSH-keys with the SSH-agent - Experiencing Technology (tinned-software.net)](https://blog.tinned-software.net/manage-ssh-keys-with-the-ssh-agent/)
+3. [What is the difference between ssh-add and ssh-agent? - Stack Overflow](https://stackoverflow.com/questions/22272299/what-is-the-difference-between-ssh-add-and-ssh-agent)
