@@ -21,3 +21,5 @@ Với mỗi page, form, ... mà trang web gửi đến người dùng sẽ luôn
 Và các trang web giả mạo khác cũng sẽ không biết được các giá trị này do đã bị phía browser chặn access.
 
 # References
+1. [What is a CSRF token? What is its importance and how does it work? - Stack Overflow](https://stackoverflow.com/questions/5207160/what-is-a-csrf-token-what-is-its-importance-and-how-does-it-work)
+2. [CSRF tokens | Web Security Academy (portswigger.net)](https://portswigger.net/web-security/csrf/tokens)

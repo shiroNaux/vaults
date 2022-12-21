@@ -121,6 +121,33 @@ Parttion trong ClickHouse tương đối giống với partition trong các [[Re
 
 ## 4. Projection
 
+Projection là 1 cách thức mới, nhằm tăng độ hiệu quả cho các câu truy vấn mà:
+- Điều kiện `where` không chứa các column nằm trong `primary key`
+- Thực hiện Pre-aggregate các columns -> giảm tài thời gian tính toán cũng như I/O
+
+Projection thực chất là lưu thêm 1 hay nhiều các bảng ẩn kèm theo bảng chính. Các bảng này có dữ liệu được phân phối từ bảng chính, tuy nhiên sẽ được sắp xếp hoặc aggreagte theo 1 cách khác so với bảng chính
+
+Ví dụ:
+
+```SQL
+CREATE TABLE visits  
+(  
+`user_id` UInt64,  
+`user_name` String,  
+`pages_visited` Nullable(Float64),  
+`user_agent` String,  
+PROJECTION projection_visits_by_user  
+(  
+SELECT  
+user_agent,  
+sum(pages_visited)  
+GROUP BY user_id, user_agent  
+)  
+)  
+ENGINE = MergeTree()  
+ORDER BY user_agent
+```
+ Như trong ví dụ trên, ngoài bảng chính là `visits`, thì còn 1 bảng phụ nữa `projection_visits_by_user` chứa các thông tin giống với bảng chính, nhưng đã được aggregate theo `user_id` và `user_agent`. Mỗi khi có 1 câu [[SQL|query]] mà có nội dung là tính tổng `pages_visited` theo `user_id` hay `user_agent` thì ClickHouse sẽ không đọc dữ liệu tù bảng mà lấy dữ lie
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
