@@ -16,7 +16,7 @@ CSRF là kỹ thuật tấn công dựa vào các thông tin được lưu trên
 
 1. Sử dụng CSRF token
 
-Với mỗi page mà trang web gửi đến người dùng sẽ luôn kèm theo 1 token gọi là CSRF Token. Nó là 1 số ngẫu nhiêu, rất lớn mà không thể đoán mà hay [[brute force]] được. Và mỗi request thật từ người dùng đến server sẽ luôn kèm theo token này để đối chứng xem request này có được thực hiện từ page mà server đã phản hồi lại cho người dùng hay không.
+Với mỗi page, form, ... mà trang web gửi đến người dùng sẽ luôn kèm theo 1 token gọi là CSRF Token. Nó là 1 số ngẫu nhiêu, rất lớn mà không thể đoán mà hay [[brute force]] được. Và mỗi request thật từ người dùng đến server sẽ luôn kèm theo token này để đối chứng xem request này có được thực hiện từ page mà server đã phản hồi lại cho người dùng hay không.
 
 Và các trang web giả mạo khác cũng sẽ không biết được các giá trị này do đã bị phía browser chặn access.
 
