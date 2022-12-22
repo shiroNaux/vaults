@@ -147,7 +147,16 @@ GROUP BY user_id, user_agent
 ENGINE = MergeTree()  
 ORDER BY user_agent
 ```
- Như trong ví dụ trên, ngoài bảng chính là `visits`, thì còn 1 bảng phụ nữa `projection_visits_by_user` chứa các thông tin giống với bảng chính, nhưng đã được aggregate theo `user_id` và `user_agent`. Mỗi khi có 1 câu [[SQL|query]] mà có nội dung là tính tổng `pages_visited` theo `user_id` hay `user_agent` thì ClickHouse sẽ không đọc dữ liệu tù bảng mà lấy dữ lie
+ Như trong ví dụ trên, ngoài bảng chính là `visits`, thì còn 1 bảng phụ nữa `projection_visits_by_user` chứa các thông tin giống với bảng chính, nhưng đã được aggregate theo `user_id` và `user_agent`. Mỗi khi có 1 câu [[SQL|query]] mà có nội dung là tính tổng `pages_visited` theo `user_id` hay `user_agent` thì ClickHouse sẽ không đọc dữ liệu tù bảng mà lấy dữ liệu từ projection đã được aggregate và sắp sếp theo `user_id` -> tăng tốc độ truy vấn
+
+### Projection vs Materialized view
+
+Projection thường được so sánh với materialized view bởi vì đây là 2 cách phổ biến để tăng tốc truy vấn bằng cách tạo thêm bảng hay các thành phần lưu trữ vật lý khác(tức là tăng không gian để đổi lấy thời gian). So với Materialized view, Projection có các điểm sau
+
+##### Advantages
+- Nếu view thì sẽ phải sửa câu query 
+##### Disadvantages
+- 
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
