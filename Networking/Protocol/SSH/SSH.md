@@ -29,7 +29,10 @@ ssh-add ~/.ssh/id_rsa
 	- password based: user sẽ nhập password
 	- private key: Quá trình sử dụng private key sẽ trải qua các bước sau:
 		- Client sẽ gửi ID của key mà nó muốn dùng để đăng nhập vào server
-		- Server sẽ kiểm tra file 
+		- Server sẽ kiểm tra file `authorized_keys`, xem các public key trong đó có khớp với key mà client gửi đến hay không. 
+		- Nếu tồn tại 1 key trùng, server sẽ tạo 1 số ngẫu nhiên và dùng public key vừa có để encrypt lại. Sau đó gửi giá trị vừa mã hóa cho client.
+		- Client sẽ dùng private key để decrypt message và nhận được số mà server đã tạo nhẫu nhiên
+		- Client kết hợp số vừa giải mã được và shared session key từ bước trước với nhau. Rối sau đó tính giá tr
 # References
 
 1. [Ssh-agent single sign-on configuration, agent forwarding, the agent protocol.](https://www.ssh.com/academy/ssh/agent)
