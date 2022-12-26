@@ -28,7 +28,10 @@ ssh-add ~/.ssh/id_rsa
 	- Client và Server trao đổi với nhau và thống nhất về 1 số nguyên tố (rất lớn, ngẫu nhiên), và cả thuật toán tạo key (thường là AES)
 	- Mỗi phía sẽ tạo thêm cho mình 1 giá trị nguyên tố ngẫu nhiên khác. Giá trị này là bí mật và không chia sẻ cho phía còn lại
 	- Mỗi phía sẽ sử dựng private number, shared prime number và thuật toán tạo mã đã thống nhất để tạo ra 1 public key cho riêng mình
-	- Sau đó mỗi bên gửi public key vửa tạo cho phía còn lại
+	- Sau đó mỗi bên gửi public key vửa tạo cho phía còn lại.
+	- Client và Server sau khi nhận được public key thì sẽ dùng private key của mình để tính được shared session key. Và đương nhiên, giá trị này là giống nhau ở cả Server và Client.
+- Sau khi thống nhất được shared session key, từ bây giờ mọi kết nối giữa client và server đều được mã hóa bởi key vừa tạo.
+- Quá trình SSH được chuyển sang bước tiếp theo: Client sẽ đăng nhập vào Server.
 
 ## Authentication
 - Sau khi đã thống nhất được key chung, tiếp đến là client sẽ đăng nhập vào server. Có 1 số cách authen chính:
