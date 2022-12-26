@@ -21,7 +21,9 @@ ssh-add ~/.ssh/id_rsa
 
 ## Negotiating Encryption for the Session
 
-- Client sẽ tạo yêu cầu kết nối SSH đến server. Server sẽ tiếp nhận
+- Client sẽ tạo yêu cầu kết nối SSH đến server. Server sẽ tiếp nhận request và gửi về 1 response  bao gồm các thông tin
+	- Version mà serever có thể support -> Nếu client không tương thích với các version này, connection sẽ kết thúc
+	- Server public host key -> Client sẽ kiểm tra định danh của server dựa vào thông tin này
 # References
 
 1. [Ssh-agent single sign-on configuration, agent forwarding, the agent protocol.](https://www.ssh.com/academy/ssh/agent)
