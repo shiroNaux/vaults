@@ -25,6 +25,8 @@ ssh-add ~/.ssh/id_rsa
 	- Version mà serever có thể support -> Nếu client không tương thích với các version này, connection sẽ kết thúc
 	- Server public host key -> Client sẽ kiểm tra định danh của server dựa vào thông tin này
 - Sau đó, client và server sẽ negotiate với nhau để tạo ra được 1 private key chung, được lưu bởi cả client và server
+- Sau khi đã thống nhất được key chung, tiếp đến là client sẽ đăng nhập vào server. Có 1 số cách authen chính:
+	- password based: user sẽ nhập password
 # References
 
 1. [Ssh-agent single sign-on configuration, agent forwarding, the agent protocol.](https://www.ssh.com/academy/ssh/agent)
