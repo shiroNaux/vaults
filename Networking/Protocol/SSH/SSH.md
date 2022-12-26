@@ -17,7 +17,11 @@ Khi muốn thêm mới 1 private key, nếu chỉ đưa vào thư mục `~/.ssh`
 ssh-add ~/.ssh/id_rsa
 ```
 
+# Detail process
 
+## Negotiating Encryption for the Session
+
+- Client sẽ tạo yêu cầu kết nối SSH đến server. Server sẽ tiếp nhận
 # References
 
 1. [Ssh-agent single sign-on configuration, agent forwarding, the agent protocol.](https://www.ssh.com/academy/ssh/agent)
