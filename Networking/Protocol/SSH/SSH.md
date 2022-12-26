@@ -25,7 +25,10 @@ ssh-add ~/.ssh/id_rsa
 	- Version mà serever có thể support -> Nếu client không tương thích với các version này, connection sẽ kết thúc
 	- Server public host key -> Client sẽ kiểm tra định danh của server dựa vào thông tin này
 - Sau đó, client và server sẽ negotiate với nhau để tạo ra được 1 private key chung gọi là sahred session key, được lưu bởi cả client và server. Quá trình sử dụng thuật toán Diffie-Hellman, nó bao gồm các bước như sau:
-	- 
+	- Client và Server trao đổi với nhau và thống nhất về 1 số nguyên tố (rất lớn, ngẫu nhiên), và cả thuật toán tạo key (thường là AES)
+	- Mỗi phía sẽ tạo thêm cho mình 1 giá trị nguyên tố ngẫu nhiên khác. Giá trị này là bí mật và không chia sẻ cho phía còn lại
+	- Mỗi phía sẽ sử dựng private number, shared prime number và thuật toán tạo mã đã thống nhất để tạo ra 1 public key cho riêng mình
+	- Sau đó mỗi bên gửi public key vửa tạo cho phía còn lại
 
 ## Authentication
 - Sau khi đã thống nhất được key chung, tiếp đến là client sẽ đăng nhập vào server. Có 1 số cách authen chính:
