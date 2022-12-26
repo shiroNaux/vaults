@@ -27,8 +27,14 @@ ssh-add ~/.ssh/id_rsa
 - Sau đó, client và server sẽ negotiate với nhau để tạo ra được 1 private key chung, được lưu bởi cả client và server
 - Sau khi đã thống nhất được key chung, tiếp đến là client sẽ đăng nhập vào server. Có 1 số cách authen chính:
 	- password based: user sẽ nhập password
+	- private key: Quá trình sử dụng private key sẽ trải qua các bước sau:
+		- Client sẽ gửi ID của key mà nó muốn dùng để đăng nhập vào server
+		- Server sẽ kiểm tra file 
 # References
 
 1. [Ssh-agent single sign-on configuration, agent forwarding, the agent protocol.](https://www.ssh.com/academy/ssh/agent)
 2. [Manage SSH-keys with the SSH-agent - Experiencing Technology (tinned-software.net)](https://blog.tinned-software.net/manage-ssh-keys-with-the-ssh-agent/)
 3. [What is the difference between ssh-add and ssh-agent? - Stack Overflow](https://stackoverflow.com/questions/22272299/what-is-the-difference-between-ssh-add-and-ssh-agent)
+4. [Best way to use multiple SSH private keys on one client - Stack Overflow](https://stackoverflow.com/questions/2419566/best-way-to-use-multiple-ssh-private-keys-on-one-client)
+5. [RFC 4253: The Secure Shell (SSH) Transport Layer Protocol (rfc-editor.org)](https://www.rfc-editor.org/rfc/rfc4253)
+6. [authentication - How does SSH client ensure that SSH server bears the private key, which is the pair of the public key in client's "known_hosts" file? - Information Security Stack Exchange](https://security.stackexchange.com/questions/154796/how-does-ssh-client-ensure-that-ssh-server-bears-the-private-key-which-is-the-p)
