@@ -151,12 +151,17 @@ ORDER BY user_agent
 
 ### Projection vs Materialized view
 
-Projection thường được so sánh với materialized view bởi vì đây là 2 cách phổ biến để tăng tốc truy vấn bằng cách tạo thêm bảng hay các thành phần lưu trữ vật lý khác(tức là tăng không gian để đổi lấy thời gian). So với Materialized view, Projection có các điểm sau
+Projection thường được so sánh với materialized view bởi vì đây là 2 cách phổ biến để tăng tốc truy vấn bằng cách tạo thêm bảng hay các thành phần lưu trữ vật lý khác(tức là tăng không gian để đổi lấy thời gian).
+
+Về cơ bản thì Projection và Materialized view đều lấy dữ liệu sau khi chúng được insert thành công vào bảng chính và từ đó xử lý để tạo ra các bảng phụ. Cách hoạt động rất giống với trigger trong các [[Relational Database]].
+
+Tuy nhiên so với Materialized view, Projection có các điểm sau
 
 ##### Advantages
-- Nếu view thì sẽ phải sửa câu query 
+- Nếu view thì sẽ phải sửa câu query, còn nếu dùng projection thì sẽ không cần phải sửa query (tên bảng), ClickHouse sẽ tự tìm projection hù hợp theo câu truy vấn
+- Materialized view
 ##### Disadvantages
-- 
+- Projection không làm thay đổi data quá nhiều, hầu hết nó sẽ được dùng để có nhiều cách  sắp xếp dữ liệu để câu truy vấn có hiệu năng tốt hơn. Còn materialized view thì có khả năng xử lý dữ liệu ở mức cao hơn, do nó có thể kết hợp với các bảng khác hay sử dụng nhiều hàm khác. -> Materialized view đem lại khả năng xử lý dữ liệu, còn 
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
