@@ -159,10 +159,11 @@ Tuy nhiên so với Materialized view, Projection có các điểm sau
 
 ##### Advantages
 - Nếu view thì sẽ phải sửa câu query, còn nếu dùng projection thì sẽ không cần phải sửa query (tên bảng), ClickHouse sẽ tự tìm projection hù hợp theo câu truy vấn
-- Materialized view
+- Dữ liệu của materialized view được sinh ra sau khi nó được insert thành công vào bảng chính và thực hiện thêm các bước xử lý được define trong view. Quá trình này có thể xảy ra lỗi, tức là khi dữ liệu đã được insert vào bảng nhưng trong view lại không có -> __miss data__. Còn dữ liệu của projection được sinh ra dưới background. Nếu xảy ra lỗi, nó có thể mix data từ projection và bảng chính để đưa ra kết quả, hoặc sẽ raise 1 exception nếu người dùng truy vấn -> Khả năng __handle lỗi__ của projection tốt hơn
 ##### Disadvantages
-- Projection không làm thay đổi data quá nhiều, hầu hết nó sẽ được dùng để có nhiều cách  sắp xếp dữ liệu để câu truy vấn có hiệu năng tốt hơn. Còn materialized view thì có khả năng xử lý dữ liệu ở mức cao hơn, do nó có thể kết hợp với các bảng khác hay sử dụng nhiều hàm khác. -> Materialized view đem lại khả năng xử lý dữ liệu, còn 
+- Projection không làm thay đổi data quá nhiều, hầu hết nó sẽ được dùng để có nhiều cách  sắp xếp dữ liệu để câu truy vấn có hiệu năng tốt hơn. Còn materialized view thì có khả năng xử lý dữ liệu ở mức cao hơn, do nó có thể kết hợp với các bảng khác hay sử dụng nhiều hàm khác. -> Materialized view xử lý dữ liệu tốt hơn
 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
 2. [ClickHouse Index Design | ClickHouse Docs](https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-design/)
+3. [Experimental ClickHouse: Projections・Tinybird](https://www.tinybird.co/blog-posts/projections)
