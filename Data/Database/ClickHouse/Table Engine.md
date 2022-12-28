@@ -29,7 +29,19 @@ Các Table Engine sẽ được đặc trưng bởi các yếu tố:
 
 ## Log
 
+Các Engine thuộc dạng Log thường được thiết kế đặc biệt cho các workload với đặc điểm: quick write vào nhiều bảng nhỏ, và read tất cả các bảng với nhau. Log Engine family bao gồm:
+- TinyLog
+- StripleLog
+- Log
+
 ## Integration Engines
+
+Các Engine thuộc loại Interagtion sẽ đọc data được lưu trữ từ 1 nơi khác không phải ClickHouse, lấy dữ liệu về và xử lý. Dữ liệu sẽ không được lưu trữ bởi ClickHouse. Nó tương tự như tính năng FDW của [[PostgreSQL]]. Các Engine thuộc loại Integration là:
+- ODBC
+- JDBC
+- [[MySQL]]
+- [[MongoDB]]
+- [[HDFS]]
 
 ## Special Engines
 
