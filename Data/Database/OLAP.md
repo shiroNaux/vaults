@@ -46,7 +46,7 @@ aliases
  | An OLAP database has a multi-dimensional schema, so it can support complex queries of multiple data facts from current and historical data | OLTP, on the other hand, uses a traditional DBMS to accommodate a large volume of real-time transactions, Different OLTP databases can be the source of aggregated data for OLAP, and they may be organized as a data warehouse|
  | Thời gian trả về kết quả tương đối lớn, do phải làm việc với số lượng dữ liệu lớn -> nhu cầu tối ưu để ra kết quả trong thời gian sớm nhất | For OLTP transactions and responses, every millisecond counts. Workloads involve simple read and write operations via SQL (structured query language), requiring less time and less storage space|
 
-- Tóm lại: OLAP và [[OLTP]] có mục đích riêng của chúng, ***không thể thay thế lẫn nhau***, và thường được kết hợp với nhau: nguồn dữ liệu của OLAP thường sẽ là từ nhiều nguồn [[OLTP]] kết hợp lại và được biến đổi thông  qua quá trình [[../Data Engineering/ETL]]
+- Tóm lại: OLAP và [[OLTP]] có mục đích riêng của chúng, ***không thể thay thế lẫn nhau***, và thường được kết hợp với nhau: nguồn dữ liệu của OLAP thường sẽ là từ nhiều nguồn [[OLTP]] kết hợp lại và được biến đổi thông  qua quá trình [[ETL]]
 
 ## 2. [[OLEP]]
 
