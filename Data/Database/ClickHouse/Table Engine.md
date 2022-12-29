@@ -42,7 +42,13 @@ Các Engine thuộc loại Interagtion sẽ đọc data được lưu trữ từ
 - [[MySQL]]
 - [[MongoDB]]
 - [[HDFS]]
-
+- [[S3]]
+- [[Apache Kafka|Kafka]]
+- EmbbededRocksDB
+- [[PostgreSQL]]
 ## Special Engines
+
+Các Engine đặc biệt:
+- 
 
 ## Virtual Column
