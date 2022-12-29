@@ -27,8 +27,16 @@ Các Table Engine sẽ được đặc trưng bởi các yếu tố:
 
 ### MergeTree
 
-MergeTree Engine có các đặc điểm chính sau:
+MergeTree Engine có các tính năng chính sau:
 - Data được lưu trữ trên [[Hard disk|ổ cứng]] và được sắp xếp theo
+- Có thể chia partition cho dữ liệu
+- Hỗ trợ replication
+- Hỗ trợ sampling
+
+Các đặc điểm của MergeTree:
+- 
+
+### 
 
 ## Log
 
