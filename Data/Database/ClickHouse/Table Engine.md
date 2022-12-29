@@ -16,7 +16,7 @@ Các Table Engine sẽ được đặc trưng bởi các yếu tố:
 
 ## MergeTree
 
-Đây có lẽ là Engine được biết đến và sử dụng nhiều nhất trong ClickHouse. MergeTree engine family bao gồm:
+Đây có lẽ là Engine được biết đến và sử dụng nhiều nhất trong [[ClickHouse]]. MergeTree engine family bao gồm:
 - MergeTree
 - ReplacingMergeTree
 - SummingMergeTree
@@ -25,7 +25,10 @@ Các Table Engine sẽ được đặc trưng bởi các yếu tố:
 - VersionedCollapsingMergeTree
 - GraphiteMergeTree
 
-### 
+### MergeTree
+
+MergeTree Engine có các đặc điểm chính sau:
+- Data được lưu trữ trên [[Hard disk|ổ cứng]] và được sắp xếp theo
 
 ## Log
 

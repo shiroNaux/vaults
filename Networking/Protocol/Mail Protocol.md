@@ -34,7 +34,7 @@ Ngoài ra, giữa POP và IMAP cũng có 1 số điều cần lưu ý như sau:
 | IMAP                                                                                               | POP                                                                                           |
 | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | IMAP sẽ chỉ show header, rồi sau đó dựa vào action của người dùng rồi mới download email về client | POP3 sẽ download tất cả các email đồng thời                                                   |
-| IMAP vẫn lưu email trên server cho đến khi bị xóa -> server cần nhiều [[hard disk]] hơn            | Email trên server sẽ bị xóa khi người dùng download về client -> server cần ít tài nguyên hơn |
+| IMAP vẫn lưu email trên server cho đến khi bị xóa -> server cần nhiều [[Hard disk]] hơn            | Email trên server sẽ bị xóa khi người dùng download về client -> server cần ít tài nguyên hơn |
 |                                                                                                    |                                                                                               |
 
 ## Libraries
