@@ -36,7 +36,17 @@ MergeTree Engine có các tính năng chính sau:
 Các đặc điểm của MergeTree:
 - 
 
-### 
+### ReplacingMergeTree
+
+### SummingMergeTree
+
+### AggregatingMergeTree
+
+### CollapsingMergeTree
+
+### VersionedCollapsingMergeTree
+
+### GraphiteMergeTree
 
 ## Log
 
