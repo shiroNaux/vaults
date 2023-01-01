@@ -6,9 +6,19 @@ Concurrency control là việc kiểm soát việc nhiều tiến trình khác n
 
 # Concurrency Control trong database
 
+## Concurrency Control Protocols
 
+### 1. Lock-Based protocols
+### 2. Two phase locking protocols
+### 3. Timestamp-Based protocols
+### 4. Validation-Based protocols
 
-## 1. Optimistic Concurrency Control
-## 2. Pessimistic Concurrency Control
-## 3. Semi-optimistic Concurrency Control
+## Concurency Control Mechanism
+
+### 1. Optimistic Concurrency Control
+### 2. Pessimistic Concurrency Control
+### 3. Semi-optimistic Concurrency Control
+
 # References
+
+1. [Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)
