@@ -23,7 +23,7 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 Shared lock hay còn được gọi là read-only lock. Đối với protocol này, resource sẽ bị khóa đối với write operations, còn các read operation vẫn sẽ được thực hiện.
 
 #### Exclusive Lock
-Đối với exclusive lock, chỉ có duy nhất 1 transaction/process được thực hiện read, ửite.
+Đối với exclusive lock, chỉ có duy nhất 1 transaction/process được thực hiện read, write. Hay chỉ có duy nhất 1 transaction được chiếm exclusive lock
 
 #### Simplistic Lock
 #### Pre-claiming Lock
