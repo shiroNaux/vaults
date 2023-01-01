@@ -18,8 +18,9 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 
 ### 1. Lock-Based protocols
 
-Đối với protocol loại này, các resource sẽ bị khóa loại 
+Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[process]] sử dụng tài nguyên.
 #### Shared Lock
+Shared lock hay còn được gọi là read-only lock. Đối với protocol này, 
 #### Exclusive Lock
 #### Simplistic Lock
 #### Pre-claiming Lock
@@ -37,3 +38,5 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 # References
 
 1. [Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)
+2. [Concurrency Control in DBMS - Scaler Topics](https://www.scaler.com/topics/dbms/concurrency-control-in-dbms/)
+3. [DBMS Concurrency Control: Timestamp & Lock-Based Protocols (guru99.com)](https://www.guru99.com/dbms-concurrency-control.html)
