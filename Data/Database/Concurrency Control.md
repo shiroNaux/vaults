@@ -7,6 +7,7 @@ Concurrency control là việc kiểm soát việc nhiều tiến trình khác n
 Nếu không đảm bảo được khả năng CC, có 1 số điều sau có thể xảy ra:
 - Lost update:
 - Dirty read
+- hantom read
 - Non-repeateable read
 - Incorrect summary issues
 
