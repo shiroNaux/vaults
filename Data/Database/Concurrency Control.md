@@ -27,19 +27,24 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 #### Lock level
 
 
-#### Shared Lock (S)
+#### Lock type (Lock model)
+Việc lock data item 
+
+##### Shared Lock (S)
 Shared lock hay còn được gọi là read-only lock. Đối với protocol này, resource sẽ bị khóa đối với write operations, còn các read operation vẫn sẽ được thực hiện.
 
-#### Exclusive Lock (X)
+##### Exclusive Lock (X)
 Đối với exclusive lock, chỉ có duy nhất 1 transaction/process được thực hiện read, write. Hay chỉ có duy nhất 1 transaction được chiếm exclusive lock
 
-#### Simplistic Lock 
-#### Pre-claiming Lock
-#### Update Lock (U)
-#### Intent Lock (I)
-#### Schema Lock (Sch)
-#### Bulk Update (BU)
-#### Two phase locking protocols
+##### Update Lock (U)
+##### Intent Lock (I)
+##### Schema Lock (Sch)
+##### Bulk Update (BU)
+
+#### Các protocol (Các phương pháp sử dụng lock based)
+##### Simplistic Lock 
+##### Pre-claiming Lock
+##### Two phase locking protocols
 
 ### Timestamp-Based protocols
 ### Validation-Based protocols
