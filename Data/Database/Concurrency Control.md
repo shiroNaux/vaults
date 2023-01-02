@@ -47,9 +47,9 @@ Pessimistic CC sẽ block tất cả các transaction khác khỏi việc truy c
 
 ### Optimistic Concurrency Control
 
-Optimistic được sử dụng trong điều kiện mà conccurency operation xảy ra ít. Nó sẽ không block các transaction khác khỏi việc truy cập data. Tuy nhiên
+Optimistic được sử dụng trong điều kiện mà conccurency operation xảy ra ít. Nó sẽ không block các transaction khác khỏi việc truy cập data. Tuy nhiên sau khi commit và trước khi data được ghi vào [[Hard disk]] thì sẽ có thêm 1 bước đó là kiểm tra lại version của
 
-#### Phase of optimistic concurrency contro
+#### Phase of optimistic concurrency control
 - Begin: Ghi lại timestamp tại thời điểm bắt đầu transaction
 - Modify: Thực hiện các lệnh trong transaction
 - Validate: Kiểm tra xem dữ liệu có bị thay đổi bởi process nào khác không trong quá trình thực hiện transaction. Việc kiểm tra này dựa vào thời gian đã ghi lại ở bước 1.
