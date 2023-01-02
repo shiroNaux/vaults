@@ -42,9 +42,11 @@ Shared lock hay còn được gọi là read-only lock. Đối với protocol n�
 #### Các protocol (Các phương pháp thuộc lock based protocols)
 ---
 ##### Simplistic Lock 
-Đây là protocol đơn giản nhất thuocj lock-based
+Đây là protocol đơn giản nhất thuộc lock-based. Khi 1 transaction sử dụng data, tất cả cá transaction khác sẽ phải đợi đến khi transaction này hoàn thành rồi mới tiếp cận được data.
 
 ##### Pre-claiming Lock
+Protocol loại này sẽ kiểm tra xem các tài nguyên cần dùng để thực hiện transaction là những gì. Sau đó nó sẽ phải đợi cho đến khi các tài nguyên này được __grant__
+
 ##### Two phase locking protocols
 
 ### Timestamp-Based protocols
