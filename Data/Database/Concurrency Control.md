@@ -38,6 +38,9 @@ Shared lock hay còn được gọi là read-only lock. Đối với protocol n�
 ### 2. Pessimistic Concurrency Control
 ### 3. Semi-optimistic Concurrency Control
 
+# Concurrency control in [[PostgreSQL]]
+
+
 # References
 
 1. [Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)
