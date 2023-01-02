@@ -43,9 +43,12 @@ Các concurrency control method được chia vào 3 loại chính
 
 ### Pessimistic Concurrency Control
 
-Pessimistic CC sẽ block tất cả các transaction khác khỏi việc truy cập data
+Pessimistic CC sẽ block tất cả các transaction khác khỏi việc truy cập data để tránh xung đột, Loại CC này thường được sử dụng trong các điều kiện số lượng concurrency operation lớn. Điểm yếu của cách xử lý này là: việc lock data lại có thể dẫn đến việc giảm hiệu năng của database.
 
 ### Optimistic Concurrency Control
+
+Optimistic được sử dụng trong điều kiện mà conccurency operation xảy ra ít. Nó sẽ không block các transaction khác khỏi việc truy cập data. Tuy nhiên
+
 #### Phase of optimistic concurrency contro
 - Begin: Ghi lại timestamp tại thời điểm bắt đầu transaction
 - Modify: Thực hiện các lệnh trong transaction
