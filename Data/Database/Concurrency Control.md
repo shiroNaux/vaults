@@ -20,12 +20,11 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[process]] hay transaction sử dụng tài nguyên. Các porcess/transaction khác phải đợi đến khi lock được release thì mới tiếp cận được data. Các phương pháp lock này được phân loại thành:
 - Shared lock
 - Exclusive lock
-- Update Lock
+- Update lock
 - Intent lock
 - Bulk update
 
 #### Lock level
-
 
 #### Lock type (Lock model)
 ##### Shared Lock (S)
@@ -45,7 +44,7 @@ Shared lock hay còn được gọi là read-only lock. Đối với protocol n�
 Đây là protocol đơn giản nhất thuộc lock-based. Khi 1 transaction sử dụng data, tất cả cá transaction khác sẽ phải đợi đến khi transaction này hoàn thành rồi mới tiếp cận được data.
 
 ##### Pre-claiming Lock
-Protocol loại này sẽ kiểm tra xem các tài nguyên cần dùng để thực hiện transaction là những gì. Sau đó nó sẽ phải đợi cho đến khi các tài nguyên này được __grant__
+Protocol loại này sẽ kiểm tra xem các tài nguyên cần dùng để thực hiện transaction là những gì. Sau đó nó sẽ phải đợi cho đến khi các tài nguyên này được __granted__. Có thể hiểu đơn giản là: Đối với Simplistic lock, các resource sẽ bị lock khi được dùng đến, còn với pre-claiming lock, nó sẽ phải tính toán trước các tài nguyên cần sử dụng và đợi cho đến khi các tài nguyên này được grant thì transaction mới được thực thi.
 
 ##### Two phase locking protocols
 
@@ -75,6 +74,8 @@ Optimistic được sử dụng trong điều kiện mà conccurency operation x
 Multiversion CC có thể coi là 1 phiên bản năng cấp của OCC. Nó được sử dụng trong hầu hết các [[Database]] thông dụng hiện nay.
 
 ### Semi-optimistic Concurrency Control
+Với loại CC này, lock sẽ được sẽ được thực hiện hay không được thực hiện tùy thuộc vào khả năng gây ra conflict của transaction
+-> ___Cách mà aly lock cho transactions ???___
 
 # Concurrency control in [[PostgreSQL]]
 
@@ -89,3 +90,4 @@ Multiversion CC là cơ chế xử lý concurrency operations chính của [[Pos
 6. [Exclusive lock và Shared lock - Viblo - Dat Bui](https://viblo.asia/p/010-exclusive-lock-va-shared-lock-924lJjn0lPM)
 7. [database replication - Optimistic vs Multi Version Concurrency Control - Differences? - Stack Overflow](https://stackoverflow.com/questions/5751271/optimistic-vs-multi-version-concurrency-control-differences)
 8. [PostgreSQL: Documentation: 13: Chapter 13. Concurrency Control](https://www.postgresql.org/docs/13/mvcc.html)
+9. [Lock based Protocol in DBMS - BeginnersBook](https://beginnersbook.com/2022/07/lock-based-protocol-in-dbms/)
