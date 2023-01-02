@@ -6,7 +6,7 @@ Concurrency control là việc kiểm soát việc nhiều tiến trình khác n
 
 Nếu không đảm bảo được khả năng CC, có 1 số điều sau có thể xảy ra:
 - Lost update:
-- Dirty read
+- Dirty read: 
 - hantom read
 - Non-repeateable read
 - Incorrect summary issues
@@ -69,3 +69,5 @@ Multiversion CC có thể coi là 1 phiên bản năng cấp của OCC. Nó đư
 2. [Concurrency Control in DBMS - Scaler Topics](https://www.scaler.com/topics/dbms/concurrency-control-in-dbms/)
 3. [DBMS Concurrency Control: Timestamp & Lock-Based Protocols (guru99.com)](https://www.guru99.com/dbms-concurrency-control.html)
 4. [Exclusive lock và Shared lock - Viblo - Dat Bui](https://viblo.asia/p/010-exclusive-lock-va-shared-lock-924lJjn0lPM)
+5. [database replication - Optimistic vs Multi Version Concurrency Control - Differences? - Stack Overflow](https://stackoverflow.com/questions/5751271/optimistic-vs-multi-version-concurrency-control-differences)
+6. [PostgreSQL: Documentation: 13: Chapter 13. Concurrency Control](https://www.postgresql.org/docs/13/mvcc.html)
