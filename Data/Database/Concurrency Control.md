@@ -16,7 +16,7 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 ## Concurrency Control Protocols
 ---
 
-### 1. Lock-Based protocols
+### Lock-Based protocols
 Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[process]] sử dụng tài nguyên.
 
 #### Shared Lock
@@ -27,15 +27,23 @@ Shared lock hay còn được gọi là read-only lock. Đối với protocol n�
 
 #### Simplistic Lock
 #### Pre-claiming Lock
+#### Two phase locking protocols
 
-### 2. Two phase locking protocols
-### 3. Timestamp-Based protocols
-### 4. Validation-Based protocols
+### Timestamp-Based protocols
+### Validation-Based protocols
 
 ## Concurency Control Mechanism
 ---
-### 1. Optimistic Concurrency Control
-### 2. Pessimistic Concurrency Control
+
+Các concurrency control method được chia vào 3 loại chính
+
+### 1. Pessimistic Concurrency Control
+### 2. Optimistic Concurrency Control
+#### Phase of optimistic concurrency contro
+- Begin: Ghi lại timestamp tại thời điểm bắt đầu transaction
+- Modify: Thực hiện các lệnh trong transaction
+- Validate: Kiểm tra xem dữ liệu có bị thay đổi bởi process nào khác không trong quá trình thực hiện transaction. Việc kiểm tra này dựa vào thời gian đã ghi lại ở bước 1.
+- Commit/Rollback
 ### 3. Semi-optimistic Concurrency Control
 
 # Concurrency control in [[PostgreSQL]]
