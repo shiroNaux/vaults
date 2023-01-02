@@ -27,6 +27,9 @@ Shared lock hay còn được gọi là read-only lock. Đối với protocol n�
 
 #### Simplistic Lock
 #### Pre-claiming Lock
+#### Update lock
+#### Intent lock
+####
 #### Two phase locking protocols
 
 ### Timestamp-Based protocols
