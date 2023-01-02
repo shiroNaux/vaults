@@ -19,17 +19,18 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 ### Lock-Based protocols
 Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[process]] sử dụng tài nguyên.
 
-#### Shared Lock
+#### Shared Lock (S)
 Shared lock hay còn được gọi là read-only lock. Đối với protocol này, resource sẽ bị khóa đối với write operations, còn các read operation vẫn sẽ được thực hiện.
 
-#### Exclusive Lock
+#### Exclusive Lock (X)
 Đối với exclusive lock, chỉ có duy nhất 1 transaction/process được thực hiện read, write. Hay chỉ có duy nhất 1 transaction được chiếm exclusive lock
 
-#### Simplistic Lock
+#### Simplistic Lock 
 #### Pre-claiming Lock
-#### Update lock
-#### Intent lock
-####
+#### Update Lock
+#### Intent Lock
+#### Schema Lock
+
 #### Two phase locking protocols
 
 ### Timestamp-Based protocols
@@ -40,14 +41,21 @@ Shared lock hay còn được gọi là read-only lock. Đối với protocol n�
 
 Các concurrency control method được chia vào 3 loại chính
 
-### 1. Pessimistic Concurrency Control
-### 2. Optimistic Concurrency Control
+### Pessimistic Concurrency Control
+
+Pessimistic CC sẽ block tất cả các transaction khác khỏi việc truy cập data
+
+### Optimistic Concurrency Control
 #### Phase of optimistic concurrency contro
 - Begin: Ghi lại timestamp tại thời điểm bắt đầu transaction
 - Modify: Thực hiện các lệnh trong transaction
 - Validate: Kiểm tra xem dữ liệu có bị thay đổi bởi process nào khác không trong quá trình thực hiện transaction. Việc kiểm tra này dựa vào thời gian đã ghi lại ở bước 1.
 - Commit/Rollback
-### 3. Semi-optimistic Concurrency Control
+
+#### Multiversion Concurrency control
+Multiversion CC có thể coi là 1 phiên bản năng cấp của OCC. Nó được sử dụng trong hầu hết các [[Database]] thông dụng hiện nay.
+
+### Semi-optimistic Concurrency Control
 
 # Concurrency control in [[PostgreSQL]]
 
