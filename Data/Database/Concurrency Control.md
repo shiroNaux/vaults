@@ -28,8 +28,6 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 
 
 #### Lock type (Lock model)
-Việc lock data item 
-
 ##### Shared Lock (S)
 Shared lock hay còn được gọi là read-only lock. Đối với protocol này, resource sẽ bị khóa đối với write operations, còn các read operation vẫn sẽ được thực hiện.
 
@@ -41,8 +39,11 @@ Shared lock hay còn được gọi là read-only lock. Đối với protocol n�
 ##### Schema Lock (Sch)
 ##### Bulk Update (BU)
 
-#### Các protocol (Các phương pháp sử dụng lock based)
+#### Các protocol (Các phương pháp thuộc lock based protocols)
+---
 ##### Simplistic Lock 
+Đây là protocol đơn giản nhất thuocj lock-based
+
 ##### Pre-claiming Lock
 ##### Two phase locking protocols
 
