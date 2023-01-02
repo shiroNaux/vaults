@@ -17,7 +17,7 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 ---
 
 ### Lock-Based protocols
-Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[process]] sử dụng tài nguyên.
+Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[process]] hay transaction sử dụng tài nguyên. Các porcess/transaction khác phải đợi đến khi lock được release thì mới tiếp cận được data. Các phương pháp lock nđưo
 
 #### Shared Lock (S)
 Shared lock hay còn được gọi là read-only lock. Đối với protocol này, resource sẽ bị khóa đối với write operations, còn các read operation vẫn sẽ được thực hiện.
@@ -53,7 +53,7 @@ Optimistic được sử dụng trong điều kiện mà conccurency operation x
 - Begin: Ghi lại timestamp tại thời điểm bắt đầu transaction
 - Modify: Thực hiện các lệnh trong transaction
 - Validate: Kiểm tra xem dữ liệu có bị thay đổi bởi process nào khác không trong quá trình thực hiện transaction. Việc kiểm tra này dựa vào thời gian đã ghi lại ở bước 1.
-- Commit/Rollback
+- Commit/Rollback: Sau khi kiểm tra, nếu có conflict -> rollback còn không thì sẽ thực hiện operations.
 
 #### Multiversion Concurrency control
 Multiversion CC có thể coi là 1 phiên bản năng cấp của OCC. Nó được sử dụng trong hầu hết các [[Database]] thông dụng hiện nay.
@@ -62,12 +62,13 @@ Multiversion CC có thể coi là 1 phiên bản năng cấp của OCC. Nó đư
 
 # Concurrency control in [[PostgreSQL]]
 
-
+Multiversion CC là cơ chế xử lý concurrency operations chính của [[PostgreSQL]]
 # References
 
 1. [Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)
-2. [Concurrency Control in DBMS - Scaler Topics](https://www.scaler.com/topics/dbms/concurrency-control-in-dbms/)
-3. [DBMS Concurrency Control: Timestamp & Lock-Based Protocols (guru99.com)](https://www.guru99.com/dbms-concurrency-control.html)
-4. [Exclusive lock và Shared lock - Viblo - Dat Bui](https://viblo.asia/p/010-exclusive-lock-va-shared-lock-924lJjn0lPM)
-5. [database replication - Optimistic vs Multi Version Concurrency Control - Differences? - Stack Overflow](https://stackoverflow.com/questions/5751271/optimistic-vs-multi-version-concurrency-control-differences)
-6. [PostgreSQL: Documentation: 13: Chapter 13. Concurrency Control](https://www.postgresql.org/docs/13/mvcc.html)
+2. [Optimistic concurrency control – Wikipedia](https://en.wikipedia.org/wiki/Optimistic_concurrency_control)
+3. [Concurrency Control in DBMS - Scaler Topics](https://www.scaler.com/topics/dbms/concurrency-control-in-dbms/)
+4. [DBMS Concurrency Control: Timestamp & Lock-Based Protocols (guru99.com)](https://www.guru99.com/dbms-concurrency-control.html)
+5. [Exclusive lock và Shared lock - Viblo - Dat Bui](https://viblo.asia/p/010-exclusive-lock-va-shared-lock-924lJjn0lPM)
+6. [database replication - Optimistic vs Multi Version Concurrency Control - Differences? - Stack Overflow](https://stackoverflow.com/questions/5751271/optimistic-vs-multi-version-concurrency-control-differences)
+7. [PostgreSQL: Documentation: 13: Chapter 13. Concurrency Control](https://www.postgresql.org/docs/13/mvcc.html)
