@@ -24,7 +24,7 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 - Intent lock
 - Bulk update
 
-#### Lock level
+#### Lock hierarchy
 
 #### Lock type (Lock model)
 ##### Shared Lock (S)
