@@ -75,3 +75,6 @@ Các Engine đặc biệt:
 ## Virtual Column
 
 # References
+1. [Table Engines | ClickHouse Docs](https://clickhouse.com/docs/en/engines/table-engines/)
+2. [How to pick an ORDER BY / PRIMARY KEY / PARTITION BY for the MergeTree-family table | Altinity Knowledge Base](https://kb.altinity.com/engines/mergetree-table-engine-family/pick-keys/)
+3. [Understanding ClickHouse Data Skipping Indexes | ClickHouse Docs](https://clickhouse.com/docs/en/guides/improving-query-performance/skipping-indexes/)
