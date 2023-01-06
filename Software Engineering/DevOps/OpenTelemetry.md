@@ -13,3 +13,4 @@ OTel sử dụng plugable architecture cho nên nó có thể hỗ trợ rất n
 
 1. [What is OpenTelemetry? How it Works & Use Cases | Datadog (datadoghq.com)](https://www.datadoghq.com/knowledge-center/opentelemetry/)
 2. [Documentation | OpenTelemetry](https://opentelemetry.io/docs/)
+3. [Guide to OpenTelemetry (logz.io)](https://logz.io/learn/opentelemetry-guide/#auto)
