@@ -28,3 +28,6 @@ Sharding là 1 cách mà MongoDB sử dụng để scale theo chiều ngang. Sha
 # RAC
 
 # References
+1. [Shards — MongoDB Manual](https://www.mongodb.com/docs/manual/core/sharded-cluster-shards/)
+2. [Three Member Replica Sets — MongoDB Manual](https://www.mongodb.com/docs/manual/core/replica-set-architecture-three-members/#primary-with-a-secondary-and-an-arbiter--psa-)
+3. [Sharding Considerations - Practical MongoDB Aggregations Book (practical-mongodb-aggregations.com)](https://www.practical-mongodb-aggregations.com/guides/sharding.html)
