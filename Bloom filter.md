@@ -26,3 +26,5 @@ Bloom được sử dụng rất nhiều trong các sản phẩm software, có t
 1. [Bloom Filter - BlogDogy](https://dogy.io/2020/10/06/bloom-filter/)
 2. [Bloom filter – Wikipedia](https://en.wikipedia.org/wiki/Bloom_filter)
 3. [Tìm hiểu bộ lọc Bloom (Bloom filter) và một số ứng dụng dưới con mắt đời thường – ManhDV's blog (manhdaovan.github.io)](https://manhdaovan.github.io/programming/vi/2019/12/21/tim-hieu-bloom-filter-va-mot-so-ung-dung/)
+4. [Preventing DDoS using Bloom Filter: A Survey (eudl.eu)](https://eudl.eu/pdf/10.4108/eai.19-6-2018.155865)
+5. [Bloom Filters: Cấu trúc lưu trữ dữ liệu dựa trên xác suất. - Viblo](https://viblo.asia/p/bloom-filters-tai-sao-cac-mang-blockchain-lai-thuong-su-dung-no-GrLZD07eZk0)
