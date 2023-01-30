@@ -114,3 +114,4 @@ Do cách hoạt động giống như database, cho nên Git cũng có một số
 4. [Git's database internals IV: distributed synchronization | The GitHub Blog](https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/)
 5. [Git's database internals V: scalability | The GitHub Blog](https://github.blog/2022-09-02-gits-database-internals-v-scalability/)
 6. [internals - What does the git index contain EXACTLY? - Stack Overflow](https://stackoverflow.com/questions/4084921/what-does-the-git-index-contain-exactly)
+7. [Beyond Git: The other version control systems developers use - Stack Overflow Blog](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/)
