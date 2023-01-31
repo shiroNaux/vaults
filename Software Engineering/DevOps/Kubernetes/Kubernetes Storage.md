@@ -34,6 +34,26 @@ Các use cases của emptyDir:
 
 Ta có thể set giá trị cho `emptyDir.medium` để xác định vị trí lưu data. Mặc định là emptyDir sẽ lưu vào bất cứ thiết bị lưu trữ nào có trên node như: HDD, [[Hard disk]], [[NAS]], ... Ngoài ra có thể lưu trên [[RAM]] bằng cách set là `memory`
 
+Example config:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: test-pd
+spec:
+  containers:
+  - image: registry.k8s.io/test-webserver
+    name: test-container
+    volumeMounts:
+    - mountPath: /cache
+      name: cache-volume
+  volumes:
+  - name: cache-volume
+    emptyDir:
+      sizeLimit: 500Mi
+```
+
 #### fc (fiber channel)
 #### OpenStack CSI migration
 #### downwardAPI
