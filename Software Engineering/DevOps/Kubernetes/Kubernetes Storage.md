@@ -22,7 +22,11 @@ Kubernetes là 1 sản phẩm open source, có cung cấp interface cho storage 
 
 Ở đây, chúng ta chỉ nói đến những giải pháp free hoặc open source, có thể deploy ở bất kì đây (trên cloud hay on-premise) và có thể được sử dụng ở hiện tại ([[2023-01-31]]), chưa bị deprecated
 
-#### empDir
+#### emptyDir
+emptyDir sẽ được tạo trước tiên khi ta tạo pod trên 1 node, và nó chỉ tồn tại khi pod đó tồn tại trên node đó. Các container trong cùng pod 
+
+> Chú ý: emtyDir ở level node và pod. Khi pod bị crash thì emtyDir sẽ không mất đi. Chỉ khi pod bị remove khỏi node thì emtyDir mới bị xóa theo.
+
 #### fc (fiber channel)
 #### OpenStack CSI migration
 #### downwardAPI
