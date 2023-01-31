@@ -32,7 +32,7 @@ Các use cases của emptyDir:
 - checkpointing a long computation for recovery from crashes
 - holding files that a content-manager container fetches while a webserver container serves the data
 
-
+Ta có thể set giá trị cho `emptyDir.medium` để xác định vị trí lưu data. Mặc định là emptyDir sẽ lưu vào bất cứ thiết bị lưu trữ nào có trên node như: HDD, [[Hard disk]], [[NAS]], ... Ngoài ra có thể lưu trên [[RAM]] bằng cách set là `memory`
 
 #### fc (fiber channel)
 #### OpenStack CSI migration
