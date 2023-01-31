@@ -28,7 +28,11 @@ emptyDir sẽ được tạo trước tiên khi ta tạo pod trên 1 node, và n
 > Chú ý: emtyDir ở level node và pod. Khi pod bị crash thì emtyDir sẽ không mất đi. Chỉ khi pod bị remove khỏi node thì emtyDir mới bị xóa theo.
 
 Các use cases của emptyDir:
-- 
+- scratch space, such as for a disk-based merge sort
+- checkpointing a long computation for recovery from crashes
+- holding files that a content-manager container fetches while a webserver container serves the data
+
+
 
 #### fc (fiber channel)
 #### OpenStack CSI migration
