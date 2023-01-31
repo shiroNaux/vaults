@@ -11,3 +11,13 @@ CSI stand for container storage interface.
 
 Volume trong kubernetes cũng khá giống với volume trong [[Docker]], tuy nhiên volume của kubernetes có nhiều điểm nổi bật hơn. 
 Về cơ bản thì volume là 1 directory, có thể chứa data bên trong. Mỗi pod muốn sử dụng volume thì phải mount volume đó vào 1 path trong file system của nó.
+
+### Types of volumes
+
+Kubernetes là 1 sản phẩm open source, có cung cấp interface cho storage -> có rất nhiều loại volume được các vendor họ tạo ra để kinh doanh các sản phẩm của mình, có thể kể đến các loại Volume như:
+- AWS EBS CSI Migration, sẽ sử dụng [[AWS]] EBS để lưu trữ volume data.
+- azureDisk CSI Migration, sử dụng [[Azure]] Disk để lưu trữu volume.
+- cephfs
+- ...
+
+Ở đây, chúng ta chỉ nói đến 
