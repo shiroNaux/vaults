@@ -20,4 +20,17 @@ Kubernetes là 1 sản phẩm open source, có cung cấp interface cho storage 
 - cephfs
 - ...
 
-Ở đây, chúng ta chỉ nói đến 
+Ở đây, chúng ta chỉ nói đến những giải pháp free hoặc open source, có thể deploy ở bất kì đây (trên cloud hay on-premise) và có thể được sử dụng ở hiện tại ([[2023-01-31]]), chưa bị deprecated
+
+#### empDir
+#### fc (fiber channel)
+#### OpenStack CSI migration
+#### downwardAPI
+#### hostPath
+#### iscsi
+#### local
+#### nfs
+### Using subPath
+
+## Persistent volumes
+## Projected volumes
