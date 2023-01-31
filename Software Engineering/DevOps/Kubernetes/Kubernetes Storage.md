@@ -6,4 +6,8 @@ Mục đích ban đầu của [[Kubernetes]] là để triển khai các statele
 
 ## CSI
 CSI stand for container storage interface. 
+
 ## Volume
+
+Volume trong kubernetes cũng khá giống với volume trong [[Docker]], tuy nhiên volume của kubernetes có nhiều điểm nổi bật hơn. 
+Về cơ bản thì volume là 1 directory, có thể chứa data bên trong. Mỗi pod muốn sử dụng volume thì phải mount volume đó vào 1 path trong file system của nó.
