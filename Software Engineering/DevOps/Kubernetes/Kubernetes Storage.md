@@ -64,4 +64,6 @@ spec:
 ### Using subPath
 
 ## Persistent volumes
+
+Persistent volume là 1 piece of storage, được cung cấp bởi administrator hay dynamic provisioning bởi storage class. Theo 1 cách đơn giản, PV chính là phần storage được cung cấp cho pod, services để sử dụng. Nó có thể là 1 đường dẫn local file system trên node chứa pod hay 1 loại storage khác như objec
 ## Projected volumes
