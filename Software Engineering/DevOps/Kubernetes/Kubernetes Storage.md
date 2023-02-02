@@ -10,7 +10,7 @@ CSI stand for container storage interface.
 ## Volume
 
 Volume trong kubernetes cũng khá giống với volume trong [[Docker]], tuy nhiên volume của kubernetes có nhiều điểm nổi bật hơn. 
-Về cơ bản thì volume là 1 directory, có thể chứa data bên trong. Mỗi pod muốn sử dụng volume thì phải mount volume đó vào 1 path trong file system của nó.
+Về cơ bản thì volume là 1 directory, có thể chứa data bên trong. Mỗi pod muốn sử dụng volume thì phải mount volume đó vào 1 path trong file system của nó. Volume 
 
 ### Types of volumes
 
@@ -65,5 +65,5 @@ spec:
 
 ## Persistent volumes
 
-Persistent volume là 1 piece of storage, được cung cấp bởi administrator hay dynamic provisioning bởi storage class. Theo 1 cách đơn giản, PV chính là phần storage được cung cấp cho pod, services để sử dụng. Nó có thể là 1 đường dẫn local file system trên node chứa pod hay 1 loại storage khác như objec
+Persistent volume là 1 piece of storage, được cung cấp bởi administrator hay dynamic provisioning bởi storage class. Theo 1 cách đơn giản, PV chính là phần storage được cung cấp cho pod, services để sử dụng. Nó có thể là local file system trên node chứa pod hay 1 loại storage khác như object store hay block store. 
 ## Projected volumes
