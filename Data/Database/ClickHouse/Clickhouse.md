@@ -109,7 +109,7 @@ Các giá trị này được sử dụng để loại bỏ (skipping) bớt cá
 
 ### Primary key vs Order by
 
-Đối với các MergeTree [[Table Engine|table engine]], có 2 options là `Order by` và `Primary key` dều dùng để chỉ định các cột dùng để sắp xếp dữ liệu trên [[disk]]. Tuy nhiên Primary key phải là prefix của `Order by` bởi vì:
+Đối với các MergeTree [[ClickHouse Table Engine|table engine]], có 2 options là `Order by` và `Primary key` dều dùng để chỉ định các cột dùng để sắp xếp dữ liệu trên [[disk]]. Tuy nhiên Primary key phải là prefix của `Order by` bởi vì:
 - Dữ liệu sẽ được sắp xếp theo `Order by`
 - Tuy nhiên `Primary key` dùng để tạo `primary index`. `Primary index` sẽ được tạo ra dựa trên các cột dùng để sắp xếp dữ liệu -> `Primary key` phải là prefix của `Order by`
 
