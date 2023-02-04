@@ -58,3 +58,4 @@ aliases
 2. [Tổng quan về Xử lý Phân tích Trực tuyến (OLAP) (microsoft.com)](https://support.microsoft.com/vi-vn/office/t%E1%BB%95ng-quan-v%E1%BB%81-x%E1%BB%AD-l%C3%BD-ph%C3%A2n-t%C3%ADch-tr%E1%BB%B1c-tuy%E1%BA%BFn-olap-15d2cdde-f70b-4277-b009-ed732b75fdd6)
 3. [OLAP vs. OLTP: What’s the Difference? | IBM](https://www.ibm.com/cloud/blog/olap-vs-oltp)
 4. [Online analytical processing - Wikipedia](https://en.wikipedia.org/wiki/Online_analytical_processing)
+5. [OLTP vs OLAP: What's their difference | Towards Data Science](https://towardsdatascience.com/oltp-vs-olap-9ac334baa370)
