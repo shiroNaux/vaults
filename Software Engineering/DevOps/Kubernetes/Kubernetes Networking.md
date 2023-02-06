@@ -16,3 +16,6 @@ Có 1 số điểm cần lưu sau về network tromg [[Kubernetes]]
 ### Pod to pod network
 ### Pod to service network
 ### Internet to service network
+
+---
+# Refe
