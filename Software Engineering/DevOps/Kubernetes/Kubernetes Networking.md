@@ -18,4 +18,7 @@ Có 1 số điểm cần lưu sau về network tromg [[Kubernetes]]
 ### Internet to service network
 
 ---
-# Refe
+# References
+1. [Kubernetes Networking Fundamentals – techbeatly](https://www.techbeatly.com/kubernetes-networking-fundamentals/)
+2. [The life of a DNS query in Kubernetes — NsLookup learning](https://www.nslookup.io/learning/the-life-of-a-dns-query-in-kubernetes/?ref=architecture-notes)
+3. 
