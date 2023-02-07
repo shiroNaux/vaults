@@ -9,6 +9,11 @@ Có 1 số điểm cần lưu sau về network tromg [[Kubernetes]]
 
 [[IP]] trong Kubernetes có scope mức pod -> mọi container trong pod đều có chung IP  Và thực tế là các container trong cùng pod share chung network namespaces (bao gồm IP, và MAC). -> Coi pod là 1 VM thì container chính là các process trong VM đó. Mô hình này được gọi là "IP-per-pod" model.
 
+Với mô hình Kubernetes networking như trên, nó có thể giải quyết được 4 vấn đề sau:
+- Các container trong cùng 1 pod connect với nhau qua loopback
+- Cluster chịu trách nhiệm quản lý kết nối giữa các Pods
+- Để các traffic từ bên ngoài có thể access tài nguyên trong cluster, có thể sử dụng Service [[API]]
+- Ngoài ra, Service cũng dùng để thực hiện các kết nối giữa các thành phần trong cluster
 
 ---
 
