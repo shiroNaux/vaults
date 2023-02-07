@@ -23,6 +23,9 @@ Với mô hình Kubernetes networking như trên, nó có thể giải quyết �
 ### Internet to service network
 
 ---
+
+## Service
+
 # References
 1. [Kubernetes Networking Fundamentals – techbeatly](https://www.techbeatly.com/kubernetes-networking-fundamentals/)
 2. [The life of a DNS query in Kubernetes — NsLookup learning](https://www.nslookup.io/learning/the-life-of-a-dns-query-in-kubernetes/?ref=architecture-notes)
