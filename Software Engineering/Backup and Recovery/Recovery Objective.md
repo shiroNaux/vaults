@@ -20,4 +20,8 @@ RPO, on the other hand with RTO, is a measure of the maximum amount of data loss
 
 # Define Recovery Objectives
 
-Let do this 
+Let do this through an example:
+
+At 9 am, an application was impaired on the bank's main server, halting services locally and online for 5 minutes. The bank's RPO counted for 15 minutes of data loss, and their RTO counted for 10 minutes of recovery time to restore the systems and applications. Therefore, the bank was within the parameters of both objectives.
+
+At 3 am, the same bank faced a shutdown of systems for one hour. As the RPO only counted for 15 minutes of data loss, and the Recovery Time Objective counted for only 10 minutes of downtime, it meant 50 minutes of the shutdown time was not accounted for. However, due to the time that the shutdown occurred, the loss of data was not exponential as the recovery process happened during a low-traffic period for the bank.
