@@ -13,7 +13,7 @@ Với mô hình Kubernetes networking như trên, nó có thể giải quyết �
 - Các container trong cùng 1 pod connect với nhau qua loopback
 - Cluster chịu trách nhiệm quản lý kết nối giữa các Pods
 - Để các traffic từ bên ngoài có thể access tài nguyên trong cluster, có thể sử dụng Service [[API]]
-- Ngoài ra, Service cũng dùng để thực hiện các kết nối giữa các thành phần trong cluster
+- Ngoài ra, [[Kubernetes Service|service]] cũng dùng để thực hiện các kết nối giữa các thành phần trong cluster
 
 ---
 
@@ -23,8 +23,6 @@ Với mô hình Kubernetes networking như trên, nó có thể giải quyết �
 ### Internet to service network
 
 ---
-
-## Service
 
 # References
 1. [Kubernetes Networking Fundamentals – techbeatly](https://www.techbeatly.com/kubernetes-networking-fundamentals/)
