@@ -14,7 +14,10 @@ RTO is a measure of the maximum amount of time a system, application, or functio
 
 RPO mean Recovery Point Objective.
 
-RPO, on the other hand with RTO, is a measure of the maximum amount of data loss that an organization is willing to accept as a result of a disaster or disruption. It represents the point in time to which data must be recovered from backups in order to minimize the impact of an interruption.
+RPO, on the other hand with RTO, is a measure of the maximum amount of data loss that an organization is willing to accept as a result of a disaster or disruption. It represents the point in time to which data must be recovered from backups in order to minimize the impact of an interruption. -> Tức là RPO chỉ ra khoảng loss data chấp nhận được
 
 => In summary, RTO is focused on the time it takes to restore systems, while RPO is focused on the data that may be lost. Both RTO and RPO are important metrics in disaster recovery planning, as they help organizations ensure that they have a plan in place to quickly resume operations and minimize data loss in the event of a disaster.
 
+# Define Recovery Objectives
+
+Let do this 
