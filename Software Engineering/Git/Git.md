@@ -1,7 +1,5 @@
-# Git
 ---
 ---
-
 # Abstract
 - Được viết bằng [[C]], [[C++]], [[Python]], ...
 - Ban đàu được tạo ra để hỗ trợ cho quá trình phát triển [[Linux]] kernel, sau đó phát triển thành 1 tiêu chuẩn để collaboration trong phát triển phần mềm

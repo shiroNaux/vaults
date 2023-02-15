@@ -9,9 +9,9 @@ Trong Kubernetes cluster, mỗi Pod được gắn 1 với 1 [[IP]] tuy nhiên v
 Định nghĩa về services:
 > In Kubernetes, a Service is an abstraction which defines a logical set of Pods and a policy by which to access them (sometimes this pattern is called a micro-service)
 
-Service trong Kubernetes là 1 [[REST]] object, cũng giống như pod hay các resources khác. Mỗi service khi được tạo ra, sẽ được gán kèm với 1 địa chỉ [[IP]] gọi là `clusterIP`.
+Service trong Kubernetes là 1 [[REST]] object, cũng giống như pod hay các resources khác. Mỗi service khi được tạo ra, sẽ được gán kèm với 1 địa chỉ [[IP]] gọi là `cluster IP`.
 
-Giao thức được h
+Giao thức mặc định hỗ trợ khi dùng service là [[TCP]]
 
 # References
 1. [Service | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/)
