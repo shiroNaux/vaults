@@ -11,6 +11,8 @@ Trong Kubernetes cluster, mỗi Pod được gắn 1 với 1 [[IP]] tuy nhiên v
 
 Service trong Kubernetes là 1 [[REST]] object, cũng giống như pod hay các resources khác. Mỗi service khi được tạo ra, sẽ được gán kèm với 1 địa chỉ [[IP]] gọi là `clusterIP`.
 
+Giao thức được h
+
 # References
 1. [Service | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/)
 2. 
