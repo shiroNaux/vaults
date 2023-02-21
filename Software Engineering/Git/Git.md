@@ -39,7 +39,6 @@ $ls .git/objects/pack/ multi-pack-index pack-7017e6ce443801478cf19006fc5499ba1c4
 
 ![[../../_images/Git/gitdatabase2.png]]
 
-
 #### git refs
 - Nhưng trên thực tế, các thao tác sử dụng git thường là: lấy ra các file tại commit id nào? só sánh khác nhau giữa 2 commit,... -> tức là truy vấn `content` bằng cách cung cấp `Id` -> Git cần có một cách lưu trữ dữ liệu phù hợp cho việc đó. Và đó là ... (đéo phải fo len ti lô)
 - Đầu tiên git có 1 khái niệm gọi là `references`, nó là 1 `named pointer` dùng để tham chiếu tới `Object id` trong __object database__. Các thông tin về `references` được lưu trong thư mục `.git/refs`. Có thể dùng hình ảnh dưới để mô tả quan hệ của `refs` và `objects`
