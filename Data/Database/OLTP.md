@@ -18,7 +18,7 @@ alias:
 	- *Concurrency*
 	- *Recoverability*
 
-- OLTP is typically contrasted to [OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing "Online analytical processing") (online analytical processing), which is generally characterized by much more complex queries, in a smaller volume, for the purpose of business intelligence or reporting rather than to process transactions. Whereas OLTP systems process all kinds of queries (read, insert, update and delete), OLAP is generally optimized for read only and might not even support other kinds of queries. OLTP also operates differently from [[../Data Engineering/Data Proccessing/Batch Proccessing|batch proccessing]] and [[../../Grid Computing|grid computing]].
+- OLTP is typically contrasted to [OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing "Online analytical processing") (online analytical processing), which is generally characterized by much more complex queries, in a smaller volume, for the purpose of business intelligence or reporting rather than to process transactions. Whereas OLTP systems process all kinds of queries (read, insert, update and delete), OLAP is generally optimized for read only and might not even support other kinds of queries. OLTP also operates differently from [[../Data Engineering/Data Proccessing/Batch Proccessing|batch proccessing]] and [[Grid Computing|grid computing]].
 - In addition, OLTP is often contrasted to [[OLEP]], which is based on distributed event logs to offer strong consistency in large-scale heterogeneous systems. Whereas OLTP is associated with short atomic transactions, OLEP allows for more flexible distribution patterns and higher scalability, but with increased latency and without guaranteed upper bound to the processing time
 - In large applications, efficient OLTP may depend on sophisticated transaction management software (such as [CICS](https://en.wikipedia.org/wiki/CICS "CICS")) and/or [database](https://en.wikipedia.org/wiki/Database "Database") optimization tactics to facilitate the processing of large numbers of concurrent updates to an OLTP-oriented database.
 
@@ -34,7 +34,7 @@ alias:
 ## Clusters
 - A cluster is a schema that contains one or more tables that have one or more columns in common. Clustering tables in a database improves the performance of [[SQL|join]] operations.
 ## Discrete transactions
-- A discrete transaction defers all change to the data until the transaction is committed. It can improve the performance of short, non-[[../../Distributed system|distributed]] transactions
+- A discrete transaction defers all change to the data until the transaction is committed. It can improve the performance of short, non-[[Distributed system|distributed]] transactions
 ## Block size
 - The data block size should be a multiple of the operating system's block size within the maximum limit to avoid unnecessary I/O
 ## Buffer cache size

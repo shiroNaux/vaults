@@ -56,7 +56,7 @@ $ls .git/objects/pack/ multi-pack-index pack-7017e6ce443801478cf19006fc5499ba1c4
 
 #### Object store query
 
-Nếu trong các [[database]] thông thường, để lấy được dữ liệu thì chúng ta thường sử dụng [[SQL]], còn đối với git thì đó là [[../../Operating system/CLI|command line interface]].
+Nếu trong các [[database]] thông thường, để lấy được dữ liệu thì chúng ta thường sử dụng [[SQL]], còn đối với git thì đó là [[CLI|command line interface]].
 Một số thao tác cơ bản để truy xuất dữ liệu của git
 - Lấy nội dung của 1 `object` dựa vào Id của nó
 ``` bash

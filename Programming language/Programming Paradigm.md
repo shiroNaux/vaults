@@ -23,7 +23,7 @@
 
 ![[../_images/Programming_paradigms.svg]]
 
-## [[../Computer Architecture/Machine code]]
+## [[Machine code]]
 
 - Lowest level of programming paradigms
 
@@ -98,7 +98,7 @@ const result = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 	- Lisp
 - Functional programming có đôi chút khác biệt với [[Purely Functional Programming]]
 - Được phát triển dựa trên [[Lambda Calculus]]
-- Functional programming languages are typically less efficient in their use of [[../Computer Architecture/Hardware/CPU]] and memory than imperative languages
+- Functional programming languages are typically less efficient in their use of [[CPU]] and memory than imperative languages
 - For programs that handle large [[matrices]] and multidimensional [[../Data/Database/Database |database]], array functional languages were designed with speed optimizations
 
 ### 2. Logic

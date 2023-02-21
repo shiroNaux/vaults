@@ -84,7 +84,7 @@ alias:
 
 - Mỗi khi producer gửi message bất kì đến Kafka, nó sẽ được phân chia vào 1 partition nhất định theo các ràng buộc sau:
 	- If the record has a key -> key này sẽ được hash và rồi tính toán (thường là phép module) ra ra partition mà message sẽ được lưu vào. Với việc sử dụng [[Hash function|hash]] và các phép toán => message với cùng key sẽ luôn đi vào cùng 1 partition.
-	- If the record has no key then a partition strategy is used to balance the data in the partitions (thường dùng [[Round robin]])
+	- If the record has no key then a partition strategy is used to balance the data in the partitions (thường dùng [[Round Robin]])
 
 ![[../../../../../_images/Kafka/assign-record-to-topic-partition.png]]
 
@@ -373,7 +373,7 @@ alias:
 2. Các records được gọi là message. Chúng phải nằm trong 1 topic nhất định. Message là immutable -> Không thể thay đổi. Các messages có retention time -> config dựa vào size hoặc thời gian.
 3. Topic được break thành các partiotions -> mỗi partion là đơn vị lưu trữ mức vật lý của topic. Nó cũng giống như việc partitions trong các DBMS khác -> act as distributed system.
    **Message nào lưu và partitions nào ???**:
-	-  Nếu message không xác định key -> **[[../../../../../Algorithm/Round Robin]]** (các message được lưu vào các partitions tuần tự theo đủ các partitions) -> Dùng trong trường hợp muốn đảm bảo về cân bằng số lượng các message trên các partitions.
+	-  Nếu message không xác định key -> **[[Round Robin]]** (các message được lưu vào các partitions tuần tự theo đủ các partitions) -> Dùng trong trường hợp muốn đảm bảo về cân bằng số lượng các message trên các partitions.
 	- Nếu message có chứa key ->key đó được dùng để xác định message được lưu vào partition nào bằng cách: 
 				  Hash(key) mod n = x
 		 với n là số lượng partition, x chính là output, tức là số thứ tự của partition mà message sẽ được lưu vào
