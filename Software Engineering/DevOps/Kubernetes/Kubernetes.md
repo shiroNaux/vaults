@@ -146,7 +146,7 @@ Có 2 cách để add 1 node vào cluster
 			- Attaching (usually through `kubectl`) to running pods
 			- Providing the kubelet's port-forwarding functionality
 		- Các connections này sẽ trỏ tới kubelet's [[HTTPS]] endpoint. Mặc định là [[API]] server sẽ không verify kubelet's certificate, do đó các kết nối này có thể bị tấn công theo kiểu [[man-in-the-middle]] và đương nhiên là nó không an toàn để connect giữa các thành phần với nhau qua public Internet. Tuy nhiên, có thể config cho kubelet sử dụng root certificate để secure connections. Hoặc cũng có thể dùng cách khác _SSH Tunnel_
-		- Ngoài ra, nên sử dụng kubelet [[authentication]] and/or [[authorization]] để gia tăng khả năng bảo mật
+		- Ngoài ra, nên sử dụng kubelet [[Authentication]] and/or [[Authorization]] để gia tăng khả năng bảo mật
 	- Kết nối từ API Server đến nodes, pods, services
 		- Các kết nối kiểu này theo mặc định là sử dụng [[HTTP]], nên nó dễ bị tấn công -> không nên sử dụng ở môi trường `untrusted` hay Internet
 		- Để các connections này sử dụng HTTPS, chỉ cần thay prefix `https` vào trước đường dẫn tới node, pod, hay service, tuy nhiên chúng sẽ không xác nhận endpoint certificate nên vẫn được coi là không an toàn để chạy trong `untrusted` hay Internet

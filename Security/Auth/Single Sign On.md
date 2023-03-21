@@ -3,7 +3,7 @@
 # Single Sign On
 ### 1. Introduction
 - Single sing on là cơ chế để đăng nhập nhiều dịch vụ khác nhau thông qua 1 service duy nhất.
-- SSO chủ yếu thực hiện tác vụ [[authentication]] chứ không bao gồm [[authorization]] trong nó
+- SSO chủ yếu thực hiện tác vụ [[Authentication]] chứ không bao gồm [[Authorization]] trong nó
 - SSO có thể bị nhầm lẫn với Same sign on -> tức là dùng chung 1 credential cho mọi site (ví dụ: dùng chung username, password cho mọi web khác nha)
 - SSO có thể trở thành SPOF khi mọi service khác yêu cầu user đăng nhập qua Identity Provider
 
