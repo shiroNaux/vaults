@@ -19,7 +19,20 @@ Những người tạo ra arc42 đồng thời cũng tạo ra 1 github repositor
 
 ## C4 Model
 
+C4 tự giới thiệu mình là:
+1. A set of hierarchical abstractions (software systems, containers, components, and code).  
+2. A set of hierarchical diagrams (system context, containers, components, and code).  
+3. Notation independent.
 
+-> C4 ở đây có ý nghĩa là 4 chữ C của các level (context, containers, components, code)
 
 C4 model cũng được sử dụng nhiều trong các tài liệu. Tuy nhiên, nó chỉ hướng đến việc vẽ các biểu đồ sao cho hiệu quả. Do vậy mà thường thì các tài liệu technical sẽ kết hợp arc42 và C4 với nhau. Bằng cách: đưa các biểu đồ trong C4 vào từng section cụ thể trong arc42. 
-Ví dụ:
+
+Ví dụ: 
+
+# References
+
+1. [The Ultimate Guide To Software Architecture Documentation (workingsoftware.dev)](https://www.workingsoftware.dev/software-architecture-documentation-the-ultimate-guide/)
+2. [The C4 model for visualising software architecture](https://c4model.com/)
+3. [Principles of technical documentation – INNOQ](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/)
+4. [arc42 - arc42](https://arc42.org/)
