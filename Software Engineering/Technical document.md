@@ -13,7 +13,7 @@ ___arc42___ là 1 templates dựng sẵn cho các document về technical. Nó c
 - [arc42](https://arc42.org/?ref=workingsoftware.dev) is completely process independent and is particularly well suited for lean and agile development approaches.
 - [arc42](https://arc42.org/?ref=workingsoftware.dev) is open source and can be used free of charge in both the commercial and private sectors.
 - arc42 is available in several languages.
-- arc42 is available in different formats like .adoc, .docx, .rst, [[Markdown|.md]], .tex, ...
+- arc42 is available in different formats like .adoc, .docx, .rst, [[Markdown|.md]], .[[Latex|tex]], ...
 
 Những người tạo ra arc42 đồng thời cũng tạo ra 1 github repository chứa
 
