@@ -1,0 +1,7 @@
+---
+alias:
+	- LSN
+---
+
+# Abstract
+
