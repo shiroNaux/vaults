@@ -10,7 +10,7 @@ Các services trong docker compose của superset
 - Superset app -> chạy app
 - database (có thể dùng **extrenal**)
 - redis (có thể dùng **extrenal**)
-- Superset worker -> **celery** worker (không phải web server worker), dùng để chạy query async, tránh timeout của http
+- Superset worker -> **celery** worker (không phải web server worker), dùng để chạy query [[async]], tránh timeout của http
 - Superset init -> chạy lần đầu để tạo schema, import data và meta database
 - Superset worker beat -> check health của worker
 
