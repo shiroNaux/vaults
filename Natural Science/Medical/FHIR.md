@@ -5,15 +5,16 @@
 
 FHIR (Fast Healthcare Interoperability Resource, pronounced “fire”) là chuẩn trao đổi data giữa các hệ thống CNTT áp dụng trong y tế. Giao thức (tiêu chuẩn) này được phát triển bởi HL7 (-> HL7 là 1 tổ chức). 
 
-Hầu hết các nhà cung cấp dịch vụ chăm sóc sức khỏe(Bệnh viện, phòng khám, ...) sử dụng nhiều ứng dụng khác nhau cho mọi việc, từ thanh toán đến cập nhật thông tin bệnh nhân. Vấn đề là mỗi loại phần mềm này được
 
 ![[hl7-fhir-diagram.svg]]
 
 ## Vì sao cần chuẩn hóa dữ liệu
 
-Để có được bộ dữ tiệu tốt cho công việc khai thác dữ liệu thì cần phải chuẩn hóa dữ liệu từ đầu vào.
+Để có được bộ dữ tiệu tốt cho công việc khai thác dữ liệu thì cần phải chuẩn hóa dữ liệu từ đầu vào. 
 
 > Chú ý: Khai thác dữ liệu ở đây là tất cả các công việc liên quan đến sử dụng dữ liệu. Nó bao gồm cả việc chẩn đoán của bác sĩ, theo dõi, đánh giá dịch bệnh, ...
+
+Hầu hết các nhà cung cấp dịch vụ chăm sóc sức khỏe(Bệnh viện, phòng khám, ...) sử dụng nhiều ứng dụng khác nhau cho mọi việc, từ thanh toán đến cập nhật thông tin bệnh nhân. Vấn đề là mỗi loại phần mềm này được phát triển bởi những đơn vị khác nhau, cho nên 
 
 Nhằm có được bộ dữ liệu tốt, cần có một bộ dữ liệu danh mục được chuẩn hóa.
 
