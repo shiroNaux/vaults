@@ -40,7 +40,6 @@ Những kết quả xét nghiệm được chấp nhận liên viện, dữ li�
 
 Dữ liệu được chuẩn hoá, kết nối và có thể tạo thành các data warehouse thì con đường làm Y tế thông minh sẽ ngắn lại rất nhiều. Công nghệ số tiên tiến sẽ biến dữ liệu thành tri thức phục vụ y tế dự phòng thông minh và quản lý y tế thông minh.
 
-
 The main object of FHIR is to address the growing digitization needs in the healthcare industry and simplify the data exchange without compromising the integrity of the information. FHIR is determined to make electronic health records (EHRs) available, discoverable, and easily understandable to stakeholders as patients move within the healthcare ecosystem. This standard not only makes it easier for the patient to keep track of their own health but supports automated clinical decision support and the use of other artificial intelligence or machine-based processes.
 
 There is a need for consistent, simple-to-implement, and thorough mechanisms that exchange data between disparate healthcare applications. FHIR resources have the capability to be incorporated in existing systems, which makes it easier and faster for healthcare application developers to implement. FHIR improves data exchange capability—creating a common set of APIs so healthcare platforms can connect and share data across systems in a format that each can understand.
@@ -65,7 +64,7 @@ Hiện tại đã có nhiều danh mục chuẩn hóa ở các cấp độ khác
 
 ## Specification
 
-FHIR sử dụng [[API]], nói cách khác: dữ liệu sẽ được lưu theo đúng format và trao đổi giữa các hệ thống với nhau thông qua API
+FHIR sử dụng API để trao đổi thông tin giữa các ứng dụng. Mà cụ thể hơn chính là REST API.
 
 
 FHIR specifications are relatively straightforward, but it can be difficult to know where to begin to implement a solution. For that reason, FHIR is broken up into 13 modules to organize and guide set-up. There are roughly three groups of modules, including infrastructure, content, and modeling (or reasoning). Each of these modules is based on the resources described above.
@@ -110,10 +109,10 @@ Again, there are several modules used in this level.
 Clinical Module
 This module focuses on the clinical information of patients. It is critical in terms of data breaches because it stores patient data. Users need to have security and privacy access in order to search and pull any information. This information includes:
 
-Documenting the patient’s health condition
-Retrieving patient’s condition
-Documenting family history
-Documenting and retrieving patient allergies
+1. Documenting the patient’s health condition
+2. Retrieving patient’s condition
+3. Documenting family history
+4. Documenting and retrieving patient allergies
 Diagnostics Module
 This diagnostics module describes ordering and reporting of clinical diagnostics, which includes laboratory testing and imaging. Because diagnostic resources are patient data, users need to have a required security and private policy for searching and pulling any information related to:
 
@@ -232,36 +231,9 @@ C-CDA is an XML-exclusive markup standard, not a complete API. C-CDA exports a p
 
 
 ## Benefits
-
-
-Faster Go-to-Market
-FHIR offers customers out-of-the-box APIs, reusable tools, and excellent security models. One of the major benefits of FHIR is that it is fast and easy to implement. Multiple developers can work on a project, and when using the compatible interaction engine, can have a simple interface working in just one day. The go-to-market speed greatly increases with FHIR.
-
-Better Data Management
-FHIR provides a standard common target data format that transforms data into usable formats. These standard common formats offer excellent data integrity, accuracy, clarity, and consistency.
-
-Better Data Sharing and Collaboration
-FHIR provides easy, fast, and secure data sharing capability and collaboration among healthcare systems’ stakeholders. It offers 145 APIs created for sharing information between healthcare systems. Most importantly, the componentized specifications of FHIR enables implementation of only the APIs required for specific use cases. After implementing APIs, it is easy to get the full benefit of interoperability at scale.
-
-Patient Empowerment
-Patients get easy and secure access to their complete data, both real-time and historical. A patient can take a complete picture of their data and make informed decisions about their health as a result. It also accelerates the clinical decision-making process by giving healthcare practitioners complete and accurate data about the patient.
-
-Better Data Integration
-With FHIR, it is possible to enable fast and efficient integration with legacy and modern systems. FHIR APIs provide a common way to create integrations. When a provider is integrating with non-FHIR systems, it provides standard APIs that offer interoperability. These integration points can be reused at scale across multiple systems.
-
-Developer Efficiency and Experience Improvement
-FHIR improves an application developer’s efficiency by giving them a superior user experience. As healthcare app developers, they have granular data access to individual items within resources, such as patient demographics or lab results observations.
-
-FHIR is Open Source
-FHIR is open source and free of cost. With open APIs, FHIR enables continuous real-time data exchange and makes it easy for developers to access healthcare data from healthcare applications. Open source means that any healthcare provider can use it, which provides an affordable way for the entire medical system to join together.
-
-Data Analytics and FHIR
-FHIR modules can be used to build analytical, business information, and artificial intelligence systems. FHIR supports modern databases and allows data to be analyzed, which means that artificial intelligence and machine learning systems can be used to provide accurate estimates and predictions about future volumes, workflows, and trends.
-
-Mobile App Support
-Mobile app adoption in healthcare is massive because many providers and patients increasingly move toward using apps for healthcare. FHIR supports all the technologies that mobile devices also use, increasing the compatibility with modern technology.
-
 ---
+### Đối với cấp quản lý
+
 ##### 1. FHIR giúp chia sẻ dữ liệu linh hoạt hơn
 Việc chia sẻ dữ liệu tạo ra giá trị trong lĩnh vực chăm sóc sức khỏe bằng cách:
 Trao quyền cho bệnh nhân 
@@ -357,16 +329,48 @@ Cho dù bạn đang tích hợp với những hệ thống không phải FHIR c�
 
 TPH mong rằng bài viết này đã giúp các bạn hiểu thêm FHIR là gì, cũng như những lợi ích tuyệt vời mà HL7 FHIR mang lại cho hệ thống chăm sóc sức khỏe.
 
+---
+
+### Đối với Development team
+
+##### 1. Faster Go-to-Market
+FHIR offers customers out-of-the-box APIs, reusable tools, and excellent security models. One of the major benefits of FHIR is that it is fast and easy to implement. Multiple developers can work on a project, and when using the compatible interaction engine, can have a simple interface working in just one day. The go-to-market speed greatly increases with FHIR.
+
+##### 2. Better Data Management
+FHIR provides a standard common target data format that transforms data into usable formats. These standard common formats offer excellent data integrity, accuracy, clarity, and consistency.
+
+##### 3. Better Data Sharing and Collaboration
+FHIR provides easy, fast, and secure data sharing capability and collaboration among healthcare systems’ stakeholders. It offers 145 APIs created for sharing information between healthcare systems. Most importantly, the componentized specifications of FHIR enables implementation of only the APIs required for specific use cases. After implementing APIs, it is easy to get the full benefit of interoperability at scale.
+
+##### 4. Patient Empowerment
+Patients get easy and secure access to their complete data, both real-time and historical. A patient can take a complete picture of their data and make informed decisions about their health as a result. It also accelerates the clinical decision-making process by giving healthcare practitioners complete and accurate data about the patient.
+
+##### 5. Better Data Integration
+With FHIR, it is possible to enable fast and efficient integration with legacy and modern systems. FHIR APIs provide a common way to create integrations. When a provider is integrating with non-FHIR systems, it provides standard APIs that offer interoperability. These integration points can be reused at scale across multiple systems.
+
+##### 6. Developer Efficiency and Experience Improvement
+FHIR improves an application developer’s efficiency by giving them a superior user experience. As healthcare app developers, they have granular data access to individual items within resources, such as patient demographics or lab results observations.
+
+##### 7. FHIR is Open Source
+FHIR is open source and free of cost. With open APIs, FHIR enables continuous real-time data exchange and makes it easy for developers to access healthcare data from healthcare applications. Open source means that any healthcare provider can use it, which provides an affordable way for the entire medical system to join together.
+
+##### 8. Data Analytics and FHIR
+FHIR modules can be used to build analytical, business information, and artificial intelligence systems. FHIR supports modern databases and allows data to be analyzed, which means that artificial intelligence and machine learning systems can be used to provide accurate estimates and predictions about future volumes, workflows, and trends.
+
+##### 9. Mobile App Support
+Mobile app adoption in healthcare is massive because many providers and patients increasingly move toward using apps for healthcare. FHIR supports all the technologies that mobile devices also use, increasing the compatibility with modern technology.
+
+---
+
+
 ## Chalenges
 
-
-FHIR is not free of challenges. There are three main issues that FHIR faces.
+Có một số thách thức cần phải đối mặt để có thể áp dụng và triển khai FHIR trong thực tiễn
 
 1. Different versions of FHIR can be implemented in different systems. Migration between FHIR versions is painful because of absent backward compatibility. In this case, the interoperability will fail. In order to resolve this issue, the most up-to-date version of FHIR must be implemented in all possible provider systems.
 2. Inconsistent implementation of APIs within the system means not all software will work seamlessly within the FHIR framework. The solution is complete adoption and integration with FHIR.
 3. Many healthcare providers don’t understand the resources required to develop compliant and consistent standards across the system. The solution for this problem is dedicated medical IT teams within the organization that can correctly make judgements on what is needed and where, when, and how to implement it. Changes in the infrastructure will be required, and ongoing training, support, and education is also needed.
 
-## Apply
 
 # Hiện trạng tại Việt Nam
 [[2023-04-04]]
