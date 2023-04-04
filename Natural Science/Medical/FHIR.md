@@ -59,7 +59,7 @@ Trong các phần mềm hay hệ thống IT phục vụ trong ngành y tế có 
 
 ## Specification
 
-FHIR sử dụng [[API]] để trao đổi dữ liệu
+[[API]] được sử dụng để trao đổi dữ liệu theo chuẩn FHIR. Hay cụ thể hơn là dữ liệu sẽ được lưu trữ trong các file [[JSON]], [[XML]], ... theo đúng format và trao đổi 
 
 ## Benefits
 
