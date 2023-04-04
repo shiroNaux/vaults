@@ -361,11 +361,12 @@ Ngoài ra, FHIR được dựa trên các công nghệ phát triển web mới n
 
 ##### 2. Better Data Management
 
-Định dạng dữ liệu mà FHIR cun đích chung tiêu chuẩn giúp chuyển đổi dữ liệu thành các định dạng có thể sử dụng được. Các định dạng phổ biến tiêu chuẩn này cung cấp tính toàn vẹn, chính xác, rõ ràng và nhất quán của dữ liệu
-
-FHIR provides a standard common target data format that transforms data into usable formats. These standard common formats offer excellent data integrity, accuracy, clarity, and consistency.
+Định dạng dữ liệu mà FHIR cung cấp giúp chuyển đổi dữ liệu thành nhiều  định dạng có thể sử dụng được một cách dễ dàng. Các định dạng này đảm bảo tính toàn vẹn, chính xác, rõ ràng và nhất quán của dữ liệu (ACID).
 
 ##### 3. Better Data Sharing and Collaboration
+
+FHIR cung cấp khả năng cộng tác và chia sẻ dữ liệu dễ dàng, nhanh chóng và an toàn giữa các bên liên quan. Nó cung cấp 145 API được tạo để chia sẻ thông tin giữa các hệ thống chăm sóc sức khỏe. Quan trọng nhất, các thông số kỹ thuật được cấu thành của FHIR chỉ cho phép triển khai các API cần thiết cho các trường hợp sử dụng cụ thể. Sau khi triển khai API, thật dễ dàng để có được toàn bộ lợi ích của khả năng tương tác trên quy mô lớn.
+
 FHIR provides easy, fast, and secure data sharing capability and collaboration among healthcare systems’ stakeholders. It offers 145 APIs created for sharing information between healthcare systems. Most importantly, the componentized specifications of FHIR enables implementation of only the APIs required for specific use cases. After implementing APIs, it is easy to get the full benefit of interoperability at scale.
 
 ##### 4. Patient Empowerment
@@ -422,3 +423,4 @@ Chuẩn hoá thì cần có sự tham gia của quản lý nhà nước, cụ th
 7. [What is HL7 FHIR? | TIBCO Software](https://www.tibco.com/reference-center/what-is-hl7-fhir)
 8. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
 9. [Interoperability 3.0 (particlehealth.com)](https://www.particlehealth.com/blog/interoperability-3-0)
+10. [Index - FHIR v5.0.0 (hl7.org)](https://www.hl7.org/fhir/)
