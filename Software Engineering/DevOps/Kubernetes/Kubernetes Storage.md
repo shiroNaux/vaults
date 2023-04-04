@@ -67,3 +67,7 @@ spec:
 
 Persistent volume là 1 piece of storage, được cung cấp bởi administrator hay dynamic provisioning bởi storage class. Theo 1 cách đơn giản, PV chính là phần storage được cung cấp cho pod, services để sử dụng. Nó có thể là local file system trên node chứa pod hay 1 loại storage khác như object store hay block store. 
 ## Projected volumes
+
+
+# References
+1. 
