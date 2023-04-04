@@ -36,11 +36,22 @@ Since there had been no mandated universal standard for data exchange, each EHR 
 
 Nhưng có lẽ, câu chuyện về kết nối dữ liệu chỉ thực sự trở nên cấp thiết hơn bao giờ hết khi y tế dự phòng được đẩy mạnh với sự ra đời của PHR - hồ sơ dữ liệu sức khoẻ cá nhân. Dữ liệu không còn nằm ở phía cơ sở y tế, dữ liệu được chia sẻ đến mỗi cá nhân để họ nắm được tình trạng sức khoẻ của mình, điều chỉnh sinh hoạt và phòng bệnh. Bản chất của hệ thống PHR - Hồ sơ sức khoẻ cá nhân là kết nối. PHR kết nối đến tất cả những nơi nào có dữ liệu y tế và sức khoẻ của cá nhân, tập hợp chúng lại để mỗi cá nhân có thể tự quản lý thông tin sức khoẻ của mình đầy đủ nhất. Và cũng nhờ những thông tin y tế đầy đủ đó, dưới sự hỗ trợ của công nghệ số hiện đại, máy tính có thể trợ giúp con người phòng bệnh tốt hơn, đưa ra những lời khuyên về sức khoẻ như những trợ lý sức khoẻ ảo của riêng họ.
 
+Như những phân tích ở trên thì lợi ích của việc kết nối dữ liệu là vô cùng to lớn. 
+
+Bệnh viện cũng có nhu cầu, người dân cũng có nhu cầu và nhà nước cũng có nhu cầu vì lợi ích kinh tế mà nó mang lại. 
+
+Những kết quả xét nghiệm được chấp nhận liên viện, dữ liệu được chia sẻ thì sẽ không phải thực hiện thừa các xét nghiệm, tiết kiệm được rất nhiều tiền của nhà nước, bảo hiểm y tế và của chính những người dân, đồng thời tiết kiệm thời gian, đẩy nhanh quá trình khám chữa bệnh. 
+
+Dữ liệu được chuẩn hoá, kết nối và có thể tạo thành các data warehouse thì con đường làm Y tế thông minh sẽ ngắn lại rất nhiều. Công nghệ số tiên tiến sẽ biến dữ liệu thành tri thức phục vụ y tế dự phòng thông minh và quản lý y tế thông minh.
+
+
+
 ## Chuẩn hóa dữ liệu
 
 ### Các dạng dữ liệu y tế
 
-Trong các phần mềm hay hệ thống IT phục vụ trong ngành y tế có nhiều tiêu chuẩn dữ liệu khác nhau đã được đưa ra
+Trong các phần mềm hay hệ thống IT phục vụ trong ngành y tế có nhiều tiêu chuẩn dữ liệu khác nhau đã được đưa ra.
+Với việc ứng dụng CNTT vào trong y tế
 
 - EHR cho phép cải thiện tất cả các khía cạnh của việc chăm sóc bệnh nhân, mức độ an toàn, kịp lúc, tính hiệu quả và công bằng.
 - Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
@@ -72,6 +83,14 @@ Một số vấn đề về danh mục chuẩn theo Bộ Y tế Việt Nam, nh�
 
 - Danh mục dịch vụ: các danh mục dịch vụ hiện tại do Bộ Y tế Việt Nam ban hành (2016) không theo một chuẩn quốc tế nào. Nhiều tên dịch vụ bị xếp loại trùng lắp nhau. Một tên dịch vụ có nhiều mã số… Những điều này không tạo thành chuẩn dữ liệu cho y tế quốc gia. Mặt khác tên gọi trong chuẩn không dùng được hoặc bất tiện trong việc ghi chỉ định hàng ngày. Ví dụ: một tên gọi là “Chụp Cắt Lớp Vi Tính mạch máu não có cản quang” khá dài dòng thì nên được ghi ngắn gọn là “CT mạch máu não CE”.
 - Danh mục thuốc: Danh mục thuốc nên được tuân theo chuẩn quốc tế. Cần phân biệt rõ tên thuốc (tên thương mại, tên biệt dược) với thành phần hoạt chất. Hàm lượng thuốc chính là hàm lượng của hoạt chất. Một thuốc có nhiều hoạt chất khác nhau thì tên hoạt chất phải đi kèm hàm lượng của nó. Tên thuốc thì có thể tùy gọi nhưng hoạt chất và hàm lượng cần phải được tuyệt đối chính xác. Cần có một bảng con đi kèm tên thuốc để ghi rõ hoạt chất và hàm lượng trong trường hợp thuốc có nhiều hoạt chất. Điều này rất quan trọng vì tổng hàm lượng của từng hoạt chất trong một đơn thuốc có thể ảnh hưởng đến kết quả điều trị và việc tách riêng từng hoạt chất sẽ giúp cảnh báo tương tác thuốc.
+
+Dữ liệu y tế nằm ở các hệ thống khác nhau. Muốn kết nối, chia sẻ dữ liệu thì cần được chuẩn hoá. Chuẩn lưu trữ và chia sẻ dữ liệu quốc tế HL7 ra đời với mục đích như vậy và đã có khoảng 55 quốc gia tham gia vào việc ứng dụng chuẩn này. 
+Trải qua  hơn 30 năm phát triển, HL7 đã thay đổi nhiều phiên bản từ dạng đơn giản truyền message, đến dạng document XML và kiểu REST API phù hợp với công nghệ phát triển web. 
+Ở Việt Nam, theo thông tư 46 của Bộ Y Tế, phần mềm hồ sơ bệnh án điện tử phải lưu trữ dữ liệu y tế theo chuẩn HL7 CDA hoặc FHIR là 2 dạng chuẩn mới của HL7. (Như giới thiệu ở trên, Nhật Bản đang sử dụng dạng message HL7 v2.5)
+Tuy nhiên, vấn đề nằm ở chỗ dữ liệu có đang thực sự được lưu dưới dạng HL7 CDA, FHIR hay không thì không ai kiểm chứng được. 
+Tôi không dám tin là các phần mềm bệnh án điện tử của Việt Nam hiện nay đã làm đúng được yêu cầu này. Bản thân FHIR là một chuẩn mới, guideline của nó lên tới hơn 100 nghìn tài liệu. Mới đầu năm 2021, Nhật Bản tính toán nếu phổ biến chuẩn FHIR thì trước hết Nhật Bản cần 2 triệu USD chỉ để dịch guideline hướng dẫn lưu trữ liệu y tế đúng. 
+Với một quốc gia nhỏ thì việc triển khai 1 hệ thống đồng loạt lên tất cả các cơ sở y tế là một có thể làm được (giống như Estonia đã làm thành công). Nhưng với quốc gia dân số đông như Việt Nam, với hệ thống y tế nhiều tầng, nhiều lớp thì việc triển khai đồng loạt là khó có thể thực hiện được. Việt Nam đang đi theo đúng con đường của Nhật Bản trước đây, sử dụng nhiều hệ thống khác nhau. FPT, VNPT, Viettel, Vietba...các công ty lớn, nhỏ đều đã tham gia và triển khai ở các bệnh viện khác nhau. Do đó, con đường chuẩn hoá là con đường tất yếu. 
+Chuẩn hoá thì cần có sự tham gia của quản lý nhà nước, cụ thể là bộ Y Tế. Hi vọng là bộ sẽ sớm có định hướng và chỉ đạo quyết liệt, mở con đường cao tốc đi đến chuyển đổi số Y Tế thành công. Nếu chậm trễ, chúng ta sẽ lại mất hàng chục năm nữa giống như trường hợp của Nhật Bản hiện nay. 
 
 # References
 1. [YKHOANET - Chuẩn dữ liệu](https://www.ykhoanet.com/c%E1%BA%A9m-nang-cntt-y-t%E1%BA%BF/chu%E1%BA%A9n-d%E1%BB%AF-li%E1%BB%87u)
