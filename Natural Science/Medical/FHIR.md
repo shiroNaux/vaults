@@ -138,14 +138,27 @@ This module focuses on coordinating activities within the healthcare ecosystem. 
 Creating a lab order or medicine prescription
 Communicating information about order status changes
 Creating an appointment
+
 #### Financial Module
 The financial module supports billing and transactions that occur within the healthcare ecosystem. It covers patient account management, enrollment requests and responses, payment notice, and reconciliation.
 
 ### Level 5 – Clinical Reasoning
 
+#### Clinical Reasoning
 The clinical reasoning module provides the reasoning to deal with the healthcare process. The resources used enable the representation, distribution, and evaluation of clinical knowledge. It includes clinical decision-support rules, quality measures, public health indicators, order sets, and clinical protocols.
 
 There are dependencies between modules, but they follow the steps listed above. Healthcare developers should only use the modules that apply to them.
+
+#### Medication Definition Module
+
+This module is concerned with resources and functionality in areas such as:
+
+The regulation and manufacturing of drugs, medicinal products and other medically-related substances or co-packaged devices.
+Detailed description of these same items, typically for regulators but also for any context where this level of detail is necessary, such as pharmacopoeias, or prescribing support.
+Indications and contra-indications for medications.
+The details of the chemical substances that may be ingredients for medications.
+These resources are not typically used in direct patient care or day-to-day prescribing functionality (for which see the Medications Module, and further down on this page: Relationship to Prescribing), but play a supporting role. They can specify the "full" version of the product type, with all its information, including the licensed packages available, with their physical details and containers, through to individual tablet level and on to ingredients and component substances.
+
 
 ---
 ## LOINC
