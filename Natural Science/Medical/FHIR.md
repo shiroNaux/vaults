@@ -21,27 +21,29 @@ Nhằm có được bộ dữ liệu tốt, cần có một bộ dữ liệu dan
 - Danh mục cấp quốc gia: Danh mục thuốc, danh mục tên dịch vụ y tế, danh mục bệnh viện, danh mục tên chuyên khoa, danh mục tỉnh thành…
 - Danh mục tự tạo: các khoa phòng, danh mục user, danh mục kho thuốc, danh mục thuốc… là các danh mục do bệnh viện tự tạo.
 
-Việc quy chuẩn danh mục giúp cho việc nhập liệu được nhanh chóng và dễ cho việc phân loại dữ liệu, giúp ích cho việc thống kê và giao tiếp giữa các cơ quan y tế.
-
-Tuy nhiên, việc chuẩn hóa các danh mục này cũng chỉ mang tính tương đối vì dữ liệu có thể biến đổi và không bao trùm được hết các khía cạnh thực tế.
+Việc quy chuẩn danh mục giúp cho việc nhập liệu được nhanh chóng và dễ cho việc phân loại dữ liệu, giúp ích cho việc thống kê và giao tiếp giữa các cơ quan y tế. Tuy nhiên, việc chuẩn hóa các danh mục này cũng chỉ mang tính tương đối vì dữ liệu có thể biến đổi và không bao trùm được hết các khía cạnh thực tế.
 
 Ví dụ:
 
-ICD 10 có thể ghi chẩn đoán “Viêm Xoang Hàm”, tuy nhiên thực tế cần ghi rõ hơn là viêm xoang hàm trái hay phải, mức độ nặng nhẹ thế nào, ở giai đoạn nào của diễn tiến bệnh.
+- ICD 10 có thể ghi chẩn đoán “Viêm Xoang Hàm”, tuy nhiên thực tế cần ghi rõ hơn là viêm xoang hàm trái hay phải, mức độ nặng nhẹ thế nào, ở giai đoạn nào của diễn tiến bệnh.
+- Danh mục nghề nghiệp không thể có các nghề như lơ xe, phụ hồ, xe ôm… Khi phát sinh các “nghề” mới, cần phải quy chuẩn các nghề đó vào 1 danh mục đã được định chuẩn.
+- Danh mục thuốc cũng phải được cập nhật vì nhiều thuốc mới phát sinh.
+- ...
 
-Danh mục nghề nghiệp không thể có các nghề như lơ xe, phụ hồ, xe ôm… Khi phát sinh các “nghề” mới, cần phải quy chuẩn các nghề đó vào 1 danh mục đã được định chuẩn.
-
-Danh mục thuốc cũng phải được cập nhật vì nhiều thuốc mới phát sinh.
-
-…
-
-Một số vấn đề về danh mục chuẩn theo Bộ Y tế Việt Nam, nhằm phục vụ cho công tác thanh toán viện phí Online của Bảo Hiểm Xã Hội.
-
-Danh mục dịch vụ: các danh mục dịch vụ hiện tại do Bộ Y tế Việt Nam ban hành (2016) không theo một chuẩn quốc tế nào. Nhiều tên dịch vụ bị xếp loại trùng lắp nhau. Một tên dịch vụ có nhiều mã số… Những điều này không tạo thành chuẩn dữ liệu cho y tế quốc gia. Mặt khác tên gọi trong chuẩn không dùng được hoặc bất tiện trong việc ghi chỉ định hàng ngày. Ví dụ: một tên gọi là “Chụp Cắt Lớp Vi Tính mạch máu não có cản quang” khá dài dòng thì nên được ghi ngắn gọn là “CT mạch máu não CE”.
-
-Danh mục thuốc: Danh mục thuốc nên được tuân theo chuẩn quốc tế. Cần phân biệt rõ tên thuốc (tên thương mại, tên biệt dược) với thành phần hoạt chất. Hàm lượng thuốc chính là hàm lượng của hoạt chất. Một thuốc có nhiều hoạt chất khác nhau thì tên hoạt chất phải đi kèm hàm lượng của nó. Tên thuốc thì có thể tùy gọi nhưng hoạt chất và hàm lượng cần phải được tuyệt đối chính xác. Cần có một bảng con đi kèm tên thuốc để ghi rõ hoạt chất và hàm lượng trong trường hợp thuốc có nhiều hoạt chất. Điều này rất quan trọng vì tổng hàm lượng của từng hoạt chất trong một đơn thuốc có thể ảnh hưởng đến kết quả điều trị và việc tách riêng từng hoạt chất sẽ giúp cảnh báo tương tác thuốc.
 
 ## Chuẩn hóa dữ liệu
+
+### Các dạng dữ liệu y tế
+
+Trong các phần mềm hay hệ thống IT p
+
+- EHR cho phép cải thiện tất cả các khía cạnh của việc chăm sóc bệnh nhân, mức độ an toàn, kịp lúc, tính hiệu quả và công bằng.
+Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
+Hồ sơ quan trọng (Vital record) thông báo các mục tiêu và chính sách y tế công cộng.
+Dữ liệu về đơn thuốc, hình ảnh, công việc xét nghiệm và tất cả các thành phần khác của dịch vụ khám chữa bệnh.
+Nghiên cứu được thực hiện nhằm cải thiện hệ thống hệ thống cung ứng dịch vụ y tế.
+Khảo sát thu thập dữ liệu để thúc đẩy nghiên cứu chính sách khám, chữa bệnh công cộng.
+Thiết bị đeo trên người với mục đích cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
 ## Chuẩn hóa trao đổi dữ liệu
 
 # HL7
@@ -56,6 +58,11 @@ HL7, the publisher of FHIR, is a not-for-profit American National Standards Inst
 
 # Hiện trạng tại Việt Nam
 [[2023-04-04]]
+
+Một số vấn đề về danh mục chuẩn theo Bộ Y tế Việt Nam, nhằm phục vụ cho công tác thanh toán viện phí Online của Bảo Hiểm Xã Hội.
+
+- Danh mục dịch vụ: các danh mục dịch vụ hiện tại do Bộ Y tế Việt Nam ban hành (2016) không theo một chuẩn quốc tế nào. Nhiều tên dịch vụ bị xếp loại trùng lắp nhau. Một tên dịch vụ có nhiều mã số… Những điều này không tạo thành chuẩn dữ liệu cho y tế quốc gia. Mặt khác tên gọi trong chuẩn không dùng được hoặc bất tiện trong việc ghi chỉ định hàng ngày. Ví dụ: một tên gọi là “Chụp Cắt Lớp Vi Tính mạch máu não có cản quang” khá dài dòng thì nên được ghi ngắn gọn là “CT mạch máu não CE”.
+- Danh mục thuốc: Danh mục thuốc nên được tuân theo chuẩn quốc tế. Cần phân biệt rõ tên thuốc (tên thương mại, tên biệt dược) với thành phần hoạt chất. Hàm lượng thuốc chính là hàm lượng của hoạt chất. Một thuốc có nhiều hoạt chất khác nhau thì tên hoạt chất phải đi kèm hàm lượng của nó. Tên thuốc thì có thể tùy gọi nhưng hoạt chất và hàm lượng cần phải được tuyệt đối chính xác. Cần có một bảng con đi kèm tên thuốc để ghi rõ hoạt chất và hàm lượng trong trường hợp thuốc có nhiều hoạt chất. Điều này rất quan trọng vì tổng hàm lượng của từng hoạt chất trong một đơn thuốc có thể ảnh hưởng đến kết quả điều trị và việc tách riêng từng hoạt chất sẽ giúp cảnh báo tương tác thuốc.
 
 # References
 1. [YKHOANET - Chuẩn dữ liệu](https://www.ykhoanet.com/c%E1%BA%A9m-nang-cntt-y-t%E1%BA%BF/chu%E1%BA%A9n-d%E1%BB%AF-li%E1%BB%87u)
