@@ -32,11 +32,11 @@ Since there had been no mandated universal standard for data exchange, each EHR 
 
 Nhưng có lẽ, câu chuyện về kết nối dữ liệu chỉ thực sự trở nên cấp thiết hơn bao giờ hết khi y tế dự phòng được đẩy mạnh với sự ra đời của PHR - hồ sơ dữ liệu sức khoẻ cá nhân. Dữ liệu không còn nằm ở phía cơ sở y tế, dữ liệu được chia sẻ đến mỗi cá nhân để họ nắm được tình trạng sức khoẻ của mình, điều chỉnh sinh hoạt và phòng bệnh. Bản chất của hệ thống PHR - Hồ sơ sức khoẻ cá nhân là kết nối. PHR kết nối đến tất cả những nơi nào có dữ liệu y tế và sức khoẻ của cá nhân, tập hợp chúng lại để mỗi cá nhân có thể tự quản lý thông tin sức khoẻ của mình đầy đủ nhất. Và cũng nhờ những thông tin y tế đầy đủ đó, dưới sự hỗ trợ của công nghệ số hiện đại, máy tính có thể trợ giúp con người phòng bệnh tốt hơn, đưa ra những lời khuyên về sức khoẻ như những trợ lý sức khoẻ ảo của riêng họ.
 
-Như những phân tích ở trên thì lợi ích của việc kết nối dữ liệu là vô cùng to lớn. 
+Như những phân tích ở trên thì lợi ích của việc kết nối dữ liệu là vô cùng to lớn.
 
-Bệnh viện cũng có nhu cầu, người dân cũng có nhu cầu và nhà nước cũng có nhu cầu vì lợi ích kinh tế mà nó mang lại. 
+Bệnh viện cũng có nhu cầu, người dân cũng có nhu cầu và nhà nước cũng có nhu cầu vì lợi ích kinh tế mà nó mang lại.
 
-Những kết quả xét nghiệm được chấp nhận liên viện, dữ liệu được chia sẻ thì sẽ không phải thực hiện thừa các xét nghiệm, tiết kiệm được rất nhiều tiền của nhà nước, bảo hiểm y tế và của chính những người dân, đồng thời tiết kiệm thời gian, đẩy nhanh quá trình khám chữa bệnh. 
+Những kết quả xét nghiệm được chấp nhận liên viện, dữ liệu được chia sẻ thì sẽ không phải thực hiện thừa các xét nghiệm, tiết kiệm được rất nhiều tiền của nhà nước, bảo hiểm y tế và của chính những người dân, đồng thời tiết kiệm thời gian, đẩy nhanh quá trình khám chữa bệnh.
 
 Dữ liệu được chuẩn hoá, kết nối và có thể tạo thành các data warehouse thì con đường làm Y tế thông minh sẽ ngắn lại rất nhiều. Công nghệ số tiên tiến sẽ biến dữ liệu thành tri thức phục vụ y tế dự phòng thông minh và quản lý y tế thông minh.
 
@@ -58,44 +58,43 @@ Hiện tại đã có nhiều danh mục chuẩn hóa ở các cấp độ khác
 
 ## Chuẩn hóa trao đổi dữ liệu
 
-
 # FHIR
-
 
 ## Specification
 
 FHIR sử dụng API để trao đổi thông tin giữa các ứng dụng. Mà cụ thể hơn chính là REST API.
 
-
 FHIR specifications are relatively straightforward, but it can be difficult to know where to begin to implement a solution. For that reason, FHIR is broken up into 13 modules to organize and guide set-up. There are roughly three groups of modules, including infrastructure, content, and modeling (or reasoning). Each of these modules is based on the resources described above.
 
 HL7 has also outlined various steps (called “levels”) to show where each module is used in the set-up of your FHIR implementation:
 
-Level 1, Foundation Module
+### Level 1:
+#### Foundation Module
 The foundation module is the baseline infrastructure or framework on which the rest of the modules are developed. This framework defines the base documentations. The foundation module includes the following resources:
 
-Foundation framework
-Content management resource
-Data exchange resource
-Level 2, Implementation and Set-Up
+- Foundation framework
+- Content management resource
+- Data exchange resource
+
+### Level 2, Implementation and Set-Up
 There are several modules included in this step. They are designed to help you build the system and bind them to the proper external resources.
 
-Implementation Support Module
+#### Implementation Support Module
 This module supports the system with resources required for implementation, including available libraries, tools, helpline, and other similar resources.
 
-Security and Privacy Module
+#### Security and Privacy Module
 This module provides guidance on how to protect FHIR servers through access control and authorization, user permission documentation, audit login, and provenance to keep records about events within the system. It controls access, identifies users and the context of access, audits the use of the system, and ensures privacy consent is enabled.
 
-Conformance Module
+#### Conformance Module
 The FHIR conformance module is all about the metadata for data types, resources, and API features. Conformance resources typically include an implementation guide that describes how FHIR is adapted to support certain use cases.
 
-Terminology Module
+#### Terminology Module
 This module provides terminologies that are used for representing and communicating coded and structured data in the FHIR core specification and profiles. These terminologies are used to create or reference a code system or value set, record data using pre-coordinated codes, record data using post-coordinated expressions, expand a value set, or validate a code.
 
-Exchange Module
+#### Exchange Module
 FHIR specifies which data is exchanged between healthcare apps. It also controls how the exchange is managed and implemented.
 
-Level 3, Administration
+### Level 3, Administration
 The administration module describes the base data to track patients and their care and links it to external sources. It is linked into the other modules for finance and billing, workflow, and clinical content. It performs a number of tasks, including:
 
 Managing a master record of a patient
@@ -103,38 +102,41 @@ Managing administrative records
 Enabling patient profiles
 Enabling clinical reporting and connecting clinical records
 Enabling clinical grouping and financial reporting
-Level 4, Record-Keeping and Data Exchange
+
+### Level 4, Record-Keeping and Data Exchange
 Again, there are several modules used in this level.
 
-Clinical Module
+#### Clinical Module
 This module focuses on the clinical information of patients. It is critical in terms of data breaches because it stores patient data. Users need to have security and privacy access in order to search and pull any information. This information includes:
 
 1. Documenting the patient’s health condition
 2. Retrieving patient’s condition
 3. Documenting family history
 4. Documenting and retrieving patient allergies
-Diagnostics Module
+
+#### Diagnostics Module
 This diagnostics module describes ordering and reporting of clinical diagnostics, which includes laboratory testing and imaging. Because diagnostic resources are patient data, users need to have a required security and private policy for searching and pulling any information related to:
 
-Recording a patient’s temperature
-Reporting a image study
-Reporting a laboratory test
-Medications Module
-Medication covers three main parts:
+- Recording a patient’s temperature
+- Reporting a image study
+- Reporting a laboratory test
+- Medications Module
+- Medication covers three main parts:
 
 Ordering, dispensing, administering medications, and recording statements of medication use
 Recording immunizations given (or not given), evaluation of given immunizations, and recommendations for individual patients at a point in time
 Creating or querying medications as part of drug information or drug knowledge
-Workflow Module
+#### Workflow Module
 This module focuses on coordinating activities within the healthcare ecosystem. Some of the common use cases are:
 
 Creating a lab order or medicine prescription
 Communicating information about order status changes
 Creating an appointment
-Financial Module
+#### Financial Module
 The financial module supports billing and transactions that occur within the healthcare ecosystem. It covers patient account management, enrollment requests and responses, payment notice, and reconciliation.
 
-Level 5 – Clinical Reasoning
+### Level 5 – Clinical Reasoning
+
 The clinical reasoning module provides the reasoning to deal with the healthcare process. The resources used enable the representation, distribution, and evaluation of clinical knowledge. It includes clinical decision-support rules, quality measures, public health indicators, order sets, and clinical protocols.
 
 There are dependencies between modules, but they follow the steps listed above. Healthcare developers should only use the modules that apply to them.
