@@ -35,19 +35,19 @@ Ví dụ:
 
 ### Các dạng dữ liệu y tế
 
-Trong các phần mềm hay hệ thống IT p
+Trong các phần mềm hay hệ thống IT phục vụ trong ngành y tế có nhiều tiêu chuẩn dữ liệu khác nhau đã được đưa ra
 
 - EHR cho phép cải thiện tất cả các khía cạnh của việc chăm sóc bệnh nhân, mức độ an toàn, kịp lúc, tính hiệu quả và công bằng.
-Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
-Hồ sơ quan trọng (Vital record) thông báo các mục tiêu và chính sách y tế công cộng.
-Dữ liệu về đơn thuốc, hình ảnh, công việc xét nghiệm và tất cả các thành phần khác của dịch vụ khám chữa bệnh.
-Nghiên cứu được thực hiện nhằm cải thiện hệ thống hệ thống cung ứng dịch vụ y tế.
-Khảo sát thu thập dữ liệu để thúc đẩy nghiên cứu chính sách khám, chữa bệnh công cộng.
-Thiết bị đeo trên người với mục đích cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
+- Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
+- Hồ sơ quan trọng (Vital record) thông báo các mục tiêu và chính sách y tế công cộng.
+- Dữ liệu về đơn thuốc, hình ảnh, công việc xét nghiệm và tất cả các thành phần khác của dịch vụ khám chữa bệnh.
+- Nghiên cứu được thực hiện nhằm cải thiện hệ thống hệ thống cung ứng dịch vụ y tế.
+- Khảo sát thu thập dữ liệu để thúc đẩy nghiên cứu chính sách khám, chữa bệnh công cộng.
+- Thiết bị đeo trên người (wearable device) cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
 ## Chuẩn hóa trao đổi dữ liệu
 
 # HL7
-HL7, the publisher of FHIR, is a not-for-profit American National Standards Institute accredited healthcare standard-developing organization. It is an international organization with over 50 member countries, and some of the biggest industry vendors and healthcare providers utilize the software. It works toward supporting integration, exchange, sharing, and retrieval of electronic health information. Its philosophy is to create a base set of resources that are used by the majority of organizations within the healthcare ecosystem.
+**HL7**,  một tổ chức quốc tế phi lợi nhuận được thành lập năm 1987, chuyên về chuẩn hóa giao tiếp trong ngành y tế, chăm sóc sức khỏe.
 
 # FHIR
 
