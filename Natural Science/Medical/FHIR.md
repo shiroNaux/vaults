@@ -94,3 +94,7 @@ Chuẩn hoá thì cần có sự tham gia của quản lý nhà nước, cụ th
 
 # References
 1. [YKHOANET - Chuẩn dữ liệu](https://www.ykhoanet.com/c%E1%BA%A9m-nang-cntt-y-t%E1%BA%BF/chu%E1%BA%A9n-d%E1%BB%AF-li%E1%BB%87u)
+2. [Tiêu chuẩn HL7 phiên bản 2.5 có những điểm nổi bật nào? - TPH Solutions (tphsoft.com.vn)](https://tphsoft.com.vn/tieu-chuan-hl7-phien-ban-2-5/)
+3. [Kết nối dữ liệu y tế, câu chuyện của cả chục năm nữa? | OmiCare.vn](https://omicare.vn/goc-ceo/ket-noi-du-lieu-y-te-cau-chuyen-cua-ca-chuc-nam-nua)
+4. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
+5. [Tech Talk: What is an API? (particlehealth.com)](https://www.particlehealth.com/blog/tech-talk-what-is-an-api)
