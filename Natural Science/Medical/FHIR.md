@@ -74,14 +74,16 @@ FHIR bao gồm 5 cấp độ và 13 modules. Các cấp độ có thể được
 2. Nội dung (Level 3 & 4)
 3. Suy luận (Level 5)
 
-### Level 1: Foundation Module
+### Level 1:  Basic framework on which the specification is built
+
+#### Foundation Module
 The foundation module is the baseline infrastructure or framework on which the rest of the modules are developed. This framework defines the base documentations. The foundation module includes the following resources:
 
 - Foundation framework
 - Content management resource
 - Data exchange resource
 
-### Level 2: Implementation and Set-Up
+### Level 2: Supporting implementation and binding to external specifications
 
 Có 5 Module trong level này
 
@@ -100,7 +102,9 @@ This module provides terminologies that are used for representing and communicat
 #### Exchange Module
 FHIR specifies which data is exchanged between healthcare apps. It also controls how the exchange is managed and implemented.
 
-### Level 3, Administration
+### Level 3: Linking to real-world concepts in the healthcare system
+
+#### Administration Module
 The administration module describes the base data to track patients and their care and links it to external sources. It is linked into the other modules for finance and billing, workflow, and clinical content. It performs a number of tasks, including:
 
 Managing a master record of a patient
@@ -109,8 +113,9 @@ Enabling patient profiles
 Enabling clinical reporting and connecting clinical records
 Enabling clinical grouping and financial reporting
 
-### Level 4, Record-Keeping and Data Exchange
-Again, there are several modules used in this level.
+### Level 4: Record-keeping and Data Exchange for the healthcare process
+
+Level này bao gồm 5 module
 
 #### Clinical Module
 This module focuses on the clinical information of patients. It is critical in terms of data breaches because it stores patient data. Users need to have security and privacy access in order to search and pull any information. This information includes:
@@ -132,6 +137,7 @@ This diagnostics module describes ordering and reporting of clinical diagnostics
 Ordering, dispensing, administering medications, and recording statements of medication use
 Recording immunizations given (or not given), evaluation of given immunizations, and recommendations for individual patients at a point in time
 Creating or querying medications as part of drug information or drug knowledge
+
 #### Workflow Module
 This module focuses on coordinating activities within the healthcare ecosystem. Some of the common use cases are:
 
@@ -351,6 +357,7 @@ TPH mong rằng bài viết này đã giúp các bạn hiểu thêm FHIR là gì
 ### Đối với Development team
 
 ##### 1. Faster Go-to-Market
+Do đã có sẵn các tiêu chuẩn nên thời gian phát triển được rút ngắn lại. Bởi vì nó được dựa trên các công nghệ phát triển phần mềm mới nhất, phù hợp với hầu hết các team hiện tại. Ngoài ra
 FHIR offers customers out-of-the-box APIs, reusable tools, and excellent security models. One of the major benefits of FHIR is that it is fast and easy to implement. Multiple developers can work on a project, and when using the compatible interaction engine, can have a simple interface working in just one day. The go-to-market speed greatly increases with FHIR.
 
 ##### 2. Better Data Management
