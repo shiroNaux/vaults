@@ -30,6 +30,11 @@ Ví dụ:
 - Danh mục thuốc cũng phải được cập nhật vì nhiều thuốc mới phát sinh.
 - ...
 
+With the emergence of electronic health record systems (EHRs), direct system-to-system secure digital transfer and portability of patient records become possible. Yet, even as we usher out 2022 we’ve still seen data formatting and availability as the wild, wild west. Each system implementer provides different ways to share data, or in some cases, prevent the sharing of data.
+
+Since there had been no mandated universal standard for data exchange, each EHR had its own data specifications – often a hybrid approach using some industry standards and their own custom formats. This format and integration fragmentation put a lot of pressure on vendor integration teams and required custom API implementations for each platform they wished to integrate with. Because every implementation required a time and monetary investment, this meant that the APIs intended to provide data portability, ironically became hurdles for larger integration strategies.
+
+Nhưng có lẽ, câu chuyện về kết nối dữ liệu chỉ thực sự trở nên cấp thiết hơn bao giờ hết khi y tế dự phòng được đẩy mạnh với sự ra đời của PHR - hồ sơ dữ liệu sức khoẻ cá nhân. Dữ liệu không còn nằm ở phía cơ sở y tế, dữ liệu được chia sẻ đến mỗi cá nhân để họ nắm được tình trạng sức khoẻ của mình, điều chỉnh sinh hoạt và phòng bệnh. Bản chất của hệ thống PHR - Hồ sơ sức khoẻ cá nhân là kết nối. PHR kết nối đến tất cả những nơi nào có dữ liệu y tế và sức khoẻ của cá nhân, tập hợp chúng lại để mỗi cá nhân có thể tự quản lý thông tin sức khoẻ của mình đầy đủ nhất. Và cũng nhờ những thông tin y tế đầy đủ đó, dưới sự hỗ trợ của công nghệ số hiện đại, máy tính có thể trợ giúp con người phòng bệnh tốt hơn, đưa ra những lời khuyên về sức khoẻ như những trợ lý sức khoẻ ảo của riêng họ.
 
 ## Chuẩn hóa dữ liệu
 
@@ -53,7 +58,11 @@ Trong các phần mềm hay hệ thống IT phục vụ trong ngành y tế có 
 
 
 ## Specification
+
+FHIR sử dụng [[API]] để trao đổi dữ liệu
+
 ## Benefits
+
 ## Apply
 
 # Hiện trạng tại Việt Nam
