@@ -370,6 +370,8 @@ FHIR cung cấp khả năng cộng tác và chia sẻ dữ liệu dễ dàng, nh
 FHIR provides easy, fast, and secure data sharing capability and collaboration among healthcare systems’ stakeholders. It offers 145 APIs created for sharing information between healthcare systems. Most importantly, the componentized specifications of FHIR enables implementation of only the APIs required for specific use cases. After implementing APIs, it is easy to get the full benefit of interoperability at scale.
 
 ##### 4. Patient Empowerment
+
+
 Patients get easy and secure access to their complete data, both real-time and historical. A patient can take a complete picture of their data and make informed decisions about their health as a result. It also accelerates the clinical decision-making process by giving healthcare practitioners complete and accurate data about the patient.
 
 ##### 5. Better Data Integration
@@ -386,6 +388,7 @@ FHIR modules can be used to build analytical, business information, and artifici
 
 ##### 9. Mobile App Support
 Mobile app adoption in healthcare is massive because many providers and patients increasingly move toward using apps for healthcare. FHIR supports all the technologies that mobile devices also use, increasing the compatibility with modern technology.
+Nhu cầu áp dụng các thiết bị di động trong lĩnh vực chăm sóc sức khỏe đang rất lớn vì sự gia tăng, phát triển của các thiết bị di động. FHIR hỗ trợ tất cả các công nghệ mà thiết bị di động sử dụng, giúp đảm bảo khả năng 
 
 ---
 
@@ -394,9 +397,11 @@ Mobile app adoption in healthcare is massive because many providers and patients
 
 Có một số thách thức cần phải đối mặt để có thể áp dụng và triển khai FHIR trong thực tiễn
 
-1. Different versions of FHIR can be implemented in different systems. Migration between FHIR versions is painful because of absent backward compatibility. In this case, the interoperability will fail. In order to resolve this issue, the most up-to-date version of FHIR must be implemented in all possible provider systems.
-2. Inconsistent implementation of APIs within the system means not all software will work seamlessly within the FHIR framework. The solution is complete adoption and integration with FHIR.
-3. Many healthcare providers don’t understand the resources required to develop compliant and consistent standards across the system. The solution for this problem is dedicated medical IT teams within the organization that can correctly make judgements on what is needed and where, when, and how to implement it. Changes in the infrastructure will be required, and ongoing training, support, and education is also needed.
+2. FHIR có nhiều phiên bản khác nhau. Mỗi hệ thống có thể implement những phiên bản FHIR khác nhau. Điều này có thể dẫn đến một số phức tạp khi migrate sang những version khác nhau, hay trao đổi giữa các hệ thống không trùng phiên bản.
+3. a
+4. Nhiều nhà cung cấp dịch vụ chăm sóc sức khỏe không hiểu các nguồn lực cần thiết để phát triển các tiêu chuẩn tuân thủ và nhất quán trên toàn hệ thống. Giải pháp cho vấn đề này là các nhóm CNTT y tế chuyên dụng trong tổ chức có thể đưa ra phán đoán chính xác về những gì cần thiết cũng như địa điểm, thời gian và cách triển khai. Những thay đổi về cơ sở hạ tầng sẽ là bắt buộc, và cũng cần phải đào tạo, hỗ trợ và giáo dục liên tục.
+5. Inconsistent implementation of APIs within the system means not all software will work seamlessly within the FHIR framework. The solution is complete adoption and integration with FHIR.
+6. Many healthcare providers don’t understand the resources required to develop compliant and consistent standards across the system. The solution for this problem is dedicated medical IT teams within the organization that can correctly make judgements on what is needed and where, when, and how to implement it. Changes in the infrastructure will be required, and ongoing training, support, and education is also needed.
 
 
 # Hiện trạng tại Việt Nam
