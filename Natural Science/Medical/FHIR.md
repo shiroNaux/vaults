@@ -15,11 +15,7 @@ Hầu hết các nhà cung cấp dịch vụ chăm sóc sức khỏe(Bệnh vi�
 
 > Chú ý: Khai thác dữ liệu ở đây là tất cả các công việc liên quan đến sử dụng dữ liệu. Nó bao gồm cả việc chẩn đoán của bác sĩ, theo dõi, đánh giá dịch bệnh, ...
 
-Nhằm có được bộ dữ liệu tốt, cần có một bộ dữ liệu danh mục được chuẩn hóa. Hiện tại đã có nhiều danh mục chuẩn hóa ở các cấp độ khác nhau: quốc tế, cấp quốc gia và cũng có danh mục chuẩn hóa tại từng bệnh viện
-
-- Danh mục quốc tế: Tên quốc gia, mã số quốc gia, bộ mã chẩn đoán ICD, bộ mã thuốc men ATP, LOINC, SNOMED CT, …
-- Danh mục cấp quốc gia: Danh mục thuốc, danh mục tên dịch vụ y tế, danh mục bệnh viện, danh mục tên chuyên khoa, danh mục tỉnh thành…
-- Danh mục tự tạo: các khoa phòng, danh mục user, danh mục kho thuốc, danh mục thuốc… là các danh mục do bệnh viện tự tạo.
+Nhằm có được bộ dữ liệu tốt, cần có một bộ dữ liệu danh mục được chuẩn hóa.
 
 Việc quy chuẩn danh mục giúp cho việc nhập liệu được nhanh chóng và dễ cho việc phân loại dữ liệu, giúp ích cho việc thống kê và giao tiếp giữa các cơ quan y tế. Tuy nhiên, việc chuẩn hóa các danh mục này cũng chỉ mang tính tương đối vì dữ liệu có thể biến đổi và không bao trùm được hết các khía cạnh thực tế.
 
@@ -52,18 +48,15 @@ There is a need for consistent, simple-to-implement, and thorough mechanisms tha
 
 ## Chuẩn hóa dữ liệu
 
-### Các dạng dữ liệu y tế
+Việc quy chuẩn danh mục giúp cho việc nhập liệu được nhanh chóng và dễ cho việc phân loại dữ liệu, giúp ích cho việc thống kê và giao tiếp giữa các cơ quan y tế
 
-Trong các phần mềm hay hệ thống IT phục vụ trong ngành y tế có nhiều tiêu chuẩn dữ liệu khác nhau đã được đưa ra.
-Với việc ứng dụng CNTT vào trong y tế
+Hiện tại đã có nhiều danh mục chuẩn hóa ở các cấp độ khác nhau: quốc tế, cấp quốc gia và cũng có danh mục chuẩn hóa tại từng bệnh viện
 
-- EHR cho phép cải thiện tất cả các khía cạnh của việc chăm sóc bệnh nhân, mức độ an toàn, kịp lúc, tính hiệu quả và công bằng.
-- Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
-- Hồ sơ quan trọng (Vital record) thông báo các mục tiêu và chính sách y tế công cộng.
-- Dữ liệu về đơn thuốc, hình ảnh, công việc xét nghiệm và tất cả các thành phần khác của dịch vụ khám chữa bệnh.
-- Nghiên cứu được thực hiện nhằm cải thiện hệ thống hệ thống cung ứng dịch vụ y tế.
-- Khảo sát thu thập dữ liệu để thúc đẩy nghiên cứu chính sách khám, chữa bệnh công cộng.
-- Thiết bị đeo trên người (wearable device) cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
+- Danh mục quốc tế: Tên quốc gia, mã số quốc gia, bộ mã chẩn đoán ICD, bộ mã thuốc men ATP, LOINC, SNOMED CT, …
+- Danh mục cấp quốc gia: Danh mục thuốc, danh mục tên dịch vụ y tế, danh mục bệnh viện, danh mục tên chuyên khoa, danh mục tỉnh thành…
+- Danh mục tự tạo: các khoa phòng, danh mục user, danh mục kho thuốc, danh mục thuốc… là các danh mục do bệnh viện tự tạo.
+
+
 ## Chuẩn hóa trao đổi dữ liệu
 
 
@@ -396,6 +389,6 @@ Chuẩn hoá thì cần có sự tham gia của quản lý nhà nước, cụ th
 2. [Tiêu chuẩn HL7 phiên bản 2.5 có những điểm nổi bật nào? - TPH Solutions (tphsoft.com.vn)](https://tphsoft.com.vn/tieu-chuan-hl7-phien-ban-2-5/)
 3. [HL7 FHIR là gì và đem lại lợi ích như thế nào cho hệ thống y tế? - TPH Solutions (tphsoft.com.vn)](https://tphsoft.com.vn/hl7-fhir-la-gi/)
 4. [Kết nối dữ liệu y tế, câu chuyện của cả chục năm nữa? | OmiCare.vn](https://omicare.vn/goc-ceo/ket-noi-du-lieu-y-te-cau-chuyen-cua-ca-chuc-nam-nua)
-5. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
-6. [Tech Talk: What is an API? (particlehealth.com)](https://www.particlehealth.com/blog/tech-talk-what-is-an-api)
 7. [What is HL7 FHIR? | TIBCO Software](https://www.tibco.com/reference-center/what-is-hl7-fhir)
+8. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
+9. [Interoperability 3.0 (particlehealth.com)](https://www.particlehealth.com/blog/interoperability-3-0)
