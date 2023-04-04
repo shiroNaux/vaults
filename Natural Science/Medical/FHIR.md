@@ -59,7 +59,7 @@ Hiện tại đã có nhiều danh mục chuẩn hóa ở các cấp độ khác
 
 ## Chuẩn hóa trao đổi dữ liệu
 
-# FHIR
+# FHIR (release 5)
 
 ## Specification
 
