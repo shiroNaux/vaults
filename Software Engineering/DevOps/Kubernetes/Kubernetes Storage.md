@@ -70,4 +70,4 @@ Persistent volume là 1 piece of storage, được cung cấp bởi administrato
 
 
 # References
-1. 
+1. [Kubernetes storage is complex, but it’s getting better | Cloud Native Computing Foundation (cncf.io)](https://www.cncf.io/blog/2023/03/28/kubernetes-storage-is-complex-but-its-getting-better/)
