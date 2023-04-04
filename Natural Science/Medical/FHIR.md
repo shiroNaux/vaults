@@ -365,7 +365,7 @@ Ngoài ra, FHIR được dựa trên các công nghệ phát triển web mới n
 
 ##### 3. Better Data Sharing and Collaboration
 
-FHIR cung cấp khả năng cộng tác và chia sẻ dữ liệu dễ dàng, nhanh chóng và an toàn giữa các bên liên quan. Nó cung cấp 145 API được tạo để chia sẻ thông tin giữa các hệ thống chăm sóc sức khỏe. Quan trọng nhất, các thông số kỹ thuật được cấu thành của FHIR chỉ cho phép triển khai các API cần thiết cho các trường hợp sử dụng cụ thể. Sau khi triển khai API, thật dễ dàng để có được toàn bộ lợi ích của khả năng tương tác trên quy mô lớn.
+FHIR cung cấp khả năng cộng tác và chia sẻ dữ liệu dễ dàng, nhanh chóng và an toàn giữa các bên liên quan. Nó cung cấp 145 API được tạo để chia sẻ thông tin giữa các hệ thống y tế. Quan trọng nhất, các thông số kỹ thuật được cấu thành của FHIR chỉ cho phép triển khai các API cần thiết cho các trường hợp sử dụng cụ thể. Sau khi triển khai API, thật dễ dàng để có được toàn bộ lợi ích của khả năng tương tác trên quy mô lớn.
 
 FHIR provides easy, fast, and secure data sharing capability and collaboration among healthcare systems’ stakeholders. It offers 145 APIs created for sharing information between healthcare systems. Most importantly, the componentized specifications of FHIR enables implementation of only the APIs required for specific use cases. After implementing APIs, it is easy to get the full benefit of interoperability at scale.
 
