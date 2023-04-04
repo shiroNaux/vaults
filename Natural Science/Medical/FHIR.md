@@ -45,6 +45,10 @@ Những kết quả xét nghiệm được chấp nhận liên viện, dữ li�
 Dữ liệu được chuẩn hoá, kết nối và có thể tạo thành các data warehouse thì con đường làm Y tế thông minh sẽ ngắn lại rất nhiều. Công nghệ số tiên tiến sẽ biến dữ liệu thành tri thức phục vụ y tế dự phòng thông minh và quản lý y tế thông minh.
 
 
+The main object of FHIR is to address the growing digitization needs in the healthcare industry and simplify the data exchange without compromising the integrity of the information. FHIR is determined to make electronic health records (EHRs) available, discoverable, and easily understandable to stakeholders as patients move within the healthcare ecosystem. This standard not only makes it easier for the patient to keep track of their own health but supports automated clinical decision support and the use of other artificial intelligence or machine-based processes.
+
+There is a need for consistent, simple-to-implement, and thorough mechanisms that exchange data between disparate healthcare applications. FHIR resources have the capability to be incorporated in existing systems, which makes it easier and faster for healthcare application developers to implement. FHIR improves data exchange capability—creating a common set of APIs so healthcare platforms can connect and share data across systems in a format that each can understand.
+
 
 ## Chuẩn hóa dữ liệu
 
@@ -72,7 +76,117 @@ Với việc ứng dụng CNTT vào trong y tế
 
 FHIR sử dụng [[API]], nói cách khác: dữ liệu sẽ được lưu theo đúng format và trao đổi giữa các hệ thống với nhau thông qua API
 
+
+FHIR specifications are relatively straightforward, but it can be difficult to know where to begin to implement a solution. For that reason, FHIR is broken up into 13 modules to organize and guide set-up. There are roughly three groups of modules, including infrastructure, content, and modeling (or reasoning). Each of these modules is based on the resources described above.
+
+HL7 has also outlined various steps (called “levels”) to show where each module is used in the set-up of your FHIR implementation:
+
+Level 1, Foundation Module
+The foundation module is the baseline infrastructure or framework on which the rest of the modules are developed. This framework defines the base documentations. The foundation module includes the following resources:
+
+Foundation framework
+Content management resource
+Data exchange resource
+Level 2, Implementation and Set-Up
+There are several modules included in this step. They are designed to help you build the system and bind them to the proper external resources.
+
+Implementation Support Module
+This module supports the system with resources required for implementation, including available libraries, tools, helpline, and other similar resources.
+
+Security and Privacy Module
+This module provides guidance on how to protect FHIR servers through access control and authorization, user permission documentation, audit login, and provenance to keep records about events within the system. It controls access, identifies users and the context of access, audits the use of the system, and ensures privacy consent is enabled.
+
+Conformance Module
+The FHIR conformance module is all about the metadata for data types, resources, and API features. Conformance resources typically include an implementation guide that describes how FHIR is adapted to support certain use cases.
+
+Terminology Module
+This module provides terminologies that are used for representing and communicating coded and structured data in the FHIR core specification and profiles. These terminologies are used to create or reference a code system or value set, record data using pre-coordinated codes, record data using post-coordinated expressions, expand a value set, or validate a code.
+
+Exchange Module
+FHIR specifies which data is exchanged between healthcare apps. It also controls how the exchange is managed and implemented.
+
+Level 3, Administration
+The administration module describes the base data to track patients and their care and links it to external sources. It is linked into the other modules for finance and billing, workflow, and clinical content. It performs a number of tasks, including:
+
+Managing a master record of a patient
+Managing administrative records
+Enabling patient profiles
+Enabling clinical reporting and connecting clinical records
+Enabling clinical grouping and financial reporting
+Level 4, Record-Keeping and Data Exchange
+Again, there are several modules used in this level.
+
+Clinical Module
+This module focuses on the clinical information of patients. It is critical in terms of data breaches because it stores patient data. Users need to have security and privacy access in order to search and pull any information. This information includes:
+
+Documenting the patient’s health condition
+Retrieving patient’s condition
+Documenting family history
+Documenting and retrieving patient allergies
+Diagnostics Module
+This diagnostics module describes ordering and reporting of clinical diagnostics, which includes laboratory testing and imaging. Because diagnostic resources are patient data, users need to have a required security and private policy for searching and pulling any information related to:
+
+Recording a patient’s temperature
+Reporting a image study
+Reporting a laboratory test
+Medications Module
+Medication covers three main parts:
+
+Ordering, dispensing, administering medications, and recording statements of medication use
+Recording immunizations given (or not given), evaluation of given immunizations, and recommendations for individual patients at a point in time
+Creating or querying medications as part of drug information or drug knowledge
+Workflow Module
+This module focuses on coordinating activities within the healthcare ecosystem. Some of the common use cases are:
+
+Creating a lab order or medicine prescription
+Communicating information about order status changes
+Creating an appointment
+Financial Module
+The financial module supports billing and transactions that occur within the healthcare ecosystem. It covers patient account management, enrollment requests and responses, payment notice, and reconciliation.
+
+Level 5 – Clinical Reasoning
+The clinical reasoning module provides the reasoning to deal with the healthcare process. The resources used enable the representation, distribution, and evaluation of clinical knowledge. It includes clinical decision-support rules, quality measures, public health indicators, order sets, and clinical protocols.
+
+There are dependencies between modules, but they follow the steps listed above. Healthcare developers should only use the modules that apply to them.
+
 ## Benefits
+
+
+Faster Go-to-Market
+FHIR offers customers out-of-the-box APIs, reusable tools, and excellent security models. One of the major benefits of FHIR is that it is fast and easy to implement. Multiple developers can work on a project, and when using the compatible interaction engine, can have a simple interface working in just one day. The go-to-market speed greatly increases with FHIR.
+
+Better Data Management
+FHIR provides a standard common target data format that transforms data into usable formats. These standard common formats offer excellent data integrity, accuracy, clarity, and consistency.
+
+Better Data Sharing and Collaboration
+FHIR provides easy, fast, and secure data sharing capability and collaboration among healthcare systems’ stakeholders. It offers 145 APIs created for sharing information between healthcare systems. Most importantly, the componentized specifications of FHIR enables implementation of only the APIs required for specific use cases. After implementing APIs, it is easy to get the full benefit of interoperability at scale.
+
+Patient Empowerment
+Patients get easy and secure access to their complete data, both real-time and historical. A patient can take a complete picture of their data and make informed decisions about their health as a result. It also accelerates the clinical decision-making process by giving healthcare practitioners complete and accurate data about the patient.
+
+Better Data Integration
+With FHIR, it is possible to enable fast and efficient integration with legacy and modern systems. FHIR APIs provide a common way to create integrations. When a provider is integrating with non-FHIR systems, it provides standard APIs that offer interoperability. These integration points can be reused at scale across multiple systems.
+
+Developer Efficiency and Experience Improvement
+FHIR improves an application developer’s efficiency by giving them a superior user experience. As healthcare app developers, they have granular data access to individual items within resources, such as patient demographics or lab results observations.
+
+FHIR is Open Source
+FHIR is open source and free of cost. With open APIs, FHIR enables continuous real-time data exchange and makes it easy for developers to access healthcare data from healthcare applications. Open source means that any healthcare provider can use it, which provides an affordable way for the entire medical system to join together.
+
+Data Analytics and FHIR
+FHIR modules can be used to build analytical, business information, and artificial intelligence systems. FHIR supports modern databases and allows data to be analyzed, which means that artificial intelligence and machine learning systems can be used to provide accurate estimates and predictions about future volumes, workflows, and trends.
+
+Mobile App Support
+Mobile app adoption in healthcare is massive because many providers and patients increasingly move toward using apps for healthcare. FHIR supports all the technologies that mobile devices also use, increasing the compatibility with modern technology.
+
+## Chalenges
+
+
+FHIR is not free of challenges. There are three main issues that FHIR faces.
+
+1. Different versions of FHIR can be implemented in different systems. Migration between FHIR versions is painful because of absent backward compatibility. In this case, the interoperability will fail. In order to resolve this issue, the most up-to-date version of FHIR must be implemented in all possible provider systems.
+2. Inconsistent implementation of APIs within the system means not all software will work seamlessly within the FHIR framework. The solution is complete adoption and integration with FHIR.
+3. Many healthcare providers don’t understand the resources required to develop compliant and consistent standards across the system. The solution for this problem is dedicated medical IT teams within the organization that can correctly make judgements on what is needed and where, when, and how to implement it. Changes in the infrastructure will be required, and ongoing training, support, and education is also needed.
 
 ## Apply
 
@@ -98,3 +212,4 @@ Chuẩn hoá thì cần có sự tham gia của quản lý nhà nước, cụ th
 3. [Kết nối dữ liệu y tế, câu chuyện của cả chục năm nữa? | OmiCare.vn](https://omicare.vn/goc-ceo/ket-noi-du-lieu-y-te-cau-chuyen-cua-ca-chuc-nam-nua)
 4. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
 5. [Tech Talk: What is an API? (particlehealth.com)](https://www.particlehealth.com/blog/tech-talk-what-is-an-api)
+6. [What is HL7 FHIR? | TIBCO Software](https://www.tibco.com/reference-center/what-is-hl7-fhir)
