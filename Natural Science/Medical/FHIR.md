@@ -13,5 +13,12 @@ FHIR (Fast Healthcare Interoperability Resource, pronounced “fire”) là chu�
 
 # FHIR
 
+
+## Specification
+## Benefits
+## Apply
+
 # Hiện trạng tại Việt Nam
 [[2023-04-04]]
+
+# References
