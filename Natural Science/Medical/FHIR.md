@@ -179,6 +179,102 @@ FHIR modules can be used to build analytical, business information, and artifici
 Mobile App Support
 Mobile app adoption in healthcare is massive because many providers and patients increasingly move toward using apps for healthcare. FHIR supports all the technologies that mobile devices also use, increasing the compatibility with modern technology.
 
+---
+##### 1. FHIR giúp chia sẻ dữ liệu linh hoạt hơn
+Việc chia sẻ dữ liệu tạo ra giá trị trong lĩnh vực chăm sóc sức khỏe bằng cách:
+Trao quyền cho bệnh nhân 
+Trước tiên, hãy xem xét việc trao cho bệnh nhân quyền được chủ động đối với việc chăm sóc sức khỏe. Chúng ta biết rằng khi chia sẻ dữ liệu với bệnh nhân, họ có thể kiểm soát nhiều hơn vấn đề sức khỏe của bản thân. Qua đó, bệnh nhân đưa ra quyết định chăm sóc y tế tốt hơn cho chính mình, từ chế độ ăn uống, tập luyện thể dục đến việc điều trị. Tăng cường sự hợp tác giữa người thanh toán và nhà cung cấp dịch vụ y tế
+
+FHIR đem lại những lợi ích gì cho hệ thống y tế?
+Ngành Y tế đang hướng tới mô hình hoàn trả dựa trên giá trị. Đây là mô hình chủ yếu dựa vào việc chia sẻ dữ liệu giữa người trả tiền và nhà cung cấp dịch vụ y tế. Giá trị là sự phối hợp chăm sóc, phòng ngừa tốt hơn và quản lý các điều kiện tốt hơn, nhưng không làm tăng chi phí. Giúp nhà nghiên cứu lâm sàng đưa ra phương pháp điều trị hiệu quả. Nhà nghiên cứu lâm sàng có thể cải thiện các phương pháp điều trị bệnh, khi được quyền tiếp cận tốt hơn đối với EHR và dữ liệu có nguồn gốc từ bệnh nhân. Điều làm cho FHIR khác biệt với các cơ chế chia sẻ dữ liệu y tế trước đây là: FHIR rất phù hợp để triển khai các RESTful web service (nghĩa là các web service được viết dựa trên kiến trúc REST). REST (Viết tắt của từ: REpresentational State Transfer) gọn nhẹ và có thể được triển khai với các công nghệ web service nguồn mở phổ biến. Những điều này sẽ giúp bạn thực hiện chúng trong chia sẻ dữ liệu dễ dàng và tiết kiệm chi phí hơn. FHIR cung cấp 145 API riêng lẻ để chia sẻ dữ liệu trên toàn bộ hệ thống y tế. Thông số FHIR được thành phần hóa, nên bạn chỉ có thể triển khai các API cần thiết cho trường hợp sử dụng cụ thể. Một khi API đã khai triển, rất dễ dàng để đạt được khả năng tương tác. Bạn có thể kết nối bất kỳ nhà cung cấp hoặc hệ thống API nào phù hợp với đặc tả API. Điều này sẽ mang lại sự linh hoạt cho kiến ​​trúc của bạn. Hơn nữa, FHIR đang trở thành nền tảng cho các tiêu chuẩn khác giúp gia tăng giá trị dữ liệu của bạn. Chẳng hạn như SMART trên FHIR, nó xác định cách tích hợp các ứng dụng y tế sử dụng dữ liệu FHIR vào hệ thống EHR.
+
+
+##### 2. FHIR giúp quản lý dữ liệu dễ dàng hơn
+Các dạng dữ liệu y tế
+Dữ liệu thúc đẩy hệ thống y tế có nhiều nguồn, định dạng khác nhau, với khối lượng và tần suất khác nhau. Ví dụ là:
+
+EHR cho phép cải thiện tất cả các khía cạnh của việc chăm sóc bệnh nhân, mức độ an toàn, kịp lúc, tính hiệu quả và công bằng.
+Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
+Hồ sơ quan trọng (Vital record) thông báo các mục tiêu và chính sách y tế công cộng.
+Dữ liệu về đơn thuốc, hình ảnh, công việc xét nghiệm và tất cả các thành phần khác của dịch vụ khám chữa bệnh.
+Nghiên cứu được thực hiện nhằm cải thiện hệ thống hệ thống cung ứng dịch vụ y tế.
+Khảo sát thu thập dữ liệu để thúc đẩy nghiên cứu chính sách khám, chữa bệnh công cộng.
+Thiết bị đeo trên người với mục đích cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
+HL7 FHIR giúp quản lý tất cả những dữ liệu trên bằng cách nào?
+HL7 FHIR đem lại những lợi ích gì cho hệ thống y tế?
+FHIR giúp quản lý dữ liệu dễ dàng hơn – Ảnh: geralt – pixabay
+FHIR cung cấp một format dữ liệu mục tiêu chung tiêu chuẩn, chuyển đổi thông tin thành dạng có thể sử dụng được. 
+
+Nhờ format tiêu chuẩn này, tính toàn vẹn, chính xác và nhất quán của dữ liệu được đảm bảo. 
+
+Đồng thời, nó làm rõ các ý nghĩa khó hiểu và giảm thiểu dữ liệu thừa. 
+
+Mặt khác, nó cũng giúp chúng ta dễ dàng áp dụng nhất quán các quy tắc kinh doanh cụ thể.
+
+Chuẩn hóa dữ liệu như vậy giúp việc quản lý trở nên đơn giản hơn, với danh mục dữ liệu có thể theo dõi được nguồn gốc, người sở hữu, người được phép sử dụng, người đã sử dụng và cho mục đích gì.
+
+Bất chấp những lợi ích to lớn trong quản lý dữ liệu, khi áp dụng FHIR, bạn vẫn sẽ cần hiểu cách nhập dữ liệu, chuyển đổi, quản lý dữ liệu và cách giải quyết các vấn đề như bảo mật dữ liệu.
+
+##### 3. FHIR giúp khai thác dữ liệu hiệu quả hơn
+AI/máy học có thể khiến việc chăm sóc sức khỏe tốt hơn ra sao?
+Khoa học dữ liệu đề cập đến cách thức dữ liệu được khai thác tự động để có thông tin chi tiết. Đây đích thị là nơi mà lợi ích thực tiễn của FHIR đối với ngành y tế đáp ứng được lời hứa hẹn của trí tuệ nhân tạo và máy học.
+
+Rất nhiều giá trị phong phú ẩn chứa trong dữ liệu có thể được tiết lộ bằng AI hay máy học:
+
+Đào tạo mô hình AI/máy học để chẩn đoán tình trạng bệnh. “Mặt trận” này đang có những tiến bộ, và nhiều nghiên cứu ngoài kia cho chúng ta biết về những học viên được hướng dẫn hoặc hỗ trợ thành công bởi mô hình AI/máy học.
+Đào tạo mô hình AI/máy học để đề xuất các quy trình khám, chữa bệnh hiệu quả nhất hoặc các loại thuốc có thể được dùng điều trị cho bệnh nhân.
+Đào tạo mô hình AI/máy học để giảm bớt gánh nặng tài chính cho hệ thống y tế, bằng cách phát hiện những nơi nguồn lực y tế đang bị sử dụng sai mục đích, do gian lận hoặc thiếu hiệu quả.
+Vậy điều này có liên quan đến HL7 FHIR như thế nào?
+4 Lợi ích tuyệt vời của FHIR đối với hệ thống y tế
+HL7 FHIR giúp khai thác dữ liệu hiệu quả hơn – Ảnh: mohamed_hassan – pixabay
+Như chúng ta đã thấy, FHIR không chỉ cung cấp tiêu chuẩn cho các API và dữ liệu. Nó còn cho biết cách dữ liệu này kết hợp cùng nhau một cách nhất quán. Định dạng tiêu chuẩn này thật sự tuyệt vời cho việc học máy.
+
+Nếu “mớm” dữ liệu xấu cho mô hình AI/máy học, bạn sẽ nhận kết quả không tốt. Còn nếu không cung cấp đủ dữ liệu, thông tin bạn nhận về cũng sẽ bị hạn chế.
+
+Thế thì, điều tạo nên những mô hình AI/machine learning tốt là gì?
+
+Đó chính là:
+
+Dữ liệu chất lượng cao
+Dữ liệu cần có độ bao phủ rộng và đại diện cho toàn bộ không gian dữ liệu mà bạn cần bao phủ.
+
+Số lượng dữ liệu đủ
+Machine learning không hiệu quả với megabyte dữ liệu như với gigabyte, terabyte hoặc hơn. Càng có nhiều dữ liệu thì các dự đoán của machine learning càng đáng tin cậy.
+
+Dữ liệu được định dạng thích hợp
+Dữ liệu cũng cần được định dạng tốt, dán nhãn chính xác và mang ý nghĩa nhất quán.
+
+FHIR cho phép bạn tạo ra các tập dữ liệu đào tạo khá lớn, chất lượng cao từ nhiều nguồn dữ liệu. 
+
+
+
+##### 4. FHIR giúp tích hợp dữ liệu tốt hơn
+
+Các điểm tích hợp hiện có
+Chuỗi giá trị có thể bao gồm các hệ thống kế thừa hoặc cloud native mới vẫn đang trong quá trình phát triển. Trong nhiều trường hợp, bạn cần tích hợp thời gian thực với các hệ thống. Và FHIR có thể làm cho sự tích hợp này hợp lý hơn, với chi phí giảm mà hiệu quả lại được cải thiện.
+
+Format trao đổi dữ liệu bắt buộc
+Có những trao đổi dữ liệu bị ảnh hưởng bởi các quy định bắt buộc một số loại format trao đổi dữ liệu. 
+
+Công nghệ Sổ cái phân tán
+Hãy xem xét lời hứa của blockchain (sổ cái phân tán), cũng như ý nghĩa của nó đối với sự tích hợp giữa các hệ thống hoặc tổ chức. 
+
+Chúng ta chuyển từ mô hình tập trung (tất cả dữ liệu và chức năng nằm trong máy tính lớn) sang mô hình phi tập trung (dữ liệu và chức năng tồn tại trong các hệ thống phi tập trung).
+
+Và bây giờ là tới Sổ cái phân tán (Distributed Ledger), nghĩa là mọi người có cùng dữ liệu, chức năng, dữ liệu luôn được cập nhật ở tất cả các địa điểm và cho tất cả các bên.
+
+Sổ cái phân tán có những tác động gì đến hệ thống thông tin y tế?
+Đầu tiên là nó đồng nghĩa với việc bạn có quyền truy cập dữ liệu tức thì tại cùng một điểm với những người khác trong blockchain (với quyền bảo mật). Như thế, dữ liệu của chúng ta có chất lượng tốt hơn và lúc nào cũng có sẵn. Với những thứ như minh bạch chi phí, đây thực sự là một điều rất ý nghĩa! 
+
+Thứ hai, nó có nghĩa là chúng ta không cần phải chỉnh phiên bản khác nhau của cùng một dữ liệu. Qua đó, các hệ thống và chuỗi giá trị có thể được đơn giản hóa đáng kể, giúp ích cho những lĩnh vực như xử lý yêu cầu bồi thường. 
+
+HL7 FHIR trợ giúp như thế nào với những tích hợp dữ liệu này? 
+Các API tiêu chuẩn do FHIR cung cấp có thể góp phần đơn giản hóa mọi thứ. Tương tự tiêu chuẩn dữ liệu, các API FHIR cung cấp một mục tiêu tiêu chuẩn chung để sắp đặt các tích hợp. 
+
+Cho dù bạn đang tích hợp với những hệ thống không phải FHIR cần hỗ trợ các format trao đổi dữ liệu bắt buộc, hay đang tích hợp với blockchain, các API này đều sẽ cung cấp những API tiêu chuẩn nhằm xây dựng các tích hợp đó. Tất cả các lợi ích của khả năng tương tác là ở đây. Các điểm tích hợp có thể được tái sử dụng trên nhiều hệ thống đã được tích hợp với một tiêu chuẩn API chung.
+
+TPH mong rằng bài viết này đã giúp các bạn hiểu thêm FHIR là gì, cũng như những lợi ích tuyệt vời mà HL7 FHIR mang lại cho hệ thống chăm sóc sức khỏe.
+
 ## Chalenges
 
 
@@ -209,7 +305,8 @@ Chuẩn hoá thì cần có sự tham gia của quản lý nhà nước, cụ th
 # References
 1. [YKHOANET - Chuẩn dữ liệu](https://www.ykhoanet.com/c%E1%BA%A9m-nang-cntt-y-t%E1%BA%BF/chu%E1%BA%A9n-d%E1%BB%AF-li%E1%BB%87u)
 2. [Tiêu chuẩn HL7 phiên bản 2.5 có những điểm nổi bật nào? - TPH Solutions (tphsoft.com.vn)](https://tphsoft.com.vn/tieu-chuan-hl7-phien-ban-2-5/)
-3. [Kết nối dữ liệu y tế, câu chuyện của cả chục năm nữa? | OmiCare.vn](https://omicare.vn/goc-ceo/ket-noi-du-lieu-y-te-cau-chuyen-cua-ca-chuc-nam-nua)
-4. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
-5. [Tech Talk: What is an API? (particlehealth.com)](https://www.particlehealth.com/blog/tech-talk-what-is-an-api)
-6. [What is HL7 FHIR? | TIBCO Software](https://www.tibco.com/reference-center/what-is-hl7-fhir)
+3. [HL7 FHIR là gì và đem lại lợi ích như thế nào cho hệ thống y tế? - TPH Solutions (tphsoft.com.vn)](https://tphsoft.com.vn/hl7-fhir-la-gi/)
+4. [Kết nối dữ liệu y tế, câu chuyện của cả chục năm nữa? | OmiCare.vn](https://omicare.vn/goc-ceo/ket-noi-du-lieu-y-te-cau-chuyen-cua-ca-chuc-nam-nua)
+5. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
+6. [Tech Talk: What is an API? (particlehealth.com)](https://www.particlehealth.com/blog/tech-talk-what-is-an-api)
+7. [What is HL7 FHIR? | TIBCO Software](https://www.tibco.com/reference-center/what-is-hl7-fhir)
