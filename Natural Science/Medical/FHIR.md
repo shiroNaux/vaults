@@ -175,7 +175,7 @@ Một mã LOINC bao gồm 6 thành phần:
 
 Mỗi thành phần được quy ước thành các bộ mã riêng để thuận tiện trong việc sắp xếp. Nhìn vào dãy mã số, người ta không thể xác nhận được đó là xét nghiệm gì mà phải dùng một tiện ích phiên dịch là RELMA.
 
-Cho đến nay thì LOINC chưa được ứng dụng rộng rãi và hữu dụng trong CNTT y tế thế giới.
+Cho đến nay thì LOINC chưa được ứng dụng rộng rãi và hữu dụng trong CNTT y tế ở cả thế giới và Việt Nam.
 
 ---
 Resources (aka Atomic Data)
@@ -238,11 +238,12 @@ C-CDA, or Consolidated Clinical Document Architecture, is the main alternative t
 C-CDA is an XML-exclusive markup standard, not a complete API. C-CDA exports a patient’s medical history in a way that is difficult to query, and is generally read-only. It defines how documents are encoded, and can be exported - but does not define how they should be transported.
 
 
-## Benefits
+## Lợi ích
 ---
-### Đối với cấp quản lý
+### Đối với xã hội
 
 ##### 1. FHIR giúp chia sẻ dữ liệu linh hoạt hơn
+
 Việc chia sẻ dữ liệu tạo ra giá trị trong lĩnh vực chăm sóc sức khỏe bằng cách:
 Trao quyền cho bệnh nhân 
 Trước tiên, hãy xem xét việc trao cho bệnh nhân quyền được chủ động đối với việc chăm sóc sức khỏe. Chúng ta biết rằng khi chia sẻ dữ liệu với bệnh nhân, họ có thể kiểm soát nhiều hơn vấn đề sức khỏe của bản thân. Qua đó, bệnh nhân đưa ra quyết định chăm sóc y tế tốt hơn cho chính mình, từ chế độ ăn uống, tập luyện thể dục đến việc điều trị. Tăng cường sự hợp tác giữa người thanh toán và nhà cung cấp dịch vụ y tế
