@@ -245,34 +245,29 @@ C-CDA is an XML-exclusive markup standard, not a complete API. C-CDA exports a p
 ##### 1. FHIR giúp chia sẻ dữ liệu linh hoạt hơn
 
 Việc chia sẻ dữ liệu tạo ra giá trị trong lĩnh vực chăm sóc sức khỏe bằng cách:
-Trao quyền cho bệnh nhân 
-Trước tiên, hãy xem xét việc trao cho bệnh nhân quyền được chủ động đối với việc chăm sóc sức khỏe. Chúng ta biết rằng khi chia sẻ dữ liệu với bệnh nhân, họ có thể kiểm soát nhiều hơn vấn đề sức khỏe của bản thân. Qua đó, bệnh nhân đưa ra quyết định chăm sóc y tế tốt hơn cho chính mình, từ chế độ ăn uống, tập luyện thể dục đến việc điều trị. Tăng cường sự hợp tác giữa người thanh toán và nhà cung cấp dịch vụ y tế
+- Trao quyền cho bệnh nhân
+	Trước tiên, hãy xem xét việc trao cho bệnh nhân quyền được chủ động đối với việc chăm sóc sức khỏe. Chúng ta biết rằng khi chia sẻ dữ liệu với bệnh nhân, họ có thể kiểm soát nhiều hơn vấn đề sức khỏe của bản thân. Qua đó, bệnh nhân đưa ra quyết định chăm sóc y tế tốt hơn cho chính mình, từ chế độ ăn uống, tập luyện thể dục đến việc điều trị. Tăng cường sự hợp tác giữa người thanh toán và nhà cung cấp dịch vụ y tế
 
-FHIR đem lại những lợi ích gì cho hệ thống y tế?
-Ngành Y tế đang hướng tới mô hình hoàn trả dựa trên giá trị. Đây là mô hình chủ yếu dựa vào việc chia sẻ dữ liệu giữa người trả tiền và nhà cung cấp dịch vụ y tế. Giá trị là sự phối hợp chăm sóc, phòng ngừa tốt hơn và quản lý các điều kiện tốt hơn, nhưng không làm tăng chi phí. Giúp nhà nghiên cứu lâm sàng đưa ra phương pháp điều trị hiệu quả. Nhà nghiên cứu lâm sàng có thể cải thiện các phương pháp điều trị bệnh, khi được quyền tiếp cận tốt hơn đối với EHR và dữ liệu có nguồn gốc từ bệnh nhân. Điều làm cho FHIR khác biệt với các cơ chế chia sẻ dữ liệu y tế trước đây là: FHIR rất phù hợp để triển khai các RESTful web service (nghĩa là các web service được viết dựa trên kiến trúc REST). REST (Viết tắt của từ: REpresentational State Transfer) gọn nhẹ và có thể được triển khai với các công nghệ web service nguồn mở phổ biến. Những điều này sẽ giúp bạn thực hiện chúng trong chia sẻ dữ liệu dễ dàng và tiết kiệm chi phí hơn. FHIR cung cấp 145 API riêng lẻ để chia sẻ dữ liệu trên toàn bộ hệ thống y tế. Thông số FHIR được thành phần hóa, nên bạn chỉ có thể triển khai các API cần thiết cho trường hợp sử dụng cụ thể. Một khi API đã khai triển, rất dễ dàng để đạt được khả năng tương tác. Bạn có thể kết nối bất kỳ nhà cung cấp hoặc hệ thống API nào phù hợp với đặc tả API. Điều này sẽ mang lại sự linh hoạt cho kiến ​​trúc của bạn. Hơn nữa, FHIR đang trở thành nền tảng cho các tiêu chuẩn khác giúp gia tăng giá trị dữ liệu của bạn. Chẳng hạn như SMART trên FHIR, nó xác định cách tích hợp các ứng dụng y tế sử dụng dữ liệu FHIR vào hệ thống EHR.
+- FHIR đem lại những lợi ích gì cho hệ thống y tế?
+	Ngành Y tế đang hướng tới mô hình hoàn trả dựa trên giá trị. Đây là mô hình chủ yếu dựa vào việc chia sẻ dữ liệu giữa người trả tiền và nhà cung cấp dịch vụ y tế. Giá trị là sự phối hợp chăm sóc, phòng ngừa tốt hơn và quản lý các điều kiện tốt hơn, nhưng không làm tăng chi phí. Giúp nhà nghiên cứu lâm sàng đưa ra phương pháp điều trị hiệu quả. Nhà nghiên cứu lâm sàng có thể cải thiện các phương pháp điều trị bệnh, khi được quyền tiếp cận tốt hơn đối với EHR và dữ liệu có nguồn gốc từ bệnh nhân. Điều làm cho FHIR khác biệt với các cơ chế chia sẻ dữ liệu y tế trước đây là: FHIR rất phù hợp để triển khai các RESTful web service (nghĩa là các web service được viết dựa trên kiến trúc REST). REST (Viết tắt của từ: REpresentational State Transfer) gọn nhẹ và có thể được triển khai với các công nghệ web service nguồn mở phổ biến. Những điều này sẽ giúp bạn thực hiện chúng trong chia sẻ dữ liệu dễ dàng và tiết kiệm chi phí hơn. FHIR cung cấp 145 API riêng lẻ để chia sẻ dữ liệu trên toàn bộ hệ thống y tế. Thông số FHIR được thành phần hóa, nên bạn chỉ có thể triển khai các API cần thiết cho trường hợp sử dụng cụ thể. Một khi API đã khai triển, rất dễ dàng để đạt được khả năng tương tác. Bạn có thể kết nối bất kỳ nhà cung cấp hoặc hệ thống API nào phù hợp với đặc tả API. Điều này sẽ mang lại sự linh hoạt cho kiến ​​trúc của bạn. Hơn nữa, FHIR đang trở thành nền tảng cho các tiêu chuẩn khác giúp gia tăng giá trị dữ liệu của bạn. Chẳng hạn như SMART trên FHIR, nó xác định cách tích hợp các ứng dụng y tế sử dụng dữ liệu FHIR vào hệ thống EHR.
 
 
 ##### 2. FHIR giúp quản lý dữ liệu dễ dàng hơn
 Các dạng dữ liệu y tế
 Dữ liệu thúc đẩy hệ thống y tế có nhiều nguồn, định dạng khác nhau, với khối lượng và tần suất khác nhau. Ví dụ là:
 
-EHR cho phép cải thiện tất cả các khía cạnh của việc chăm sóc bệnh nhân, mức độ an toàn, kịp lúc, tính hiệu quả và công bằng.
-Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
-Hồ sơ quan trọng (Vital record) thông báo các mục tiêu và chính sách y tế công cộng.
-Dữ liệu về đơn thuốc, hình ảnh, công việc xét nghiệm và tất cả các thành phần khác của dịch vụ khám chữa bệnh.
-Nghiên cứu được thực hiện nhằm cải thiện hệ thống hệ thống cung ứng dịch vụ y tế.
-Khảo sát thu thập dữ liệu để thúc đẩy nghiên cứu chính sách khám, chữa bệnh công cộng.
-Thiết bị đeo trên người với mục đích cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
-HL7 FHIR giúp quản lý tất cả những dữ liệu trên bằng cách nào?
-HL7 FHIR đem lại những lợi ích gì cho hệ thống y tế?
-FHIR giúp quản lý dữ liệu dễ dàng hơn – Ảnh: geralt – pixabay
+- EHR cho phép cải thiện tất cả các khía cạnh của việc chăm sóc bệnh nhân, mức độ an toàn, kịp lúc, tính hiệu quả và công bằng.
+- Claims data cung cấp thông tin chi tiết bổ sung về phương pháp điều trị và các loại thuốc cho bệnh nhân.
+- Hồ sơ quan trọng (Vital record) thông báo các mục tiêu và chính sách y tế công cộng.
+- Dữ liệu về đơn thuốc, hình ảnh, công việc xét nghiệm và tất cả các thành phần khác của dịch vụ khám chữa bệnh.
+- Nghiên cứu được thực hiện nhằm cải thiện hệ thống hệ thống cung ứng dịch vụ y tế.
+- Khảo sát thu thập dữ liệu để thúc đẩy nghiên cứu chính sách khám, chữa bệnh công cộng.
+- Thiết bị đeo trên người với mục đích cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
+
 FHIR cung cấp một format dữ liệu mục tiêu chung tiêu chuẩn, chuyển đổi thông tin thành dạng có thể sử dụng được. 
-
-Nhờ format tiêu chuẩn này, tính toàn vẹn, chính xác và nhất quán của dữ liệu được đảm bảo. 
-
-Đồng thời, nó làm rõ các ý nghĩa khó hiểu và giảm thiểu dữ liệu thừa. 
-
-Mặt khác, nó cũng giúp chúng ta dễ dàng áp dụng nhất quán các quy tắc kinh doanh cụ thể.
+- Nhờ format tiêu chuẩn này, tính toàn vẹn, chính xác và nhất quán của dữ liệu được đảm bảo. 
+- Đồng thời, nó làm rõ các ý nghĩa khó hiểu và giảm thiểu dữ liệu thừa. 
+- Mặt khác, nó cũng giúp chúng ta dễ dàng áp dụng nhất quán các quy tắc kinh doanh cụ thể.
 
 Chuẩn hóa dữ liệu như vậy giúp việc quản lý trở nên đơn giản hơn, với danh mục dữ liệu có thể theo dõi được nguồn gốc, người sở hữu, người được phép sử dụng, người đã sử dụng và cho mục đích gì.
 
