@@ -8,6 +8,12 @@ FHIR (Fast Healthcare Interoperability Resource, pronounced “fire”) là chu�
 ![[hl7-fhir-diagram.svg]]
 
 ## Vì sao cần chuẩn hóa dữ liệu
+
+Để có được bộ dữ tiệu tốt cho công việc khai thác dữ liệu thì cần phải chuẩn hóa dữ liệu từ đầu vào.
+
+> Chú ý: Khai thác dữ liệu ở đây là tất cả các công việc liên quan đến sử dụng dữ liệu. Nó bao gồm cả việc chẩn đoán của bác sĩ, theo dõi, đánh giá dịch bệnh, ...
+
+Nhằm có được bộ dữ liệu tốt, cần có một bộ dữ liệu danh mục được chuẩn hóa. Các tổ chức quốc tế đã có những cố gắng trong việc chuẩn hóa những danh mục chuẩn hóa quốc tế, có danh mục chuẩn hóa ở cấp quốc gia và cũng có danh mục chuẩn hóa tai từng bệnh viện
 ## Chuẩn hóa dữ liệu
 ## Chuẩn hóa trao đổi dữ liệu
 
