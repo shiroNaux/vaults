@@ -66,8 +66,6 @@ Với việc ứng dụng CNTT vào trong y tế
 - Thiết bị đeo trên người (wearable device) cung cấp dữ liệu y tế tức thì nhằm cho biết thông tin chi tiết về sức khỏe hàng ngày của bệnh nhân.
 ## Chuẩn hóa trao đổi dữ liệu
 
-# HL7
-**HL7**,  một tổ chức quốc tế phi lợi nhuận được thành lập năm 1987, chuyên về chuẩn hóa giao tiếp trong ngành y tế, chăm sóc sức khỏe.
 
 # FHIR
 
@@ -148,6 +146,97 @@ Level 5 – Clinical Reasoning
 The clinical reasoning module provides the reasoning to deal with the healthcare process. The resources used enable the representation, distribution, and evaluation of clinical knowledge. It includes clinical decision-support rules, quality measures, public health indicators, order sets, and clinical protocols.
 
 There are dependencies between modules, but they follow the steps listed above. Healthcare developers should only use the modules that apply to them.
+
+---
+Bảng mã dữ liệu LOINC
+
+Bảng mã dữ liệu LOINC bao gồm Mã đại diện cho một tên dịch vụ y tế hoặc một bộ dịch vụ y tế, áp dụng cho khu vực cận lâm sàng (xét nghiệm và chấn đoán hình ảnh).
+
+Tên một xét nghiệm có thể đọc khác nhau giữa các vùng miền, địa phương hay giữa các quốc gia. Ví dụ: đường huyết hay Glucose huyết thanh?
+
+Tên một xét nghiệm có thể nghe giống nhau nhưng khác nhau về yêu cầu định tính hay định lượng, hoặc khác nhau về cách tiến hành xét nghiệm. Ví dụ: đường huyết lúc đói hay đường huyết ngẫu nhiên? Xét nghiệm HIV theo phương pháp Westtern blot hay Elisa?
+
+Do đó, các tên xét nghiệm đó phải được phân biệt một cách rõ ràng và được gán cho một mã số xác định.
+
+Bằng cách dùng chung mã số, việc gửi nhận thông tin cho nhau bằng điện tử sẽ trở nên dễ dàng.
+
+Ứng dụng bộ mã LOINC nhiều nhất là nhúng vào thành phần bản tin HL7. Khi đó, thay vì gọi tên xét nghiệm thì người ta dùng mã đại diện để gọi tên xét nghiệm.
+
+Tên dịch vụ y tế bao gồm tên dài (long terms), tên ngắn (short terms) và tên tương đương (synonym).
+
+Một mã LOINC bao gồm 6 thành phần:
+
+- component
+- property
+- time
+- system
+- scale
+- method
+
+Mỗi thành phần được quy ước thành các bộ mã riêng để thuận tiện trong việc sắp xếp. Nhìn vào dãy mã số, người ta không thể xác nhận được đó là xét nghiệm gì mà phải dùng một tiện ích phiên dịch là RELMA.
+
+Cho đến nay thì LOINC chưa được ứng dụng rộng rãi và hữu dụng trong CNTT y tế thế giới.
+
+---
+Resources (aka Atomic Data)
+Resources are the fundamental building blocks of FHIR. All exchangeable content in the FHIR standard is contained in a resource. These lightweight JSON snippets can be created for every aspect of a patient encounter. 
+
+Instead of sharing a patient’s fixed, bloated XML record with everyone who requests it, FHIR permits requests for targeted, relevant resources. 
+
+Think of old standards as if someone handed you an entire file cabinet to read through. With FHIR, it’s as if they gave you an index card with the information you requested instead. It’s simply the preferred modern practice.
+
+Common resource types include Observation for vital signs, or Encounter for a visit. Different resources can also combine to form new use cases or standardized document types.
+
+All resources have metadata and a human-readable component. Each resource of the same type is formatted in the same way. 
+
+Resources can refer to each other, and to a URL. Resources can stand on their own or be made to support event workflows. They can come with customizable permissions, many of which have been suggested by the FHIR community.
+
+Taken together, resources begin to form a valuable store of healthcare information.
+
+Interoperable, Bi-Directional RESTful APIs
+The FHIR standard includes RESTful API protocols as well as data.
+
+REST architecture is familiar to developers, as it’s the same architecture that underlies enterprise tools, the internet, and modern APIs. It means that familiar HTTP and OAuth protocols play a part in its use. Yes, health infrastructure has finally reached the cutting edge!
+
+As a RESTful system, FHIR is far more straightforward than previous approaches to health data. It supports atomic data access, meaning that FHIR-based tools can allow access to specific parts of a health record. It’s a standard that encourages privacy and is generally easier to work with.
+
+Fast and Simple Design
+FHIR is focused on ease of developer use and adoption. FHIR empowers a more robust and flexible data model of the actual patient experiences and treatment plans than predecessors in the field.
+
+FHIR was built with the Pareto principle, or 80/20 design, in mind. The idea is that 80% of common use cases will be covered by the FHIR standard. In turn, individual FHIR implementations will handle the other less common 20%.
+
+This was partially in response to the HL7 v3 standard, which was released, and flopped, in 2005. It was too comprehensive to understand.
+
+Thanks to its focus on human-readable data, FHIR resources can also be read by non-developers with minimal effort!
+
+Support for Legacy Health Systems
+FHIR can be expressed as XML, JSON or RDF. It’s possible for basic FHIR interfaces to be implemented in a day, for free, and with support from vendors from Apple to Epic. 
+
+Your implementation of FHIR need not support all FHIR resources, but must support what your organization does.
+
+The FHIR standard doesn’t bring a system into or out of HIPAA compliance, but it can be implemented in HIPAA-compliant networks.
+
+FHIR Has Friends In High Places
+Legally speaking, FHIR is an important part of health tech.
+
+In the US, the federal government has thrown its weight behind FHIR. The 21st Century Cures Act directed two major agencies - ONC and CMS - to promote nationwide interoperability using FHIR APIs.
+
+Consumer-directed apps and portals are increasingly reliant on FHIR data. FHIR compatibility is also mandatory for payors and providers alike. FHIR implementations make it considerably easier to comply with Cures Act anti-information blocking rules.
+
+FHIR’s Huge Community
+There’s an active, worldwide community around FHIR. We’ve watched this community develop in real time, after the first draft of an API-based health data exchange was initiated by Australian developer Grahame Grieve in 2012 under the name Resources for Healthcare.
+
+FHIR’s development was then overseen by Health Level 7 (HL7), the standards development organization dedicated to digital health interoperability. It continues to evolve with the help of volunteers and HL7 working groups.
+
+FHIR is popular with developers globally. The standard’s open source nature, robust documentation and culture of collaboration contributes to its appeal.
+
+You can find FHIR penetration in countries with health systems at various stages of development. For example, FHIR sees significant use in Brazil, Australia, Europe, Canada and India.
+
+FHIR vs. CCDA
+C-CDA, or Consolidated Clinical Document Architecture, is the main alternative to FHIR for patient medical record exports.
+
+C-CDA is an XML-exclusive markup standard, not a complete API. C-CDA exports a patient’s medical history in a way that is difficult to query, and is generally read-only. It defines how documents are encoded, and can be exported - but does not define how they should be transported.
+
 
 ## Benefits
 
