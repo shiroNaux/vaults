@@ -398,9 +398,8 @@ Nhu cầu áp dụng các thiết bị di động trong lĩnh vực chăm sóc s
 Có một số thách thức cần phải đối mặt để có thể áp dụng và triển khai FHIR trong thực tiễn
 
 2. FHIR có nhiều phiên bản khác nhau. Mỗi hệ thống có thể implement những phiên bản FHIR khác nhau. Điều này có thể dẫn đến một số phức tạp khi migrate sang những version khác nhau, hay trao đổi giữa các hệ thống không trùng phiên bản.
-3. a
-4. Nhiều nhà cung cấp dịch vụ chăm sóc sức khỏe không hiểu các nguồn lực cần thiết để phát triển các tiêu chuẩn tuân thủ và nhất quán trên toàn hệ thống. Giải pháp cho vấn đề này là các nhóm CNTT y tế chuyên dụng trong tổ chức có thể đưa ra phán đoán chính xác về những gì cần thiết cũng như địa điểm, thời gian và cách triển khai. Những thay đổi về cơ sở hạ tầng sẽ là bắt buộc, và cũng cần phải đào tạo, hỗ trợ và giáo dục liên tục.
-5. Inconsistent implementation of APIs within the system means not all software will work seamlessly within the FHIR framework. The solution is complete adoption and integration with FHIR.
+3. Do là 1 tiêu chuẩn chung, duy nhất cho toàn hệ thống, cũng có nghĩa là chỉ cần 1 thành phần trong hệ thống không tuân thủ các tiêu chuẩn này có nghĩa là cả hệ thống cũng không đạt chuẩn. Bởi vì các thành phần có tương tác dữ liệu với nhau 
+4. Nhiều đơn cung cấp dịch vụ y tế không hiểu yêu cầu, cũng như không có đủ các nguồn lực cần thiết để phát triển được các phần mềm tuân thủ tiêu chuẩn. Giải pháp cho vấn đề này là mỗi tổ chức cần có một đội CNTT inhouse để có thể đáp ứng được những yêu cầu một cách nhanh chóng, thuận tiện nhất. Điều đó đồng nghĩa với việc các tổ chức này cần dành nhiều tài nguyên hơn cho hệ thống, hạ tầng CNTT.
 6. Many healthcare providers don’t understand the resources required to develop compliant and consistent standards across the system. The solution for this problem is dedicated medical IT teams within the organization that can correctly make judgements on what is needed and where, when, and how to implement it. Changes in the infrastructure will be required, and ongoing training, support, and education is also needed.
 
 
