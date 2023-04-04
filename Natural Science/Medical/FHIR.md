@@ -69,16 +69,21 @@ FHIR specifications are relatively straightforward, but it can be difficult to k
 
 HL7 has also outlined various steps (called “levels”) to show where each module is used in the set-up of your FHIR implementation:
 
-### Level 1:
-#### Foundation Module
+FHIR bao gồm 5 cấp độ và 13 modules. Các cấp độ có thể được nhóm lại theo cấu trúc
+1. Cơ sở hạ tầng (Level 1 & 2)
+2. Nội dung (Level 3 & 4)
+3. Suy luận (Level 5)
+
+### Level 1: Foundation Module
 The foundation module is the baseline infrastructure or framework on which the rest of the modules are developed. This framework defines the base documentations. The foundation module includes the following resources:
 
 - Foundation framework
 - Content management resource
 - Data exchange resource
 
-### Level 2, Implementation and Set-Up
-There are several modules included in this step. They are designed to help you build the system and bind them to the proper external resources.
+### Level 2: Implementation and Set-Up
+
+Có 5 Module trong level này
 
 #### Implementation Support Module
 This module supports the system with resources required for implementation, including available libraries, tools, helpline, and other similar resources.
@@ -143,7 +148,7 @@ The clinical reasoning module provides the reasoning to deal with the healthcare
 There are dependencies between modules, but they follow the steps listed above. Healthcare developers should only use the modules that apply to them.
 
 ---
-Bảng mã dữ liệu LOINC
+## LOINC
 
 Bảng mã dữ liệu LOINC bao gồm Mã đại diện cho một tên dịch vụ y tế hoặc một bộ dịch vụ y tế, áp dụng cho khu vực cận lâm sàng (xét nghiệm và chấn đoán hình ảnh).
 
