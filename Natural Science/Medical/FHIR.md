@@ -350,17 +350,19 @@ Các API tiêu chuẩn do FHIR cung cấp có thể góp phần đơn giản hó
 
 Cho dù bạn đang tích hợp với những hệ thống không phải FHIR cần hỗ trợ các format trao đổi dữ liệu bắt buộc, hay đang tích hợp với blockchain, các API này đều sẽ cung cấp những API tiêu chuẩn nhằm xây dựng các tích hợp đó. Tất cả các lợi ích của khả năng tương tác là ở đây. Các điểm tích hợp có thể được tái sử dụng trên nhiều hệ thống đã được tích hợp với một tiêu chuẩn API chung.
 
-TPH mong rằng bài viết này đã giúp các bạn hiểu thêm FHIR là gì, cũng như những lợi ích tuyệt vời mà HL7 FHIR mang lại cho hệ thống chăm sóc sức khỏe.
-
----
 
 ### Đối với Development team
+---
 
 ##### 1. Faster Go-to-Market
-Do đã có sẵn các tiêu chuẩn nên thời gian phát triển được rút ngắn lại. Bởi vì nó được dựa trên các công nghệ phát triển phần mềm mới nhất, phù hợp với hầu hết các team hiện tại. Ngoài ra
-FHIR offers customers out-of-the-box APIs, reusable tools, and excellent security models. One of the major benefits of FHIR is that it is fast and easy to implement. Multiple developers can work on a project, and when using the compatible interaction engine, can have a simple interface working in just one day. The go-to-market speed greatly increases with FHIR.
+
+Bởi vì là 1 tiêu chuẩn mở, chung, cho nên đã có sẵn rất nhiều tài liệu, công cụ hỗ trợ cho việc phát triển các phần mềm FHIR. Do đó thời gian của việc phát triển phần mềm sẽ được rút ngắn lại.
+Ngoài ra, FHIR được dựa trên các công nghệ phát triển web mới nhất -> Development team có thể tuân thủ các tiêu chuẩn này 1 cách dễ dàng mà không cần phải tìm hiểu thêm bất kì 1 công cụ hay công nghệ nào mới.
 
 ##### 2. Better Data Management
+
+Định dạng dữ liệu mà FHIR cun đích chung tiêu chuẩn giúp chuyển đổi dữ liệu thành các định dạng có thể sử dụng được. Các định dạng phổ biến tiêu chuẩn này cung cấp tính toàn vẹn, chính xác, rõ ràng và nhất quán của dữ liệu
+
 FHIR provides a standard common target data format that transforms data into usable formats. These standard common formats offer excellent data integrity, accuracy, clarity, and consistency.
 
 ##### 3. Better Data Sharing and Collaboration
