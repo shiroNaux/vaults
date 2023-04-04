@@ -7,4 +7,11 @@ FHIR (Fast Healthcare Interoperability Resource, pronounced “fire”) là chu�
 
 ![[hl7-fhir-diagram.svg]]
 
+## Vì sao cần chuẩn hóa dữ liệu
+## Chuẩn hóa dữ liệu
+## Chuẩn hóa trao đổi dữ liệu
+
 # FHIR
+
+# Hiện trạng tại Việt Nam
+[[2023-04-04]]
