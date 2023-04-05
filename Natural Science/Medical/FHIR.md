@@ -428,3 +428,5 @@ Chuẩn hoá thì cần có sự tham gia của quản lý nhà nước, cụ th
 8. [What Is FHIR? Here's What Makes HL7 FHIR Special (particlehealth.com)](https://www.particlehealth.com/blog/what-is-fhir)
 9. [Interoperability 3.0 (particlehealth.com)](https://www.particlehealth.com/blog/interoperability-3-0)
 10. [Index - FHIR v5.0.0 (hl7.org)](https://www.hl7.org/fhir/)
+12. [What is the C-CDA Healthcare Data Format? (particlehealth.com)](https://www.particlehealth.com/blog/what-is-ccda-consolidated-clinical-document-architecture)
+13. [Interoperability 3.0 (particlehealth.com)](https://www.particlehealth.com/blog/interoperability-3-0)
