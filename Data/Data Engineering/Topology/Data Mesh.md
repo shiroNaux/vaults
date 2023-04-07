@@ -1,9 +1,9 @@
 ---
 
 tags:
-  - data mesh
-  - data architecture
-  - micorservices
+  - DataMesh
+  - DataArchitecture
+  - Micorservices
 ---
 
 # Why ?
