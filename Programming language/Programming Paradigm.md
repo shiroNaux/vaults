@@ -30,7 +30,7 @@
 ## Imperative language
 
 - Imperative programming consists of sets of detailed instructions that are given to the computer to execute in a given order
-- Được dựa trên [[../Applied Math/Von Neumann architecture]]
+- Được dựa trên [[Von Neumann architecture]]
 - It works by changing the program state through assignment statements
 - It performs step by step task by changing state.
 - It's called "imperative" because as programmers we dictate exactly what the computer has to do, in a very specific way.
