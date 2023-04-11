@@ -37,14 +37,14 @@
 - Các ngôn nhữ trong nhóm này: 
 	- COBOL (COmmon Business Oriented Language)
 	- FORTRAN ()
-	- [[C Programming language|C]]
+	- [[C|C]]
 - Ưu điểm
 	- Dễ để implement thuật toán
 	- Bao gồm nhiều tính năng như: loop, conditions, variable, ...
 
 ### 1. Procedural
 - Ví dụ:
-	- [[C Programming language |C]]
+	- [[C |C]]
 	- Pascal
 - Procedural programming cho phép tách 1 đoạn lệnh thành các procudure đơn giản hơn
 - **Procudures không phải là functions**. Điểm khác biệt giữa chúng là functions có `return` kết quả, còn procedures thì không. Mục đích của functions là luôn cho ra 1 kết quả duy nhất nếu được feed bởi cùng 1 input. Còn mục đích của procedures chỉ là thực hiện lệnh và tạo ra các sidde effect.
@@ -135,7 +135,7 @@ const result = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 - Các ngôn ngữ có thể được chia vào nhiều 1 loại
 - Ví dụ: [[Scala]] vừa là functional programming, vừa là ngôn ngữ [[OOP]]
 - Hay [[JS]] là 1 ngôn ngữ lập trình hàm, nhưng hỗ trợ rất nhiều tính năng của [[OOP]]
-- Rất nhiều các ngôn ngữ [[OOP]] đã áp dụng các hàm đặc trưng của functional programming như các hàm `map`, `flatMap`, `lambda expression`, *higher-order functions* vào trong syntax: [[Java]] từ Java 8, [[C Sharp|C#]] từ .NetCore, [[C Programming language|C]]/[[C++]] từ C++ 11
+- Rất nhiều các ngôn ngữ [[OOP]] đã áp dụng các hàm đặc trưng của functional programming như các hàm `map`, `flatMap`, `lambda expression`, *higher-order functions* vào trong syntax: [[Java]] từ Java 8, [[C Sharp|C#]] từ .NetCore, [[C|C]]/[[C++]] từ C++ 11
 
 # References
 1. [Programming Paradigms – Paradigm Examples for Beginners (freecodecamp.org)](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/)
