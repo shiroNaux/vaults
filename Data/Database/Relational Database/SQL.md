@@ -26,5 +26,14 @@ Các câu lệnh trong SQL thường tương ứng với 1 phép toán trong [[R
 ![[sql_join_2.png]]
 
 
+## Advanced features
+
+##### Select for Update
+
+Syntax
+```
+
+```
+
 # References
 1. [SQL - Wikipedia](https://en.wikipedia.org/wiki/SQL)
