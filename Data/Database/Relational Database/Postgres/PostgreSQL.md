@@ -30,4 +30,4 @@ Các trigger cần return lại một số giá trị
 	- Nếu return trả về table row -> Các INSERT, UPDATE triggers sẽ lấy giá trị return từ trigger function để thực hiện các operation thay cho giá trị gốc (input của trigger)
 -> Cần phải chú ý các giá trị RETURN của cá row-level BEFORE trigger
 Với các AFTER trigger, giá trị return không quan trọng nên thường được để là NULL.
-INSTEAD trigger
+Nếu có nhiều trigger có được kích hoạt dựa trên cùng 1 event, các trigger này sẽ được thực hiện lần lượt theo alphabet. Và các giá trị return từ trigger trước sẽ là input cho các trigger phía sau. Nếu có 1 trong số các trigger này return NULL, toàn bộ các trigger phía sau sẽ không được thực hiện nữa.
