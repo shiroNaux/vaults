@@ -24,5 +24,7 @@ Một trường hợp cần lưu ý nữa là: Nếu 1 statment move record từ
 Đối với các MERGE statement, các trigger được kích hoạt sẽ tùy thuộc vào kết quả của statement này.
 ##### Return
 Các trigger cần return lại một số giá trị
-- Đối với statement-level triggers: function luôn return NULL
-- 
+- statement-level triggers: function luôn return NULL
+- row-level triggers: function có thể return NULL hoặc 1 table row (a value of type `HeapTuple`). Nếu 
+	- Nếu return NULL -> skip operation
+	- 
