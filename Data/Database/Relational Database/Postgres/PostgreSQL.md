@@ -25,6 +25,9 @@ Một trường hợp cần lưu ý nữa là: Nếu 1 statment move record từ
 ##### Return
 Các trigger cần return lại một số giá trị
 - statement-level triggers: function luôn return NULL
-- row-level triggers: function có thể return NULL hoặc 1 table row (a value of type `HeapTuple`). Nếu 
-	- Nếu return NULL -> skip operation
-	- 
+- row-level triggers: function có thể return NULL hoặc 1 table row (a value of type `HeapTuple`). Tùy vào giá trị trả về mà sẽ có những thay đổi về giá trị input của statement(BEFORE trigger)
+	- Nếu return NULL -> skip operation đối với row hiện tại (tức là sẽ không thực thi các lệnh INSERT, DELETE, UPDATE đối với row hiện tại nữa)
+	- Nếu return trả về table row -> Các INSERT, UPDATE triggers sẽ lấy giá trị return từ trigger function để thực hiện các operation thay cho giá trị gốc (input của trigger)
+-> Cần phải chú ý các giá trị RETURN của cá row-level BEFORE trigger
+Với các AFTER trigger, giá trị return không quan trọng nên thường được để là NULL.
+INSTEAD trigger
