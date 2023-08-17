@@ -20,5 +20,9 @@ Một trường hợp đặc biệt đó là: Đối với statement loại `INS
 	- BEFORE UPDATE
 	- AFTER UPDATE
 	- AFETR INSERT
-Một trường hợp cần lưu ý nữa là: Nếu 1 statment move record từ partition này sang 1 partition khác, nó có thể sẽ kích hoạt đồng thời các trigger:
-	- 
+Một trường hợp cần lưu ý nữa là: Nếu 1 statment move record từ partition này sang 1 partition khác, nó có thể sẽ kích hoạt 1 loạt các triggger trên cả partition cũ và partition mới (loằng ngoằng vl, đéo ai mà nhớ được 😒😒 -> đọc ở đây nè [PostgreSQL: Documentation: 15: 39.1. Overview of Trigger Behavior](https://www.postgresql.org/docs/current/trigger-definition.html))
+Đối với các MERGE statement, các trigger được kích hoạt sẽ tùy thuộc vào kết quả của statement này.
+##### Return
+Các trigger cần return lại một số giá trị
+- Đối với statement-level triggers: function luôn return NULL
+- 
