@@ -14,18 +14,21 @@ Oracle database được chia làm 2 thành phần chính
 ## Database system
 
 Database system ám chỉ hệ thống các files lưu trữ để database có thể hoạt động. Nó bao gồm các loại files như sau:
-- Data files: -> hiển nhiên là để lưu trữ data mà người dùng đưa vào [[Oralce]]
-- Control files: 
-- Redo log files:
+- Data files -> Hiển nhiên là để lưu trữ data mà người dùng đưa vào [[Oralce]]
+- Control files -> Chứa metadata của database như Database name, LSN, vị trí các file data, ...
+- Redo log files ->
 
 ![[Pasted image 20230819213546.png]]
 
 Ngoài ra Oracle còn sử dụng 1 số loại file khác để có thể hoạt động, bao gồm:
-- Parameter files:
-- Pasword files:
+- Parameter files -> Chứa các thông tin cần để initialization database. Parameter files cũng được chia ra 2 loại
+	- Server parameter files (SPFILE): 
+- Pasword files -> yepp, lưu trữ password của user để đăng nhập vào hệ thống
 - Network files:
 - Backup files ->
 - Archived redo log files ->
+
+## Logical storage structure
 ## Instance
 
 Oracle database instance là process run trên server.
