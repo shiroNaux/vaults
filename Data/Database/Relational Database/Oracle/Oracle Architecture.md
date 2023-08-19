@@ -41,16 +41,31 @@ Giống như các process thông thường khác, Oracle instance có 2 thứ đ
 - Memory
 - Compute
 
+![[Pasted image 20230819220909.png]]
+
 ### Memory structures
 
 #### SGA
 
 SGA stand for System Global Area
 
+SGA được allocate khi startup Instance và release khi stop -> Chính là bộ nhớ được cấp phát ban đầu cho Instance
+
 #### PGA
 
 PGA stand for Program Global Area
 
+Điểm khác biệt giữa SGA và PGA chính là PGA là private memory
 ### Background processes
+
+Các Background process bao gồm:
+- PMON
+- SMON
+- DBWn
+- CKPT
+- LGWR
+- ARCn
+- MMON
+- LREG
 
 # Multitenenant Architecture
