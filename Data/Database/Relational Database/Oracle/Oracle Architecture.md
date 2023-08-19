@@ -28,7 +28,7 @@ Ngoài ra Oracle còn sử dụng 1 số loại file khác để có thể hoạ
 - Backup files ->
 - Archived redo log files ->
 
-## Logical storage structure
+### Logical storage structure
 ## Instance
 
 Oracle database instance là process run trên server.
@@ -37,5 +37,20 @@ Có một số lưu ý về Oracle instance:
 - 1 Instance chỉ có thể access 1 database (files system) khi chạy. Quá trình Instance sử dụng database files nào chính là <u>mount database files</u>
 - Multiple instacne có thể access cùng 1 database -> khá dễ hiểu nếu như sử dụng NFS hay các network file system để làm nơi lưu trữ data
 
+Giống như các process thông thường khác, Oracle instance có 2 thứ để hoạt động:
+- Memory
+- Compute
+
+### Memory structures
+
+#### SGA
+
+SGA stand for System Global Area
+
+#### PGA
+
+PGA stand for Program Global Area
+
+### Background processes
 
 # Multitenenant Architecture
