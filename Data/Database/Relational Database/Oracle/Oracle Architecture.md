@@ -77,3 +77,4 @@ Các Background process bao gồm:
 3. [Microsoft PowerPoint - Oracle_Architecture.ppt (cern.ch)](https://indico.cern.ch/event/36804/attachments/731758/1003980/oracleArchitecture.pdf)
 4. [Introduction to Multitenant Administration (oracle.com)](https://docs.oracle.com/en/database/oracle/oracle-database/21/multi/introduction-to-the-multitenant-architecture.html#GUID-267F7D12-D33F-4AC9-AA45-E9CD671B6F22)
 5. [Oracle Architecture - GeeksforGeeks](https://www.geeksforgeeks.org/oracle-architecture/)
+6. [Oracle Database Instance](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/oracle-database-instance.html#GUID-B3A8DB74-211A-453C-8B73-B61824DC56F6)
