@@ -69,3 +69,11 @@ Các Background process bao gồm:
 - LREG
 
 # Multitenenant Architecture
+
+
+# References
+1. [Oracle Database 19c Technical Architecture](https://www.oracle.com/webfolder/technetwork/tutorials/architecture-diagrams/19/pdf/db-19c-architecture.pdf)
+2. [An Overview of Oracle Database Architecture (oracletutorial.com)](https://www.oracletutorial.com/oracle-administration/oracle-database-architecture/)
+3. [Microsoft PowerPoint - Oracle_Architecture.ppt (cern.ch)](https://indico.cern.ch/event/36804/attachments/731758/1003980/oracleArchitecture.pdf)
+4. [Introduction to Multitenant Administration (oracle.com)](https://docs.oracle.com/en/database/oracle/oracle-database/21/multi/introduction-to-the-multitenant-architecture.html#GUID-267F7D12-D33F-4AC9-AA45-E9CD671B6F22)
+5. [Oracle Architecture - GeeksforGeeks](https://www.geeksforgeeks.org/oracle-architecture/)
