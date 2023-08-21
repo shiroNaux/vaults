@@ -2,7 +2,11 @@
 ---
 # Abstract
 
-# HTTP request method
+# Specification
+
+## HTTP Header
+
+## HTTP request method
 1. GET
 2. HEAD
 3. POST
@@ -13,3 +17,5 @@
 8. TRACE
 9. PATCH
 # References
+1. [HTTP request methods - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+2. [RFC 9110: HTTP Semantics (rfc-editor.org)](https://www.rfc-editor.org/rfc/rfc9110)
