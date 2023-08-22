@@ -16,7 +16,19 @@ Các bảng trong Data Vault Modeling được chia ra làm 3 loại chính
 - Satellites -> Là bảng chứa các thông tin chi tiết, bổ sung cho Hub và Link
 
 ## Structure
+
+Các thành phần chính của Data vault modeling bao gồm 3 đối tượng
+- Hubs
+- Links
+- Satellites
+
+![[Pasted image 20230823011151.png]]
+
+Ngoài ra, để phù hợp với nhiều yêu cầu đặc thù, một số loại bảng hỗ trợ được thêm vào, cùng với đó là 
 ### Hubs
+> Hubs are entities of interest to the business.
+
+Hubs là các __đối tượng business__ được quan tâm. Các bảng Hubs chỉ chứa Business key của các object để thể hiện là đối tượng này có tồn tại trong hệ thống. Các thông tin metadata về đối tượng được lưu trong bảng satellites.
 ### Links
 
 #### Hierarchical Link
