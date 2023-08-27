@@ -87,10 +87,10 @@ Có nhiều cách tiếp cận với
 
 ## Pros
 - Insert only architecture: Cái này sẽ phù hợp các hệ thống data warehouse hiện đại, hạn chế các nhược điểm của các hệ thống xử lý song song.
-- Agile: Co thể hiểu là khả năng thay đổi nhanh chóng với các yêu cầu mới. Do cách thiết kế là Top Down, cho nên
+- Agile: Co thể hiểu là khả năng thay đổi nhanh chóng với các yêu cầu mới. Do cách thiết kế là Top Down, cho nên các thay đổi về mạt dữ liệu sẽ ít ảnh hưởng đến thiết kế của Data vault. Thông thường sẽ chỉ là thêm các bảng Satellites, Links. Nếu có phát sinh về business thì cũng chỉ là thêm các bảng Hubs và references.
 - Structured, dễ dàng thay đổi (flexibility for refactoring)
 - Có các khái niệm tương đồng với các mô hình khác -> dễ làm quen và nắm bắt cách dùng
-- Hashed: Hash value là deterministic -> do đó có thể load các dữ liệu song song với nhau mà không cần tuân theo mối quan hệ của dữ liệu. Để rõ ràng hơn, khi ta sử dụng c
+- Hashed: Hash value là deterministic -> do đó có thể load các dữ liệu song song với nhau mà không cần tuân theo mối quan hệ của dữ liệu. Để rõ ràng hơn, khi ta sử dụng Surrogate Key là sequence, thì ta sẽ phải load dữ liệu theo các thứ tự Hubs -> Links -> Satellite. Phải load Hubs đầu tiên thì ta mới lấy được Key của Hubs sau đó các Bảng Links, Sagtellites sẽ sử dụng Key đó để refernce đến Hubs. Tuy nhiên nếu sử dụng Hash value, các giá trị này sẽ luôn là xác định (deterministic) -> Có thể load data parallel. Ngoài ra, nếu có sự cố hay phải chạy backfill thì cá key xây dựng từ Hash value sẽ được vẫn giữ nguyên giá trị. Việc sử dụng hash value còn làm tăng tốc độ xứ lý (Không cần xử lý concurrency), và các data warehouse hiện đại không còn hỗ trợ sequence nữa.
 ## Cons
 - Complex
 - Quá nhiều join
