@@ -58,13 +58,11 @@ Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ vi
 
 > 
 
-Satellite được coi là `context` của các đối tượng khác (Hubs, Links). Nó cung cấp các descritive data cho các đối tượng đó. Ví dụ: Hub_User 
+Satellite được coi là `context` của các đối tượng khác (Hubs, Links). Nó cung cấp các descritive data cho các đối tượng đó. Ví dụ: _Satellite_ của _Hub_User_ có thể sẽ có các thông tin về Tên , tuổi, địa chỉ, ... của User đó
 
-Các Hubs hoặc Links có thể có nhiều hơn
+Các Hubs hoặc Links có thể có nhiều hơn 1 satellite -> Điều này nhằm hướng tới khả năng mở rộng cũng như có thể dùng để tăng hiệu năng của các truy vấn (gần giống với sharding).
 
-Có một và lưu
-- Không có direct relationship giữa các Satellite
-- 1 Hub hoặc Link có thể có nhiều Satellite
+Không có điều ngược lại. Các Satellite chỉ có 1 liên kết với các bảng Hubs hay Links. Giữa các Satellite cũng không có direct relationship.
 #### Multi-active satellite
 #### Efective satellite
 
