@@ -35,7 +35,7 @@ $ ls .git/objects/01/
 $ls .git/objects/pack/ multi-pack-index pack-7017e6ce443801478cf19006fc5499ba1c4d2960.idx pack-7017e6ce443801478cf19006fc5499ba1c4d2960.pack pack-9f9258a8ffe4187f08a93bcba47784e07985d999.idx pack-9f9258a8ffe4187f08a93bcba47784e07985d999.pack
 ```
 
-- Thư mục này được gọi là _object store_ hay `content-addressable data store` tức là nó có thể truy xuất thông tin dựa vào [[hash]] của nội dung lưu trữ (***can retrieve the contents of an object by providing a hash of those contents***) -> object store có cấu trúc giống 1 bảng mà có 2 cột `Object ID` và `Object content`. `Object Id` chính là  giá trị [[hash]] của content và hoạt dộng như khóa chính.
+- Thư mục này được gọi là _object store_ hay `content-addressable data store` tức là nó có thể truy xuất thông tin dựa vào [[Hash function]] của nội dung lưu trữ (***can retrieve the contents of an object by providing a hash of those contents***) -> object store có cấu trúc giống 1 bảng mà có 2 cột `Object ID` và `Object content`. `Object Id` chính là  giá trị [[Hash function]] của content và hoạt dộng như khóa chính.
 
 ![[../../_images/Git/gitdatabase2.png]]
 

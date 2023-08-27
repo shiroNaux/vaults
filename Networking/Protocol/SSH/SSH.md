@@ -41,8 +41,8 @@ ssh-add ~/.ssh/id_rsa
 		- Server sẽ kiểm tra file `authorized_keys`, xem các public key trong đó có khớp với key mà client gửi đến hay không. 
 		- Nếu tồn tại 1 key trùng, server sẽ tạo 1 số ngẫu nhiên và dùng public key vừa có để encrypt lại. Sau đó gửi giá trị vừa mã hóa cho client.
 		- Client sẽ dùng private key để decrypt message và nhận được số mà server đã tạo nhẫu nhiên
-		- Client kết hợp số vừa giải mã được và shared session key từ bước trước với nhau. Rối sau đó tính giá trị [[hash]] của giá trị trên. Sau đó gửi giá trị hash này đến server.
-		- Server sẽ kiểm tra giá trị [[hash]] này (do cả client và server đều biết số nhẫu nhiên và shared session key) -> Nếu giá trị [[Hash]] trùng nhau thì server sẽ chấp nhận client là hợp lệ và bắt đầu thực hiện các thao tác chính của SSH
+		- Client kết hợp số vừa giải mã được và shared session key từ bước trước với nhau. Rối sau đó tính giá trị [[Hash function]] của giá trị trên. Sau đó gửi giá trị hash này đến server.
+		- Server sẽ kiểm tra giá trị [[Hash function]] này (do cả client và server đều biết số nhẫu nhiên và shared session key) -> Nếu giá trị [[Hash function]] trùng nhau thì server sẽ chấp nhận client là hợp lệ và bắt đầu thực hiện các thao tác chính của SSH
 # References
 
 1. [Ssh-agent single sign-on configuration, agent forwarding, the agent protocol.](https://www.ssh.com/academy/ssh/agent)
