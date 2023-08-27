@@ -45,6 +45,8 @@ Có thể thấy là cấu trúc của các bảng Hub khá đơn giản, nó ch
 
 Links là các relationship giữa các Hub, và đương nhiên nó có thể là quan hệ giữa nhiều bảng với nhau. Nó chính là đại diện cho mối quan hệ giữa các đối tượng (Hub) tring thực tế. Ví dụ:
 
+Do là bảng quan hệ, cho nên các cột trong Links sẽ là các giá trị Khóa ngoại tới ID của các Hubs
+Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ việc xử lý khác như load timestamp, Record source, ...
 #### Hierarchical Link
 #### Same-as Link
 
@@ -56,7 +58,11 @@ Links là các relationship giữa các Hub, và đương nhiên nó có thể l
 
 > 
 
+Satellite được coi là `context` của các đối tượng khác (Hubs, Links). Nó cung cấp các descritive data cho các đối tượng đó. Ví dụ: Hub_User 
 
+Các Hubs hoặc Links có thể có nhiều hơn
+
+Có một và lưu
 - Không có direct relationship giữa các Satellite
 - 1 Hub hoặc Link có thể có nhiều Satellite
 #### Multi-active satellite
