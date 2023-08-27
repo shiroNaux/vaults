@@ -43,9 +43,10 @@ Có thể thấy là cấu trúc của các bảng Hub khá đơn giản, nó ch
 
 >  Links connect Hubs and may record a transaction, composition, or other type of relationship between hubs
 
-Links là các relationship giữa các Hub, và đương nhiên nó có thể là quan hệ giữa nhiều bảng với nhau. Nó chính là đại diện cho mối quan hệ giữa các đối tượng (Hub) tring thực tế. Ví dụ:
+Links là các relationship giữa các Hub -> many to many join tables. Và đương nhiên nó có thể là quan hệ giữa nhiều bảng với nhau. Nó chính là đại diện cho mối quan hệ giữa các đối tượng (Hub) tring thực tế.
 
-Do là bảng quan hệ, cho nên các cột trong Links sẽ là các giá trị Khóa ngoại tới ID của các Hubs
+Do là bảng quan hệ, cho nên các cột trong Links sẽ là các giá trị Khóa ngoại tới ID của các Hubs.
+
 Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ việc xử lý khác như load timestamp, Record source, ...
 #### Hierarchical Link
 #### Same-as Link
@@ -85,9 +86,11 @@ Có nhiều cách tiếp cận với
 # Comparation
 
 ## Pros
-- Agile (???) -> need prove
+- Insert only architecture: Cái này sẽ phù hợp các hệ thống data warehouse hiện đại, hạn chế các nhược điểm của các hệ thống xử lý song song.
+- Agile: Co thể hiểu là khả năng thay đổi nhanh chóng với các yêu cầu mới. Do cách thiết kế là Top Down, cho nên
 - Structured, dễ dàng thay đổi (flexibility for refactoring)
 - Có các khái niệm tương đồng với các mô hình khác -> dễ làm quen và nắm bắt cách dùng
+- Hashed: Hash value là deterministic -> do đó có thể load các dữ liệu song song với nhau mà không cần tuân theo mối quan hệ của dữ liệu. Để rõ ràng hơn, khi ta sử dụng c
 ## Cons
 - Complex
 - Quá nhiều join
