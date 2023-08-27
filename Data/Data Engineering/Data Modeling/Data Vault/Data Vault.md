@@ -26,12 +26,14 @@ Các thành phần chính của Data vault modeling bao gồm 3 đối tượng
 
 Ngoài ra, để phù hợp với nhiều yêu cầu đặc thù, một số loại bảng hỗ trợ được thêm vào, cùng với đó là 
 ### Hubs
+
 > Hubs are entities of interest to the business.
 
 Hubs là các __đối tượng business__ được quan tâm. Các bảng Hubs chỉ chứa Business key của các object để thể hiện là đối tượng này có tồn tại trong hệ thống. Các thông tin metadata về đối tượng được lưu trong bảng satellites.
+Hubs có ý nghĩa như là 1 bảng ghi lại sự xuất hiện của đối tượng nào đó trong hệ thống.Vì thế các bảng Hubs nó sẽ chỉ chứa business unique key của đối tượng
 ### Links
->  Links connect Hubs and may record a transaction, composition, or other type of relationship between hubs
 
+>  Links connect Hubs and may record a transaction, composition, or other type of relationship between hubs
 
 #### Hierarchical Link
 #### Same-as Link
