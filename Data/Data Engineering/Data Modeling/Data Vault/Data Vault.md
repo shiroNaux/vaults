@@ -43,6 +43,8 @@ Có thể thấy là cấu trúc của các bảng Hub khá đơn giản, nó ch
 
 >  Links connect Hubs and may record a transaction, composition, or other type of relationship between hubs
 
+Links là các relationship giữa các Hub, và đương nhiên nó có thể là quan hệ giữa nhiều bảng với nhau. Nó chính là đại diện cho mối quan hệ giữa các đối tượng (Hub) tring thực tế. Ví dụ:
+
 #### Hierarchical Link
 #### Same-as Link
 
@@ -54,6 +56,9 @@ Có thể thấy là cấu trúc của các bảng Hub khá đơn giản, nó ch
 
 > 
 
+
+- Không có direct relationship giữa các Satellite
+- 1 Hub hoặc Link có thể có nhiều Satellite
 #### Multi-active satellite
 #### Efective satellite
 
