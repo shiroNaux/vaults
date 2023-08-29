@@ -11,3 +11,6 @@ Có 2 cách để viết dynamic SQL trong PL/SQL:
 ###### References
 1. [PL/SQL Dynamic SQL (oracle.com)](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/dynamic-sql.html#GUID-7E2F596F-9CA3-4DC8-8333-0C117962DB73)
 2. [DYNAMIC SQL (viblo.asia)](https://viblo.asia/p/dynamic-sql-RnB5pNAYZPG)
+
+##### SELECT FOR UPDATE
+
