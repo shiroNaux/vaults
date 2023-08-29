@@ -14,3 +14,4 @@ Có 2 cách để viết dynamic SQL trong PL/SQL:
 
 ##### SELECT FOR UPDATE
 
+Giống như các [[SQL]] khác, câu lệnh `SELECT FOR UPDATE` dùng để lock lại row từ câu lệnh `SELECT`. Lệnh này thường dùng để đảm bảo dữ liệu từ lệnh `SELECT` sẽ không bị thay đổi trong quá trình thực hiện _TRANSACTION_
