@@ -1,3 +1,8 @@
+---
+aliases:
+---
+SSH hay còn được gọi là Secure Shell. Là 1 giao thức được dùng để kết nối đến 1 máy tính khác 1 cách an toàn.
+
 Khi sử dụng [[SSH]], client hay server đều phải có key cho riêng mình. SSH Agent là 1 chương trình có nhiệm vụ quản lý các private key phía client, sử dụng chúng trong các kết nối [[SSH]]
 
 # Functionalities

@@ -47,6 +47,9 @@ Links là các relationship giữa các Hub -> many to many join tables. Và đ�
 
 Do là bảng quan hệ, cho nên các cột trong Links sẽ là các giá trị Khóa ngoại tới ID của các Hubs.
 
+Một bảng Links tối thiểu cần có:
+- SUROGATE KEY của các Hubs mà Links liê
+
 Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ việc xử lý khác như load timestamp, Record source, ...
 #### Hierarchical Link
 #### Same-as Link
