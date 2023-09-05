@@ -43,12 +43,12 @@ Có thể thấy là cấu trúc của các bảng Hub khá đơn giản, nó ch
 
 >  Links connect Hubs and may record a transaction, composition, or other type of relationship between hubs
 
-Links là các relationship giữa các Hub -> many to many join tables. Và đương nhiên nó có thể là quan hệ giữa nhiều bảng với nhau. Nó chính là đại diện cho mối quan hệ giữa các đối tượng (Hub) tring thực tế.
-
-Do là bảng quan hệ, cho nên các cột trong Links sẽ là các giá trị Khóa ngoại tới ID của các Hubs.
+Links là các relationship giữa các Hub -> many to many join tables. Và đương nhiên nó có thể là quan hệ giữa nhiều bảng với nhau. Nó chính là đại diện cho mối quan hệ giữa các đối tượng (Hub) trong thực tế.
 
 Một bảng Links tối thiểu cần có:
-- SUROGATE KEY của các Hubs mà Links liê
+- SUROGATE KEY của các Hubs mà Links là liên kết giữa chúng
+- SUROGATE KEY của Links
+- Các cột hỗ trợ cho việc xử lý dữ liệu: load_ts, source ...
 
 Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ việc xử lý khác như load timestamp, Record source, ...
 #### Hierarchical Link
@@ -86,6 +86,19 @@ Thông thường các Data warehouse mà implement Data vault method cũng sẽ 
 # Modeling steps
 
 Có nhiều cách tiếp cận với 
+
+
+## Rules
+
+This is some rules we should follow when modeling with Data Vault 2.0
+
+![[DV-datasheet-v109-A3.pdf]]
+
+# Data Warehouse Architecture
+
+Below is a proposal for Enterprise Data warehouse Architecture
+![[Pasted image 20230906010912.png]]
+
 # Comparation
 
 ## Pros
