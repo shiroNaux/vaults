@@ -57,9 +57,11 @@ Là các Links được dùng để diễn tả mối quan hệ của các đố
 #### Same-as Link
 
 Là quan hệ giữa cùng 1 đối tượng. 
-Ví dụ: Trong bảng Hub có 2 giá trị SĐT, 1 giá trị sai và 1 giá trị là đã được chuẩn hóa -> Khi đó ta có thể dùng 1 Links để 
+Ví dụ: Trong bảng Hub có 2 giá trị SĐT, 1 giá trị sai và 1 giá trị là đã được chuẩn hóa -> Khi đó ta có thể dùng 1 Links để liên kết 2 số ĐT này để cho biết đâu là giá trị chính xác
 
-#### Non-historized Link
+#### Non-historized Link / Transaction Link
+
+
 
 #### Exploration Link
 
