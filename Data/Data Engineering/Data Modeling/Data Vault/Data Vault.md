@@ -61,8 +61,9 @@ Ví dụ: Trong bảng Hub có 2 giá trị SĐT, 1 giá trị sai và 1 giá tr
 
 #### Non-historized Link / Transaction Link
 
+> That is perfectly adapted to the immutable facts, so something that happened in the past can neither be undone nor modified. And since the changes will never happen, they don't need to be stored in the satellites
 
-
+-> Tức là các Link này chứa data không thể bị update (Log, Transaction, ...). Khi đó dữ liệu sẽ được lưu trực tiếp trong bảng Link, không cần bảng satellite -> Join ít hơn.
 #### Exploration Link
 
 ### Satellites
