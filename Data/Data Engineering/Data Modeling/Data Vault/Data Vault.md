@@ -53,8 +53,11 @@ Một bảng Links tối thiểu cần có:
 Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ việc xử lý khác như load timestamp, Record source, ...
 #### Hierarchical Link
 
-Là các Links được dùng để diễn tả mối quan hệ của các đối tượng trong cùng 1 Hub. Ví dụ
+Là các Links được dùng để diễn tả mối quan hệ của các đối tượng trong cùng 1 Hub. Ví dụ: Links của cùng Hub mô tả quan hệ cha con giữa các địa điểm trong HUB_AREA
 #### Same-as Link
+
+Là quan hệ giữa cùng 1 đối tượng. 
+Ví dụ: Trong bảng Hub có 2 giá trị SĐT, 1 giá trị sai và 1 giá trị là đã được chuẩn hóa -> Khi đó ta có thể dùng 1 Links để 
 
 #### Non-historized Link
 
