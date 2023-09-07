@@ -115,6 +115,7 @@ Below is a proposal for Enterprise Data warehouse Architecture
 - Structured, dễ dàng thay đổi (flexibility for refactoring)
 - Có các khái niệm tương đồng với các mô hình khác -> dễ làm quen và nắm bắt cách dùng
 - Hashed: Hash value là deterministic -> do đó có thể load các dữ liệu song song với nhau mà không cần tuân theo mối quan hệ của dữ liệu. Để rõ ràng hơn, khi ta sử dụng Surrogate Key là sequence, thì ta sẽ phải load dữ liệu theo các thứ tự Hubs -> Links -> Satellite. Phải load Hubs đầu tiên thì ta mới lấy được Key của Hubs sau đó các Bảng Links, Sagtellites sẽ sử dụng Key đó để refernce đến Hubs. Tuy nhiên nếu sử dụng Hash value, các giá trị này sẽ luôn là xác định (deterministic) -> Có thể load data parallel. Ngoài ra, nếu có sự cố hay phải chạy backfill thì cá key xây dựng từ Hash value sẽ được vẫn giữ nguyên giá trị. Việc sử dụng hash value còn làm tăng tốc độ xứ lý (Không cần xử lý concurrency), và các data warehouse hiện đại không còn hỗ trợ sequence nữa.
+One huge advantage Data Vault has against other data warehousing architectures is that relationships can be added between Hubs with ease. Data Vault focuses on being agile and implementing what is needed to accomplish the current business goals. If relationships aren’t currently known or data sources aren’t yet accessible, this is ok because Links are easily created when they are needed. Adding a new Link in no way impacts existing Hubs or Satellites
 ## Cons
 - Complex
 - Quá nhiều join
