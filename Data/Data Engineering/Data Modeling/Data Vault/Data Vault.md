@@ -52,6 +52,8 @@ Một bảng Links tối thiểu cần có:
 
 Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ việc xử lý khác như load timestamp, Record source, ...
 #### Hierarchical Link
+
+
 #### Same-as Link
 
 #### Non-historized Link
