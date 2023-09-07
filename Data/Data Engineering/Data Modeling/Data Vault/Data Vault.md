@@ -86,10 +86,11 @@ Không có điều ngược lại. Các Satellite chỉ có 1 liên kết với 
 #### Bridge table
 #### Reference table
 
-Là các bảng thường được reference nhiều bởi các bảng 
+Là các bảng thường được reference nhiều bởi các bảng khác
 
 Ví dụ: Satellite có thể chứa Category Code để reference đến bảng Category mà không cần phải tạo thêm bảng Link giữa Product và Category -> giảm sự phức tạp ko cần thiết
 
+Thường thì các bảng reference sẽ là 1 Hub, và các bảng satellite sẽ có Foreign Key tới bảng này.
 ## Layer
 
 Thông thường các Data warehouse mà implement Data vault method cũng sẽ chia ra làm 3 layers giống như Dimensional Modeling
