@@ -53,7 +53,7 @@ Một bảng Links tối thiểu cần có:
 Tất nhiên là Links cũng sẽ có Surrogate Key và các cột hỗ trợ việc xử lý khác như load timestamp, Record source, ...
 #### Hierarchical Link
 
-
+Là các Links được dùng để diễn tả mối quan hệ của các đối tượng trong cùng 1 Hub. Ví dụ
 #### Same-as Link
 
 #### Non-historized Link
