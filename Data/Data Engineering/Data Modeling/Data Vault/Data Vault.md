@@ -86,7 +86,9 @@ Không có điều ngược lại. Các Satellite chỉ có 1 liên kết với 
 #### Bridge table
 #### Reference table
 
-#### Staging table
+Là các bảng thường được reference nhiều bởi các bảng 
+
+Ví dụ: Satellite có thể chứa Category Code để reference đến bảng Category mà không cần phải tạo thêm bảng Link giữa Product và Category -> giảm sự phức tạp ko cần thiết
 
 ## Layer
 
