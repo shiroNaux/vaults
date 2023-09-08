@@ -76,6 +76,13 @@ Các Hubs hoặc Links có thể có nhiều hơn 1 satellite -> Điều này nh
 
 Không có điều ngược lại. Các Satellite chỉ có 1 liên kết với các bảng Hubs hay Links. Giữa các Satellite cũng không có direct relationship.
 #### Multi-active satellite
+
+Các bảng satellite này chứa nhiều giá trị active active/valid at a time.
+Ví dụ: 1 người có thể có nhiều số ĐT -> Satellite chứa Phone Number chứa nhiều giá trị active này
+
+Đối với các bảng này, có  cách model:
+	- Row-based -> 
+	- Set-based
 #### Efective satellite
 
 #### System-driven satellite
