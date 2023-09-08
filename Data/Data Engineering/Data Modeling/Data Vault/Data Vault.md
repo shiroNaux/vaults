@@ -80,13 +80,16 @@ Không có điều ngược lại. Các Satellite chỉ có 1 liên kết với 
 Các bảng satellite này chứa nhiều giá trị active active/valid at a time.
 Ví dụ: 1 người có thể có nhiều số ĐT -> Satellite chứa Phone Number chứa nhiều giá trị active này
 
-Đối với các bảng này, có  cách model:
-	- Row-based -> 
+Đối với các bảng này, có cách model:
+	- Row-based
 	- Set-based
 #### Efective satellite
 
-#### System-driven satellite
+Là các Satellite chứa các records mà chỉ có giá trị trong 1 khoảng thời gian nhất định -> Các bảng satellite này thường có thêm cột END_VALID_TIME và START_VALID_TIME
 
+#### Business satellite
+
+Là các bảng
 ### Additional Table
 
 #### Point-in-time table (PIT)
