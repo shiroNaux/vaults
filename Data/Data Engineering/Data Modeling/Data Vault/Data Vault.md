@@ -103,7 +103,19 @@ PIT Tables được sử dụng trong trường hợp:
 - Ví dụ như ảnh dưới
 
 ![[Pasted image 20230911013853.png]]
-Nếu sử dụng các bảng trong câu [[SQL|truy vấn] t
+Nếu sử dụng các bảng trong câu [[SQL|truy vấn]] thì sẽ phải sử dụng 1 đoạn query rất dài và phức tạp vì
+- Join nhiều bảng
+- Các bảng satellite có chứa state (trạng thái) -> phải có điều kiện where rất phức tạp để lấy đúng được các giá trị khớp với nhau từ tất cả các bảng satellite
+
+Và ta cũng không thể kết hợp tất cả các bảng này vào trong 1 bảng satellite duy nhất bởi nhiều lí do (Data từ các nguồn khác nhau, change rate khác nhau -> tách bảng ra để tăng perfomance)
+
+Để giải quyết vấn đề trên, các bảng PIT được tạo ra theo cách: 
+
+For example, if a hub has 3 different satellites, satA, satB and satC, a point-in-time table will store the most recent load date for every satellite and so for every business key. So the stored data will be built like (business key [BK] from the hub, MAX(loadDate from satA for BK), MAX(loadDate from satB for the BK),MAX(loadDate from satC for BK)
+
+Từ Model ban đầu, khi ta sử dụng PIT thì sẽ có được diagram như sau
+![[Pasted image 20230911014818.png]]
+
 #### Bridge table
 #### Reference table
 
