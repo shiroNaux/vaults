@@ -89,7 +89,7 @@ Là các Satellite chứa các records mà chỉ có giá trị trong 1 khoảng
 
 #### Business satellite
 
-Là các bảng
+Là các bảng giống như satellite, nhưng được sinh ra trong quá trình Transform, Enrich data. Thường là các bảng aggregated -> đưa ra kết quả nhanh hơn, phục vụ cho business
 ### Additional Table
 
 #### Point-in-time table (PIT)
