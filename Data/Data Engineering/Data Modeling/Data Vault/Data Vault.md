@@ -97,6 +97,13 @@ Là các bảng giống như satellite, nhưng được sinh ra trong quá trìn
 Các bảng PIT và Bridge được coi là _dispoable_ -> có thể phá hủy, bản chất của các bảng này chỉ là được delivered từ các bảng có sẵn.
 
 Tác dụng chính của các bảng này là giảm thiểu độ phức tạp của query và tăng performance.
+
+PIT Tables được sử dụng trong trường hợp: 
+- Khi mà 1 Hub có nhiều Satellites. Và ta cần query từ tất cả các satellite đó
+- Ví dụ như ảnh dưới
+
+![[Pasted image 20230911013853.png]]
+Nếu sử dụng các bảng trong câu [[SQL|truy vấn] t
 #### Bridge table
 #### Reference table
 
