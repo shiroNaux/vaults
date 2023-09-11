@@ -120,7 +120,17 @@ Từ Model ban đầu, khi ta sử dụng PIT thì sẽ có được diagram nh�
 
 Đây cũng là 1 loại bảng dùng để tăng performance cho query. Dữ liệu trong Bridge tables cũng được delivered từ các bảng khác.
 
-Do kiến trúc của DV, nên các câu truy vấn phải thực hiện join rất nhiều -> Phức tạp và slow. Để giải quyết vấn đề này, người ta đã sử dụng Bridge tables (BRG). Các bảng này giống như wide table, chứa hầu hết các thông tin câ
+Do kiến trúc của DV, nên các câu truy vấn phải thực hiện join rất nhiều -> Phức tạp và slow. Để giải quyết vấn đề này, người ta đã sử dụng Bridge tables (BRG). Các bảng này giống như wide table, chứa hầu hết các thông tin cần thiết vào trong 1 bảng duy nhất để tránh truy vấn trên nhiều bảng. Nghe có vẻ giống PIT, nhưng điểm 
+
+
+Ví dụ: Đối với các table Location, nếu ta dùng DV để model thì kết quả thường sẽ giống thế này
+![[Pasted image 20230912012224.png]]
+
+Trong trường hợp này, ta có thể áp dụng BRG table như sau
+
+![[Pasted image 20230912012314.png]]
+
+
 #### Reference table
 
 Là các bảng thường được reference nhiều bởi các bảng khác
