@@ -120,8 +120,11 @@ Từ Model ban đầu, khi ta sử dụng PIT thì sẽ có được diagram nh�
 
 Đây cũng là 1 loại bảng dùng để tăng performance cho query. Dữ liệu trong Bridge tables cũng được delivered từ các bảng khác.
 
-Do kiến trúc của DV, nên các câu truy vấn phải thực hiện join rất nhiều -> Phức tạp và slow. Để giải quyết vấn đề này, người ta đã sử dụng Bridge tables (BRG). Các bảng này giống như wide table, chứa hầu hết các thông tin cần thiết vào trong 1 bảng duy nhất để tránh truy vấn trên nhiều bảng. Nghe có vẻ giống PIT, nhưng điểm 
+Do kiến trúc của DV, nên các câu truy vấn phải thực hiện join rất nhiều -> Phức tạp và slow. Để giải quyết vấn đề này, người ta đã sử dụng Bridge tables (BRG). Các bảng này giống như wide table, chứa hầu hết các thông tin cần thiết vào trong 1 bảng duy nhất để tránh truy vấn trên nhiều bảng. Nghe có vẻ giống PIT, nhưng điểm khác biệt ở đây là PIT thì chỉ lưu data của 1 Hub duy nhất, còn bridge thì có thể lưu dữ liệu của nhiều bảng khác nhau
 
+Cấu trúc của 1 Bridge table thường nhưu sau:
+
+![[Pasted image 20230912013531.png]]
 
 Ví dụ: Đối với các table Location, nếu ta dùng DV để model thì kết quả thường sẽ giống thế này
 ![[Pasted image 20230912012224.png]]
@@ -175,3 +178,10 @@ Data Vault models are not built for consumption by business intelligence (BI) to
 - Cần hiểu rõ về business knowledge
 # References
 1. [How to implement data vault model - Aginic](https://aginic.com/blog/modelling-with-data-vaults/)
+2. [Creating Data Vault Point-In-Time and Dimension tables: merging historical data sources - Roelant Vos](https://roelantvos.com/blog/creating-data-vault-point-in-time-and-dimension-tables-merging-historical-data-sources/)
+3. [Data Vault Bridge tables (varigence.com)](https://docs.varigence.com/bimlflex/delivering-data-vault/data-vault-implementation-bridge)
+4. [Data-Vault-Implementation-and-Automation-A-pattern-for-Data-Mart-delivery.pdf (roelantvos.com)](https://roelantvos.com/blog/wp-content/uploads/2019/01/Data-Vault-Implementation-and-Automation-A-pattern-for-Data-Mart-delivery.pdf)
+5. [Point-in-Time (PIT) constructs & Join-Trees (snowflake.com)](https://www.snowflake.com/blog/point-in-time-constructs-and-join-trees/)
+6. [Data Vault 2.0 and Big Data on waitingforcode.com - articles about General Big Data](https://www.waitingforcode.com/general-big-data/data-vault-2-big-data/read#architecture_examples)
+7. [DataJoinery’s Data Vault Key Concepts – DataJoinery](https://datajoinery.io/datajoinerys-data-vault-key-concepts/)
+8. [The Data Vault Guru: a pragmatic guide on building a data vault | LinkedIn](https://www.linkedin.com/pulse/data-vault-guru-pragmatic-guide-building-patrick-cuba/)
