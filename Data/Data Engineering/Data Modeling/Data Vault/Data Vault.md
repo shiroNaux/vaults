@@ -118,7 +118,9 @@ Từ Model ban đầu, khi ta sử dụng PIT thì sẽ có được diagram nh�
 
 #### Bridge table
 
-Đây cũng là 1 loại bảng dùng để tăng performance cho query
+Đây cũng là 1 loại bảng dùng để tăng performance cho query. Dữ liệu trong Bridge tables cũng được delivered từ các bảng khác.
+
+Do kiến trúc của DV, nên các câu truy vấn phải thực hiện join rất nhiều -> Phức tạp và slow. Để giải quyết vấn đề này, người ta đã sử dụng Bridge tables (BRG). Các bảng này giống như wide table, chứa hầu hết các thông tin câ
 #### Reference table
 
 Là các bảng thường được reference nhiều bởi các bảng khác
@@ -133,6 +135,7 @@ Thông thường các Data warehouse mà implement Data vault method cũng sẽ 
 
 Có nhiều cách tiếp cận với 
 
+Sau khi thiết kế được DV với các bảng tiêu chuẩn: Hubs, Links, Satellites thì coi như đã hoàn thành được bước modeling. Tuy nhiên, vẫn cần 1 số bước tạo ra các bảng hỗ trợ như: refernce tables, PIT, Bridge (BRG), .. để có thể khiến DV hoạt động 1 cách hiệu quả
 
 ## Rules
 
