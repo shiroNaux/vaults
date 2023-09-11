@@ -117,6 +117,8 @@ Từ Model ban đầu, khi ta sử dụng PIT thì sẽ có được diagram nh�
 ![[Pasted image 20230911014818.png]]
 
 #### Bridge table
+
+Đây cũng là 1 loại bảng dùng để tăng performance cho query
 #### Reference table
 
 Là các bảng thường được reference nhiều bởi các bảng khác
