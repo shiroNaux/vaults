@@ -70,7 +70,15 @@ Các Background process bao gồm:
 
 # Multitenenant Architecture
 
+Với Multitenant Architecture, 1 Oracle Database được coi là 1 CDB(Container database). CDB có thể chứa Application container và PDB(Plugable database)
 
+## CDB
+
+CDB là level cao nhất của Oracle database. Nó sẽ chứa >= 1 PDB hoặc Application Container.
+
+## PDB
+
+## Application container
 # References
 1. [Oracle Database 19c Technical Architecture](https://www.oracle.com/webfolder/technetwork/tutorials/architecture-diagrams/19/pdf/db-19c-architecture.pdf)
 2. [An Overview of Oracle Database Architecture (oracletutorial.com)](https://www.oracletutorial.com/oracle-administration/oracle-database-architecture/)
