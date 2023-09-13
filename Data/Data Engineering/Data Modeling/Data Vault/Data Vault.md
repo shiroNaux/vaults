@@ -68,9 +68,9 @@ Ví dụ: Trong bảng Hub có 2 giá trị SĐT, 1 giá trị sai và 1 giá tr
 
 Đây là 1 loại Link phục vụ cho Business Rules.
 Ví dụ: 
-- Khi ta muốn biết rằng User có thích Product nào hay ko, ta hoàn toàn có thể tạo thêm 1 bảng Link giữa User và Product. Bảng này giống như 1 model thống kê, đo kha
- The official specification calls it also a Deep Learning link because it can give confidence for the prediction and strength for the correlation of 2 datasets, but if we stay with these 2 columns, we could also try to use it to model a result of the ML recommendation system between a user and an item. The link would then specify how possible it is that the user will like the product. Here, the link is mutable since the prediction can change or even be discarded if the algorithm detects other user preferences changes.
+- Khi ta muốn biết rằng User có thích Product nào hay ko, ta hoàn toàn có thể tạo thêm 1 bảng Link giữa User và Product. Bảng này giống như 1 model thống kê, đo sự tương quan giữa User và Product để biết là họ có thích sản phẩm này hay không.
 
+Việc thêm, hay xóa cũng như thay đổi trên các bảng loại này không anh hưởng đến các thành phần khác trong Data Vault.
 ### Satellites
 
 > 
