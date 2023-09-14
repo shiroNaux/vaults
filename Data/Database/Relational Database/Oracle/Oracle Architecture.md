@@ -101,4 +101,4 @@ CDB sẽ chứa các containers:
 8. [ORACLE-BASE - Multitenant : Overview of Container Databases (CDB) and Pluggable Databases (PDB)](https://oracle-base.com/articles/12c/multitenant-overview-container-database-cdb-12cr1)
 9. [CDBs and PDBs (oracle.com)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/CDBs-and-PDBs.html#GUID-5C339A60-2163-4ECE-B7A9-4D67D3D894FB)
 10. [Oracle Database Architecture with Diagram - Dot Net Tutorials](https://dotnettutorials.net/lesson/oracle-database-architecture/)
-12. [Introduction to Multitenant Administration (oracle.com)](https://docs.oracle.com/en/database/oracle/oracle-database/21/multi/introduction-to-the-multitenant-architecture.html#GUID-267F7D12-D33F-4AC9-AA45-E9CD671B6F22)
+11. [Oracle Database Storage Structures - Dot Net Tutorials](https://dotnettutorials.net/lesson/oracle-storage-structures/)
