@@ -72,11 +72,14 @@ Các Background process bao gồm:
 
 Với Multitenant Architecture, 1 Oracle Database được coi là 1 CDB(Container database). CDB có thể chứa Application container và PDB(Plugable database)
 
+![[Pasted image 20230914130225.png]]
+
+Nếu không áp dụng multitenant Architecture, mỗi Oracle instance chỉ có thể tương tác với 1 Database cùng lúc. Do đó, bắt đầu từ phiên bản 12, Oracle đã sử dụng Multitenanet Architecture để cho phép sử dụng nhiều database hơn, khiến nó trở nên giống với hầu hết các [[DBMS]] khác. 
 ## CDB
 
 CDB là level cao nhất của Oracle database. Nó sẽ chứa >= 1 PDB hoặc Application Container.
 
-CDB chỉ là container nên nó không chứa bất kì thông tin nào về User hay Application.
+CDB chỉ là container nên nó không chứa bất kì thông tin cũng như dữ liệu nào của User hay Application. Tuy nhiên nó sẽ chứa hầu hết các thông tin khác phục vụ cho hoạt động của Oracle Database: controlfiles, datafiles, undo, tempfiles, redo logs etc.
 ## PDB
 
 ## Application container
