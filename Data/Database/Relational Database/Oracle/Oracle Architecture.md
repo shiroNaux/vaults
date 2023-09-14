@@ -25,7 +25,7 @@ Ngoài ra Oracle còn sử dụng 1 số loại file khác để có thể hoạ
 	- Server parameter files (SPFILE): 
 - Pasword files -> yepp, lưu trữ password của user để đăng nhập vào hệ thống
 - Network files:
-- Backup files ->
+- Backup files: ->
 - Archived redo log files ->
 
 ### Logical storage structure
