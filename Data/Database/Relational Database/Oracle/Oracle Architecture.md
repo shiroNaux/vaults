@@ -77,9 +77,16 @@ Với Multitenant Architecture, 1 Oracle Database được coi là 1 CDB(Contain
 Nếu không áp dụng multitenant Architecture, mỗi Oracle instance chỉ có thể tương tác với 1 Database cùng lúc. Do đó, bắt đầu từ phiên bản 12, Oracle đã sử dụng Multitenanet Architecture để cho phép sử dụng nhiều database hơn, khiến nó trở nên giống với hầu hết các [[DBMS]] khác. 
 ## CDB
 
-CDB là level cao nhất của Oracle database. Nó sẽ chứa >= 1 PDB hoặc Application Container.
+CDB là level cao nhất của Oracle database. Nó sẽ chứa >= 1 PDB hoặc Application Container. Mỗi 1 Oracle instacne chỉ có thể có 1 CDB (Có thể hiểu CDB chính là Oracle Database)
 
 CDB chỉ là container nên nó không chứa bất kì thông tin cũng như dữ liệu nào của User hay Application. Tuy nhiên nó sẽ chứa hầu hết các thông tin khác phục vụ cho hoạt động của Oracle Database: controlfiles, datafiles, undo, tempfiles, redo logs etc.
+
+CDB sẽ chứa các containers:
+- 1 CDB Root: 
+- 1 System container
+- >= 0 Application container
+- >= 0 PDB
+- 1 Seed PDB
 ## PDB
 
 ## Application container
