@@ -76,6 +76,7 @@ Với Multitenant Architecture, 1 Oracle Database được coi là 1 CDB(Contain
 
 CDB là level cao nhất của Oracle database. Nó sẽ chứa >= 1 PDB hoặc Application Container.
 
+CDB chỉ là container nên nó không chứa bất kì thông tin nào về User hay Application.
 ## PDB
 
 ## Application container
