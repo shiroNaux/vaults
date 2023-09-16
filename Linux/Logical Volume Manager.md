@@ -6,7 +6,7 @@ LVM là 1 công cụ dùng để quản lý các ổ cứng và phân vùng củ
 
 Physical volume chính là physical volume :)))
 
-
+Nó có thể là Disk hoặc là 1 partition cúa [[Disk]]
 
 ## Volume Group 
 
