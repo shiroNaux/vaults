@@ -10,6 +10,8 @@ Nó có thể là Disk hoặc là 1 partition cúa [[Disk]]
 
 ## Volume Group 
 
+Volume Group là 1 tập các Physical volume nhóm lại với nhau
+
 ## Logical Volume
 
 # Advantages
