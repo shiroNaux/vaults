@@ -16,7 +16,7 @@ A Kubernets cluster is composed of many machines, each one called **node** and h
 ![[0 4NDfryrEmVpo2UOp.png]]
 
 This server acts as a gateway by exposing an [[API]] for users and clients, health checking other servers, deciding how best to split up and assign work (known as “scheduling”). 
-The other machines in the cluster are designated as **nodes** -> accepting and running workloads using local and external resources. To help with isolation, management, and flexibility, Kubernetes runs applications and services in [[container|containers]], so each node needs to be equipped with a container runtime (like [[Docker]] or rkt). The node receives work instructions from the master server and creates or destroys containers accordingly, adjusting networking rules to route and forward traffic appropriately
+The other machines in the cluster are designated as **nodes** -> accepting and running workloads using local and external resources. To help with isolation, management, and flexibility, Kubernetes runs applications and services in [[Container|containers]], so each node needs to be equipped with a container runtime (like [[Virtualization/Container/Docker]] or rkt). The node receives work instructions from the master server and creates or destroys containers accordingly, adjusting networking rules to route and forward traffic appropriately
 
 ## Control plane components
 

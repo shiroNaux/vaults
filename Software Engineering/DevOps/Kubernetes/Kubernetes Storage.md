@@ -9,7 +9,7 @@ CSI stand for container storage interface.
 
 ## Volume
 
-Volume trong kubernetes cũng khá giống với volume trong [[Docker]], tuy nhiên volume của kubernetes có nhiều điểm nổi bật hơn. 
+Volume trong kubernetes cũng khá giống với volume trong [[Virtualization/Container/Docker]], tuy nhiên volume của kubernetes có nhiều điểm nổi bật hơn. 
 Về cơ bản thì volume là 1 directory, có thể chứa data bên trong. Mỗi pod muốn sử dụng volume thì phải mount volume đó vào 1 path trong file system của nó. Volume nằm trong pod specification, tức là life cylce của volume phụ thuộc vào pod, nó có nhiệm vụ là tách storage ra khỏi container chứ ko phải tách storage ra khỏi pod. Mục đích chính của volume là đảm bảo data sẽ không bị mất khi restart container và sharring data giữa các container trong cùng pod. VÌ vậy mà thường thì volume sẽ không được sử dụng nhiều so với Persistent volume.
 
 ### Types of volumes

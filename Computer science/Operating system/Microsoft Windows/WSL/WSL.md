@@ -7,7 +7,7 @@
 - 
 
 ### Cách tạo distro
-1. Có thể tạo 1 distro WSL bất kỳ bằng cách archive 1 [[Docker]] container. Sau đó import vào WSL
+1. Có thể tạo 1 distro WSL bất kỳ bằng cách archive 1 [[Virtualization/Container/Docker]] container. Sau đó import vào WSL
 2.  Cách làm cụ thể:
 	- Run 1 docker image -> tạo ra container
 	  
