@@ -23,7 +23,12 @@ Docker bridge netwrok thuộc loại phần mềm.
 
 Các container sẽ được add vào trong default bridge netwrok nếu không được chỉ định. Các containẻ trong netwrok sẽ được cung cấp 1 địa chỉ [[Internet protocol|IP]] riêng trong network này -> Số container sẽ bị limt theo số địa chỉ IP. Các container trng cùng 1 network có thể connect với nahu thông qua IP hoặc service_name (Không phải hostname). Default là IPv4, đương nhiên là có thể sử dụng Ipv6 nếu được config.
 
-Mục đích chính của bridge là để isolate docker network với host machine network. Bridge netwrok sẽ tạo ra 1 layer
+Mục đích chính của bridge là để isolate docker network với host machine network. Khi docker hoạt động, nếu kiểm tra network thông qua lệnh `ipconfig` ta sẽ thấy 1 số interface đặc biệt
+
+- docker0 -> interface của default bridge network
+- br-xxxxx -> interface của các container hoặc compose đang có trên Docker
+
+Tuy nhiên, mọi network bên trong container nếu muốn đi ra ngoài host machine sẽ đi qua docker0 bất kể là container đó sử dụng network là gì (điều này giải thích tại sao có thể dùng docker0 ip cho mọi container để thay thế cho host machine)
 ## host
 
 ## overlay
