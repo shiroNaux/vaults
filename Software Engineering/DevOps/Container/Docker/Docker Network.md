@@ -16,13 +16,23 @@ Khi cài đặt docker trên [[Linux]] có sử dựng firewalld, thì cũng s�
 Để Docker netwrok hoạt động, ta cần có Netwrok drier. Các driver hoạt động theo cơ chế plugable. Hầu hết các driver được cài đặt mặc định cùng với Docker.
 
 ## bridge
+Đây là netwrok default. 
+> In terms of networking, a bridge network is a Link Layer device which forwards traffic between network segments. A bridge can be a hardware device or a software device running within a host machine's kernel.
+
+Docker bridge netwrok thuộc loại phần mềm.
+
+Các container sẽ được add vào trong default bridge netwrok nếu không được chỉ định. Các containẻ trong netwrok sẽ được cung cấp 1 địa chỉ IP
 ## host
 
 ## overlay
 
-##ipvlan
+## ipvlan
 
-#mac
+## macvlan
+
+## none
+
+Ngoài ra còn 1 số driver plugin do cộng đồng phát triển (tuy nhiên không khuyến khích sử dụng). Chúng ta có thể cài hoặc tự phát triển các plugin này.
 
 # Netwroking in Docker compose
 
