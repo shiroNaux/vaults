@@ -21,7 +21,9 @@ Khi cài đặt docker trên [[Linux]] có sử dựng firewalld, thì cũng s�
 
 Docker bridge netwrok thuộc loại phần mềm.
 
-Các container sẽ được add vào trong default bridge netwrok nếu không được chỉ định. Các containẻ trong netwrok sẽ được cung cấp 1 địa chỉ IP
+Các container sẽ được add vào trong default bridge netwrok nếu không được chỉ định. Các containẻ trong netwrok sẽ được cung cấp 1 địa chỉ [[Internet protocol|IP]] riêng trong network này -> Số container sẽ bị limt theo số địa chỉ IP. Các container trng cùng 1 network có thể connect với nahu thông qua IP hoặc service_name (Không phải hostname). Default là IPv4, đương nhiên là có thể sử dụng Ipv6 nếu được config.
+
+Mục đích chính của bridge là để isolate docker network với host machine network. Bridge netwrok sẽ tạo ra 1 layer
 ## host
 
 ## overlay
