@@ -1,7 +1,9 @@
 ---
 aliases:
 ---
-A Reverse Proxy accepts a request from a client, forwards it to a server that can fulfill it, and returns the server’s response to the client.
+> A Reverse Proxy accepts a request from a client, forwards it to a server that can fulfill it, and returns the server’s response to the client.
+
+
 - Load balancing
 - Security
 - Perfomance Acceleration
