@@ -158,7 +158,7 @@ Có 2 cách để add 1 node vào cluster
 
 ### 4. Konnectivity service
 - Là giải pháp thay thế cho [[SSH]] Tunnel khi mà nó đã bị deprecated
-- Konnectivity là 1 service. Nó sẽ cung cấp [[proxy]] ở level [[TCP]] để control plane kết nối tới các thành phần khác trong cluster
+- Konnectivity là 1 service. Nó sẽ cung cấp [[Proxy]] ở level [[TCP]] để control plane kết nối tới các thành phần khác trong cluster
 - Bao gồm 2 phần:
 	- Konnectivity server ở control plane
 	- Konnectivity agents nằm trong nodes
