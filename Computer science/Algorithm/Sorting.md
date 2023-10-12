@@ -18,9 +18,8 @@ thì thuật toán đó được coi là unstability
 
 Stability của các thuật toán sắp xếp phổ biến:
 
-|                   |           | 
+| **Sorting Algorithm** | **Stability** | 
 | ----------------- | --------- |
-| Sorting Algorithm | Stability |
 | Bublle Sort       | Stable    |
 | Selection Sort    | Unstable  |
 | Insertion Sort    | Stable    |
