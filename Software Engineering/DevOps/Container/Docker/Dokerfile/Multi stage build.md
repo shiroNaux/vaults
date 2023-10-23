@@ -29,3 +29,14 @@ CMD ["/bin/hello"]
 
 
 ##### Đặt tên cho stage
+
+# Benefits
+
+1. Smaller image
+	- 
+2. Buld faster
+3. Less vulnerabilities
+
+# References
+1. [Learn Multi-Stage Builds Easy With Examples - Docker Development Tips & Tricks - YouTube](https://www.youtube.com/watch?v=vIfS9bZVBaw)
+2. 
