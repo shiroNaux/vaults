@@ -39,4 +39,6 @@ CMD ["/bin/hello"]
 
 # References
 1. [Learn Multi-Stage Builds Easy With Examples - Docker Development Tips & Tricks - YouTube](https://www.youtube.com/watch?v=vIfS9bZVBaw)
-2. 
+2. [Multi-stage builds | Docker Docs](https://docs.docker.com/build/building/multi-stage/)
+3. [Multi-stage | Docker Docs](https://docs.docker.com/build/guide/multi-stage/)
+4. 
