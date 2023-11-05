@@ -1,8 +1,11 @@
 ---
-alias:
-	- LSN
+aliases:
+  - LSN
+tags:
+  - Database
+  - PostgreSQL
 ---
-
+---
 # Abstract
 
 # References

@@ -1,4 +1,19 @@
+---
+aliases: 
+tags:
+  - Oracle
+  - Database
+---
+
 > A database system is basically a computer-based record-keeping system. The main use of the database is that the same collection of data should serve as many applications as possible.
+
+# Core Concept
+
+## SID
+When connecting to an Oracle instance, you have the option to connect using either the SID or the Service Name. The SID (System Identifier) is a unique name that identifies your instance/database. On the other hand, the Service Name is the TNS (Transparent Network Substrate) alias that you give when you remotely connect to your database. This Service Name is recorded in the tnsnames.ora file on your clients and can be the same as the SID or any other name you want.
+
+In short, the SID is the unique name of your instance/database, while the Service Name is an alias used when connecting to your database remotely. Is there anything else you would like to know? 😊
+
 
 # Oracle Database Architecture
 
