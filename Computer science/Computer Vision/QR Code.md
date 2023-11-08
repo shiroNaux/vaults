@@ -13,6 +13,8 @@ Nó đồng thời được dùng để khắc phục 1 số điểm hạn chế
 
 Các mã QR thường có định dạng: các ô hình vuông màu đen được xắp sếp trên nền trắng
 
+> A QR code is a square array of dark and light dots. One dot (or "module") represents one bit of information.
+
 ## QR Code Version
 
 Có đến 40 version khác nhau của QR code. Mỗi version khác nhau chủ yếu về kích thước của QR code. Version 40 có kích size là 177 \* 177
@@ -29,21 +31,26 @@ Mỗi version đều khác nhau về các yếu tố:
 
 
 QR code được chia làm nhiều loại với các kích thước khác nhau. Tuy nhiên mọi QR code đều bao gồm các thành phần sau:
-1. Quiet Zone
-2. Separator
-3. Finder
-4. Aligment marking
-5. Timing
-6. Version Information
-7. Format Information
-8. Content
+
+1. **Quiet Zone**
+2. **Separator**
+3. **Finder**
+4. **Aligment marking**
+5. **Timing**
+6. **Version Information**
+7. **Format Information**
+8. **Content**
+
 ![[Pasted image 20231108014847.png]]
 
 ## Finder
 
 Điểm nổi bật nhất trong các mã QR chính là 3 hình vuông có kích thước lớn nằm ở 3 góc của mã QR
 
-https://brooker.co.za/blog/2023/10/18/optimism.html
+![[Pasted image 20231109011243.png]]
+
+Đây là các vị trí để dánh dấu hướng đọc của mã QR -> nó giúp các ứng dụng có thể dọc mã QR ở bất kỳ angle nào. Hình vuông nhỏ bên trong gọi là **Inner eye**, hình vuông bên ngoài gọi là **Outer eye**.
+
 
 # References
 
