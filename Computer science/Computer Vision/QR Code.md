@@ -39,5 +39,12 @@ QR code được chia làm nhiều loại với các kích thước khác nhau. 
 8. Content
 ![[Pasted image 20231108014847.png]]
 
+## Finder
+
+Điểm nổi bật nhất trong các mã QR chính là 3 hình vuông có kích thước lớn nằm ở 3 góc của mã QR
+
+https://brooker.co.za/blog/2023/10/18/optimism.html
+
 # References
+
 1. [QR codes | Dan Hollick (typefully.com)](https://typefully.com/DanHollick/qr-codes-T7tLlNi)
