@@ -11,3 +11,5 @@ aliases:
 	- Caching
 
 Có thể thấy 1 Reserve proxy có bao gồm chức năng của 1 lòa balancer
+
+# Ref
