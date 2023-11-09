@@ -51,6 +51,21 @@ QR code được chia làm nhiều loại với các kích thước khác nhau. 
 
 Đây là các vị trí để dánh dấu hướng đọc của mã QR -> nó giúp các ứng dụng có thể dọc mã QR ở bất kỳ angle nào. Hình vuông nhỏ bên trong gọi là **Inner eye**, hình vuông bên ngoài gọi là **Outer eye**.
 
+## Timing pattern
+
+Timing parttern giúp các ứng dụng biết được độ lớn - kích thước của mã QR -> tức là chỉ ra được mã QR này là version bao nhiêu.
+
+Tiiming parttern được detect dựa vào finder như hình dưới
+
+![[Pasted image 20231110011326.png]]
+
+Chúng gồm 2 dải các ô trắng đen liên tiếp, nối giữa các Finder gần nhau. 
+
+## Format info
+
+Format Info cũng được lưu ở gần các finder. Chúng sẽ chứa các thông tin
+
+![[Pasted image 20231110011737.png]]
 
 ## QR Code scanning process
 
@@ -65,6 +80,14 @@ QR code được chia làm nhiều loại với các kích thước khác nhau. 
 
 # Type of QR Code
 
+## QR Code Model 1
+## QR Code Model 2
+
+## Micro QR Code
+
+## 
+
 # References
 
 1. [QR codes | Dan Hollick (typefully.com)](https://typefully.com/DanHollick/qr-codes-T7tLlNi)
+2. [QR code - Wikipedia](https://en.wikipedia.org/wiki/QR_code)
