@@ -9,6 +9,20 @@ QR là viết tắt của quick response -> mục đích đầu tiên để nó 
 Nó đồng thời được dùng để khắc phục 1 số điểm hạn chế của barcode như:
 - Barcode chỉ có thể đọc được từ 1 hướng, QR code có thể được đọc từ mọi angle
 - QR có thể lưu nhiều thông tin hơn do nó là dạng ma trận 2 chiều còn barcode là dạng 1 chiều (tối đa 20 kí tự)
+
+## Error Corection Level
+QR codes contain error correction data. The standard offers the following levels of error correction:
+- L: (low) about 7% of codewords can be restored
+- M: (medium) 15%
+- Q: (quality) 25%
+- H: (high) 30% (not available for Micro QR codes)
+
+For Micro QR code symbols, the available error correction levels depend on the version:
+
+- M1 has only error detection
+- M2 and M3 support L and M levels
+- M4 supports L, M and Q levels
+
 # Technical detail
 
 Các mã QR thường có định dạng: các ô hình vuông màu đen được xắp sếp trên nền trắng
@@ -85,9 +99,18 @@ Format Info cũng được lưu ở gần các finder. Chúng sẽ chứa các t
 
 ## Micro QR Code
 
-## 
+## Snall QR Code
+
+## iQR
+
+## SQRC
+
+## Frame QR
+
+Loại mã QR này sẽ cho phép chèn hình ảnh hoặc các dạng đồ họa khác vào chính giữa của mã QR. Vùng đồ họa này trên mã QR được gọi là QR Code frame
 
 # References
 
 1. [QR codes | Dan Hollick (typefully.com)](https://typefully.com/DanHollick/qr-codes-T7tLlNi)
 2. [QR code - Wikipedia](https://en.wikipedia.org/wiki/QR_code)
+3. [QR Code Types: Different Types of QR Codes (sproutqr.com)](https://www.sproutqr.com/blog/qr-code-types)
