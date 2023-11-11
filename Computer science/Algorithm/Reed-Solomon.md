@@ -2,6 +2,3 @@
 tags:
   - Algorithm
 ---
-
-
-# Round Robin

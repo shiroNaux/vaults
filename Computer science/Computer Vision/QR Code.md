@@ -81,6 +81,10 @@ Format Info cũng được lưu ở gần các finder. Chúng sẽ chứa các t
 
 ![[Pasted image 20231110011737.png]]
 
+
+# Error Corection
+
+QR Code sử dụng thuật toán [[Reed-Solomon]] để thực hiện việc sửa lỗi hay khôi phục dữ liệu trong trường hợp 1 phần của mã QR bị hư hại, không thể scan được.
 ## QR Code scanning process
 
 1. Point your phone at a QR code.
@@ -95,7 +99,15 @@ Format Info cũng được lưu ở gần các finder. Chúng sẽ chứa các t
 # Type of QR Code
 
 ## QR Code Model 1
+
+QR Code model là tiêu chuẩn (Specification) đầu tiên của mã QR, nó được giới thiệu vào năm 1994.
+
+Phiên bản đầu tiên này sử dụng ma trận có kích thước tối đa 73 * 73 để lưu trữ. Nó tương đương với phiên bản 14 của Version 2 -> Có nhiều phiên bản, nhưng tối đa là Version 14
+
+Loại mã QR này hiện ít được sử dụng do sự ra đời của Version 2 với nhiều cải tiến hơn.
 ## QR Code Model 2
+
+Là loại mã tiêu chuẩn ở thời điểm hiện tại ([[2023-11-11]]). Nó gia tăng số lượng version lên 40 (tương đương với việc đưa kích thước của mã QR lên 177 * 177). -> Điều này cũng kéo theo việc lưu trữ đươ
 
 ## Micro QR Code
 
