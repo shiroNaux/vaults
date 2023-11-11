@@ -99,7 +99,11 @@ Format Info cũng được lưu ở gần các finder. Chúng sẽ chứa các t
 
 ## Micro QR Code
 
-## Snall QR Code
+aka Small QR Code
+
+Nó nhỏ hơn so với mã QR thông thường (Hiển nhiê small 🥲🥲) -> Phù hợp với các trường hợp mà chỗ in mã QR có diện tích nhỏ (như trên thiết bị vi tính). và cũng bởi vì size của chúng nhỏ hơn mã QR thường nên lượng data mà chúng chứa được cũng ít hơn. Và kèm theo đó là khả năng phục hồi lỗi cũng thấp hơn.
+Micro QR có chỉ có 3 version.
+
 
 ## iQR
 
