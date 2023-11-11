@@ -102,19 +102,27 @@ QR Code sử dụng thuật toán [[Reed-Solomon]] để thực hiện việc s�
 
 QR Code model là tiêu chuẩn (Specification) đầu tiên của mã QR, nó được giới thiệu vào năm 1994.
 
-Phiên bản đầu tiên này sử dụng ma trận có kích thước tối đa 73 * 73 để lưu trữ. Nó tương đương với phiên bản 14 của Version 2 -> Có nhiều phiên bản, nhưng tối đa là Version 14
+Phiên bản đầu tiên này sử dụng ma trận có kích thước tối đa 73 * 73 để lưu trữ. Nó tương đương với phiên bản 14 của Version 2 -> Có nhiều phiên bản, nhưng tối đa là Version 14. Điều đáng chú ý là QR Model 1 chỉ lưu trữ được numeric data only.
 
 Loại mã QR này hiện ít được sử dụng do sự ra đời của Version 2 với nhiều cải tiến hơn.
 ## QR Code Model 2
 
-Là loại mã tiêu chuẩn ở thời điểm hiện tại ([[2023-11-11]]). Nó gia tăng số lượng version lên 40 (tương đương với việc đưa kích thước của mã QR lên 177 * 177). -> Điều này cũng kéo theo việc lưu trữ đươ
+Là loại mã tiêu chuẩn ở thời điểm hiện tại ([[2023-11-11]]). Nó gia tăng số lượng version lên 40 (tương đương với việc đưa kích thước của mã QR lên 177 * 177). -> Điều này cũng kéo theo việc lưu trữ được nhiều dữ liệu hơn và khả năng sửa lỗi cũng đượch tăng lên.
 
+Ngoài ra nó cũng có thay đổi khả năng lưu trữ, không chỉ là lưu được các dữ liệu numeric mà còn có thể lưu được chữ, binary data -> khả năng ứng dụng cao hơn.
 ## Micro QR Code
 
 aka Small QR Code
 
 Nó nhỏ hơn so với mã QR thông thường (Hiển nhiê small 🥲🥲) -> Phù hợp với các trường hợp mà chỗ in mã QR có diện tích nhỏ (như trên thiết bị vi tính). và cũng bởi vì size của chúng nhỏ hơn mã QR thường nên lượng data mà chúng chứa được cũng ít hơn. Và kèm theo đó là khả năng phục hồi lỗi cũng thấp hơn.
-Micro QR có chỉ có 3 version.
+Micro QR có 4 version.
+
+| Version | Modules | Maximum alpha numeric characters held |
+| ------- | ------- | ------------------------------------- |
+| M1      | 11 * 11 | None, only 5 numeric characters       |
+| M2      | 13 * 13 | 6                                     |
+| M3      | 15 * 15 | 14                                    |
+| M4      | 17 * 17 | 21                                      |
 
 
 ## iQR
