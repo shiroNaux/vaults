@@ -77,10 +77,12 @@ Chúng gồm 2 dải các ô trắng đen liên tiếp, nối giữa các Finder
 
 ## Format info
 
-Format Info cũng được lưu ở gần các finder. Chúng sẽ chứa các thông tin
+Format Info cũng được lưu ở gần các finder.
 
 ![[Pasted image 20231110011737.png]]
 
+Từ phần format information này ta có thể biết được:
+- 
 
 # Error Corection
 
@@ -114,7 +116,7 @@ Ngoài ra nó cũng có thay đổi khả năng lưu trữ, không chỉ là lư
 
 aka Small QR Code
 
-Nó nhỏ hơn so với mã QR thông thường (Hiển nhiê small 🥲🥲) -> Phù hợp với các trường hợp mà chỗ in mã QR có diện tích nhỏ (như trên thiết bị vi tính). và cũng bởi vì size của chúng nhỏ hơn mã QR thường nên lượng data mà chúng chứa được cũng ít hơn. Và kèm theo đó là khả năng phục hồi lỗi cũng thấp hơn.
+Nó nhỏ hơn so với mã QR thông thường (Hiển nhiên small mà 🥲🥲) -> Phù hợp với các trường hợp mà chỗ in mã QR có diện tích nhỏ (như trên thiết bị vi tính). và cũng bởi vì size của chúng nhỏ hơn mã QR thường nên lượng data mà chúng chứa được cũng ít hơn. Và kèm theo đó là khả năng phục hồi lỗi cũng thấp hơn.
 Micro QR có 4 version.
 
 | Version | Modules | Maximum alpha numeric characters held |
@@ -124,7 +126,9 @@ Micro QR có 4 version.
 | M3      | 15 * 15 | 14                                    |
 | M4      | 17 * 17 | 21                                      |
 
-
+Ưu điểm của Micro QR là:
+- Nó chỉ cần 1 Finder pattern
+- Chỉ cẩn 1 quiet zone
 ## iQR
 
 iQR QR Code được coi như là 1 phiên bản mở rộng, nâng cấp của mã QR tiêu chuẩn. Tuy nhiên loại mã này được độc quyền sử dụng bởi Denso Wave (công ty sáng tạo ra QR Code). iQR có nhiều ưu điểm hơn so với các mã QR tiêu chuẩn thông thường như:
