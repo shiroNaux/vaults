@@ -116,7 +116,7 @@ Khi áp dụng masking, các ô tương ứng với màu đen trên mask sẽ đ
 
 ![[Pasted image 20231112033855.png]]
 
-Nội dung chính của mã QR được lưu trong phần dánh dấu trong hình trên. Dữ liệu được đọc bắt đầu từ góc dưới bên phải và đi theo chiều mũi tên.
+Nội dung chính của mã QR được lưu trong phần dánh dấu trong hình trên. Dữ liệu được đọc bắt đầu từ góc dưới bên phải và đi theo chiều mũi tên. 
 
 # Error Corection
 
