@@ -81,7 +81,12 @@ Tiiming parttern được detect dựa vào finder như hình dưới
 
 Chúng gồm 2 dải các ô trắng đen liên tiếp (như hình vẽ) được gọi là vertical timing parttern và  horizontal timing pattern. 
 
-- Horizontal timing pattern nằm ở dòng thứ 6
+- Horizontal timing pattern nằm ở cột thứ 6 (từ trái sang)
+- Vertical timing pattern nằm ở dòng thứ 6 (từ trên xuống)
+
+## Alignment pattern
+
+
 
 ## Format info
 
