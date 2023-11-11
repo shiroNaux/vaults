@@ -57,6 +57,8 @@ QR code được chia làm nhiều loại với các kích thước khác nhau. 
 
 ![[Pasted image 20231108014847.png]]
 
+
+Các thành phần không lưu trữ data chính bao gồm: finder parttern, separator, timing pattern và alignment patterns được gọi là function pattern
 ## Finder
 
 Điểm nổi bật nhất trong các mã QR chính là 3 hình vuông có kích thước lớn nằm ở 3 góc của mã QR
@@ -64,6 +66,8 @@ QR code được chia làm nhiều loại với các kích thước khác nhau. 
 ![[Pasted image 20231109011243.png]]
 
 Đây là các vị trí để dánh dấu hướng đọc của mã QR -> nó giúp các ứng dụng có thể dọc mã QR ở bất kỳ angle nào. Hình vuông nhỏ bên trong gọi là **Inner eye**, hình vuông bên ngoài gọi là **Outer eye**.
+
+Hình vuông phía bên ngoài mà đen (Outer eye) có kích thước là: 7 * 7, trong nó là hình vuông màu trắng có kích thước 5 * 5, và hình vuông màu đen trong cùng(Inner eye) có kích thước 3 * 3. -> Các dải hình vuông bên ngoài có độ rộng là 2.
 
 ## Timing pattern
 
@@ -93,7 +97,13 @@ Từ phần format information này ta có thể biết được:
 ![[Pasted image 20231112002045.png]]
 
 QR Code sử dụng thuật toán [[Reed-Solomon]] để thực hiện việc sửa lỗi hay khôi phục dữ liệu trong trường hợp 1 phần của mã QR bị hư hại, không thể scan được.
-## QR Code scanning process
+
+# QR Generation process
+1. Analysis Input data
+2. Data Encoding
+3. Error corection coding using Reed-Solomon Algorithm
+4. Structure final message
+# QR Code scanning process
 
 1. Point your phone at a QR code.
 2. The QR code scanner in your phone’s camera recognizes the three position markers in the QR code. With a sufficient quiet area, your scanner is now aware of where the edges of the QR code are.
