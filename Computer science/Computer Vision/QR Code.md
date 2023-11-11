@@ -106,8 +106,7 @@ Format Info cũng được lưu ở gần các finder. Chúng sẽ chứa các t
 iQR QR Code được coi như là 1 phiên bản mở rộng, nâng cấp của mã QR tiêu chuẩn. Tuy nhiên loại mã này được độc quyền sử dụng bởi Denso Wave (công ty sáng tạo ra QR Code). iQR có nhiều ưu điểm hơn so với các mã QR tiêu chuẩn thông thường như:
 - Có thể store được nhiều data hơn so với QR thường
 - iQR có thể được biểu diễn dưới dạng hình chữ nhật chứ không bắt buộc là hình vuông
-- 
-
+- Tăng khả năng tự sửa lỗi
 
 ## SQRC
 
