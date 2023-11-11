@@ -101,6 +101,23 @@ Từ phần format information này ta có thể biết được:
 - Error Correction level
 - Error Correction format
 
+
+## Masking
+
+Các phần mềm đọc QR sẽ hoạt động tốt nhất nếu tỉ lệ số lượng các ô màu đen và các ô màu trắng là bằng nhau. Do đó người ta sử dụng các mask để đạt được điều này
+
+Có 8 loại mask được dùng trong mã QR
+
+![[Pasted image 20231112033546.png]]
+
+Khi áp dụng masking, các ô tương ứng với màu đen trên mask sẽ được đảo ngược màu sắc, còn các ô tương ứng với màu trắng sẽ được giữ nguyên.
+
+## Content
+
+![[Pasted image 20231112033855.png]]
+
+Nội dung chính của mã QR được lưu trong phần dánh dấu trong hình trên. Dữ liệu được đọc bắt đầu từ góc dưới bên phải và đi theo chiều mũi tên.
+
 # Error Corection
 
 Để có được khả năng error corection, data trong QR Code được lưu redundant
@@ -109,6 +126,9 @@ Từ phần format information này ta có thể biết được:
 
 QR Code sử dụng thuật toán [[Reed-Solomon]] để thực hiện việc sửa lỗi hay khôi phục dữ liệu trong trường hợp 1 phần của mã QR bị hư hại, không thể scan được.
 
+Nội dung của mã QR sẽ được lưu dư thừa, vị trí lưu là phần màu tím như hình dưới.
+
+![[Pasted image 20231112034000.png]]
 # QR Generation process
 1. Analysis Input data
 2. Data Encoding
@@ -120,15 +140,15 @@ QR Code sử dụng thuật toán [[Reed-Solomon]] để thực hiện việc s�
 8. Output QR Code
 # QR Code scanning process
 
-1. Point your phone at a QR code.
-2. The QR code scanner in your phone’s camera recognizes the three position markers in the QR code. With a sufficient quiet area, your scanner is now aware of where the edges of the QR code are.
-3. The scanner begins at the bottom right, where it encounters the _mode indicator._ These four data modules indicate what data type (numeric, alphanumeric, byte, or kanji) the rest of the encoded data is.
-4. Next, the scanner encounters the _character count indicator,_ which are the next 8 data modules up from the mode indicator. These indicate how many characters the total encoded data is
-5. Knowing the data type and character length, the scanner then continues its zig-zag path along the data modules until all it retrieves all the encoded information and reaches the _end indicator_
-6. After reading the final character, the scanner proceeds along its path to the error correction data modules. Within these encoded modules are one of four levels of error correction. Or how much of the QR code’s encoded data is backed up in case of code damage
-
-![[Pasted image 20231109012554.png]]
-
+1. Recognizing Modules
+2. Extract format Information
+3. Determine Version Information
+4. Release Masking
+5. Restore Data & Error Corection Codeworks
+6. Error Detection
+7. Error Correction (If error)
+8. Decode data codeworks
+9. Output
 # Type of QR Code
 
 ## QR Code Model 1
