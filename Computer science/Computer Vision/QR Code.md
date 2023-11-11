@@ -69,6 +69,8 @@ Các thành phần không lưu trữ data chính bao gồm: finder parttern, sep
 
 Hình vuông phía bên ngoài mà đen (Outer eye) có kích thước là: 7 * 7, trong nó là hình vuông màu trắng có kích thước 5 * 5, và hình vuông màu đen trong cùng(Inner eye) có kích thước 3 * 3. -> Các dải hình vuông bên ngoài có độ rộng là 2.
 
+Khoảng trắng ở giữa finder pattern và phần lưu trữ dữ liệu được gọi là separator.
+
 ## Timing pattern
 
 Timing parttern giúp các ứng dụng biết được độ lớn - kích thước của mã QR -> tức là chỉ ra được mã QR này là version bao nhiêu.
@@ -77,7 +79,9 @@ Tiiming parttern được detect dựa vào finder như hình dưới
 
 ![[Pasted image 20231110011326.png]]
 
-Chúng gồm 2 dải các ô trắng đen liên tiếp, nối giữa các Finder gần nhau. 
+Chúng gồm 2 dải các ô trắng đen liên tiếp (như hình vẽ) được gọi là vertical timing parttern và  horizontal timing pattern. 
+
+- Horizontal timing pattern nằm ở dòng thứ 6
 
 ## Format info
 
@@ -103,6 +107,10 @@ QR Code sử dụng thuật toán [[Reed-Solomon]] để thực hiện việc s�
 2. Data Encoding
 3. Error corection coding using Reed-Solomon Algorithm
 4. Structure final message
+5. Module placement
+6. Perform data masking
+7. Add format and Version Information
+8. Output QR Code
 # QR Code scanning process
 
 1. Point your phone at a QR code.
@@ -163,3 +171,4 @@ Loại mã QR này sẽ cho phép chèn hình ảnh hoặc các dạng đồ h�
 1. [QR codes | Dan Hollick (typefully.com)](https://typefully.com/DanHollick/qr-codes-T7tLlNi)
 2. [QR code - Wikipedia](https://en.wikipedia.org/wiki/QR_code)
 3. [QR Code Types: Different Types of QR Codes (sproutqr.com)](https://www.sproutqr.com/blog/qr-code-types)
+4. [(PDF) An Introduction to QR Code Technology (researchgate.net)](https://www.researchgate.net/publication/318125149_An_Introduction_to_QR_Code_Technology)
