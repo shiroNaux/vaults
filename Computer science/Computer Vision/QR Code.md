@@ -86,7 +86,9 @@ Chúng gồm 2 dải các ô trắng đen liên tiếp (như hình vẽ) đượ
 
 ## Alignment pattern
 
+Alignment pattern có tác dụng giúp các phần mềm scan mã QR xác định được 
 
+Kích thước của alignment patter từ ngoài vào trong lần lượt là 5 * 5 3 * 3 và 1 * 1
 
 ## Format info
 
@@ -165,7 +167,9 @@ iQR QR Code được coi như là 1 phiên bản mở rộng, nâng cấp của 
 - iQR có thể được biểu diễn dưới dạng hình chữ nhật chứ không bắt buộc là hình vuông
 - Tăng khả năng tự sửa lỗi
 
-## SQRC
+## SQRC hay EQR
+
+aka Encrypted QR Code - là 1 loại QR mà dữ liệu được mã hóa. Điều này làm cho thông tin trên mã QR có thể được chia sẻ một cách an toàn và bí mật.
 
 ## Frame QR
 
