@@ -82,9 +82,15 @@ Format Info cũng được lưu ở gần các finder.
 ![[Pasted image 20231110011737.png]]
 
 Từ phần format information này ta có thể biết được:
-- 
+- Mask
+- Error Correction level
+- Error Correction format
 
 # Error Corection
+
+Để có được khả năng error corection, data trong QR Code được lưu redundant
+
+![[Pasted image 20231112002045.png]]
 
 QR Code sử dụng thuật toán [[Reed-Solomon]] để thực hiện việc sửa lỗi hay khôi phục dữ liệu trong trường hợp 1 phần của mã QR bị hư hại, không thể scan được.
 ## QR Code scanning process
