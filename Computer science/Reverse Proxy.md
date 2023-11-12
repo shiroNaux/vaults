@@ -28,7 +28,7 @@ Reverse proxy thì ngược lại, nó đứng trước server
 
 ![[Pasted image 20231112040037.png]]
 
-Nhằm ngăn client gửi request trực tiến đến server
+Nhằm ngăn client gửi request trực tiến đến server.
 # Reverse proxy vs [[Load Balancing|Load balancer]]
 
 > A Reverse Proxy accepts a request from a client, forwards it to a server that can fulfill it, and returns the server’s response to the client.
