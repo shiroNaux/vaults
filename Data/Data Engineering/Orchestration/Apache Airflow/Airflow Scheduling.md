@@ -25,7 +25,10 @@ start_date/last_run + schedule_interval
 => tức là DAG sẽ được trigger vào **cuối** khoảng thời gian interval mà ta định nghĩa.
 
 Ví dụ: 1 DAG được lên lịch chạy vào phút thứ 30 của mỗi giờ. Thì lúc 9h30 DAG sẽ chạy nhưng không phải là chạy cho kì 9h30 -> 10h30 mà là chạy cho kì 8h30 -> 9h30.
-Để rõ hơn, nếu ta set thời điểm bắt đầu run DAG là là 1h ngày hôm nay và interval là 1 tiếng. Thì DAG sẽ được run lần đầu tiên không phải là lúc 1h mà là 
+
+Để rõ hơn, nếu ta set thời điểm bắt đầu run DAG là là 1h ngày hôm nay và interval là 1 tiếng. Thì DAG sẽ được run lần đầu tiên không phải là lúc 1h mà là 2h.
+
+> => DAG được run vào cuối interval, không phải đầu
 # References
 1. [DAG scheduling and timetables in Airflow | Astronomer Documentation](https://docs.astronomer.io/learn/scheduling-in-airflow)
 2. [Airflow DAG Scheduling in 5 mins - YouTube](https://www.youtube.com/watch?v=bwi_xkTmv4I)
