@@ -21,5 +21,6 @@ SVG stand for Scalable Vector Graphics
 </svg>
 
 Các thuộc tính trong thẻ svg
-= 
+- width và height: 
+- viewBox
 # Elements
