@@ -21,6 +21,26 @@ SVG stand for Scalable Vector Graphics
 </svg>
 
 Các thuộc tính trong thẻ svg
-- width và height: 
-- viewBox
+- width và height: -> size của svg
+- viewBox -> define hệ tọa độ mà các đối tượng có trong svg sẽ neo vào làm mốc quy chiếu
+	- 2 giá trị đầu là tạo độ của góc trên trái
+	- 2 giá trị sau là tọa độ của góc dưới phải
+- Các giá trị tọa độ có thể không nhất thiết phải = hoặc tương ứng với height và width
+
+Ví dụ:
+
+<svg 
+  width="200"
+  height="200"
+  viewBox="-100 -100 200 200"
+>
+  <circle 
+    cx="0"
+    cy="20"
+    r="70"
+    fill="#D1495B" 
+  />
+</svg>
+
+
 # Elements
