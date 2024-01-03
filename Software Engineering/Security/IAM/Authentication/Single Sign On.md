@@ -8,7 +8,7 @@
 - SSO có thể trở thành SPOF khi mọi service khác yêu cầu user đăng nhập qua Identity Provider
 
 ### SSO flow
-![[../../../_images/typical-sso-v2.png]]
+![[typical-sso-v2.png]]
 
 Các bước thực hiện quá trình SSO
 1. Người dùng gửi request đến dịch vụ (Service Provider / SP)
@@ -27,7 +27,7 @@ Một số protocol thường dùng để implement SSO là
 
 SSO là 1 thành phần của FIM. Hình ảnh dưới minh họa mối quan hệ giữa các khái niệm liên quan
 
-![[../../../_images/sso-types.png]]
+![[sso-types.png]]
 - Có thể thấy OAuth2 thực hiện cả 2 chức năng Authentication và Authorization. Ở khía cạnh Authen, OAuth2 sử dụng OpenID Connect để thực hiện đăng nhập
 
 # References

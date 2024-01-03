@@ -1,8 +1,0 @@
----
-alias:
-	- IAM
----
-
-# Abstract
-
-# References
