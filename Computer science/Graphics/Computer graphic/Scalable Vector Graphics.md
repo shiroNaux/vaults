@@ -3,7 +3,7 @@ tags:
   - SVG
   - svg
 aliases:
-  - Scalable Vector Graphics
+  - SVG
 ---
 # Introduction
 
@@ -50,3 +50,7 @@ Ví dụ:
 ## Circle
 
 ## Ellipse
+
+# References
+1. [Day 1: How to Draw Basic Shapes with SVG - SVG Tutorial (svg-tutorial.com)](https://svg-tutorial.com/svg/basic-shapes)
+2. [SVG Rectangle (w3schools.com)](https://www.w3schools.com/graphics/svg_rect.asp)
