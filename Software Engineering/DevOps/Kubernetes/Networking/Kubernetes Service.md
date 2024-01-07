@@ -13,6 +13,11 @@ Service trong Kubernetes là 1 [[REST]] object, cũng giống như pod hay các 
 
 Giao thức mặc định hỗ trợ khi dùng service là [[TCP]]
 
+
+### Ingress vs Load Balancer
+
+[kubernetes - Ingress vs Load Balancer - Stack Overflow](https://stackoverflow.com/questions/45079988/ingress-vs-load-balancer)
+
 # References
 1. [Service | Kubernetes](https://kubernetes.io/docs/concepts/services-networking/service/)
 2. 
