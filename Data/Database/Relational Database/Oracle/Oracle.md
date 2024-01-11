@@ -3,7 +3,7 @@
 ## Query language
 ##### Dynamic SQL
 
-Dynamic [[SQL]] là 1 tính năng của [[Oracle]], cho phép người dùng viết các câu [[sql|query]] dưới dạng generic, và rồi các câu query đó sẽ được render lúc runtime. Nó tương tụ như các phương pháp templating.
+Dynamic [[SQL]] là 1 tính năng của [[Oracle]], cho phép người dùng viết các câu [[SQL|query]] dưới dạng generic, và rồi các câu query đó sẽ được render lúc runtime. Nó tương tụ như các phương pháp templating.
 
 Có 2 cách để viết dynamic SQL trong PL/SQL:
 - PL/SQL có sẵn tính năng hỗ trợ viết Dynamic [[SQL]]
