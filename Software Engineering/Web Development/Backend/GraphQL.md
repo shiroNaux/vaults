@@ -18,6 +18,8 @@
 
 - Type:
 - Resolver: Là 1 function. Mục đích của resolver là retrieve data từ nguồn dựa theo câu truy vấn của client gửi đến
+- Mutation: Là 1 request dùng để sửa đổi data trên server. Nó giống với ý nghĩa các method: POST, PUT, DELETE trong [[REST]].
+- 
 ## Hạn chế
 
 ### GraphQL vs OData vs REST
