@@ -12,7 +12,12 @@
 		- Hỗ trợ sử dụng biến và tham số khiến query dễ dàng hơn.
 		- Versionless -> Vừa là điểm mạnh, vừa là điểm yếu
 
+# Abstraction
 
+## Glossaries
+
+- Type:
+- Resolver: Là 1 function. 
 ## Hạn chế
 
 ### GraphQL vs OData vs REST
