@@ -66,8 +66,18 @@ spec:
 ## Persistent volumes
 
 Persistent volume là 1 piece of storage, được cung cấp bởi administrator hay dynamic provisioning bởi storage class. Theo 1 cách đơn giản, PV chính là phần storage được cung cấp cho pod, services để sử dụng. Nó có thể là local file system trên node chứa pod hay 1 loại storage khác như object store hay block store. 
+
 ## Projected volumes
 
+
+## Storage Class
+
+Storage Class là các loại lưu trữ mà các container có thể sử dụng
+
+Storage class cần defined được các thông tin như sau:
+- Provisioner
+- parameter
+- reclaimPolicy
 
 # References
 1. [Kubernetes storage is complex, but it’s getting better | Cloud Native Computing Foundation (cncf.io)](https://www.cncf.io/blog/2023/03/28/kubernetes-storage-is-complex-but-its-getting-better/)
