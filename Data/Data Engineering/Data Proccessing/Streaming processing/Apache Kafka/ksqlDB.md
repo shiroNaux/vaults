@@ -26,6 +26,10 @@ alias:
 
 - ksqlDB can also build stateful aggregations on event streams. How many orders have been placed in the last hour? Errors in the last five minutes? Current balance on an account? These aggregates are held in a state store within ksqlDB, and external applications can query the store directly.
 
+# Glossaries
+
+- Stream -> tương ứng với khái niệm table trong [[Relational Database|RDBMS]]. Dữ liệu của stream được lấy từ [[Apache Kafka|Kafka]] topic. Stream sẽ xử lý dữ liệu theo dạng event
+- Table -> Cũng giống như stream, lấy data từ Kafka topic. Tuy nhiên dữ liệu của table sẽ được **reduce by key**.
 # Interact with ksqlSB
 - ksqlDB có thể tương tác thông qua 
 	- [[CLI]]
