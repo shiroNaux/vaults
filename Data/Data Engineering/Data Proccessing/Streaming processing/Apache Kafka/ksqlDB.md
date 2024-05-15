@@ -33,7 +33,7 @@ alias:
 # Interact with ksqlSB
 - ksqlDB có thể tương tác thông qua 
 	- [[CLI]]
-	- [[../../../../../Software Engineering/Web Development/Backend/REST]] [[../../../../../Software Engineering/Web Development/API]]
+	- [[../../../../../Software Engineering/Web Development/API |API]]
 	- Web UI
 	- Client Library
 
