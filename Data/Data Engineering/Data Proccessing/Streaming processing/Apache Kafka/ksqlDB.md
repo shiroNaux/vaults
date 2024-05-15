@@ -28,8 +28,8 @@ alias:
 
 # Glossaries
 
-- Stream -> tương ứng với khái niệm table trong [[Relational Database|RDBMS]]. Dữ liệu của stream được lấy từ [[Apache Kafka|Kafka]] topic. Stream sẽ xử lý dữ liệu theo dạng event
-- Table -> Cũng giống như stream, lấy data từ Kafka topic. Tuy nhiên dữ liệu của table sẽ được **reduce by key**.
+- **Stream** -> tương ứng với khái niệm table trong [[Relational Database|RDBMS]]. Dữ liệu của stream được lấy từ [[Apache Kafka|Kafka]] topic. Stream sẽ xử lý dữ liệu theo dạng event
+- **Table** -> Cũng giống như stream, lấy data từ Kafka topic. Tuy nhiên dữ liệu của table sẽ được **reduce by key**.
 # Interact with ksqlSB
 - ksqlDB có thể tương tác thông qua 
 	- [[CLI]]
