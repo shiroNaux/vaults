@@ -1,5 +1,6 @@
 ---
 ---
+
 # Single Sign On
 ### 1. Introduction
 - Single sing on là cơ chế để đăng nhập nhiều dịch vụ khác nhau thông qua 1 service duy nhất.
