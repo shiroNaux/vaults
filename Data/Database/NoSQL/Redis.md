@@ -20,7 +20,6 @@ Redis là 1 [[Database]] được chia vào loại [[NoSQL]]. Model lưu trữ d
 Redis Cluster là phương pháp để Redis có thể scale horizontaly (linear scale). Cũng giống như các phương pháp scaling khác, 1 Cluster Redis sẽ bao gồm nhiều máy khác nhau, dữ liệu sẽ được partition đều ra cho các máy để lưu trữ và xử lý. Khi có nhu cầu scale thì chỉ cần thêm hoặc giảm số lượng máy trong cluster.
 
 
-
 ## Features
 - Automatically split data among multiple nodes.
 - Vẫn có thể hoạt động bình thường trong Th có 1 số máy failure.
@@ -31,6 +30,14 @@ Model này giúp Redis Clutser đạt được HA. Mỗi máy trong cụm Redis 
 
 Dữ liệu đồng bộ giữa Master và Replica theo cơ chế [[Asynchronous|async]] cho nên tính Consistency sẽ không được đảm bảo.
 # Redis Sentinal
+
+Redis Sentinal là 1 giải pháp HA cho Redis. Nó hoạt động theo cơ chế **hot standby**, sẽ luôn có 1 máy
+
+## Features:
+- Monitoring
+- Notiication
+- Automatic Failover
+- Configuration provider
 
 # Comparision
 
