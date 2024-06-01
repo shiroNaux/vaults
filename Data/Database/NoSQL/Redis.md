@@ -23,6 +23,11 @@ Redis Cluster là phương pháp để Redis có thể scale horizontaly (linear
 - Automatically split data among multiple nodes.
 - Vẫn có thể hoạt động bình thường trong Th có 1 số máy failure.
 
+## Master-Replica Model
+
+Model này giúp Redis Clutser đạt được HA. Mỗi máy trong cụm Redis sẽ đảm nhận 1 trong 2 vai trò: Master hoặc Replica. Dữ liệu sẽ được ghi vào cả Master và Replica. Khi Master không thể sử dụng được thì Replica sẽ được promote thành Mater và phục vụ Client.
+
+Dữ liệu đồng bộ giữa Master và Replica theo cơ chế [[Asynchronous|async]] cho nên tính Consistency sẽ không được đảm bảo.
 # Redis Sentinal
 
 # Comparision
