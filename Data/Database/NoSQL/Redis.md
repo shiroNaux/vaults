@@ -13,6 +13,8 @@ Redis là 1 [[Database]] được chia vào loại [[NoSQL]]. Model lưu trữ d
 
 # Architecture
 
+# Storage
+
 # Redis Cluster
 
 Redis Cluster là phương pháp để Redis có thể scale horizontaly (linear scale). Cũng giống như các phương pháp scaling khác, 1 Cluster Redis sẽ bao gồm nhiều máy khác nhau, dữ liệu sẽ được partition đều ra cho các máy để lưu trữ và xử lý. Khi có nhu cầu scale thì chỉ cần thêm hoặc giảm số lượng máy trong cluster.
