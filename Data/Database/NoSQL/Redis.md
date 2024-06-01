@@ -31,9 +31,9 @@ Model này giúp Redis Clutser đạt được HA. Mỗi máy trong cụm Redis 
 Dữ liệu đồng bộ giữa Master và Replica theo cơ chế [[Asynchronous|async]] cho nên tính Consistency sẽ không được đảm bảo.
 # Redis Sentinal
 
-Redis Sentinal là 1 giải pháp HA cho Redis. Nó hoạt động theo cơ chế **hot standby**, sẽ luôn có 1 máy
+Redis Sentinal là 1 giải pháp HA cho Redis. Nó hoạt động theo cơ chế **hot standby**, các máy replicated sẽ lưu data giống như trên master 
 
-## Features:
+## Features
 - Monitoring
 - Notiication
 - Automatic Failover
