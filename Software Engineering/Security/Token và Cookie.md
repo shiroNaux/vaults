@@ -1,7 +1,7 @@
 # Token và Cookie
 
 ## Lý do cần dùng Token hoặc Cookie
-- Http là stateless, tức  là mỗi request sẽ phải đăng nhập lại
+- [[HTTP]] là stateless, tức  là mỗi request sẽ phải đăng nhập lại
 - Để khắc phục => Client cần lưu lại thông tin của session
 - Có 2 cách phổ biến là Token và Cookie
 
@@ -40,3 +40,4 @@ Choose Cookies when:
 
 ###### References
 + [Cookie vs Token authentication | Engineering Education (EngEd) Program | Section](https://www.section.io/engineering-education/cookie-vs-token-authentication/)
++ [Demystifying cookies and tokens – Tommi Hovi | The Security blog](https://tommihovi.com/2024/05/demystifying-cookies-and-tokens/)
