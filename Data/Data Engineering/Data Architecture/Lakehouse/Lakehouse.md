@@ -12,6 +12,10 @@ tags:
 
 ![[lakehouse.png]]
 
+Để lưu trữ được metadata của table, các table open format sẽ tạo thêm mục thư mục ẩn trong folder chứa data, cụ thể như sau:
+
+![[table_format_structure.png]]
+
 # Reference
 
 1. https://lakefs.io/hudi-iceberg-and-delta-lake-data-lake-table-formats-compared/
