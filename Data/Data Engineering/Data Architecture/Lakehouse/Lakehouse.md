@@ -22,6 +22,8 @@ tags:
 
 ### Merge on Read
 
+The **Merge-on-Read** strategy optimizes write performance by logging updates separately rather than rewriting base files immediately. Changes are stored in delta logs, and when data is queried, these logs are merged with the base files on-the-fly.
+
 #### Advantages
 - Tốt cho các workload cần update hoặc thay đổi dữ liệu nhiều, thường xuyên
 - Phù hợp với các ứng dụng cần xử lý real time
@@ -31,10 +33,10 @@ tags:
 ### Copy on Write
 In the **Copy-on-Write** approach, any updates or modifications to a dataset result in the creation of new versions of the data files. Instead of altering existing files, COW writes changes to new files, which ensures that the original data remains intact until the new version is finalized.
 
-Khi đọc dữ liệu 
-
 #### Advantages
+- 
 #### Disadvantages
+- Write chậm do phải tạo file mới, copy dữ liệu rồi mới append
 
 ### Write-Audit-Publish
 
