@@ -16,6 +16,16 @@ tags:
 
 ![[table_format_structure.png]]
 
+
+
+# Notion
+
+### Merge on Read
+
+### Copy on Write
+
+### Write-Audit-Publish
+
 # Reference
 
 1. https://lakefs.io/hudi-iceberg-and-delta-lake-data-lake-table-formats-compared/
