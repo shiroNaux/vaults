@@ -38,6 +38,15 @@ In the **Copy-on-Write** approach, any updates or modifications to a dataset r
 #### Disadvantages
 - Write chậm do phải tạo file mới, copy dữ liệu rồi mới append
 
+|                   | CoW                                      | MoR                                     |
+| ----------------- | ---------------------------------------- | --------------------------------------- |
+| Update Method     | Use Cases                                | Appends changes to delta files          |
+| Read Performance  | Fast                                     | Can be slower due to merging            |
+| Write Performance | Slower, especially for small updates     | Fast                                    |
+| Complexity        | Simpler                                  | More complex                            |
+| Use Cases         | Read-heavy workloads, infrequent updates | Write-heavy workloads, frequent updates |
+
+
 ### Write-Audit-Publish
 
 # Reference
