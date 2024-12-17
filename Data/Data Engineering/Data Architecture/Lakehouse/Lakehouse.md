@@ -22,7 +22,19 @@ tags:
 
 ### Merge on Read
 
+#### Advantages
+- Tốt cho các workload cần update hoặc thay đổi dữ liệu nhiều, thường xuyên
+- Phù hợp với các ứng dụng cần xử lý real time
+#### Disadvantages
+- Sẽ chậm hơn COW do phải merge dữ liệu trước khi gửi cho client
+
 ### Copy on Write
+In the **Copy-on-Write** approach, any updates or modifications to a dataset result in the creation of new versions of the data files. Instead of altering existing files, COW writes changes to new files, which ensures that the original data remains intact until the new version is finalized.
+
+Khi đọc dữ liệu 
+
+#### Advantages
+#### Disadvantages
 
 ### Write-Audit-Publish
 
