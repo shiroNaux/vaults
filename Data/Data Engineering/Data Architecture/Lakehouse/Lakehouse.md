@@ -52,7 +52,21 @@ In the **Copy-on-Write** approach, any updates or modifications to a dataset r
 
 ## Catalogs
 
-Catalogs là phần mềm lưu trữ metadata
+Catalogs là phần mềm lưu trữ metadata, hỗ trợ các công cụ Query engine có thể tương tác với dữ liệu lưu trên lakehouse để có được fully functionality như là 1 [[database]], bao gồm
+- Storage -> Dữ liệu lư trữ sử dụng các Open table format
+- Query Engine -> Công cụ truy vấn & tính toán
+- Catalogs -> Lưu trữ metadata của các bảng được lưu trên storage và cung cấp cho query engine.
+
+Các catalogs phổ biếm:
+
+- Hive
+- Tabular
+- JDBC
+- AWS Glue
+- Unity
+- Polaris
+
+
 
 # Reference
 
