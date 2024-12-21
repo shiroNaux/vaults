@@ -13,7 +13,7 @@ LDAP thường được dùng kết hợp với [[Single Sign On|SSO]] để xá
 
 LDAP hoạt động theo mô hình Client - Server. Client là ứng dụng sử dụng LDAP sẽ gửi yêu cầu đến Directory server, server sẽ tìm kiếm kết quả và trả về cho client. Luồng tương tác giữa client và server được mô tả theo hình dưới:
 
-![[Pasted image 20240530004314.png]]
+![[LDAP flow.png]]
 
 
 # LDAP Server

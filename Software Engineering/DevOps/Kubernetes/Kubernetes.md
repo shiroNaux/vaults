@@ -188,6 +188,12 @@ Node controller có nhiệm vụ update các Node khi mà các machine hay serve
 ### 3. Service controller
 - Service controller sẽ tương tác với các dịch vụ của cloud provider như load balancer, IP, Packet filtering, ...và sử dụng chúng để hỗ trợ cho hoạt động của cluster.
 
+#
+##
+### Annotations & Labels
+
+Annotations và Label là các 
+
 # References
 1. [Concepts | Kubernetes](https://kubernetes.io/docs/concepts/)
 4. [How To Level Up Your Kubernetes Game | by Piotr | ITNEXT](https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9)
