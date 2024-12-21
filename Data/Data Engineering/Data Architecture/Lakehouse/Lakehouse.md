@@ -49,6 +49,11 @@ In the **Copy-on-Write** approach, any updates or modifications to a dataset r
 
 ### Write-Audit-Publish
 
+
+## Catalogs
+
+Catalogs là phần mềm lưu trữ metadata
+
 # Reference
 
 1. https://lakefs.io/hudi-iceberg-and-delta-lake-data-lake-table-formats-compared/
