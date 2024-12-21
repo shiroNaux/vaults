@@ -192,11 +192,14 @@ Node controller có nhiệm vụ update các Node khi mà các machine hay serve
 ##
 ### Annotations & Labels
 
-Annotations và Label là các 
+Annotations và Labels được dùng để đánh tag các trên k8s. 
+Annotations và labels hoạt động với cơ chế key-value pairs
+
+Các 
 
 # References
 1. [Concepts | Kubernetes](https://kubernetes.io/docs/concepts/)
-4. [How To Level Up Your Kubernetes Game | by Piotr | ITNEXT](https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9)
-5. [An Introduction to Kubernetes | DigitalOcean](https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes)
-6. [inhibit (www.freedesktop.org)](https://www.freedesktop.org/wiki/Software/systemd/inhibit/)
-7. 
+2. [How To Level Up Your Kubernetes Game | by Piotr | ITNEXT](https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9)
+3. [An Introduction to Kubernetes | DigitalOcean](https://www.digitalocean.com/community/tutorials/an-introduction-to-kubernetes)
+4. [inhibit (www.freedesktop.org)](https://www.freedesktop.org/wiki/Software/systemd/inhibit/)
+5. 
