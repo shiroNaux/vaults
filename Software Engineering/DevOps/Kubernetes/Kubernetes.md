@@ -192,7 +192,7 @@ Node controller có nhiệm vụ update các Node khi mà các machine hay serve
 ##
 ### Annotations & Labels
 
-Annotations và Labels được dùng để đánh tag các trên k8s. 
+Annotations in Kubernetes (K8s) are metadata used to express additional information related to a resource or object.
 Annotations và labels hoạt động với cơ chế key-value pairs
 
 Các 
