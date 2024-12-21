@@ -197,6 +197,13 @@ Annotations và labels hoạt động với cơ chế key-value pairs
 
 Các 
 
+
+| Annotations                                                  | Labels                                |
+| ------------------------------------------------------------ | ------------------------------------- |
+| Annotations are used to store data about the resource itself | Labels are used to identify resources |
+|                                                              |                                       |
+
+
 # References
 1. [Concepts | Kubernetes](https://kubernetes.io/docs/concepts/)
 2. [How To Level Up Your Kubernetes Game | by Piotr | ITNEXT](https://itnext.io/how-to-level-up-your-kubernetes-game-96f8f7ea50b9)
