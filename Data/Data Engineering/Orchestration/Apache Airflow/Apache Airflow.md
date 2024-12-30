@@ -13,3 +13,8 @@
 
 
 
+## DAG File Processing
+
+Quy trình xử lý các file DAG của Airflow như sau:
+
+![[airflow_dag_file_processor.png]]
