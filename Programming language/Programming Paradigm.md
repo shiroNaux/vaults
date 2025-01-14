@@ -55,15 +55,15 @@
 
 ### 2. Object-Oriented
 
-- [[Object Oriented Programming|OOP]] là loại ngôn ngữ phổ biến nhất
+- [[Programming language/Object Oriented Programming|OOP]] là loại ngôn ngữ phổ biến nhất
 - The core concept of OOP is to separate concerns into entities which are coded as objects. Each entity will group a given set of information (properties) and actions (methods) that can be performed by the entity.
 -  The smallest and basic entity is object and all kind of computation is performed on the objects only.
 - Với cách lập trình kiểu này, có thể giải quyết hầu hết các bài toán trong thực tế với việc mô phỏng các đối tượng thành các object
-- Các ngôn ngữ thuộc loại [[Object Oriented Programming|OOP]]
+- Các ngôn ngữ thuộc loại [[Programming language/Object Oriented Programming|OOP]]
 	- [[C++]]
 	- [[Java]]
 	- [[C Sharp#]]
-- [[JavaScripts]] không thuộc loại OOP mặc dù có 1 số tính chất của [[Object Oriented Programming|OOP]]
+- [[JavaScripts]] không thuộc loại OOP mặc dù có 1 số tính chất của [[Programming language/Object Oriented Programming|OOP]]
 
 - Advantages
 	- Reuse of code through Inheritance
@@ -133,9 +133,9 @@ const result = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # Mixing paradigm
 
 - Các ngôn ngữ có thể được chia vào nhiều 1 loại
-- Ví dụ: [[Scala]] vừa là functional programming, vừa là ngôn ngữ [[OOP]]
-- Hay [[JS]] là 1 ngôn ngữ lập trình hàm, nhưng hỗ trợ rất nhiều tính năng của [[OOP]]
-- Rất nhiều các ngôn ngữ [[OOP]] đã áp dụng các hàm đặc trưng của functional programming như các hàm `map`, `flatMap`, `lambda expression`, *higher-order functions* vào trong syntax: [[Java]] từ Java 8, [[C Sharp|C#]] từ .NetCore, [[C|C]]/[[C++]] từ C++ 11
+- Ví dụ: [[Scala]] vừa là functional programming, vừa là ngôn ngữ [[Object Oriented Programming]]
+- Hay [[JS]] là 1 ngôn ngữ lập trình hàm, nhưng hỗ trợ rất nhiều tính năng của [[Object Oriented Programming]]
+- Rất nhiều các ngôn ngữ [[Object Oriented Programming]] đã áp dụng các hàm đặc trưng của functional programming như các hàm `map`, `flatMap`, `lambda expression`, *higher-order functions* vào trong syntax: [[Java]] từ Java 8, [[C Sharp|C#]] từ .NetCore, [[C|C]]/[[C++]] từ C++ 11
 
 # References
 1. [Programming Paradigms – Paradigm Examples for Beginners (freecodecamp.org)](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/)

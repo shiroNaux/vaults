@@ -16,7 +16,7 @@
 
 ## Glossaries
 
-- Type:
+- Type: -> struct trong [[C]]/[[C++]] hay object trong 1 số ngôn ngữ lập trình [[Object Oriented Programming]].
 - Resolver: Là 1 function. Mục đích của resolver là retrieve data từ nguồn dựa theo câu truy vấn của client gửi đến
 - Mutation: Là 1 request dùng để sửa đổi data trên server. Nó giống với ý nghĩa các method: POST, PUT, DELETE trong [[REST]].
 - 
