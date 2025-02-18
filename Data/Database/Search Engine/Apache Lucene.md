@@ -3,7 +3,7 @@
 # Abstract
 - Là 1 thư viện [[Java]] library dùng để indexing và searching, 
 - Sử dụng bằng cách nhúng trực tiếp trong ứng dụng [[Java]]
-- [[Elastic Search]] và [[Apache Solr]] cũng được phát triển dựa trên [[Apache Lucece]]
+- [[Data/Database/Elastic Search]] và [[Apache Solr]] cũng được phát triển dựa trên [[Apache Lucece]]
 
 
 # Architecture
