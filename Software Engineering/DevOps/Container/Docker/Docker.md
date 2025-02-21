@@ -13,8 +13,8 @@ Docker use Client-Server Architecture.
 Clinet & Server communicate using a REST API over UNIX socket or a network interface
 Components
 - Docker Client: -> Docker CLI
-- Docker Daemon
-- Docker Host
+- Docker Daemon: -> Server. The core engine that manages Docker operations. It runs on the host operating system and manages Docker services and objects like images, containers, networks, and volumes... The daemon listens for Docker API requests and processes commands to manage containers and images. It can also communicate with other daemons in a distributed system to facilitate orchestration tasks across multiple hosts
+- Docker Host: -> Máy chạy docker daemon
 - Docker Registry
 
 
