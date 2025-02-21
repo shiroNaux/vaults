@@ -17,6 +17,6 @@ Components
 - Docker Host: -> Máy chạy docker daemon
 - Docker Registry
 
-*Docker Daemon* use [[Container Runtime|container runtime]] to execute containers.
+*Docker Daemon* use [[Container Runtime|container runtime]] to execute containers. By default docker use [[containerd|containerd]]
 
 # References
