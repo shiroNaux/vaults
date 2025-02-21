@@ -10,8 +10,12 @@ Docker is an open platform for developing, shipping and running applications. It
 
 # Architecture
 Docker use Client-Server Architecture.
-Clinet & Server communicate using a REST API over UNIX socket
-
+Clinet & Server communicate using a REST API over UNIX socket or a network interface
+Components
+- Docker Client: -> Docker CLI
+- Docker Daemon
+- Docker Host
+- Docker Registry
 
 
 
