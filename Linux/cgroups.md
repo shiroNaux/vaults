@@ -1,5 +1,10 @@
 ---
+tags:
+  - cgoups
+  - linux
+  - process
 ---
+
 # Abstract
 cgroup là viết tắt của control group. cgroup là 1 cơ chế (machenism)
 

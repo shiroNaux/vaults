@@ -35,7 +35,7 @@ The other machines in the cluster are designated as **nodes** -> accepting and 
 	- Endpoints controller: Populates the Endpoints object (that is, joins Services & Pods).
 	- Service Account & Token controllers: Create default accounts and API access tokens for new namespaces.
 - Mỗi loại lại có 1 chức năng riêng biệt là quản lý các chức năng của Kubernetes
-- Ty có nhiều loại controller khác nhau, và mỗi loại lại được chạy bởi 1 [[process]] riêng, nhưng chúng đều được compiled chung trong 1 binary
+- Ty có nhiều loại controller khác nhau, và mỗi loại lại được chạy bởi 1 [[Process]] riêng, nhưng chúng đều được compiled chung trong 1 binary
 ### 4. kube-scheduler
 - Scheduler có nhiệm vụ giám sát available capacity trên các node trong cluster. Và mỗi khi nhận được workload’s operating requirements, nó sẽ phân tích, tính toán và đưa ra quyết định assign workload vào 1 hoặc nhiều node 1 một cách hợp lý sao cho không có node nào phải chạy vượt quá lượng tài nguyên mà node đó có.
 - Các yếu tố ảnh hưởng tới quyết định của scheduler bao gồm

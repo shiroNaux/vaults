@@ -13,7 +13,7 @@
 	- Với hệ thống distributed, có sự giao tiếp vào thống nhất giữa các node
 - Nhưng git vẫn có một số điểm khác biệt so với các [[database]] thông thường
 	- Git thường dùn để lưu trữ các file code -> dung lượng rất nhỏ, nên mọi thay đổi đều có thể được lưu lại 
-	- Với các database, thông thường chúng là các long-live [[process]] và sử dụng 1 lượng lớn [[RAM]] để lưu trữ và xử lý dữ liệu. Nhưng git thì không, Git lưu dữ liệu ra file rồi xử lý trực tiếp trên các file đó, và chạy bằng các short-lived process
+	- Với các database, thông thường chúng là các long-live [[Process]] và sử dụng 1 lượng lớn [[RAM]] để lưu trữ và xử lý dữ liệu. Nhưng git thì không, Git lưu dữ liệu ra file rồi xử lý trực tiếp trên các file đó, và chạy bằng các short-lived process
 # Concepts
 
 # Internal Architecture

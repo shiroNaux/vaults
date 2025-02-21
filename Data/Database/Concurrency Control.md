@@ -17,7 +17,7 @@ Nếu không đảm bảo được khả năng CC, có 1 số điều sau có th
 ---
 
 ### Lock-Based protocols
-Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[process]] hay transaction sử dụng tài nguyên. Các porcess/transaction khác phải đợi đến khi lock được release thì mới tiếp cận được data. Các phương pháp lock này được phân loại thành:
+Đối với protocol loại này, các resource sẽ bị khóa loại khi có 1 [[Process]] hay transaction sử dụng tài nguyên. Các porcess/transaction khác phải đợi đến khi lock được release thì mới tiếp cận được data. Các phương pháp lock này được phân loại thành:
 - Shared lock
 - Exclusive lock
 - Update lock
