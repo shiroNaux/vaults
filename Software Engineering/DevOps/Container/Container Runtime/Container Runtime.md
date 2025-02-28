@@ -11,6 +11,7 @@ Chức năng của container runtime:
 - Resource Allocation and Management: Quản lý tài nguyên cấp phát cho các container.
 
 # Types
+- 
 
 # Popular Runtime
 1. Docker
