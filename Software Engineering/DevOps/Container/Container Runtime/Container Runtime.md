@@ -6,12 +6,14 @@ alias: container runtime
 # Abstraction
 Container runtime là 1 thành phần quan trọng để các công nghệ ảo container có thể hoạt động được.
 Chức năng của container runtime:
-- Execution of Containers: Container runtime thực thi các lệnh tạo, running container
-- Interaction with the Host OS
-- Resource Allocation and Management: Quản lý tài nguyên cấp phát cho các container.
+- _Execution of Containers_: Container runtime thực thi các lệnh tạo, running container
+- _Interaction with the Host OS_: Sử dụng các công cụ mức [[OS]] như [[cgroups]], [[namespaces]] để
+- _Resource Allocation and Management_: Quản lý tài nguyên cấp phát cho các container.
 
 # Types
-- 
+- **Low-Level Container Runtimes**: 
+- **High-Level Container Runtimes**: 
+- **Specialized Runtimes**: 
 
 # Popular Runtime
 1. Docker
