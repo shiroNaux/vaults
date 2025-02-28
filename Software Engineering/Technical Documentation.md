@@ -1,6 +1,5 @@
 ---
 ---
-
 ## arc 42 templates
 
 ___arc42___ là 1 templates dựng sẵn cho các document về technical. Nó có các đặc điểm sau:
@@ -36,3 +35,4 @@ Ví dụ:
 2. [The C4 model for visualising software architecture](https://c4model.com/)
 3. [Principles of technical documentation – INNOQ](https://www.innoq.com/en/articles/2022/01/principles-of-technical-documentation/)
 4. [arc42 - arc42](https://arc42.org/)
+5. [C4 Modelling for Data Teams: From Chaos to Clarity | by Andy Sawyer | Jan, 2025 | Data Training Lab](https://blog.datatraininglab.com/c4-modelling-for-data-teams-from-chaos-to-clarity-a9f499007e20)
