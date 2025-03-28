@@ -8,6 +8,8 @@ Mục đích ban đầu của [[Kubernetes]] là để triển khai các statele
 
 - CSI - Container Storage Interface. 
 - Volume: 
+- Persistent Volume
+- Persistent Volume Claim (PVC): chỉ là **request** không ảnh hưởng 
 
 ## Volume
 
