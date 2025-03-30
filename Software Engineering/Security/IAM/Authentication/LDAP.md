@@ -19,7 +19,7 @@ LDAP hoạt động theo mô hình Client - Server. Client là ứng dụng sử
 # LDAP Server
 
 Có 1 số giải pháo LDAP server phổ biến là:
-- Active Directory: Hỗ trợ cả [[Software Engineering/Security/IAM/Kerberos]] và LDAP
+- Active Directory: Hỗ trợ cả [[Kerberos]] và LDAP
 
 # Features
 

@@ -1,7 +1,13 @@
 ---
 ---
 # Single Sign On
-### 1. Introduction
+## Introduction
+
+### Glossaries
+- SSO:
+- IdP:
+- SP
+### Abstraction
 - Single sing on là cơ chế để đăng nhập nhiều dịch vụ khác nhau thông qua 1 service duy nhất.
 - SSO chủ yếu thực hiện tác vụ [[Authentication]] chứ không bao gồm [[Authorization]] trong nó
 - SSO có thể bị nhầm lẫn với Same sign on -> tức là dùng chung 1 credential cho mọi site (ví dụ: dùng chung username, password cho mọi web khác nha)
@@ -19,7 +25,7 @@ Các bước thực hiện quá trình SSO
 
 ## 2. Implement SSO
 Một số protocol thường dùng để implement SSO là
-- [[OpenID Connect]]
+- [[OIDC|OpenID Connect]]
 - [[LDAP]]
 - [[SAML]]
 - Kerberos
@@ -29,6 +35,38 @@ SSO là 1 thành phần của FIM. Hình ảnh dưới minh họa mối quan h�
 
 ![[sso-types.png]]
 - Có thể thấy OAuth2 thực hiện cả 2 chức năng Authentication và Authorization. Ở khía cạnh Authen, OAuth2 sử dụng OpenID Connect để thực hiện đăng nhập
+
+# Method & Protocol
+
+| Feature\Method                  | Kerberos        | OIDC                       | LDAP                                                               | SAML | NTLM    | RADIUS  |
+| ------------------------------- | --------------- | -------------------------- | ------------------------------------------------------------------ | ---- | ------- | ------- |
+| Network Authentication Protocol |                 |                            |                                                                    |      |         |         |
+| Primary Use                     | Authentication  | Authentication  + Identity |                                                                    |      |         |         |
+| Architecture                    |                 |                            |                                                                    |      |         |         |
+| Auth Flow type                  |                 |                            |                                                                    |      |         |         |
+| SSO                             | Yes             | Yes                        | __No__ (LDAP is not protocol for SSO, just a part of SSO solution) | Yes  | Limited | Limited |
+| Mutual Authen tication          |                 |                            |                                                                    |      |         |         |
+| Token Type                      | Ticker (Binary) |                            |                                                                    |      |         |         |
+| Cross Domain Support            |                 |                            |                                                                    |      |         |         |
+| Complexity                      |                 |                            |                                                                    |      |         |         |
+| Encryption & Security           |                 |                            |                                                                    |      |         |         |
+|                                 |                 |                            |                                                                    |      |         |         |
+
+## RADIUS
+
+RADIUS is most appropriate for controlling network access for remote users, including those connecting via VPNs, Wi-Fi, or dial-up.
+
+## NTLM
+
+NTLM is most appropriate for maintaining compatibility with older Windows systems and applications that do not support more modern authentication protocols.
+
+# Recommendation
+
+- [[Kerberos]] & NTLM: Internal authen, Windows environment
+- [[OIDC]]: Web based app, federated login
+- [[LDAP]]: Hierarchical organizational data, on-prem
+- RADIUS: Legacy, for network devices
+- [[SAML]]: 
 
 # References
 1. [What Is and How Does Single Sign-On Authentication Work? (auth0.com)](https://auth0.com/blog/what-is-and-how-does-single-sign-on-work/)
