@@ -1,5 +1,5 @@
 ---
-aliases
+aliases:
   - OLAP
   - Online analytical proccessing
 ---

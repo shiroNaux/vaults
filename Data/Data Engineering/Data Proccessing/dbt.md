@@ -1,6 +1,6 @@
 ---
 alias:
-	- data build tool
+- data build tool
 ---
 
 # Abstract

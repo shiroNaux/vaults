@@ -1,6 +1,6 @@
 ---
 alias:
-	- PKI
+- PKI
 ---
 # Introduction
 

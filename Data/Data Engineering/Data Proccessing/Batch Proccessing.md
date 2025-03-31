@@ -1,5 +1,6 @@
 ---
 aliases:
-	- batch proccessing
-	- batch proccess
+  - batch processing
+  - batch process
+  - batching
 ---

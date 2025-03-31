@@ -1,5 +1,0 @@
----
-alias:
-	- C
-	- C language
----
