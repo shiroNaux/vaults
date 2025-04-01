@@ -1,0 +1,5 @@
+---
+tags:
+  - ODBC
+---
+# Abstraction
