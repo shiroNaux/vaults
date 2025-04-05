@@ -1,4 +1,6 @@
 ---
-alias:
-- OOP
+aliases:
+  - OOP
+tags:
+  - oop
 ---
