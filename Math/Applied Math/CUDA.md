@@ -1,4 +1,7 @@
-  ---
+---
+tags:
+  - cuda
+  - nvidia
 ---
 
 # References
