@@ -80,6 +80,8 @@ Với loại CC này, lock sẽ được sẽ được thực hiện hay không 
 # Concurrency control in [[PostgreSQL]]
 
 Multiversion CC là cơ chế xử lý concurrency operations chính của [[PostgreSQL]]
+
+https://www.geeksforgeeks.org/multiversion-concurrency-control-mvcc-in-postgresql/
 # References
 
 1. [Concurrency control - Wikipedia](https://en.wikipedia.org/wiki/Concurrency_control)
