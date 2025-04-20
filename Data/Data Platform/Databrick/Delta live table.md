@@ -4,9 +4,9 @@
 # Introduction
 
 Delta live table là 1 công cụ dùng để thực hiện transform dữ liệu. Nó có những đặc điểm sau
-- Sử dụng dưới dạng code SQL hoặc Python -> kết hợp của [[dbt]] và [[Apache Spark]]
+- Có thể được sử dụng bằng SQL hoặc Python -> kết hợp của [[dbt]] và [[Apache Spark]]
 - Hỗ trợ cả streaming và batch process
-- Chỉ hoạt động trên nền tảng của Databrick
+- Sản phẩm priority của Databrick (closed source)
 
 # Alternative
 1. [[dbt]]
