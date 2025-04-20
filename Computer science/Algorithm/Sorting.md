@@ -1,7 +1,12 @@
 ---
 aliases:
 ---
-# Stability
+# Noticeable Algorithm
+
+Các thuật toán sắp xếp đáng lưu ý bao gồm:
+- 
+# Tính chất
+## Stability
 Reference: [Stability and Sorting Algorithms (kirupa.com)](https://www.kirupa.com/data_structures_algorithms/stability_sorting_algorithms.htm)
 Stability của thuật toán sắp xếp là khả năng giữ nguyên được các thứ tụ của các phần tử có cùng giá trị  sau khi hoàn thành thuật toán sắp xếp
 Ví dụ: Ta có 1 dãy cần sắp xếp như sau
