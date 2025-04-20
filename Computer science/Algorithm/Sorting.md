@@ -23,15 +23,15 @@ thì thuật toán đó được coi là unstability
 
 Stability của các thuật toán sắp xếp phổ biến:
 
-| **Sorting Algorithm** | **Stability** | 
-| ----------------- | --------- |
-| Bublle Sort       | Stable    |
-| Selection Sort    | Unstable  |
-| Insertion Sort    | Stable    |
-| Merge Sort        | Stable    |
-| Quick Sort        | Unstable  |
-| Heap Sort         | Unstable  |
-| Counting Sort     | Stable    |
-| Radix Sort        | Stable    |
-| Tim Sort          | Stable    |
+| **Sorting Algorithm** | **Stability** |
+| --------------------- | ------------- |
+| Bublle Sort           | Stable        |
+| Selection Sort        | Unstable      |
+| Insertion Sort        | Stable        |
+| Merge Sort            | Stable        |
+| Quick Sort            | Unstable      |
+| Heap Sort             | Unstable      |
+| Counting Sort         | Stable        |
+| Radix Sort            | Stable        |
+| Tim Sort              | Stable        |
 
