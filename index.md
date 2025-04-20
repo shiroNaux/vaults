@@ -1,6 +1,6 @@
 # Hello there
-Welcome to my digital garden
+Welcome to my digital garden 🥹🥹
    
-- Github: https://github.com/shiroNaux
-- LinkedIn:  
-- Blog: https://blog.nauxs.com
+- **Github**: [shiroNaux (Vũ Trường Xuân)](https://github.com/shiroNaux)
+- **LinkedIn**: [Vũ Trường Xuân | LinkedIn](https://www.linkedin.com/in/naux/)
+- **Blog**: [i miss her 🥹🥹🥹](https://blog.nauxs.com/)
