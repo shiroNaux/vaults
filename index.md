@@ -9,3 +9,4 @@ Welcome to my digital garden 🥹🥹
 # Glossaries
 
 - Shadow Banking System: Là các tổ chức tài chính có chức năng gần giống với ngân hàng (trung gian nguồn vốn, chuyển đổi loại tài sản, ...) mà không phải tuân theo các quy định dành cho các ngân hàng.
+- 
