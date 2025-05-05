@@ -8,4 +8,4 @@ Welcome to my digital garden 🥹🥹
 
 # Glossaries
 
-- Shadow Banking System: 
+- Shadow Banking System: Là hệ thống các tổ chức tài chính, nhưng mà cho vay mà không sử dụng deposit như các ngân hàng -> more risk hơn, tuy nhiên cũng sẽ không phải tuân theo các nguyên tắc dành cho các ngân hàng
