@@ -8,4 +8,4 @@ Welcome to my digital garden 🥹🥹
 
 # Glossaries
 
-- 
+- Shadow Banking System: 
