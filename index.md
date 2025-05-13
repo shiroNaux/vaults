@@ -10,3 +10,7 @@ Welcome to my digital garden 🥹🥹
 
 - **Shadow Banking System**: Là các tổ chức tài chính có chức năng gần giống với ngân hàng (trung gian nguồn vốn, chuyển đổi loại tài sản, ...) mà không phải tuân theo các quy định dành cho các ngân hàng.
 - **Row Contention**: In a typical relational [[database]], when a transaction needs to update a row, it acquires an _exclusive lock_ on that row. This lock prevents other transactions from modifying the same row. When many concurrent transactions converge on the _exact same row_ — our “hot row”— they are forced to queue up, waiting for the current lock holder to finish.
+- Oracle
+	- A company
+	- **Crypto**: 
+	- **Mystic**: 
