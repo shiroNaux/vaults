@@ -14,3 +14,7 @@ Welcome to my digital garden 🥹🥹
 	- A company
 	- **Crypto**: 
 	- **Mystic**: 
+- Deployment Strategy:
+	- Rolling
+	- Blue-Green
+	- 
