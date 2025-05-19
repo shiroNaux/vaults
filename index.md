@@ -17,4 +17,4 @@ Welcome to my digital garden 🥹🥹
 - Deployment Strategy:
 	- Rolling
 	- Blue-Green
-	- 
+- QE & QT: Quantiative Easing & Quantiative Tightening. QE mục đích là bơm tiền ra thị trường, còn QT thì ngược lại rút vốn ra khỏi thị trường. Các làm thì có nhiều các khác nhau (lãi suất, in tiền, mua trái phiếu, ...)
