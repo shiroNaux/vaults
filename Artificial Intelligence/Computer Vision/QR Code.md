@@ -201,3 +201,4 @@ Loại mã QR này sẽ cho phép chèn hình ảnh hoặc các dạng đồ h�
 2. [QR code - Wikipedia](https://en.wikipedia.org/wiki/QR_code)
 3. [QR Code Types: Different Types of QR Codes (sproutqr.com)](https://www.sproutqr.com/blog/qr-code-types)
 4. [(PDF) An Introduction to QR Code Technology (researchgate.net)](https://www.researchgate.net/publication/318125149_An_Introduction_to_QR_Code_Technology)
+5. https://qr.blinry.org/
