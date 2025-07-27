@@ -14,10 +14,10 @@ Welcome to my digital garden 🥹🥹
 	- A company of course 😁
 	- **Crypto**: 
 	- **Mystic**: 
-- Deployment Strategy:
+- **Deployment Strategy**:
 	- Rolling
 	- Blue-Green
-- QE & QT: Quantiative Easing & Quantiative Tightening. QE mục đích là bơm tiền ra thị trường, còn QT thì ngược lại rút vốn ra khỏi thị trường. Các làm thì có nhiều các khác nhau (lãi suất, in tiền, mua trái phiếu, ...)
+- **QE & QT**: Quantiative Easing & Quantiative Tightening. QE mục đích là bơm tiền ra thị trường, còn QT thì ngược lại rút vốn ra khỏi thị trường. Các làm thì có nhiều các khác nhau (lãi suất, in tiền, mua trái phiếu, ...)
 - CPU caching sensitive: 
-- A2/AD: Anti-Access/Area Denial - Là 1 chiến lược quân sự chống tiếp cận khu vực. Chiến lược A2/AD thường được nhắc đến là của Trung Quốc trong việc chống tiếp cận từ biển.
-- ADIZ: Air defence identification zone - Vùng nhận dạng phòng không
+- **A2/AD**: Anti-Access/Area Denial - Là 1 chiến lược quân sự chống tiếp cận khu vực. Chiến lược A2/AD thường được nhắc đến là của Trung Quốc trong việc chống tiếp cận từ biển.
+- **ADIZ**: Air defence identification zone - Vùng nhận dạng phòng không
