@@ -163,6 +163,15 @@ Tuy nhiên so với Materialized view, Projection có các điểm sau
 ##### Disadvantages
 - Projection không làm thay đổi data quá nhiều, hầu hết nó sẽ được dùng để có nhiều cách  sắp xếp dữ liệu để câu truy vấn có hiệu năng tốt hơn. Còn materialized view thì có khả năng xử lý dữ liệu ở mức cao hơn, do nó có thể kết hợp với các bảng khác hay sử dụng nhiều hàm khác. -> Materialized view xử lý dữ liệu tốt hơn
 
+# Caching
+ClickHouse cache gần như mọi thứ có thể 😃😃😃
+Source: https://clickhouse.com/blog/building-a-distributed-cache-for-s3
+
+
+
+# Cautions
+
+1. ClickHouse là columnar store cho nên việc update sẽ không efficient. Bởi vì lưu trữ dạng cột, nên sẽ phải lookup record qua 
 # References
 1. [What Is ClickHouse? | ClickHouse Docs](https://clickhouse.com/docs/en/intro/)
 2. [ClickHouse Index Design | ClickHouse Docs](https://clickhouse.com/docs/en/guides/improving-query-performance/sparse-primary-indexes/sparse-primary-indexes-design/)
