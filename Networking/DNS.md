@@ -17,3 +17,4 @@ CNAME là viết tắt của canonical name. Dùng để map domain sang 1 domai
 2. [DNS zone - Wikipedia](https://en.wikipedia.org/wiki/DNS_zone)
 3. https://infosecwriteups.com/dns-records-3c7bcfe74b01
 4. https://blog.algomaster.io/p/how-dns-actually-works
+5. [DNS Records. The purpose of DNS is to resolve… | by Fehzan Vayani | InfoSec Write-ups](https://infosecwriteups.com/dns-records-3c7bcfe74b01)
