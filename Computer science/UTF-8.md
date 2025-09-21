@@ -7,4 +7,4 @@ tags:
 2. [encoding - What is the difference between utf8mb4 and utf8 charsets in MySQL? - Stack Overflow](https://stackoverflow.com/questions/30074492/what-is-the-difference-between-utf8mb4-and-utf8-charsets-in-mysql)
 3. [unicode - UTF-8, UTF-16, and UTF-32 - Stack Overflow](https://stackoverflow.com/questions/496321/utf-8-utf-16-and-utf-32)
 4. [UTF-8 - Wikipedia](https://en.wikipedia.org/wiki/UTF-8)
-5. 
+5. https://iamvishnu.com/posts/utf8-is-brilliant-design?
