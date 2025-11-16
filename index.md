@@ -22,3 +22,5 @@ Welcome to my digital garden 🥹🥹
 - **A2/AD**: Anti-Access/Area Denial - Là 1 chiến lược quân sự chống tiếp cận khu vực. Chiến lược A2/AD thường được nhắc đến là của Trung Quốc trong việc chống tiếp cận từ biển.
 - **ADIZ**: Air defence identification zone - Vùng nhận dạng phòng không
 - [A distributed systems reliability glossary](https://antithesis.com/resources/reliability_glossary/)
+- PPP: Purchasing power parity - Sức mua tương đương
+- 
