@@ -23,4 +23,8 @@ Welcome to my digital garden 🥹🥹
 - **ADIZ**: Air defence identification zone - Vùng nhận dạng phòng không
 - [A distributed systems reliability glossary](https://antithesis.com/resources/reliability_glossary/)
 - PPP: Purchasing power parity - Sức mua tương đương
-- 
+- Lệnh chứng khoán:
+	- ATO: Lệnh mua tại mức giá mở của phiên GD. Lệnh này chỉ được thực hiện trong vòng 15 phút mở cửa thị trường 
+	- ATC:
+	- LO: Limit order - lệnh mua hoặc bán tại mức giá xác định hoặc tốt hơn. Mức giá này do người đầu tư lựa chọn
+	- MP: 
