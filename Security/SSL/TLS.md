@@ -10,3 +10,4 @@
 
 # References
 1. [How does SSL work? | SSL certificates and TLS | Cloudflare](https://www.cloudflare.com/learning/ssl/how-does-ssl-work/)
+2. https://blog.gitguardian.com/a-complete-guide-to-transport-layer-security-tls-authentication/

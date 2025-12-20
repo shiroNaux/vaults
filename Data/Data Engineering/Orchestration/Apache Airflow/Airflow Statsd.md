@@ -2,7 +2,7 @@
 ---
 # Airflow Statsd
 
-> Là thành phần của [[Apache Airflow]], có nhiệm vụ đo đạc các runtime metrics của [[Apache Airflow]] và gửi output ra log hay 1 [[websocket]]
+> Là thành phần của [[Apache Airflow]], có nhiệm vụ đo đạc các runtime metrics của [[Apache Airflow]] và gửi output ra log hay 1 [[Websocket]]
 
 - Phần code của statsd ở file: airflow/stats.py
 
