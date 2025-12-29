@@ -15,13 +15,9 @@ Think of it as adding an apartment number when delivering a package. Without it,
 Before SNI existed, HTTPS had a big limitation:
 
 - Many websites share a single IP address (virtual hosting).
-    
 - Each HTTPS site has its own TLS certificate.
-    
 - But the TLS handshake happens **before** the browser sends the HTTP Host header.
-    
 - So the server didn’t know _which_ certificate to present.
-    
 
 This caused **common name mismatch errors** — the browser would say “Your connection is not private” because it got the wrong certificate.
 
