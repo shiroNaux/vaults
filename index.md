@@ -23,3 +23,4 @@ Welcome to my digital garden 🥹🥹
 - **ADIZ**: Air defence identification zone - Vùng nhận dạng phòng không
 - [A distributed systems reliability glossary](https://antithesis.com/resources/reliability_glossary/)
 - PPP: Purchasing power parity - Sức mua tương đương
+- Chỉ số P/E: Price/Earning
