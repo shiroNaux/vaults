@@ -7,11 +7,15 @@ LDAP là viết tắt của Lightweight Directory Access Protocol -> Nó là 1 G
 
 Bản chất thì LDAP chỉ là giao thức, cho nên nó không lưu trữ thông tin. Thông tin sẽ được lưu trữ trên Directory server hoặc còn được gọi là LDAP server.
 
-LDAP thường được dùng kết hợp với [[Single Sign On|SSO]] để xác thực user tập trung. LDAP server sẽ đóng vai trò như 1 [[Identity Provider|IDP]]. Còn LDAP sẽ là giao thức mà ứng dụng SSO dùng để lấy đưuọc thông tin từ LDAP server.
+LDAP thường được dùng kết hợp với [[Single Sign On|SSO]] để xác thực user tập trung. LDAP server sẽ đóng vai trò như 1 [[Identity Provider|IDP]]. Còn LDAP sẽ là giao thức mà ứng dụng SSO dùng để lấy được thông tin từ LDAP server.
 
 # Dictionary
 
-
+- User
+- Domain
+- CN - Common Name:
+- OU - Organization Unit:
+- UPN
 
 # Technical Detail
 
