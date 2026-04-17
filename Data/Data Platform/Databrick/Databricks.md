@@ -9,4 +9,4 @@ aliases:
 - SQL Warehouse
 - Photon
 - Catalog
-- Delta lake
+- [[Delta Lake]]
