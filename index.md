@@ -27,3 +27,4 @@ Welcome to my digital garden 🥹🥹
 - P/B: (Price / Book value), cũng tương tự P/E nhưng mà mẫu số sẽ là giá trị trên sổ sách của tổ chức. Chỉ số này phản ánh liệu giá của cổ phiếu có đang bị đánh giá cao hay thấp so với giá trị thực tế trên sổ sách.
 - EPS(Earning Per Share): 
 	- Diluted EPS (EPS pha loãng)
+- PEG: 
