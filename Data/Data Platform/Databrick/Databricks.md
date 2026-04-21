@@ -4,7 +4,7 @@ aliases:
 # Dictionary
 - Control plane:
 - Data plane
-- All-Purpose cluster
+- All-Purpose cluster:
 - Job Cluster
 - SQL Warehouse
 - Photon
