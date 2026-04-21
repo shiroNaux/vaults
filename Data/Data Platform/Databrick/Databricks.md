@@ -10,3 +10,6 @@ aliases:
 - Photon
 - Catalog
 - [[Delta Lake]]
+
+
+# Cluster Structure
