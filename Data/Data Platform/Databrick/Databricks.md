@@ -12,7 +12,10 @@ aliases:
 - [[Delta Lake]]
 - Notebook
 - Magic command: Cũng giống như magic command trong Jupyter Notebook, được bắt đầu bằng ***`%`*** để thực hiện các câu lệnh đặc thù như cài package(%pip install)
-- 
+- Transaction log
+- Managed table: Là các table được quản lý (bao gồm cả data và metadata) bởi chính Databricks
+- External table
+- Schema enforcement
 
 
 # Cluster Structure
