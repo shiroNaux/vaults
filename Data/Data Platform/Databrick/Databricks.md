@@ -20,7 +20,7 @@ aliases:
 - Streaming table
 - **Materialized table**:
 - **Auto loader**: Là 1 tính năng của Databricks cho phép auto load dữ liệu từ các nguồn Cloud storage. Databricks sẽ tự động nhận biết các file dữ liệu mới và ingest chúng về Databricks.
-- DLT: Delta live table
+- [[Delta live table|DLT]]: Delta live table
 
 
 # Databricks Architecture
