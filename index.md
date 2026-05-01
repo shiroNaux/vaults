@@ -18,3 +18,4 @@ Welcome to my digital garden 🥹🥹
 - CPU caching sensitive: 
 - **ADIZ**: Air defence identification zone - Vùng nhận dạng phòng không
 - [A distributed systems reliability glossary](https://antithesis.com/resources/reliability_glossary/)
+- 
