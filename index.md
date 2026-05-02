@@ -18,4 +18,4 @@ Welcome to my digital garden 🥹🥹
 - CPU caching sensitive: 
 - **ADIZ**: Air defence identification zone - Vùng nhận dạng phòng không
 - [A distributed systems reliability glossary](https://antithesis.com/resources/reliability_glossary/)
-- 
+- **Session affinity**: means a load balancer keeps sending all requests from the same user to the _same backend server_ instead of distributing them randomly.
