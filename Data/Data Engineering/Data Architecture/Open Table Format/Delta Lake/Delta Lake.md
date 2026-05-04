@@ -2,7 +2,7 @@
 tags:
   - DataArchitecture
   - Delta
-  - Spark
+  - spark
 ---
 # Abstraction
 

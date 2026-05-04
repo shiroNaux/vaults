@@ -11,7 +11,7 @@ aliases:
 - **Photon**:
 - [[Unity Catalog|Catalog]]:
 - [[Delta Lake]]:
-- **Notebook**:
+- **Notebook**: 
 - **Magic command**: Cũng giống như magic command trong Jupyter Notebook, được bắt đầu bằng ***`%`*** để thực hiện các câu lệnh đặc thù như cài package(%pip install)
 - Transaction log
 - **Managed table**: Là các table được quản lý (bao gồm cả data và metadata) bởi chính Databricks
@@ -21,6 +21,7 @@ aliases:
 - **Streaming table**:
 - **Materialized table**:
 - **Auto loader**: Là 1 tính năng của Databricks cho phép auto load dữ liệu từ các nguồn Cloud storage. Databricks sẽ tự động nhận biết các file dữ liệu mới và ingest chúng về Databricks.
+- **Delta Sharing**: là 1 open protocol được Databricks phát triển với mục đích chia sẻ dữ liệu giữa các platform 1 cách hiệu quả, thống nhất.
 
 
 # Databricks Architecture

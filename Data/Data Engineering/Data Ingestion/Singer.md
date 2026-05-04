@@ -18,15 +18,6 @@ Tiêu chuẩn mà singer sử dụng rất đơn giản
 - Target sẽ đọc dữ liệu từ stdin (console) và ghi vào đích.
 - ??? ***Chuẩn data format khi đưa ra console -> để target có thể biết đâu là 1 records***
 
-# Sử dụng
-
-- Set up python environment và cài đặt các tap, target cần thiết thông qua [[pip]]
-- Chạy flow trong [[bash]] [[shell]] theo syntax
-
-```
-tap-source | target-destination
-```
-
 # References
 1. [Singer | Open Source ETL](https://www.singer.io/)
 2. [Singer (github.com)](https://github.com/singer-io)
