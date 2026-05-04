@@ -17,10 +17,11 @@ aliases:
 - **Managed table**: Là các table được quản lý (bao gồm cả data và metadata) bởi chính Databricks
 - **External table**: Databricks sẽ có thông tin meta data của các table này, nhưng data file sẽ không được quản lý bởi Databricks
 - **Schema enforcement**:
-- **[[Delta live table]]**:
-- **Streaming table**:
+- **[[Delta live table]]**: 
+- **Streaming table**: Là 1 loại table trong Databricks. Streaming table chỉ cho phép append thêm dữ liệu vào bảng và không được sửa đổi các record đã được ghi vào từ trước đó.
 - **Materialized table**:
 - **Auto loader**: Là 1 tính năng của Databricks cho phép auto load dữ liệu từ các nguồn Cloud storage. Databricks sẽ tự động nhận biết các file dữ liệu mới và ingest chúng về Databricks.
+- **CloudFiles Format**: The cloudFiles format is the Spark data source identifier used to invoke Auto Loader when reading from cloud storage paths in Databricks. It is specified as the format parameter in spark.readStream.format and in DLT table definitions, and supports options for file type, schema hints, and schema evolution behavior.
 - **Delta Sharing**: là 1 open protocol được Databricks phát triển với mục đích chia sẻ dữ liệu giữa các platform 1 cách hiệu quả, thống nhất.
 
 
@@ -59,3 +60,5 @@ Databricks có 4 roles:
 1. [High-level architecture | Databricks on AWS](https://docs.databricks.com/aws/en/getting-started/high-level-architecture)
 
 # Cluster Structure
+
+# Streaming
