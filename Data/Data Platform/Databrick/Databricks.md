@@ -7,6 +7,7 @@ aliases:
 - All-Purpose cluster:
 - Job Cluster
 - SQL Warehouse:
+- **Service Principal**: Giống như role trong AWS, Service principal là credential dành cho các service, các automation  agent
 - Photon:
 - Catalog:
 - [[Delta Lake]]:
@@ -26,7 +27,7 @@ aliases:
 # Databricks Architecture
 
 ## Account
-Trong Databricks, account là đơn vị cấu trúc cấp bậc cao nhất. Bên dưới account sẽ bao gồm các workspace là đơn vị logical để phân chia môi trường làm việc cho các workload khác nhau. Account còn dùng để quản lý users, group, service principle, SSO, ... nói chung là các vấn đề liên quan đến quyền truy cập dữ liệu và tính năng của Databricks. Account cũng thực hiện quản lý billing và Unity catalog metastore.
+Trong Databricks, account là đơn vị cấu trúc cấp bậc cao nhất. Bên dưới account sẽ bao gồm các workspace là đơn vị logical để phân chia môi trường làm việc cho các workload khác nhau. Account còn dùng để quản lý users, group, service principal, SSO, ... nói chung là các vấn đề liên quan đến quyền truy cập dữ liệu và tính năng của Databricks. Account cũng thực hiện quản lý billing và Unity catalog metastore.
 
 ![[Pasted image 20260428184809.png]]
 
@@ -47,6 +48,7 @@ Databricks có 4 roles:
 - Metastore Administrator
 - Workspace Administrator
 - Owner
+
 
 ## Control plane
 
