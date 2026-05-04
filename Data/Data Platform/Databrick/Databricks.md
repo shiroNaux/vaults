@@ -9,7 +9,7 @@ aliases:
 - SQL Warehouse:
 - **Service Principal**: Giống như role trong AWS, Service principal là credential dành cho các service, các automation  agent
 - Photon:
-- Catalog:
+- [[Unity Catalog|Catalog]]:
 - [[Delta Lake]]:
 - Notebook:
 - Magic command: Cũng giống như magic command trong Jupyter Notebook, được bắt đầu bằng ***`%`*** để thực hiện các câu lệnh đặc thù như cài package(%pip install)

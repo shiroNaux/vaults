@@ -1,3 +1,9 @@
+---
+tags:
+  - unity_catalog
+  - databricks
+---
+
 # Abstraction
 
 ## Glossaries
