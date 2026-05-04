@@ -62,3 +62,10 @@ Databricks có 4 roles:
 # Cluster Structure
 
 # Streaming
+
+# Trigger mode
+
+|     | Triggered | Continous |
+| --- | --------- | --------- |
+|     |           |           |
+|     |           |           |
