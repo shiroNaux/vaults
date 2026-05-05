@@ -23,6 +23,7 @@ aliases:
 - **Auto loader**: Là 1 tính năng của Databricks cho phép auto load dữ liệu từ các nguồn Cloud storage. Databricks sẽ tự động nhận biết các file dữ liệu mới và ingest chúng về Databricks.
 - **CloudFiles Format**: The cloudFiles format is the Spark data source identifier used to invoke Auto Loader when reading from cloud storage paths in Databricks. It is specified as the format parameter in spark.readStream.format and in DLT table definitions, and supports options for file type, schema hints, and schema evolution behavior.
 - **Delta Sharing**: là 1 open protocol được Databricks phát triển với mục đích chia sẻ dữ liệu giữa các platform 1 cách hiệu quả, thống nhất.
+- **DAB**:
 
 
 # Databricks Architecture
@@ -69,3 +70,9 @@ Databricks có 4 roles:
 | --- | --------- | --------- |
 |     |           |           |
 |     |           |           |
+# Catalog
+
+## Standard
+## Foregin
+## Shared
+## Lakebase Postgres

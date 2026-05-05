@@ -19,10 +19,7 @@ Welcome to my digital garden 🥹🥹
 - **ADIZ**: Air defence identification zone - Vùng nhận dạng phòng không
 - [A distributed systems reliability glossary](https://antithesis.com/resources/reliability_glossary/)
 - **Session affinity**: means a load balancer keeps sending all requests from the same user to the _same backend server_ instead of distributing them randomly.
-
-# Catalog
-
-## Standard
-## Foregin
-## Shared
-## Lakebase Postgres
+- Dyslexia: 
+- Autism: 
+- Adhd: 
+- **TTFT**(Time to first token): là khoảng thời gian mà LLM cần để generate ra token output đầu tiên tính từ lúc nhận được input prompt

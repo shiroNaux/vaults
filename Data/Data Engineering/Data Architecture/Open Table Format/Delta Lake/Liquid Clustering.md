@@ -3,7 +3,6 @@ tags:
   - databricks
   - deltalake
 ---
-
 # Introduction
 
 Liquid Clustering là 1 cơ chế lưu trữ, sắp xếp các data file trên Hard disk nhằm mục đích tối ưu khả năng truy vấn của [[Delta Lake]] table format.
