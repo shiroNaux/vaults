@@ -73,6 +73,15 @@ Databricks có 4 roles:
 | Cluster Lifecycle | Up during run -> cheaper       | Always on -> more expensive  |
 | Latency           | 10 minutes, hourly, daily      | 10s -> a few minutes         |
 | Trigger mechanism | Manual, scheduled, or via Jobs | Start once, always listening |
+
+Databricks sử dụng [[Apache Spark]] làm key process engine, cho nên continous mode ở đây cũng hoạt động giống như streaming trong Apache Spark - theo micro batch.
+
+Đối với continous mode, nếu ta không set trigger interval cho pipeline thì mỗi khi 1 microbatch chạy xong thì batch sau sẽ ngay lập tức chạy, điều này có thể kém hiệu quả trong 1 số trường hợp cụ thể. Do đó Databricks cho phép set trigger interval cho từng table hay function để người dùng có thể control được khoảng thời gian mà continous pipeline sẽ chạy.
+
+> Trigger interval chỉ có thể được set cho continous pipeline
+
+Vậy, điểm khác biệt lớn nhất giữa Triggered và Continous mode đó là về lượng data được xử lý. Triggered sẽ xử lý hết tất cả các data có thể, còn continous sẽ chỉ process các data new arrives. Và cả 2 đều có thể điều khiển được khoảng thời gian giữa 2 lần chạy.
+
 # Catalog
 
 ## Standard
