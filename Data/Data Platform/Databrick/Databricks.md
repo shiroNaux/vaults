@@ -66,10 +66,10 @@ Databricks có 4 roles:
 
 # Trigger mode
 
-|     | Triggered | Continous |
-| --- | --------- | --------- |
-|     |           |           |
-|     |           |           |
+|           | Triggered          | Continous                  |
+| --------- | ------------------ | -------------------------- |
+| Execution | Run once then stop | Keep running until stopped |
+|           |                    |                            |
 # Catalog
 
 ## Standard
