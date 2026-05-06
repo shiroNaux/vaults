@@ -66,14 +66,13 @@ Databricks có 4 roles:
 
 # Trigger mode
 
-|                   | Triggered                  | Continous                   |
-| ----------------- | -------------------------- | --------------------------- |
-| Execution         | Run once then stop         | Keep running until stopped  |
-| Data Process      | Process all available data | New data as it arrives      |
-| Cluster Lifecycle | Up during run -> cheaper   | Always on -> more expensive |
-|                   |                            |                             |
-|                   |                            |                             |
-|                   |                            |                             |
+|                   | Triggered                      | Continous                    |
+| ----------------- | ------------------------------ | ---------------------------- |
+| Execution         | Run once then stop             | Keep running until stopped   |
+| Data Process      | Process all available data     | New data as it arrives       |
+| Cluster Lifecycle | Up during run -> cheaper       | Always on -> more expensive  |
+| Latency           | 10 minutes, hourly, daily      | 10s -> a few minutes         |
+| Trigger mechanism | Manual, scheduled, or via Jobs | Start once, always listening |
 # Catalog
 
 ## Standard
