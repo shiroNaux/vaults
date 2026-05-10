@@ -5,6 +5,7 @@ tags:
   - spark
 ---
 # Glossaries
+- Z-odering
 # Abstraction
 
 Delta lake là 1 open table format

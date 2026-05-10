@@ -20,3 +20,19 @@ aliases:
 8. **Bronze tables grow append-only**: Append-only writes guarantee that late-arriving records never overwrite earlier ones, which is critical in regulated industries where auditors need proof that no historical record was silently modified.
     
 9. **Bronze is the single source of truth**: When three different teams build their own silver tables with conflicting business logic, all of them can independently validate their results against the same bronze data, eliminating disputes about whose source is authoritative.
+
+## Key Points
+
+1. **Profiling first then cleaning**: Running summary statistics, null-rate analysis, and value distribution histograms before writing any transformation logic prevents you from building cleaning rules based on assumptions that the data does not actually support.
+    
+2. **Exploration reveals hidden data issues**: A column labeled "age" turns out to contain negative values and dates encoded as integers. Without exploratory profiling, a pipeline would silently propagate these values into silver, where they corrupt downstream aggregates for months before anyone notices.
+    
+3. **Deduplication is rarely straightforward**: Two records may share the same primary key but carry different timestamps, update flags, or source systems. Deciding which record to keep requires business context, not just a generic DISTINCT or ROW_NUMBER() call.
+    
+4. **Silver enforces type safety and schema**: Casting a string column to a proper timestamp or decimal type at the silver layer means every downstream consumer inherits correct types automatically, eliminating an entire category of bugs where dashboards silently compare strings instead of dates.
+    
+5. **Expectations bridge bronze to silver**: Databricks expectations let you declare constraints like "age must be between 0 and 120" directly in the pipeline. Records that violate expectations are quarantined rather than silently dropped, giving the team visibility into data quality without halting production.
+    
+6. **Row count comparison catches silent drops**: After every bronze-to-silver transformation, comparing input row count against output row count plus quarantined row count must balance to zero. A discrepancy signals a bug in the transformation logic, such as an unintended filter or a JOIN that fans out rows.
+    
+7. **Quality is a spectrum not a binary**: Some records are fully clean, some are usable with caveats, and some must be rejected. Tagging records with a quality score or confidence flag at the silver layer lets gold consumers decide their own tolerance threshold rather than forcing a single pass/fail decision for everyone.
