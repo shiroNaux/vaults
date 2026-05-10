@@ -7,6 +7,7 @@ tags:
 ---
 # Glossaries
 - **Expectation**: Ý nghĩa cũng giống như expectations trong [[Great Expectations]], là các metrics define data quality
+- **Event Log**: The DLT event log is a system-generated Delta table that records detailed metadata about every pipeline run, including expectation pass/fail counts, data quality metrics, table update durations, and cluster utilization. Engineers query the event log programmatically or inspect it through the pipeline UI to monitor pipeline health, diagnose failures, track data quality trends, and set up automated alerts on quality regressions.
 
 ---
 # Introduction
