@@ -24,7 +24,7 @@ aliases:
 - **CloudFiles Format**: The cloudFiles format is the Spark data source identifier used to invoke Auto Loader when reading from cloud storage paths in Databricks. It is specified as the format parameter in spark.readStream.format and in DLT table definitions, and supports options for file type, schema hints, and schema evolution behavior.
 - **Delta Sharing**: là 1 open protocol được Databricks phát triển với mục đích chia sẻ dữ liệu giữa các platform 1 cách hiệu quả, thống nhất.
 - **DAB**:
-- Landing zone: Là 1 phân vùng bên cạnh Raw - Silver - Gold layer trong medallion architecture. Đây là phân vùng lưu các file tạm, trước khi được ingest vào raw.
+- Landing zone: Là 1 phân vùng bên cạnh Raw - Silver - Gold layer trong [[Medallion Architecture]]. Đây là phân vùng lưu các file tạm, trước khi được ingest vào raw.
 # Databricks Architecture
 
 ## Account
