@@ -25,6 +25,7 @@ aliases:
 - **Delta Sharing**: là 1 open protocol được Databricks phát triển với mục đích chia sẻ dữ liệu giữa các platform 1 cách hiệu quả, thống nhất.
 - **DAB**:
 - Landing zone: Là 1 phân vùng bên cạnh Raw - Silver - Gold layer trong [[Medallion Architecture]]. Đây là phân vùng lưu các file tạm, trước khi được ingest vào raw.
+- Cluster pool
 # Databricks Architecture
 
 ## Account
