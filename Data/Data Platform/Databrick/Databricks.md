@@ -63,7 +63,7 @@ Databricks có 4 roles:
 Có 2 loại function trong databricks
 1. Built-in
 2. UDF
-Điều đặc biệt ở Databricks đó là UDF có thể được viết bằng cả [[Python|python]] và [[SQL]]. Và thậm chí code pyspark có thể call đến udf của sql thông qua expr
+Điều đặc biệt ở Databricks đó là UDF có thể được viết bằng cả [[Python|python]] và [[SQL]] (giống như viết function trong [[PostgreSQL]], tức là khai báo language trong lệnh create function). Và thậm chí code pyspark có thể call đến udf của sql thông qua expr
 Ví dụ:
 ```
 df = df.withColumn("a", expr("funtion_name(col_name)"))
@@ -100,3 +100,9 @@ Vậy, điểm khác biệt lớn nhất giữa Triggered và Continous mode đ�
 ## Foregin
 ## Shared
 ## Lakebase Postgres
+
+# Pool
+[Connect to pools | Databricks on AWS](https://docs.databricks.com/aws/en/compute/pool-index)
+
+# Git integraion
+[Databricks Git folders | Databricks on AWS](https://docs.databricks.com/aws/en/repos/)
