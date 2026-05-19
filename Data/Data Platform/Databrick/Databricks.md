@@ -56,6 +56,13 @@ Databricks có 4 roles:
 
 ## Data plane
 
+# [[Database]]
+![[Pasted image 20260520000120.png]]
+
+## Function
+Có 2 loại function trong databricks
+1. Built-in
+2. UDF
 
 ## References
 1. [High-level architecture | Databricks on AWS](https://docs.databricks.com/aws/en/getting-started/high-level-architecture)
