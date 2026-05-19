@@ -63,6 +63,11 @@ Databricks có 4 roles:
 Có 2 loại function trong databricks
 1. Built-in
 2. UDF
+Điều đặc biệt ở Databricks đó là UDF có thể được viết bằng cả [[Python|python]] và [[SQL]]. Và thậm chí code pyspark có thể call đến udf của sql thông qua expr
+Ví dụ:
+```
+df = df.withColumn("a", expr("funtion_name(col_name)"))
+```
 
 ## References
 1. [High-level architecture | Databricks on AWS](https://docs.databricks.com/aws/en/getting-started/high-level-architecture)
