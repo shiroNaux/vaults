@@ -106,3 +106,16 @@ Vậy, điểm khác biệt lớn nhất giữa Triggered và Continous mode đ�
 
 # Git integraion
 [Databricks Git folders | Databricks on AWS](https://docs.databricks.com/aws/en/repos/)
+
+
+# Row level security
+
+Để có thể sử dụng được Row level security trên Databricks, trước hết cần phải có 1 function mà output trả về là True hay False. Khi người dùng select dữ liệu từ bảng, function sẽ được evaluate cho từng row và sẽ chỉ return các row mà function trả về kết quả là True.
+
+Để gán function cho bảng, sử dụng lệnh
+```sql
+Alter table <table_name> set row filter <function_name> on (column_name);
+```
+
+Funtion có thể nhận input đầu vào, đó chính là giá trị tương ứng với cột `column_name` trong lệnh alter table bên trên.
+**-> Performance issues???**
