@@ -119,3 +119,9 @@ Alter table <table_name> set row filter <function_name> on (column_name);
 
 Funtion có thể nhận input đầu vào, đó chính là giá trị tương ứng với cột `column_name` trong lệnh alter table bên trên.
 **-> Performance issues???**
+
+# Advanced Security Features
+
+## Column Level Masking
+
+ew
