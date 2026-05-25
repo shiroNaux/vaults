@@ -169,3 +169,8 @@ Volumes serve as the storage layer for non-tabular data within the _Unity Catal
 - **Orchestration:** You can trigger other notebooks dynamically using the `run` command or manage the exit status of your notebooks
 
 `dbutils` command chỉ có thể được sử dụng trong [[Python]] và [[Scala]] notebook
+
+
+# COPY INTO command
+
+### COPY INTO vsa AUTO LOADER

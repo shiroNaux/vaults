@@ -11,4 +11,14 @@ Properties:
 - Parameters:
 - Notification:
 - Retries
-- Duration threshold
+- Duration threshold:
+- Condition: là 1 properties đặc biệt, chỉ đi kèm với Task type là if/else condition. Code bên trong codition sẽ dùng `{{ }}` để refer đến các giá trị
+
+
+# Features
+
+## Repair run
+
+## Loop over task
+
+Tính năng này cho phép người dùng loop lại các task bằng cách click chuột và chọn loop. Parameter inpt cho mỗi lần loop được specify bởi 1 array Input,
