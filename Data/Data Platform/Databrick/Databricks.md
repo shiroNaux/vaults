@@ -155,7 +155,6 @@ Tuy nhiên, nếu ta insert thêm dữ liệu vào bảng gốc, thì nó sẽ k
 > Test lại bằng `Describe history command`
 
 
-# Delta table
 
-## UPSERT
-## MERGE
+## Volume
+Volumes serve as the storage layer for non-tabular data within the _Unity Catalog_ hierarchy
