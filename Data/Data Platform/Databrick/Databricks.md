@@ -135,3 +135,19 @@ Databricks cũng có 1 lệnh [[SQL]] để xem thông tin về  các bảng đ�
 ```sql
 show tables dropped in <schema_name>
 ```
+
+# Cloning table
+
+## Deep clone
+
+Deep clone sẽ copy tất cả thông tin bao gồm cả metadata và data files ra 1 chỗ khác với table cũ. Tức là với Deep clone, table mới sẽ keep được các thông tin như partition, index, ... nếu như nó có trong [[Delta Lake|delta table]].
+```sql
+CREATE TABLE <new_table_name> DEEP CLONE <table_name>
+```
+
+## Shallow clone
+Shallow clone thì chỉ copy metadata của table sang 1 cái khác, nhưng vẫn trỏ về data file của bảng cũ. Vậy nên việc xóa data file của bất kì bảng nào cũng khiến bảng còn lại bị lỗi.
+
+Cú pháp thì chỉ cần thay DEEP bằng SHALLOW trong lệnh tạo bảng.
+
+Tuy nhiên, nếu ta insert thêm dữ liệu vào bảng gốc, thì nó sẽ không được xuất hiện trong bảng cloned. Bởi vì bảng mới sẽ clone từ 1 specific version của bảng gốc, và sẽ chỉ query được từ version đó. Các version khác của bảng gốc sau khi clone sẽ không ảnh đến bảng mới. Còn nếu chúng ta thực hiện các operation trên bảng mới, Databricks sẽ tạo ra các data file mới, dành riêng cho cloned table và sẽ MOR data lại với nhau. 
