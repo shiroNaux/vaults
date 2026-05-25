@@ -158,3 +158,10 @@ Tuy nhiên, nếu ta insert thêm dữ liệu vào bảng gốc, thì nó sẽ k
 
 ## Volume
 Volumes serve as the storage layer for non-tabular data within the _Unity Catalog_ hierarchy
+
+# dbutils
+
+`dbutils` là 1 command được databricks tạo ra để giúp cho người dùng dễ dnagf thao tác với database. Các use cases cụ thể như:
+- a
+
+`dbutils` command chỉ có thể được sử dụng trong [[Python]] và [[Scala]] notebook
