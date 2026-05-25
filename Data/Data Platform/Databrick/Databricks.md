@@ -150,4 +150,12 @@ Shallow clone thì chỉ copy metadata của table sang 1 cái khác, nhưng v�
 
 Cú pháp thì chỉ cần thay DEEP bằng SHALLOW trong lệnh tạo bảng.
 
-Tuy nhiên, nếu ta insert thêm dữ liệu vào bảng gốc, thì nó sẽ không được xuất hiện trong bảng cloned. Bởi vì bảng mới sẽ clone từ 1 specific version của bảng gốc, và sẽ chỉ query được từ version đó. Các version khác của bảng gốc sau khi clone sẽ không ảnh đến bảng mới. Còn nếu chúng ta thực hiện các operation trên bảng mới, Databricks sẽ tạo ra các data file mới, dành riêng cho cloned table và sẽ MOR data lại với nhau. 
+Tuy nhiên, nếu ta insert thêm dữ liệu vào bảng gốc, thì nó sẽ không được xuất hiện trong bảng cloned. Bởi vì bảng mới sẽ clone từ 1 specific version của bảng gốc, và sẽ chỉ query được từ version đó. Các version khác của bảng gốc sau khi clone sẽ không ảnh đến bảng mới. Còn nếu chúng ta thực hiện các operation trên bảng mới, Databricks sẽ tạo ra các data file mới, dành riêng cho cloned table và sẽ MOR data lại với nhau.
+
+> Test lại bằng `Describe history command`
+
+
+# Delta table
+
+## UPSERT
+## MERGE
