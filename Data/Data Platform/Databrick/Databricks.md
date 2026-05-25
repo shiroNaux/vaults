@@ -161,7 +161,11 @@ Volumes serve as the storage layer for non-tabular data within the _Unity Catal
 
 # dbutils
 
-`dbutils` là 1 command được databricks tạo ra để giúp cho người dùng dễ dnagf thao tác với database. Các use cases cụ thể như:
-- a
+`dbutils` là 1 command được databricks tạo ra để giúp cho người dùng dễ dnagf thao tác với các object trong databricks. Các use cases cụ thể như:
+- Interact with các object trong databricks như move, copy files, ls, ...
+- Parameterize Notebooks
+- **Dynamic Queries:** Use these widget values in your _Python_ or _SQL_ code to trigger dynamic processes or updates based on user input
+- Secure Credential Management
+- **Orchestration:** You can trigger other notebooks dynamically using the `run` command or manage the exit status of your notebooks
 
 `dbutils` command chỉ có thể được sử dụng trong [[Python]] và [[Scala]] notebook
