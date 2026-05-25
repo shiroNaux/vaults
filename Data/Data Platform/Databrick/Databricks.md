@@ -125,3 +125,13 @@ Funtion có thể nhận input đầu vào, đó chính là giá trị tương �
 ## Column Level Masking
 
 ew
+
+## UNDROP
+
+Databricks có tính năng giống như recycle bin, cho phép người dùng restore lại table trong vòng 7 ngày kể từ lúc thực hiện leennhj drop
+-> Data được store ở đâu? có xóa data? có force delete mà ko cần undrop?
+
+Databricks cũng có 1 lệnh [[SQL]] để xem thông tin về  các bảng đã được xóa
+```sql
+show tables dropped in <schema_name>
+```
