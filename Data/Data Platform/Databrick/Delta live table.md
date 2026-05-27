@@ -28,8 +28,10 @@ Các đặc trưng của delta live table
 - ***EXPECT OR FAIL***: Mỗi khi có vi phạm expectation thì pipeline sẽ bị dừng lại ngay và mark là failed.
 
 
-# Feature
-1. dlt có thể được viết 
+# Feature 
+
+- Các bảng được tạo ra bởi dlt thì khi nó được đổi tên trong pipeline, sau khi pipeline chạy thì bảng với tên cũ cũng sẽ được xóa đi -> dlt manage toàn bộ life cycle của bảng đó
+- Khi pipeline có các bảng streaming, databricks sẽ tạo ra 1 schema tên là `__databricks_internal` để chứa các microbatch của luồng streaming
 # Alternative
 1. [[dbt]]
 2. [[Apache Spark|Spark]] Declarative Pipelines
