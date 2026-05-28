@@ -174,3 +174,11 @@ Volumes serve as the storage layer for non-tabular data within the _Unity Catal
 # COPY INTO command
 
 ### COPY INTO vsa AUTO LOADER
+
+
+# Event log
+Người dùng có thể query event log của [[Delta live table|dlt]] pipeline bằng cách truy vấn như sau:
+```sql
+select * from even_log("pipeline_id")
+```
+
