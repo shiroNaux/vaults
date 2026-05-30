@@ -193,3 +193,4 @@ Không quan trọng là secret được tạo theo cách nào, người dùng c�
 
 # Authorization
 
+# Column level masking
