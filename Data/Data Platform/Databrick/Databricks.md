@@ -190,3 +190,6 @@ Ngoài ra Databricks cũng có tính năng secrfet của riêng nó.
 Không quan trọng là secret được tạo theo cách nào, người dùng có thể retrieve secret bwangf cách sử dụng `dbutils` utility.
 
 # Authentication
+
+# Authorization
+
