@@ -182,3 +182,9 @@ Người dùng có thể query event log của [[Delta live table|dlt]] pipeline
 select * from even_log("pipeline_id")
 ```
 
+
+# Secret
+Databricks có cơ chế hỗ trợ lưu trữ secret bằng cách tích hợp với các service của các dịch vụ cloud như [[AWS]], [[Azure]], [[GCP]], ...
+Ngoài ra Databricks cũng có tính năng secrfet của riêng nó.
+
+## Scope
