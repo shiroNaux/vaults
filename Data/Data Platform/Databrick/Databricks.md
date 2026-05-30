@@ -194,3 +194,10 @@ Không quan trọng là secret được tạo theo cách nào, người dùng c�
 # Authorization
 
 # Column level masking
+
+Tính năng này cũng giống như Row Level Security, cho phép người dùng tạo 1 hàm SQL và gán nó vào table. Hàm đó sẽ chứa các logic để masking dữ liệu. Hàm được dùng để masking sẽ phải return scalar value, tương ứng với giá trị được masking.
+
+Để gán hàm masking cho table, sử dụng lệnh
+```sql
+ALTER TABLE <table_name> ALTER <column_name> SET MASK <masking_function>
+```
