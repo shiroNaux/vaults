@@ -201,3 +201,6 @@ Tính năng này cũng giống như Row Level Security, cho phép người dùng
 ```sql
 ALTER TABLE <table_name> ALTER <column_name> SET MASK <masking_function>
 ```
+
+
+# Serverless
