@@ -187,4 +187,6 @@ select * from even_log("pipeline_id")
 Databricks có cơ chế hỗ trợ lưu trữ secret bằng cách tích hợp với các service của các dịch vụ cloud như [[AWS]], [[Azure]], [[GCP]], ...
 Ngoài ra Databricks cũng có tính năng secrfet của riêng nó.
 
-## Scope
+Không quan trọng là secret được tạo theo cách nào, người dùng có thể retrieve secret bwangf cách sử dụng `dbutils` utility.
+
+# Authentication
