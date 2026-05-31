@@ -204,3 +204,20 @@ ALTER TABLE <table_name> ALTER <column_name> SET MASK <masking_function>
 
 
 # Serverless
+
+# Streaming table vs Materialized view
+While both **Streaming Tables** and **Materialized Views** rely on _Delta Live Tables (DLT)_ for their backend, they serve distinct purposes based on how they process data and handle updates. Here are the key differences as discussed in the video:
+
+- **Streaming Tables (0:53 - 10:17):** Designed for **incremental processing** of streaming or batch data. They are ideal when you want to continuously append new data from a source (like files in a volume) without reprocessing everything. The refresh operation processes only the _new, unseen_ data since the last update.
+    
+- **Materialized Views (11:41 - 18:52):** Designed to store **precomputed results** of complex queries or aggregations. While they also refresh incrementally (e.g., using _group aggregate_ strategies), their primary purpose is to **reduce query latency**. Instead of performing expensive computations every time a user queries the data, the system fetches the precomputed results from the view.
+    
+
+**Summary of differences:**
+
+1. **Primary Goal:** _Streaming Tables_ are focused on data ingestion and transformation (ETL) pipelines, whereas _Materialized Views_ are focused on performance optimization for consumption and querying.
+2. **Handling Updates:** _Streaming Tables_ are optimized to move data from point A to point B incrementally. _Materialized Views_ are optimized to maintain an up-to-date state of complex logic, such as aggregations, which is why they include sophisticated incremental strategies like the "no-op" (no operation) check (18:14) when source data hasn't changed.
+
+Both can be scheduled for automatic refreshes (19:00 - 20:27), but you choose between them based on whether you are primarily concerned with **data pipeline flow** or **query performance**.
+
+# Foregin Catalog
