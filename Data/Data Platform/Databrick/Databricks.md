@@ -296,3 +296,7 @@ measures:
 ```
 
 Sau khi save metric views thì databricks sẽ tự động tạo 1 cái view bao gồm các cột được định nghĩa trong dimensions và measures. 
+
+Trong Metric Views, cũng cho phép measure sử dụng measure khác được define ở trên để tính toán các giá trị mới -> bản chất là sẽ generate query từ các metric được define trong yaml.
+
+Phần source trong metric views cũng có thể là join nhiều bảng với nhau thay vì chỉ define được trên 1 bảng duy nhất. Người dùng có thể lấy data từ nhiều bảng bằng cách viết expression ngay sau `source:` hoặc là thêm 1 key mới là `join` và define thêm trong mục này
