@@ -221,3 +221,6 @@ While both **Streaming Tables** and **Materialized Views** rely on _Delta Live T
 Both can be scheduled for automatic refreshes (19:00 - 20:27), but you choose between them based on whether you are primarily concerned with **data pipeline flow** or **query performance**.
 
 # Foregin Catalog
+
+# [[Lakehouse]] Federation
+Đây là 1 tính năng cho phép Databricks query dữ liệu từ các nguồn bên ngoài (giống như fdw, pg_lakehouse của PostgreSQL).
