@@ -300,3 +300,16 @@ Sau khi save metric views thì databricks sẽ tự động tạo 1 cái view ba
 Trong Metric Views, cũng cho phép measure sử dụng measure khác được define ở trên để tính toán các giá trị mới -> bản chất là sẽ generate query từ các metric được define trong yaml.
 
 Phần source trong metric views cũng có thể là join nhiều bảng với nhau thay vì chỉ define được trên 1 bảng duy nhất. Người dùng có thể lấy data từ nhiều bảng bằng cách viết expression ngay sau `source:` hoặc là thêm 1 key mới là `join` và define thêm trong mục này
+
+# AIBI Genie Space
+Là tính năng cho phép tạo SQL, Dashboard bằng ngôn ngữ tự nhiên
+
+# [[Git]] Folders
+
+
+## References
+1. [Databricks Git folders concepts | Databricks on AWS](https://docs.databricks.com/aws/en/repos/git-folders-concepts)
+
+# Asset bundle
+
+Asset bunldes là 1 công cụ [[IaC]] built-in của Databricks. Thực ra thì asset bundle cũng không khác mấy so với các công cụ [[CI]]/[[CD]] khác. Mọi thông tin cũng phải được lưu trữ trong file `dataabricks.yaml`
