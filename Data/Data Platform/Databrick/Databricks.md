@@ -223,4 +223,76 @@ Both can be scheduled for automatic refreshes (19:00 - 20:27), but you choose be
 # Foregin Catalog
 
 # [[Lakehouse]] Federation
-Đây là 1 tính năng cho phép Databricks query dữ liệu từ các nguồn bên ngoài (giống như fdw, pg_lakehouse của PostgreSQL).
+Đây là 1 tính năng cho phép Databricks query dữ liệu từ các nguồn bên ngoài (giống như fdw, pg_lakehouse của PostgreSQL). Để có thể đọc được data từ nguồn bên ngoài, người dùng sẽ phải sử tạo Catalog để Databricks manage thông tin metadata của dữ liệu nguồn
+
+
+# Alert
+Đây là tính năng cho phép Databricks gửi các notification qua các kênh Email, Slack, Teams, [[Webhook]],...
+Alert sẽ đọc dữ liệu từ output của 1 câu SQL Query (hoạt động dựa trên query chứ không phải notebook) và check theo các điều kiện được config từ người dùng. Nó sẽ trigger nếu như điều kiện bị vi phạm. Người dùng cũng có thể config đoạn text được gửi tới destination bằng cách sẽ dụng template (giống như jinja), đã được cung cấp sẵn 1 số giá trị.
+
+Về schedule, người dùng sẽ được tự do chỉnh sửa tần suất mà alert sẽ tiến hành evaluate logic.
+
+# Metric Views
+Metric Views là [[Semantic Layer]] của Databricks. Nội dung của metric views sẽ được define dưới dạng [[YAML]]. Đây là 1 ví dụ về Metric Views
+```yaml
+version: 1.1
+comment: 'Orders KPIs for sales analysis'
+source: samples.tpch.orders
+filter: o_orderdate > '1990-01-01'
+
+dimensions:
+  - name: Order Month
+    expr: DATE_TRUNC('MONTH', o_orderdate)
+    comment: 'Month of order'
+
+  - name: Order Status
+    expr: CASE
+      WHEN o_orderstatus = 'O' THEN 'Open'
+      WHEN o_orderstatus = 'P' THEN 'Processing'
+      WHEN o_orderstatus = 'F' THEN 'Fulfilled'
+      END
+    comment: 'Status of order'
+
+  - name: o_orderdate
+    expr: o_orderdate
+    comment: 'Original order date'
+
+  - name: o_orderkey
+    expr: o_orderkey
+    comment: 'Order key'
+
+  - name: o_custkey
+    expr: o_custkey
+    comment: 'Customer key'
+
+  - name: o_orderpriority
+    expr: o_orderpriority
+    comment: 'Order priority'
+
+  - name: o_clerk
+    expr: o_clerk
+    comment: 'Clerk'
+
+  - name: o_shippriority
+    expr: o_shippriority
+    comment: 'Ship priority'
+
+  - name: o_comment
+    expr: o_comment
+    comment: 'Order comment'
+
+measures:
+  - name: Order Count
+    expr: COUNT(1)
+    comment: 'Total number of orders'
+
+  - name: Total Revenue
+    expr: SUM(o_totalprice)
+    comment: 'Sum of all order prices'
+
+  - name: Total Revenue per Customer
+    expr: SUM(o_totalprice) / COUNT(DISTINCT o_custkey)
+    comment: 'Average revenue per unique customer'
+```
+
+Sau khi save metric views thì databricks sẽ tự động tạo 1 cái view bao gồm các cột được định nghĩa trong dimensions và measures. 
