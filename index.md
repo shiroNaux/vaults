@@ -23,3 +23,5 @@ Welcome to my digital garden 🥹🥹
 - Autism: 
 - Adhd: 
 - **TTFT**(Time to first token): là khoảng thời gian mà LLM cần để generate ra token output đầu tiên tính từ lúc nhận được input prompt
+- **RFID**: 
+- **Capital Recycling** or **Asset recycling**: 
