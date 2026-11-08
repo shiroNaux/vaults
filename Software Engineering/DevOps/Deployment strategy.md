@@ -3,11 +3,11 @@ tags:
   - deployment
 aliases:
 ---
-
+# Deployment strategy
 ![[deployment_strategy.jpg]]
 
 ---
-### Blue-Green
+## Blue-Green
 Đặc điểm:
 - Kiểu deploy này yêu cầu có  môi trường chạy song song với nhau.
 	- Môi trường Blue
@@ -25,21 +25,23 @@ aliases:
 **Cons**:
 - Yêu cầu nhiều tài nguyên do phải maintain cả 2 môi trường cùng lúc
 
-### Canary
+## Canary
 
 ![[canary-deploy.png]]
 
-### Bigbang
-### Rolling
+## Bigbang
+**Boom shakalaka**
+Thực hiện tắt version cũ và thay thế bằng phiên bản mới ngay sau đó. Chỉ có 1 lần cutover duy nhất. Khi có lỗi thì rollback lại version cũ.
+## Rolling
 
 ![[rolling-deploy.png]]
 
-### A/B Testing
+## A/B Testing
 
 
 ![[ab-testing-deploy.png]]
 
-### Feature Flag
+## Feature Flag
 
 ![[feature-flag-deploy.png]]
 
