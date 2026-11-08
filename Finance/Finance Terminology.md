@@ -16,4 +16,6 @@ aliases:
 - P/S (Price per Share):
 - **PnL**: Profit and Loss statement. Cách tính: **PNL = Tổng doanh thu – Tổng chi phí (bao gồm thuế)**
 - **Capital Recycling** or **Asset recycling**: 
+- Private credit
+- Private equity
 - NIM

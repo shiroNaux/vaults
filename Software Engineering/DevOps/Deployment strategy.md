@@ -13,7 +13,7 @@ aliases:
 	- Môi trường Blue
 	- Môi trường Green
 - 1 môi trường sẽ chạy version cũ, môi trường còn lại sẽ chạy version mới.
-- Khi cần nâng cấp thì sẽ swithc từ môi trường blue -> green (thông qua [[load balancer]], [[DNS]], ...) Nếu có lỗi thì sẽ switch lại môi trường cũ
+- Khi cần nâng cấp thì sẽ swithc từ môi trường blue -> green (thông qua [[Load Balancer]], [[DNS]], ...) Nếu có lỗi thì sẽ switch lại môi trường cũ
 
 ![[blue-green-deploy.png]]
 
